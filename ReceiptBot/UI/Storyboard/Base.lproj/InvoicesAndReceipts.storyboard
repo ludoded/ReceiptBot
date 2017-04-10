@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I31-hN-abp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invoices and Receipts-->
+        <scene sceneID="7ox-ji-brD">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Hag-2d-gxw" customClass="PagerViewController" customModule="ReceiptBot" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7VH-S9-zQr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ElA-4c-ra4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQk-g2-GWB">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ev-Bi-YWN">
+                                <rect key="frame" x="0.0" y="43" width="375" height="560"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNT-EH-zEr">
+                                <rect key="frame" x="0.0" y="43" width="375" height="560"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.21960784310000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Kl-7s-Ex1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Kl-7s-Ex1"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UwX-ad-Gfd" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                <color key="backgroundColor" red="0.12549019607843137" green="0.2196078431372549" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Wy7-FG-WKJ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MNg-qB-6cq">
+                                    <size key="itemSize" width="50" height="42"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2ev-Bi-YWN" firstAttribute="leading" secondItem="oQk-g2-GWB" secondAttribute="leading" id="3iz-AQ-9VS"/>
+                            <constraint firstItem="ElA-4c-ra4" firstAttribute="top" secondItem="2ev-Bi-YWN" secondAttribute="bottom" id="BMJ-C4-bsO"/>
+                            <constraint firstItem="KNT-EH-zEr" firstAttribute="top" secondItem="UwX-ad-Gfd" secondAttribute="bottom" id="FAB-UO-nqX"/>
+                            <constraint firstItem="2ev-Bi-YWN" firstAttribute="top" secondItem="UwX-ad-Gfd" secondAttribute="bottom" id="HGk-ki-6T8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="KNT-EH-zEr" secondAttribute="bottom" id="NwN-iS-J7S"/>
+                            <constraint firstItem="KNT-EH-zEr" firstAttribute="leading" secondItem="oQk-g2-GWB" secondAttribute="leading" id="Zne-ei-oU8"/>
+                            <constraint firstItem="UwX-ad-Gfd" firstAttribute="top" secondItem="7VH-S9-zQr" secondAttribute="bottom" id="qTD-EM-FK5"/>
+                            <constraint firstAttribute="trailing" secondItem="UwX-ad-Gfd" secondAttribute="trailing" id="qV0-nw-lWp"/>
+                            <constraint firstAttribute="trailing" secondItem="2ev-Bi-YWN" secondAttribute="trailing" id="wR3-zJ-qF8"/>
+                            <constraint firstItem="UwX-ad-Gfd" firstAttribute="leading" secondItem="oQk-g2-GWB" secondAttribute="leading" id="yVW-1g-r2n"/>
+                            <constraint firstAttribute="trailing" secondItem="KNT-EH-zEr" secondAttribute="trailing" id="zwg-DW-yf9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invoices and Receipts" id="XmS-OM-HlY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lMM-gS-ga5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barView" destination="UwX-ad-Gfd" id="TeM-Vh-vq8"/>
+                        <outlet property="container" destination="KNT-EH-zEr" id="S1L-1M-IGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeD-AU-G1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="-3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SDY-U5-W7L">
+            <objects>
+                <navigationController id="I31-hN-abp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="pIK-bD-jgS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.13301323399759157" green="0.23691135453684603" blue="0.3699536837121975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hag-2d-gxw" kind="relationship" relationship="rootViewController" id="uF5-vL-ntn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5J-8u-5bO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="-3"/>
+        </scene>
+    </scenes>
+</document>

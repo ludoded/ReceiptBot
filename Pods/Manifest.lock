@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.4.0)
+  - BRYXBanner (0.7.2)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - Material (2.6.3):
+    - Material/Core (= 2.6.3)
+  - Material/Core (2.6.3)
+  - MBProgressHUD (1.0.0)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxSwift (3.3.1)
+  - SlideMenuControllerSwift (3.0.1)
+  - SwiftyJSON (3.1.4)
+  - UIColor_Hex_Swift (3.0.2)
+  - XLPagerTabStrip (7.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - BRYXBanner
+  - Charts
+  - Material
+  - MBProgressHUD
+  - RxCocoa
+  - RxSwift
+  - SlideMenuControllerSwift
+  - SwiftyJSON
+  - UIColor_Hex_Swift
+  - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  BRYXBanner: ed407a56c53f2add0aaa16f810062eac48d802cf
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
+
+PODFILE CHECKSUM: 1f477f4045312cbb324183439ae448074bf93f55
+
+COCOAPODS: 1.2.0

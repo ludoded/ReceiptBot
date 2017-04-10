@@ -1,0 +1,6 @@
+framework module Pods_ReceiptBot {
+  umbrella header "Pods-ReceiptBot-umbrella.h"
+
+  export *
+  module * { export * }
+}

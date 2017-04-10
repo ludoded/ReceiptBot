@@ -1,0 +1,1549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22E6281B40752B886870A5C1 /* Pods_ReceiptBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */; };
+		9603600FFF96F971F37EAE33 /* Pods_ReceiptBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */; };
+		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
+		B22B11BB1E89D5C8009D3E76 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */; };
+		B22B11BD1E89D5C8009D3E76 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */; };
+		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
+		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
+		B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */; };
+		B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */; };
+		B270DB501E940A61008B5D22 /* DateFormattersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B270DB4F1E940A61008B5D22 /* DateFormattersTest.swift */; };
+		B27B53511E944DC800B0E050 /* DateFormaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53501E944DC800B0E050 /* DateFormaters.swift */; };
+		B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */; };
+		B27B53551E944E6600B0E050 /* DateFormaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53501E944DC800B0E050 /* DateFormaters.swift */; };
+		B27B53571E94542900B0E050 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53561E94542900B0E050 /* API.swift */; };
+		B27B53601E94587D00B0E050 /* PagerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53591E94587D00B0E050 /* PagerConfigurator.swift */; };
+		B27B53611E94587D00B0E050 /* PagerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53591E94587D00B0E050 /* PagerConfigurator.swift */; };
+		B27B53621E94587D00B0E050 /* PagerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535A1E94587D00B0E050 /* PagerInteractor.swift */; };
+		B27B53631E94587D00B0E050 /* PagerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535A1E94587D00B0E050 /* PagerInteractor.swift */; };
+		B27B53641E94587D00B0E050 /* PagerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535B1E94587D00B0E050 /* PagerModels.swift */; };
+		B27B53651E94587D00B0E050 /* PagerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535B1E94587D00B0E050 /* PagerModels.swift */; };
+		B27B53661E94587D00B0E050 /* PagerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535C1E94587D00B0E050 /* PagerPresenter.swift */; };
+		B27B53671E94587D00B0E050 /* PagerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535C1E94587D00B0E050 /* PagerPresenter.swift */; };
+		B27B53681E94587D00B0E050 /* PagerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535D1E94587D00B0E050 /* PagerRouter.swift */; };
+		B27B53691E94587D00B0E050 /* PagerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535D1E94587D00B0E050 /* PagerRouter.swift */; };
+		B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535E1E94587D00B0E050 /* PagerViewController.swift */; };
+		B27B536B1E94587D00B0E050 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535E1E94587D00B0E050 /* PagerViewController.swift */; };
+		B27B536C1E94587D00B0E050 /* PagerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535F1E94587D00B0E050 /* PagerWorker.swift */; };
+		B27B536D1E94587D00B0E050 /* PagerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B535F1E94587D00B0E050 /* PagerWorker.swift */; };
+		B27B53741E945BF000B0E050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53701E945BF000B0E050 /* LaunchScreen.storyboard */; };
+		B27B53751E945BF000B0E050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53701E945BF000B0E050 /* LaunchScreen.storyboard */; };
+		B27B53761E945BF000B0E050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53721E945BF000B0E050 /* Main.storyboard */; };
+		B27B53771E945BF000B0E050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53721E945BF000B0E050 /* Main.storyboard */; };
+		B27B537A1E945C0700B0E050 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53781E945C0700B0E050 /* Dashboard.storyboard */; };
+		B27B537B1E945C0700B0E050 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53781E945C0700B0E050 /* Dashboard.storyboard */; };
+		B27B537E1E945C1600B0E050 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B537C1E945C1600B0E050 /* Expenses.storyboard */; };
+		B27B537F1E945C1600B0E050 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B537C1E945C1600B0E050 /* Expenses.storyboard */; };
+		B27B53821E945C2200B0E050 /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53801E945C2200B0E050 /* Inbox.storyboard */; };
+		B27B53831E945C2200B0E050 /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53801E945C2200B0E050 /* Inbox.storyboard */; };
+		B27B53861E945E3600B0E050 /* InvoicesAndReceipts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27B53841E945E3600B0E050 /* InvoicesAndReceipts.storyboard */; };
+		B27B53901E945F2100B0E050 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53891E945F2100B0E050 /* DashboardConfigurator.swift */; };
+		B27B53911E945F2100B0E050 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53891E945F2100B0E050 /* DashboardConfigurator.swift */; };
+		B27B53921E945F2100B0E050 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538A1E945F2100B0E050 /* DashboardInteractor.swift */; };
+		B27B53931E945F2100B0E050 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538A1E945F2100B0E050 /* DashboardInteractor.swift */; };
+		B27B53941E945F2100B0E050 /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538B1E945F2100B0E050 /* DashboardModels.swift */; };
+		B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538B1E945F2100B0E050 /* DashboardModels.swift */; };
+		B27B53961E945F2100B0E050 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538C1E945F2100B0E050 /* DashboardPresenter.swift */; };
+		B27B53971E945F2100B0E050 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538C1E945F2100B0E050 /* DashboardPresenter.swift */; };
+		B27B53981E945F2100B0E050 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538D1E945F2100B0E050 /* DashboardRouter.swift */; };
+		B27B53991E945F2100B0E050 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538D1E945F2100B0E050 /* DashboardRouter.swift */; };
+		B27B539A1E945F2100B0E050 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538E1E945F2100B0E050 /* DashboardViewController.swift */; };
+		B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538E1E945F2100B0E050 /* DashboardViewController.swift */; };
+		B27B539C1E945F2100B0E050 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538F1E945F2100B0E050 /* DashboardWorker.swift */; };
+		B27B539D1E945F2100B0E050 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B538F1E945F2100B0E050 /* DashboardWorker.swift */; };
+		B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B539F1E945F9400B0E050 /* ExpensesConfigurator.swift */; };
+		B27B53A71E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B539F1E945F9400B0E050 /* ExpensesConfigurator.swift */; };
+		B27B53A81E945F9400B0E050 /* ExpensesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A01E945F9400B0E050 /* ExpensesInteractor.swift */; };
+		B27B53A91E945F9400B0E050 /* ExpensesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A01E945F9400B0E050 /* ExpensesInteractor.swift */; };
+		B27B53AA1E945F9400B0E050 /* ExpensesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A11E945F9400B0E050 /* ExpensesModels.swift */; };
+		B27B53AB1E945F9400B0E050 /* ExpensesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A11E945F9400B0E050 /* ExpensesModels.swift */; };
+		B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A21E945F9400B0E050 /* ExpensesPresenter.swift */; };
+		B27B53AD1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A21E945F9400B0E050 /* ExpensesPresenter.swift */; };
+		B27B53AE1E945F9400B0E050 /* ExpensesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A31E945F9400B0E050 /* ExpensesRouter.swift */; };
+		B27B53AF1E945F9400B0E050 /* ExpensesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A31E945F9400B0E050 /* ExpensesRouter.swift */; };
+		B27B53B01E945F9400B0E050 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A41E945F9400B0E050 /* ExpensesViewController.swift */; };
+		B27B53B11E945F9400B0E050 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A41E945F9400B0E050 /* ExpensesViewController.swift */; };
+		B27B53B21E945F9400B0E050 /* ExpensesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A51E945F9400B0E050 /* ExpensesWorker.swift */; };
+		B27B53B31E945F9400B0E050 /* ExpensesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53A51E945F9400B0E050 /* ExpensesWorker.swift */; };
+		B27B53BC1E945FC600B0E050 /* InboxConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B51E945FC600B0E050 /* InboxConfigurator.swift */; };
+		B27B53BD1E945FC600B0E050 /* InboxConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B51E945FC600B0E050 /* InboxConfigurator.swift */; };
+		B27B53BE1E945FC600B0E050 /* InboxInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B61E945FC600B0E050 /* InboxInteractor.swift */; };
+		B27B53BF1E945FC600B0E050 /* InboxInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B61E945FC600B0E050 /* InboxInteractor.swift */; };
+		B27B53C01E945FC600B0E050 /* InboxModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B71E945FC600B0E050 /* InboxModels.swift */; };
+		B27B53C11E945FC600B0E050 /* InboxModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B71E945FC600B0E050 /* InboxModels.swift */; };
+		B27B53C21E945FC600B0E050 /* InboxPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B81E945FC600B0E050 /* InboxPresenter.swift */; };
+		B27B53C31E945FC600B0E050 /* InboxPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B81E945FC600B0E050 /* InboxPresenter.swift */; };
+		B27B53C41E945FC600B0E050 /* InboxRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B91E945FC600B0E050 /* InboxRouter.swift */; };
+		B27B53C51E945FC600B0E050 /* InboxRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53B91E945FC600B0E050 /* InboxRouter.swift */; };
+		B27B53C61E945FC600B0E050 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53BA1E945FC600B0E050 /* InboxViewController.swift */; };
+		B27B53C71E945FC600B0E050 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53BA1E945FC600B0E050 /* InboxViewController.swift */; };
+		B27B53C81E945FC600B0E050 /* InboxWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53BB1E945FC600B0E050 /* InboxWorker.swift */; };
+		B27B53C91E945FC600B0E050 /* InboxWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53BB1E945FC600B0E050 /* InboxWorker.swift */; };
+		B283CBC01E955C7C008A3313 /* RebotColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBBF1E955C7C008A3313 /* RebotColor.swift */; };
+		B283CBC21E955E57008A3313 /* RebotValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC11E955E57008A3313 /* RebotValueWrapper.swift */; };
+		B283CBC51E956033008A3313 /* Errorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC41E956033008A3313 /* Errorable.swift */; };
+		B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC61E9563BF008A3313 /* NumberFormaters.swift */; };
+		B283CBC81E9564B0008A3313 /* NumberFormaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC61E9563BF008A3313 /* NumberFormaters.swift */; };
+		B283CBCA1E959473008A3313 /* LineXAxeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC91E959473008A3313 /* LineXAxeFormatter.swift */; };
+		B283CBCB1E9594A7008A3313 /* LineXAxeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC91E959473008A3313 /* LineXAxeFormatter.swift */; };
+		B283CBCC1E959928008A3313 /* RebotValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC11E955E57008A3313 /* RebotValueWrapper.swift */; };
+		B283CBCD1E959CD0008A3313 /* Errorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBC41E956033008A3313 /* Errorable.swift */; };
+		B283CBD01E96CB7A008A3313 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBCF1E96CB7A008A3313 /* InboxCell.swift */; };
+		B283CBD11E96CB7A008A3313 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBCF1E96CB7A008A3313 /* InboxCell.swift */; };
+		B283CBD31E96CB97008A3313 /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B283CBD21E96CB97008A3313 /* InboxCell.xib */; };
+		B283CBD41E96CB97008A3313 /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B283CBD21E96CB97008A3313 /* InboxCell.xib */; };
+		B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBD51E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift */; };
+		B283CBD71E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBD51E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift */; };
+		B299B78F1E9909B9002BFA87 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */; };
+		B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */; };
+		B299B7911E990FA7002BFA87 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68331E93D151009560BD /* Router.swift */; };
+		B299B7921E990FAA002BFA87 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53561E94542900B0E050 /* API.swift */; };
+		B299B7941E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */; };
+		B299B7951E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */; };
+		B299B7971E9915B9002BFA87 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7961E9915B9002BFA87 /* Managed.swift */; };
+		B299B7981E9915B9002BFA87 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7961E9915B9002BFA87 /* Managed.swift */; };
+		B299B79A1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7991E993ACE002BFA87 /* RebotDateConverter.swift */; };
+		B299B79B1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7991E993ACE002BFA87 /* RebotDateConverter.swift */; };
+		B299B79E1E993BAE002BFA87 /* RebotDateConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B79D1E993BAE002BFA87 /* RebotDateConverterTest.swift */; };
+		B299B7A01E995EE3002BFA87 /* ManagedCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B79F1E995EE3002BFA87 /* ManagedCrud.swift */; };
+		B299B7A11E995EE3002BFA87 /* ManagedCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B79F1E995EE3002BFA87 /* ManagedCrud.swift */; };
+		B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */; };
+		B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */; };
+		B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A61E9AAB02002BFA87 /* RebotValidator.swift */; };
+		B299B7A81E9AAB02002BFA87 /* RebotValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A61E9AAB02002BFA87 /* RebotValidator.swift */; };
+		B299B7AA1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A91E9AAE45002BFA87 /* EmailPasswordViewController.swift */; };
+		B299B7AB1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7A91E9AAE45002BFA87 /* EmailPasswordViewController.swift */; };
+		B299B7AE1E9AAFF0002BFA87 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */; };
+		B299B7AF1E9AAFF0002BFA87 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */; };
+		B299B7B11E9AC05C002BFA87 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */; };
+		B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */; };
+		B299B7B31E9AC0B9002BFA87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
+		B299B7B51E9ACD98002BFA87 /* Spinnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B41E9ACD98002BFA87 /* Spinnable.swift */; };
+		B299B7B61E9ACD98002BFA87 /* Spinnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B41E9ACD98002BFA87 /* Spinnable.swift */; };
+		B299B7BA1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */; };
+		B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */; };
+		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
+		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
+		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
+		B2D3ABF81E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
+		B2D3ABF91E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */; };
+		B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */; };
+		B2D3ABFB1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF11E97D53C00293B8C /* InboxDataSourcePresenter.swift */; };
+		B2D3ABFC1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF11E97D53C00293B8C /* InboxDataSourcePresenter.swift */; };
+		B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF31E97D53C00293B8C /* InboxDataSource.swift */; };
+		B2D3AC001E97D53C00293B8C /* InboxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF31E97D53C00293B8C /* InboxDataSource.swift */; };
+		B2D3AC011E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF41E97D53C00293B8C /* InboxDataSourceWorker.swift */; };
+		B2D3AC021E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABF41E97D53C00293B8C /* InboxDataSourceWorker.swift */; };
+		B2D3AC041E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3AC031E97E6A400293B8C /* DataRequest+ParseResponse.swift */; };
+		B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3AC031E97E6A400293B8C /* DataRequest+ParseResponse.swift */; };
+		B2D3AC061E97E7E300293B8C /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68361E93D218009560BD /* SignUpResponse.swift */; };
+		B2D3AC071E97E7E300293B8C /* ConvertedInvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683E1E93EA20009560BD /* ConvertedInvoiceResponse.swift */; };
+		B2D3AC081E97E7E300293B8C /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68431E93F5A1009560BD /* ForgotPasswordResponse.swift */; };
+		B2D3AC091E97E7E300293B8C /* InvoiceStatusToShowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68451E93F675009560BD /* InvoiceStatusToShowResponse.swift */; };
+		B2D3AC0A1E97E7E300293B8C /* GetConvertedInvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68471E93F7F3009560BD /* GetConvertedInvoiceResponse.swift */; };
+		B2D3AC0B1E97E7E300293B8C /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68491E93FB16009560BD /* CategoryResponse.swift */; };
+		B2D3AC0C1E97E7E300293B8C /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684B1E93FC1E009560BD /* FileUploadResponse.swift */; };
+		B2D3AC0D1E97E7E300293B8C /* XeroExpenseCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684D1E93FF22009560BD /* XeroExpenseCategoryResponse.swift */; };
+		B2D3AC0E1E97E7E300293B8C /* QBExpenseCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684F1E93FFB5009560BD /* QBExpenseCategoryResponse.swift */; };
+		B2D3AC0F1E97E7E300293B8C /* LineChartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68511E940478009560BD /* LineChartResponse.swift */; };
+		B2D3AC101E97E7E300293B8C /* SupplierResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68531E9406D9009560BD /* SupplierResponse.swift */; };
+		B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683C1E93D355009560BD /* JSONable.swift */; };
+		B2D3AC121E97E7FB00293B8C /* JSONObject+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */; };
+		B2D3AC131E97EAA000293B8C /* RebotColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBBF1E955C7C008A3313 /* RebotColor.swift */; };
+		B2FB68341E93D151009560BD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68331E93D151009560BD /* Router.swift */; };
+		B2FB68371E93D218009560BD /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68361E93D218009560BD /* SignUpResponse.swift */; };
+		B2FB683D1E93D355009560BD /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683C1E93D355009560BD /* JSONable.swift */; };
+		B2FB683F1E93EA20009560BD /* ConvertedInvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683E1E93EA20009560BD /* ConvertedInvoiceResponse.swift */; };
+		B2FB68441E93F5A1009560BD /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68431E93F5A1009560BD /* ForgotPasswordResponse.swift */; };
+		B2FB68461E93F675009560BD /* InvoiceStatusToShowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68451E93F675009560BD /* InvoiceStatusToShowResponse.swift */; };
+		B2FB68481E93F7F3009560BD /* GetConvertedInvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68471E93F7F3009560BD /* GetConvertedInvoiceResponse.swift */; };
+		B2FB684A1E93FB16009560BD /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68491E93FB16009560BD /* CategoryResponse.swift */; };
+		B2FB684C1E93FC1E009560BD /* FileUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684B1E93FC1E009560BD /* FileUploadResponse.swift */; };
+		B2FB684E1E93FF22009560BD /* XeroExpenseCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684D1E93FF22009560BD /* XeroExpenseCategoryResponse.swift */; };
+		B2FB68501E93FFB5009560BD /* QBExpenseCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB684F1E93FFB5009560BD /* QBExpenseCategoryResponse.swift */; };
+		B2FB68521E940478009560BD /* LineChartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68511E940478009560BD /* LineChartResponse.swift */; };
+		B2FB68541E9406D9009560BD /* SupplierResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68531E9406D9009560BD /* SupplierResponse.swift */; };
+		B2FC674D1E982FA50003A35C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FC674B1E982FA50003A35C /* Auth.storyboard */; };
+		B2FC674E1E9832170003A35C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
+		B2FC67511E983BAD0003A35C /* TextField+Rebotise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67501E983BAD0003A35C /* TextField+Rebotise.swift */; };
+		B2FC67521E983BAD0003A35C /* TextField+Rebotise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67501E983BAD0003A35C /* TextField+Rebotise.swift */; };
+		B2FC675C1E983C9E0003A35C /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67551E983C9E0003A35C /* SignInConfigurator.swift */; };
+		B2FC675D1E983C9E0003A35C /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67551E983C9E0003A35C /* SignInConfigurator.swift */; };
+		B2FC675E1E983C9E0003A35C /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67561E983C9E0003A35C /* SignInInteractor.swift */; };
+		B2FC675F1E983C9E0003A35C /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67561E983C9E0003A35C /* SignInInteractor.swift */; };
+		B2FC67601E983C9E0003A35C /* SignInModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67571E983C9E0003A35C /* SignInModels.swift */; };
+		B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67571E983C9E0003A35C /* SignInModels.swift */; };
+		B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67581E983C9E0003A35C /* SignInPresenter.swift */; };
+		B2FC67631E983C9E0003A35C /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67581E983C9E0003A35C /* SignInPresenter.swift */; };
+		B2FC67641E983C9E0003A35C /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67591E983C9E0003A35C /* SignInRouter.swift */; };
+		B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67591E983C9E0003A35C /* SignInRouter.swift */; };
+		B2FC67661E983C9E0003A35C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC675A1E983C9E0003A35C /* SignInViewController.swift */; };
+		B2FC67671E983C9E0003A35C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC675A1E983C9E0003A35C /* SignInViewController.swift */; };
+		B2FC67681E983C9E0003A35C /* SignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC675B1E983C9E0003A35C /* SignInWorker.swift */; };
+		B2FC67691E983C9E0003A35C /* SignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC675B1E983C9E0003A35C /* SignInWorker.swift */; };
+		B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676C1E984E390003A35C /* SignUpConfigurator.swift */; };
+		B2FC67741E984E390003A35C /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676C1E984E390003A35C /* SignUpConfigurator.swift */; };
+		B2FC67751E984E390003A35C /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676D1E984E390003A35C /* SignUpInteractor.swift */; };
+		B2FC67761E984E390003A35C /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676D1E984E390003A35C /* SignUpInteractor.swift */; };
+		B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676E1E984E390003A35C /* SignUpModels.swift */; };
+		B2FC67781E984E390003A35C /* SignUpModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676E1E984E390003A35C /* SignUpModels.swift */; };
+		B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676F1E984E390003A35C /* SignUpPresenter.swift */; };
+		B2FC677A1E984E390003A35C /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC676F1E984E390003A35C /* SignUpPresenter.swift */; };
+		B2FC677B1E984E390003A35C /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67701E984E390003A35C /* SignUpRouter.swift */; };
+		B2FC677C1E984E390003A35C /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67701E984E390003A35C /* SignUpRouter.swift */; };
+		B2FC677D1E984E390003A35C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67711E984E390003A35C /* SignUpViewController.swift */; };
+		B2FC677E1E984E390003A35C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67711E984E390003A35C /* SignUpViewController.swift */; };
+		B2FC677F1E984E390003A35C /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67721E984E390003A35C /* SignUpWorker.swift */; };
+		B2FC67801E984E390003A35C /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67721E984E390003A35C /* SignUpWorker.swift */; };
+		B2FC67881E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67811E984E560003A35C /* CompleteProfileConfigurator.swift */; };
+		B2FC67891E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67811E984E560003A35C /* CompleteProfileConfigurator.swift */; };
+		B2FC678A1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67821E984E560003A35C /* CompleteProfileInteractor.swift */; };
+		B2FC678B1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67821E984E560003A35C /* CompleteProfileInteractor.swift */; };
+		B2FC678C1E984E560003A35C /* CompleteProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67831E984E560003A35C /* CompleteProfileModels.swift */; };
+		B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67831E984E560003A35C /* CompleteProfileModels.swift */; };
+		B2FC678E1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67841E984E560003A35C /* CompleteProfilePresenter.swift */; };
+		B2FC678F1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67841E984E560003A35C /* CompleteProfilePresenter.swift */; };
+		B2FC67901E984E560003A35C /* CompleteProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67851E984E560003A35C /* CompleteProfileRouter.swift */; };
+		B2FC67911E984E560003A35C /* CompleteProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67851E984E560003A35C /* CompleteProfileRouter.swift */; };
+		B2FC67921E984E560003A35C /* CompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67861E984E560003A35C /* CompleteProfileViewController.swift */; };
+		B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67861E984E560003A35C /* CompleteProfileViewController.swift */; };
+		B2FC67941E984E560003A35C /* CompleteProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67871E984E560003A35C /* CompleteProfileWorker.swift */; };
+		B2FC67951E984E560003A35C /* CompleteProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67871E984E560003A35C /* CompleteProfileWorker.swift */; };
+		B2FC679A1E9850CC0003A35C /* SignBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67991E9850CC0003A35C /* SignBaseViewController.swift */; };
+		B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67991E9850CC0003A35C /* SignBaseViewController.swift */; };
+		B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC679C1E98571C0003A35C /* UIScrollView+keyboard.swift */; };
+		B2FC679E1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC679C1E98571C0003A35C /* UIScrollView+keyboard.swift */; };
+		B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC679F1E9857530003A35C /* UIViewController+keyboard.swift */; };
+		B2FC67A11E9857530003A35C /* UIViewController+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC679F1E9857530003A35C /* UIViewController+keyboard.swift */; };
+		B2FC67A51E98F7A90003A35C /* ReceiptBot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67A31E98F7A90003A35C /* ReceiptBot.xcdatamodeld */; };
+		B2FC67A61E98F7A90003A35C /* ReceiptBot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67A31E98F7A90003A35C /* ReceiptBot.xcdatamodeld */; };
+		B2FC67A81E98FD060003A35C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67A71E98FD060003A35C /* UserInfo.swift */; };
+		B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67A71E98FD060003A35C /* UserInfo.swift */; };
+		B2FC67AB1E98FED90003A35C /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67AA1E98FED90003A35C /* Invoice.swift */; };
+		B2FC67AC1E98FED90003A35C /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67AA1E98FED90003A35C /* Invoice.swift */; };
+		B2FC67AE1E9900920003A35C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67AD1E9900920003A35C /* Category.swift */; };
+		B2FC67AF1E9900920003A35C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67AD1E9900920003A35C /* Category.swift */; };
+		B2FC67B11E9900F00003A35C /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B01E9900F00003A35C /* Expense.swift */; };
+		B2FC67B21E9900F00003A35C /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B01E9900F00003A35C /* Expense.swift */; };
+		B2FC67B41E9904C70003A35C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B31E9904C70003A35C /* Supplier.swift */; };
+		B2FC67B51E9904C70003A35C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B31E9904C70003A35C /* Supplier.swift */; };
+		B2FC67B71E9905870003A35C /* XeroCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B61E9905870003A35C /* XeroCategory.swift */; };
+		B2FC67B81E9905870003A35C /* XeroCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B61E9905870003A35C /* XeroCategory.swift */; };
+		B2FC67BA1E9905EA0003A35C /* QboCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B91E9905EA0003A35C /* QboCategory.swift */; };
+		B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B91E9905EA0003A35C /* QboCategory.swift */; };
+		B2FC67BD1E99068E0003A35C /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */; };
+		B2FC67BE1E99068E0003A35C /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B22B11CC1E89D5C8009D3E76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22B11AD1E89D5C7009D3E76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B22B11B41E89D5C7009D3E76;
+			remoteInfo = ReceiptBot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0055D58A78E5AD565A02578F /* Pods-ReceiptBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot.debug.xcconfig"; sourceTree = "<group>"; };
+		232B5C95BDEA8FE6ECD87D20 /* Pods-ReceiptBotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot.release.xcconfig"; sourceTree = "<group>"; };
+		52CB11C467AE2FEA740D3E72 /* Pods-ReceiptBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests.release.xcconfig"; sourceTree = "<group>"; };
+		63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptBotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B22B11C61E89D5C8009D3E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22B11CB1E89D5C8009D3E76 /* ReceiptBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptBotTests.swift; sourceTree = "<group>"; };
+		B22B11D11E89D5C8009D3E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuConfigurator.swift; path = Scene/SlideMenu/SlideMenuConfigurator.swift; sourceTree = "<group>"; };
+		B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuViewController.swift; path = Scene/SlideMenu/SlideMenuViewController.swift; sourceTree = "<group>"; };
+		B270DB4F1E940A61008B5D22 /* DateFormattersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormattersTest.swift; path = Helper/Formatters/DateFormattersTest.swift; sourceTree = "<group>"; };
+		B27B53501E944DC800B0E050 /* DateFormaters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormaters.swift; path = Helper/Formatter/DateFormaters.swift; sourceTree = "<group>"; };
+		B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONObject+DateFormat.swift"; path = "Helper/Extension/JSONObject+DateFormat.swift"; sourceTree = "<group>"; };
+		B27B53561E94542900B0E050 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Networking/Router/API.swift; sourceTree = "<group>"; };
+		B27B53591E94587D00B0E050 /* PagerConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerConfigurator.swift; path = Scene/Pager/PagerConfigurator.swift; sourceTree = "<group>"; };
+		B27B535A1E94587D00B0E050 /* PagerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerInteractor.swift; path = Scene/Pager/PagerInteractor.swift; sourceTree = "<group>"; };
+		B27B535B1E94587D00B0E050 /* PagerModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerModels.swift; path = Scene/Pager/PagerModels.swift; sourceTree = "<group>"; };
+		B27B535C1E94587D00B0E050 /* PagerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerPresenter.swift; path = Scene/Pager/PagerPresenter.swift; sourceTree = "<group>"; };
+		B27B535D1E94587D00B0E050 /* PagerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerRouter.swift; path = Scene/Pager/PagerRouter.swift; sourceTree = "<group>"; };
+		B27B535E1E94587D00B0E050 /* PagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerViewController.swift; path = Scene/Pager/PagerViewController.swift; sourceTree = "<group>"; };
+		B27B535F1E94587D00B0E050 /* PagerWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerWorker.swift; path = Scene/Pager/PagerWorker.swift; sourceTree = "<group>"; };
+		B27B53711E945BF000B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B27B53731E945BF000B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B27B53791E945C0700B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
+		B27B537D1E945C1600B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/Expenses.storyboard; sourceTree = "<group>"; };
+		B27B53811E945C2200B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/Inbox.storyboard; sourceTree = "<group>"; };
+		B27B53851E945E3600B0E050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/InvoicesAndReceipts.storyboard; sourceTree = "<group>"; };
+		B27B53891E945F2100B0E050 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardConfigurator.swift; path = Scene/Dashboard/DashboardConfigurator.swift; sourceTree = "<group>"; };
+		B27B538A1E945F2100B0E050 /* DashboardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardInteractor.swift; path = Scene/Dashboard/DashboardInteractor.swift; sourceTree = "<group>"; };
+		B27B538B1E945F2100B0E050 /* DashboardModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardModels.swift; path = Scene/Dashboard/DashboardModels.swift; sourceTree = "<group>"; };
+		B27B538C1E945F2100B0E050 /* DashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardPresenter.swift; path = Scene/Dashboard/DashboardPresenter.swift; sourceTree = "<group>"; };
+		B27B538D1E945F2100B0E050 /* DashboardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardRouter.swift; path = Scene/Dashboard/DashboardRouter.swift; sourceTree = "<group>"; };
+		B27B538E1E945F2100B0E050 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Scene/Dashboard/DashboardViewController.swift; sourceTree = "<group>"; };
+		B27B538F1E945F2100B0E050 /* DashboardWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardWorker.swift; path = Scene/Dashboard/DashboardWorker.swift; sourceTree = "<group>"; };
+		B27B539F1E945F9400B0E050 /* ExpensesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesConfigurator.swift; path = Scene/Expenses/ExpensesConfigurator.swift; sourceTree = "<group>"; };
+		B27B53A01E945F9400B0E050 /* ExpensesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesInteractor.swift; path = Scene/Expenses/ExpensesInteractor.swift; sourceTree = "<group>"; };
+		B27B53A11E945F9400B0E050 /* ExpensesModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesModels.swift; path = Scene/Expenses/ExpensesModels.swift; sourceTree = "<group>"; };
+		B27B53A21E945F9400B0E050 /* ExpensesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesPresenter.swift; path = Scene/Expenses/ExpensesPresenter.swift; sourceTree = "<group>"; };
+		B27B53A31E945F9400B0E050 /* ExpensesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesRouter.swift; path = Scene/Expenses/ExpensesRouter.swift; sourceTree = "<group>"; };
+		B27B53A41E945F9400B0E050 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesViewController.swift; path = Scene/Expenses/ExpensesViewController.swift; sourceTree = "<group>"; };
+		B27B53A51E945F9400B0E050 /* ExpensesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensesWorker.swift; path = Scene/Expenses/ExpensesWorker.swift; sourceTree = "<group>"; };
+		B27B53B51E945FC600B0E050 /* InboxConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxConfigurator.swift; path = Scene/Inbox/InboxConfigurator.swift; sourceTree = "<group>"; };
+		B27B53B61E945FC600B0E050 /* InboxInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxInteractor.swift; path = Scene/Inbox/InboxInteractor.swift; sourceTree = "<group>"; };
+		B27B53B71E945FC600B0E050 /* InboxModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxModels.swift; path = Scene/Inbox/InboxModels.swift; sourceTree = "<group>"; };
+		B27B53B81E945FC600B0E050 /* InboxPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxPresenter.swift; path = Scene/Inbox/InboxPresenter.swift; sourceTree = "<group>"; };
+		B27B53B91E945FC600B0E050 /* InboxRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxRouter.swift; path = Scene/Inbox/InboxRouter.swift; sourceTree = "<group>"; };
+		B27B53BA1E945FC600B0E050 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxViewController.swift; path = Scene/Inbox/InboxViewController.swift; sourceTree = "<group>"; };
+		B27B53BB1E945FC600B0E050 /* InboxWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxWorker.swift; path = Scene/Inbox/InboxWorker.swift; sourceTree = "<group>"; };
+		B283CBBF1E955C7C008A3313 /* RebotColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotColor.swift; path = Helper/Utils/RebotColor.swift; sourceTree = "<group>"; };
+		B283CBC11E955E57008A3313 /* RebotValueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotValueWrapper.swift; path = Helper/Utils/RebotValueWrapper.swift; sourceTree = "<group>"; };
+		B283CBC41E956033008A3313 /* Errorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errorable.swift; path = Helper/Sharable/Errorable.swift; sourceTree = "<group>"; };
+		B283CBC61E9563BF008A3313 /* NumberFormaters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberFormaters.swift; path = Helper/Formatter/NumberFormaters.swift; sourceTree = "<group>"; };
+		B283CBC91E959473008A3313 /* LineXAxeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineXAxeFormatter.swift; path = Helper/Formatter/LineXAxeFormatter.swift; sourceTree = "<group>"; };
+		B283CBCF1E96CB7A008A3313 /* InboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxCell.swift; path = Scene/Inbox/Cell/InboxCell.swift; sourceTree = "<group>"; };
+		B283CBD21E96CB97008A3313 /* InboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InboxCell.xib; path = Scene/Inbox/Cell/InboxCell.xib; sourceTree = "<group>"; };
+		B283CBD51E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+RegisterHelper.swift"; path = "Helper/Extension/UITableViewCell+RegisterHelper.swift"; sourceTree = "<group>"; };
+		B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Database/DatabaseManager.swift; sourceTree = "<group>"; };
+		B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+crud.swift"; path = "Helper/Extension/NSManagedObject+crud.swift"; sourceTree = "<group>"; };
+		B299B7961E9915B9002BFA87 /* Managed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Managed.swift; path = Helper/Sharable/Managed.swift; sourceTree = "<group>"; };
+		B299B7991E993ACE002BFA87 /* RebotDateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotDateConverter.swift; path = Helper/Utils/RebotDateConverter.swift; sourceTree = "<group>"; };
+		B299B79D1E993BAE002BFA87 /* RebotDateConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotDateConverterTest.swift; path = Helper/Utils/RebotDateConverterTest.swift; sourceTree = "<group>"; };
+		B299B79F1E995EE3002BFA87 /* ManagedCrud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedCrud.swift; path = Helper/Sharable/ManagedCrud.swift; sourceTree = "<group>"; };
+		B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Reactive+ErrorTextField.swift"; path = "Helper/Extension/Reactive+ErrorTextField.swift"; sourceTree = "<group>"; };
+		B299B7A61E9AAB02002BFA87 /* RebotValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotValidator.swift; path = Helper/Utils/RebotValidator.swift; sourceTree = "<group>"; };
+		B299B7A91E9AAE45002BFA87 /* EmailPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailPasswordViewController.swift; path = Scene/Auth/EmailPasswordViewController.swift; sourceTree = "<group>"; };
+		B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = Helper/Setting/AppSettings.swift; sourceTree = "<group>"; };
+		B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConfigurator.swift; path = Helper/Setting/AppConfigurator.swift; sourceTree = "<group>"; };
+		B299B7B41E9ACD98002BFA87 /* Spinnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinnable.swift; path = Helper/Sharable/Spinnable.swift; sourceTree = "<group>"; };
+		B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailPasswordWorker.swift; path = Scene/Sharable/Worker/EmailPasswordWorker.swift; sourceTree = "<group>"; };
+		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
+		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
+		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
+		B2D3ABF11E97D53C00293B8C /* InboxDataSourcePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourcePresenter.swift; path = Scene/Inbox/DataSource/InboxDataSourcePresenter.swift; sourceTree = "<group>"; };
+		B2D3ABF31E97D53C00293B8C /* InboxDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSource.swift; path = Scene/Inbox/DataSource/InboxDataSource.swift; sourceTree = "<group>"; };
+		B2D3ABF41E97D53C00293B8C /* InboxDataSourceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceWorker.swift; path = Scene/Inbox/DataSource/InboxDataSourceWorker.swift; sourceTree = "<group>"; };
+		B2D3AC031E97E6A400293B8C /* DataRequest+ParseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+ParseResponse.swift"; path = "Helper/Extension/DataRequest+ParseResponse.swift"; sourceTree = "<group>"; };
+		B2FB68331E93D151009560BD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
+		B2FB68361E93D218009560BD /* SignUpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpResponse.swift; path = Networking/DTO/SignUpResponse.swift; sourceTree = "<group>"; };
+		B2FB683C1E93D355009560BD /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONable.swift; path = Helper/Networking/JSONable.swift; sourceTree = "<group>"; };
+		B2FB683E1E93EA20009560BD /* ConvertedInvoiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvertedInvoiceResponse.swift; path = Networking/DTO/ConvertedInvoiceResponse.swift; sourceTree = "<group>"; };
+		B2FB68431E93F5A1009560BD /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordResponse.swift; path = Networking/DTO/ForgotPasswordResponse.swift; sourceTree = "<group>"; };
+		B2FB68451E93F675009560BD /* InvoiceStatusToShowResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvoiceStatusToShowResponse.swift; path = Networking/DTO/InvoiceStatusToShowResponse.swift; sourceTree = "<group>"; };
+		B2FB68471E93F7F3009560BD /* GetConvertedInvoiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetConvertedInvoiceResponse.swift; path = Networking/DTO/GetConvertedInvoiceResponse.swift; sourceTree = "<group>"; };
+		B2FB68491E93FB16009560BD /* CategoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryResponse.swift; path = Networking/DTO/CategoryResponse.swift; sourceTree = "<group>"; };
+		B2FB684B1E93FC1E009560BD /* FileUploadResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileUploadResponse.swift; path = Networking/DTO/FileUploadResponse.swift; sourceTree = "<group>"; };
+		B2FB684D1E93FF22009560BD /* XeroExpenseCategoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XeroExpenseCategoryResponse.swift; path = Networking/DTO/XeroExpenseCategoryResponse.swift; sourceTree = "<group>"; };
+		B2FB684F1E93FFB5009560BD /* QBExpenseCategoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QBExpenseCategoryResponse.swift; path = Networking/DTO/QBExpenseCategoryResponse.swift; sourceTree = "<group>"; };
+		B2FB68511E940478009560BD /* LineChartResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChartResponse.swift; path = Networking/DTO/LineChartResponse.swift; sourceTree = "<group>"; };
+		B2FB68531E9406D9009560BD /* SupplierResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupplierResponse.swift; path = Networking/DTO/SupplierResponse.swift; sourceTree = "<group>"; };
+		B2FC674C1E982FA50003A35C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UI/Storyboard/Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		B2FC67501E983BAD0003A35C /* TextField+Rebotise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TextField+Rebotise.swift"; path = "Helper/Extension/TextField+Rebotise.swift"; sourceTree = "<group>"; };
+		B2FC67551E983C9E0003A35C /* SignInConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInConfigurator.swift; path = Scene/Auth/SignIn/SignInConfigurator.swift; sourceTree = "<group>"; };
+		B2FC67561E983C9E0003A35C /* SignInInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInInteractor.swift; path = Scene/Auth/SignIn/SignInInteractor.swift; sourceTree = "<group>"; };
+		B2FC67571E983C9E0003A35C /* SignInModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInModels.swift; path = Scene/Auth/SignIn/SignInModels.swift; sourceTree = "<group>"; };
+		B2FC67581E983C9E0003A35C /* SignInPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInPresenter.swift; path = Scene/Auth/SignIn/SignInPresenter.swift; sourceTree = "<group>"; };
+		B2FC67591E983C9E0003A35C /* SignInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInRouter.swift; path = Scene/Auth/SignIn/SignInRouter.swift; sourceTree = "<group>"; };
+		B2FC675A1E983C9E0003A35C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Scene/Auth/SignIn/SignInViewController.swift; sourceTree = "<group>"; };
+		B2FC675B1E983C9E0003A35C /* SignInWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInWorker.swift; path = Scene/Auth/SignIn/SignInWorker.swift; sourceTree = "<group>"; };
+		B2FC676C1E984E390003A35C /* SignUpConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpConfigurator.swift; path = Scene/Auth/SignUp/SignUpConfigurator.swift; sourceTree = "<group>"; };
+		B2FC676D1E984E390003A35C /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpInteractor.swift; path = Scene/Auth/SignUp/SignUpInteractor.swift; sourceTree = "<group>"; };
+		B2FC676E1E984E390003A35C /* SignUpModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpModels.swift; path = Scene/Auth/SignUp/SignUpModels.swift; sourceTree = "<group>"; };
+		B2FC676F1E984E390003A35C /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpPresenter.swift; path = Scene/Auth/SignUp/SignUpPresenter.swift; sourceTree = "<group>"; };
+		B2FC67701E984E390003A35C /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpRouter.swift; path = Scene/Auth/SignUp/SignUpRouter.swift; sourceTree = "<group>"; };
+		B2FC67711E984E390003A35C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Scene/Auth/SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
+		B2FC67721E984E390003A35C /* SignUpWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpWorker.swift; path = Scene/Auth/SignUp/SignUpWorker.swift; sourceTree = "<group>"; };
+		B2FC67811E984E560003A35C /* CompleteProfileConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileConfigurator.swift; path = Scene/Auth/CompleteProfile/CompleteProfileConfigurator.swift; sourceTree = "<group>"; };
+		B2FC67821E984E560003A35C /* CompleteProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileInteractor.swift; path = Scene/Auth/CompleteProfile/CompleteProfileInteractor.swift; sourceTree = "<group>"; };
+		B2FC67831E984E560003A35C /* CompleteProfileModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileModels.swift; path = Scene/Auth/CompleteProfile/CompleteProfileModels.swift; sourceTree = "<group>"; };
+		B2FC67841E984E560003A35C /* CompleteProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfilePresenter.swift; path = Scene/Auth/CompleteProfile/CompleteProfilePresenter.swift; sourceTree = "<group>"; };
+		B2FC67851E984E560003A35C /* CompleteProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileRouter.swift; path = Scene/Auth/CompleteProfile/CompleteProfileRouter.swift; sourceTree = "<group>"; };
+		B2FC67861E984E560003A35C /* CompleteProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileViewController.swift; path = Scene/Auth/CompleteProfile/CompleteProfileViewController.swift; sourceTree = "<group>"; };
+		B2FC67871E984E560003A35C /* CompleteProfileWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompleteProfileWorker.swift; path = Scene/Auth/CompleteProfile/CompleteProfileWorker.swift; sourceTree = "<group>"; };
+		B2FC67991E9850CC0003A35C /* SignBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignBaseViewController.swift; path = Scene/Auth/SignBaseViewController.swift; sourceTree = "<group>"; };
+		B2FC679C1E98571C0003A35C /* UIScrollView+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIScrollView+keyboard.swift"; path = "Helper/Extension/UIScrollView+keyboard.swift"; sourceTree = "<group>"; };
+		B2FC679F1E9857530003A35C /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+keyboard.swift"; path = "Helper/Extension/UIViewController+keyboard.swift"; sourceTree = "<group>"; };
+		B2FC67A41E98F7A90003A35C /* ReceiptBot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptBot.xcdatamodel; sourceTree = "<group>"; };
+		B2FC67A71E98FD060003A35C /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = DataModel/UserInfo.swift; sourceTree = "<group>"; };
+		B2FC67AA1E98FED90003A35C /* Invoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Invoice.swift; path = DataModel/Invoice.swift; sourceTree = "<group>"; };
+		B2FC67AD1E9900920003A35C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = DataModel/Category.swift; sourceTree = "<group>"; };
+		B2FC67B01E9900F00003A35C /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Expense.swift; path = DataModel/Expense.swift; sourceTree = "<group>"; };
+		B2FC67B31E9904C70003A35C /* Supplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Supplier.swift; path = DataModel/Supplier.swift; sourceTree = "<group>"; };
+		B2FC67B61E9905870003A35C /* XeroCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XeroCategory.swift; path = DataModel/XeroCategory.swift; sourceTree = "<group>"; };
+		B2FC67B91E9905EA0003A35C /* QboCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QboCategory.swift; path = DataModel/QboCategory.swift; sourceTree = "<group>"; };
+		B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvoiceStatus.swift; path = DataModel/InvoiceStatus.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B22B11B21E89D5C7009D3E76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E6281B40752B886870A5C1 /* Pods_ReceiptBot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22B11C81E89D5C8009D3E76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9603600FFF96F971F37EAE33 /* Pods_ReceiptBotTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6D77B2F458DC8FE364432C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */,
+				63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B22B11AC1E89D5C7009D3E76 = {
+			isa = PBXGroup;
+			children = (
+				B22B11B71E89D5C8009D3E76 /* ReceiptBot */,
+				B22B11CE1E89D5C8009D3E76 /* ReceiptBotTests */,
+				B22B11B61E89D5C8009D3E76 /* Products */,
+				CD5F48D88950EEE2C1C52DD5 /* Pods */,
+				9C6D77B2F458DC8FE364432C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B22B11B61E89D5C8009D3E76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */,
+				B22B11CB1E89D5C8009D3E76 /* ReceiptBotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B22B11B71E89D5C8009D3E76 /* ReceiptBot */ = {
+			isa = PBXGroup;
+			children = (
+				B299B78D1E99099E002BFA87 /* Database */,
+				B2FC67A21E98F7600003A35C /* DataModel */,
+				B27B536E1E945BC000B0E050 /* UI */,
+				B2FB68381E93D320009560BD /* Helper */,
+				B2FB68311E93D122009560BD /* Networking */,
+				B22B11DA1E89DE4C009D3E76 /* Scene */,
+				B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */,
+				B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */,
+				B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */,
+				B22B11C11E89D5C8009D3E76 /* Assets.xcassets */,
+				B22B11C61E89D5C8009D3E76 /* Info.plist */,
+			);
+			path = ReceiptBot;
+			sourceTree = "<group>";
+		};
+		B22B11CE1E89D5C8009D3E76 /* ReceiptBotTests */ = {
+			isa = PBXGroup;
+			children = (
+				B270DB4A1E9409DB008B5D22 /* Helper */,
+				B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */,
+				B22B11D11E89D5C8009D3E76 /* Info.plist */,
+			);
+			path = ReceiptBotTests;
+			sourceTree = "<group>";
+		};
+		B22B11DA1E89DE4C009D3E76 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC67531E983C740003A35C /* Auth */,
+				B27B53B41E945FB000B0E050 /* Inbox */,
+				B27B539E1E945F7C00B0E050 /* Expenses */,
+				B27B53881E945F0500B0E050 /* Dashboard */,
+				B27B53581E94585100B0E050 /* Pager */,
+				B22B11DB1E89DE54009D3E76 /* SlideMenu */,
+				B299B7B71E9AD9FC002BFA87 /* Sharable */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		B22B11DB1E89DE54009D3E76 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */,
+				B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */,
+			);
+			name = SlideMenu;
+			sourceTree = "<group>";
+		};
+		B270DB4A1E9409DB008B5D22 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B299B79C1E993B89002BFA87 /* Utils */,
+				B270DB4B1E9409E6008B5D22 /* Formatters */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		B270DB4B1E9409E6008B5D22 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				B270DB4F1E940A61008B5D22 /* DateFormattersTest.swift */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+		B27B53521E944DD700B0E050 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */,
+				B283CBD51E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift */,
+				B2D3AC031E97E6A400293B8C /* DataRequest+ParseResponse.swift */,
+				B2FC67501E983BAD0003A35C /* TextField+Rebotise.swift */,
+				B2FC679C1E98571C0003A35C /* UIScrollView+keyboard.swift */,
+				B2FC679F1E9857530003A35C /* UIViewController+keyboard.swift */,
+				B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */,
+				B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		B27B53581E94585100B0E050 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				B27B53591E94587D00B0E050 /* PagerConfigurator.swift */,
+				B27B535A1E94587D00B0E050 /* PagerInteractor.swift */,
+				B27B535B1E94587D00B0E050 /* PagerModels.swift */,
+				B27B535C1E94587D00B0E050 /* PagerPresenter.swift */,
+				B27B535D1E94587D00B0E050 /* PagerRouter.swift */,
+				B27B535E1E94587D00B0E050 /* PagerViewController.swift */,
+				B27B535F1E94587D00B0E050 /* PagerWorker.swift */,
+			);
+			name = Pager;
+			sourceTree = "<group>";
+		};
+		B27B536E1E945BC000B0E050 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B27B536F1E945BC600B0E050 /* Storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B27B536F1E945BC600B0E050 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B27B53701E945BF000B0E050 /* LaunchScreen.storyboard */,
+				B27B53721E945BF000B0E050 /* Main.storyboard */,
+				B27B53781E945C0700B0E050 /* Dashboard.storyboard */,
+				B27B537C1E945C1600B0E050 /* Expenses.storyboard */,
+				B27B53801E945C2200B0E050 /* Inbox.storyboard */,
+				B27B53841E945E3600B0E050 /* InvoicesAndReceipts.storyboard */,
+				B2FC674B1E982FA50003A35C /* Auth.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		B27B53881E945F0500B0E050 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B27B53891E945F2100B0E050 /* DashboardConfigurator.swift */,
+				B27B538A1E945F2100B0E050 /* DashboardInteractor.swift */,
+				B27B538B1E945F2100B0E050 /* DashboardModels.swift */,
+				B27B538C1E945F2100B0E050 /* DashboardPresenter.swift */,
+				B27B538D1E945F2100B0E050 /* DashboardRouter.swift */,
+				B27B538E1E945F2100B0E050 /* DashboardViewController.swift */,
+				B27B538F1E945F2100B0E050 /* DashboardWorker.swift */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		B27B539E1E945F7C00B0E050 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				B27B539F1E945F9400B0E050 /* ExpensesConfigurator.swift */,
+				B27B53A01E945F9400B0E050 /* ExpensesInteractor.swift */,
+				B27B53A11E945F9400B0E050 /* ExpensesModels.swift */,
+				B27B53A21E945F9400B0E050 /* ExpensesPresenter.swift */,
+				B27B53A31E945F9400B0E050 /* ExpensesRouter.swift */,
+				B27B53A41E945F9400B0E050 /* ExpensesViewController.swift */,
+				B27B53A51E945F9400B0E050 /* ExpensesWorker.swift */,
+			);
+			name = Expenses;
+			sourceTree = "<group>";
+		};
+		B27B53B41E945FB000B0E050 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				B283CBD81E96E899008A3313 /* DataSource */,
+				B283CBCE1E96CB2B008A3313 /* Cell */,
+				B27B53B51E945FC600B0E050 /* InboxConfigurator.swift */,
+				B27B53B61E945FC600B0E050 /* InboxInteractor.swift */,
+				B27B53B71E945FC600B0E050 /* InboxModels.swift */,
+				B27B53B81E945FC600B0E050 /* InboxPresenter.swift */,
+				B27B53B91E945FC600B0E050 /* InboxRouter.swift */,
+				B27B53BA1E945FC600B0E050 /* InboxViewController.swift */,
+				B27B53BB1E945FC600B0E050 /* InboxWorker.swift */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		B283CBBE1E955C53008A3313 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B283CBBF1E955C7C008A3313 /* RebotColor.swift */,
+				B283CBC11E955E57008A3313 /* RebotValueWrapper.swift */,
+				B299B7991E993ACE002BFA87 /* RebotDateConverter.swift */,
+				B299B7A61E9AAB02002BFA87 /* RebotValidator.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B283CBC31E956011008A3313 /* Sharable */ = {
+			isa = PBXGroup;
+			children = (
+				B283CBC41E956033008A3313 /* Errorable.swift */,
+				B299B7B41E9ACD98002BFA87 /* Spinnable.swift */,
+				B299B7961E9915B9002BFA87 /* Managed.swift */,
+				B299B79F1E995EE3002BFA87 /* ManagedCrud.swift */,
+			);
+			name = Sharable;
+			sourceTree = "<group>";
+		};
+		B283CBCE1E96CB2B008A3313 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B283CBCF1E96CB7A008A3313 /* InboxCell.swift */,
+				B283CBD21E96CB97008A3313 /* InboxCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B283CBD81E96E899008A3313 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */,
+				B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */,
+				B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */,
+				B2D3ABF11E97D53C00293B8C /* InboxDataSourcePresenter.swift */,
+				B2D3ABF31E97D53C00293B8C /* InboxDataSource.swift */,
+				B2D3ABF41E97D53C00293B8C /* InboxDataSourceWorker.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		B299B78D1E99099E002BFA87 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		B299B79C1E993B89002BFA87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B299B79D1E993BAE002BFA87 /* RebotDateConverterTest.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B299B7AC1E9AAFD1002BFA87 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */,
+				B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		B299B7B71E9AD9FC002BFA87 /* Sharable */ = {
+			isa = PBXGroup;
+			children = (
+				B299B7B81E9ADA08002BFA87 /* Worker */,
+			);
+			name = Sharable;
+			sourceTree = "<group>";
+		};
+		B299B7B81E9ADA08002BFA87 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */,
+			);
+			name = Worker;
+			sourceTree = "<group>";
+		};
+		B2FB68311E93D122009560BD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB68351E93D203009560BD /* DTO */,
+				B2FB68321E93D12B009560BD /* Router */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B2FB68321E93D12B009560BD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB68331E93D151009560BD /* Router.swift */,
+				B27B53561E94542900B0E050 /* API.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		B2FB68351E93D203009560BD /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB68361E93D218009560BD /* SignUpResponse.swift */,
+				B2FB683E1E93EA20009560BD /* ConvertedInvoiceResponse.swift */,
+				B2FB68431E93F5A1009560BD /* ForgotPasswordResponse.swift */,
+				B2FB68451E93F675009560BD /* InvoiceStatusToShowResponse.swift */,
+				B2FB68471E93F7F3009560BD /* GetConvertedInvoiceResponse.swift */,
+				B2FB68491E93FB16009560BD /* CategoryResponse.swift */,
+				B2FB684B1E93FC1E009560BD /* FileUploadResponse.swift */,
+				B2FB684D1E93FF22009560BD /* XeroExpenseCategoryResponse.swift */,
+				B2FB684F1E93FFB5009560BD /* QBExpenseCategoryResponse.swift */,
+				B2FB68511E940478009560BD /* LineChartResponse.swift */,
+				B2FB68531E9406D9009560BD /* SupplierResponse.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		B2FB68381E93D320009560BD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B299B7AC1E9AAFD1002BFA87 /* Settings */,
+				B283CBC31E956011008A3313 /* Sharable */,
+				B283CBBE1E955C53008A3313 /* Utils */,
+				B27B53521E944DD700B0E050 /* Extension */,
+				B2FB68401E93F182009560BD /* Formatter */,
+				B2FB683B1E93D343009560BD /* Networking */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		B2FB683B1E93D343009560BD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B2FB683C1E93D355009560BD /* JSONable.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B2FB68401E93F182009560BD /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				B27B53501E944DC800B0E050 /* DateFormaters.swift */,
+				B283CBC61E9563BF008A3313 /* NumberFormaters.swift */,
+				B283CBC91E959473008A3313 /* LineXAxeFormatter.swift */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
+		B2FC67531E983C740003A35C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC676B1E984E130003A35C /* Complete */,
+				B2FC676A1E984E0D0003A35C /* SignUp */,
+				B2FC67541E983C7C0003A35C /* SignIn */,
+				B2FC67991E9850CC0003A35C /* SignBaseViewController.swift */,
+				B299B7A91E9AAE45002BFA87 /* EmailPasswordViewController.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		B2FC67541E983C7C0003A35C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC67551E983C9E0003A35C /* SignInConfigurator.swift */,
+				B2FC67561E983C9E0003A35C /* SignInInteractor.swift */,
+				B2FC67571E983C9E0003A35C /* SignInModels.swift */,
+				B2FC67581E983C9E0003A35C /* SignInPresenter.swift */,
+				B2FC67591E983C9E0003A35C /* SignInRouter.swift */,
+				B2FC675A1E983C9E0003A35C /* SignInViewController.swift */,
+				B2FC675B1E983C9E0003A35C /* SignInWorker.swift */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
+		B2FC676A1E984E0D0003A35C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC676C1E984E390003A35C /* SignUpConfigurator.swift */,
+				B2FC676D1E984E390003A35C /* SignUpInteractor.swift */,
+				B2FC676E1E984E390003A35C /* SignUpModels.swift */,
+				B2FC676F1E984E390003A35C /* SignUpPresenter.swift */,
+				B2FC67701E984E390003A35C /* SignUpRouter.swift */,
+				B2FC67711E984E390003A35C /* SignUpViewController.swift */,
+				B2FC67721E984E390003A35C /* SignUpWorker.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		B2FC676B1E984E130003A35C /* Complete */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC67811E984E560003A35C /* CompleteProfileConfigurator.swift */,
+				B2FC67821E984E560003A35C /* CompleteProfileInteractor.swift */,
+				B2FC67831E984E560003A35C /* CompleteProfileModels.swift */,
+				B2FC67841E984E560003A35C /* CompleteProfilePresenter.swift */,
+				B2FC67851E984E560003A35C /* CompleteProfileRouter.swift */,
+				B2FC67861E984E560003A35C /* CompleteProfileViewController.swift */,
+				B2FC67871E984E560003A35C /* CompleteProfileWorker.swift */,
+			);
+			name = Complete;
+			sourceTree = "<group>";
+		};
+		B2FC67A21E98F7600003A35C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2FC67A31E98F7A90003A35C /* ReceiptBot.xcdatamodeld */,
+				B2FC67A71E98FD060003A35C /* UserInfo.swift */,
+				B2FC67AA1E98FED90003A35C /* Invoice.swift */,
+				B2FC67AD1E9900920003A35C /* Category.swift */,
+				B2FC67B01E9900F00003A35C /* Expense.swift */,
+				B2FC67B31E9904C70003A35C /* Supplier.swift */,
+				B2FC67B61E9905870003A35C /* XeroCategory.swift */,
+				B2FC67B91E9905EA0003A35C /* QboCategory.swift */,
+				B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		CD5F48D88950EEE2C1C52DD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0055D58A78E5AD565A02578F /* Pods-ReceiptBot.debug.xcconfig */,
+				52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */,
+				232B5C95BDEA8FE6ECD87D20 /* Pods-ReceiptBotTests.debug.xcconfig */,
+				52CB11C467AE2FEA740D3E72 /* Pods-ReceiptBotTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B22B11B41E89D5C7009D3E76 /* ReceiptBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22B11D41E89D5C8009D3E76 /* Build configuration list for PBXNativeTarget "ReceiptBot" */;
+			buildPhases = (
+				F2195B6C2FBE4CC127EB542A /* [CP] Check Pods Manifest.lock */,
+				B22B11B11E89D5C7009D3E76 /* Sources */,
+				B22B11B21E89D5C7009D3E76 /* Frameworks */,
+				B22B11B31E89D5C7009D3E76 /* Resources */,
+				DCDE838A0E1584DB85E1A875 /* [CP] Embed Pods Frameworks */,
+				94BE068DF41988A145F9AA19 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReceiptBot;
+			productName = ReceiptBot;
+			productReference = B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B22B11CA1E89D5C8009D3E76 /* ReceiptBotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22B11D71E89D5C8009D3E76 /* Build configuration list for PBXNativeTarget "ReceiptBotTests" */;
+			buildPhases = (
+				7C874180B7E44EF4110FDC6E /* [CP] Check Pods Manifest.lock */,
+				B22B11C71E89D5C8009D3E76 /* Sources */,
+				B22B11C81E89D5C8009D3E76 /* Frameworks */,
+				B22B11C91E89D5C8009D3E76 /* Resources */,
+				92F49AFB0D5779DC067BAEE9 /* [CP] Embed Pods Frameworks */,
+				CA9EE6E54F4FDD154C55E459 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B22B11CD1E89D5C8009D3E76 /* PBXTargetDependency */,
+			);
+			name = ReceiptBotTests;
+			productName = ReceiptBotTests;
+			productReference = B22B11CB1E89D5C8009D3E76 /* ReceiptBotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B22B11AD1E89D5C7009D3E76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = receiptbot;
+				TargetAttributes = {
+					B22B11B41E89D5C7009D3E76 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2JRU28287L;
+						ProvisioningStyle = Automatic;
+					};
+					B22B11CA1E89D5C8009D3E76 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B22B11B41E89D5C7009D3E76;
+					};
+				};
+			};
+			buildConfigurationList = B22B11B01E89D5C7009D3E76 /* Build configuration list for PBXProject "ReceiptBot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B22B11AC1E89D5C7009D3E76;
+			productRefGroup = B22B11B61E89D5C8009D3E76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B22B11B41E89D5C7009D3E76 /* ReceiptBot */,
+				B22B11CA1E89D5C8009D3E76 /* ReceiptBotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B22B11B31E89D5C7009D3E76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FC674D1E982FA50003A35C /* Auth.storyboard in Resources */,
+				B27B537E1E945C1600B0E050 /* Expenses.storyboard in Resources */,
+				B27B53761E945BF000B0E050 /* Main.storyboard in Resources */,
+				B27B53861E945E3600B0E050 /* InvoicesAndReceipts.storyboard in Resources */,
+				B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */,
+				B27B53741E945BF000B0E050 /* LaunchScreen.storyboard in Resources */,
+				B27B537A1E945C0700B0E050 /* Dashboard.storyboard in Resources */,
+				B283CBD31E96CB97008A3313 /* InboxCell.xib in Resources */,
+				B27B53821E945C2200B0E050 /* Inbox.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22B11C91E89D5C8009D3E76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B27B53751E945BF000B0E050 /* LaunchScreen.storyboard in Resources */,
+				B27B537F1E945C1600B0E050 /* Expenses.storyboard in Resources */,
+				B27B537B1E945C0700B0E050 /* Dashboard.storyboard in Resources */,
+				B27B53771E945BF000B0E050 /* Main.storyboard in Resources */,
+				B2FC674E1E9832170003A35C /* Assets.xcassets in Resources */,
+				B283CBD41E96CB97008A3313 /* InboxCell.xib in Resources */,
+				B27B53831E945C2200B0E050 /* Inbox.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C874180B7E44EF4110FDC6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92F49AFB0D5779DC067BAEE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94BE068DF41988A145F9AA19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA9EE6E54F4FDD154C55E459 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCDE838A0E1584DB85E1A875 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2195B6C2FBE4CC127EB542A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B22B11B11E89D5C7009D3E76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
+				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
+				B22B11BD1E89D5C8009D3E76 /* SecondViewController.swift in Sources */,
+				B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */,
+				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
+				B27B539C1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
+				B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
+				B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
+				B2FB684A1E93FB16009560BD /* CategoryResponse.swift in Sources */,
+				B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
+				B2FC67941E984E560003A35C /* CompleteProfileWorker.swift in Sources */,
+				B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */,
+				B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */,
+				B2FC67BA1E9905EA0003A35C /* QboCategory.swift in Sources */,
+				B2FB68371E93D218009560BD /* SignUpResponse.swift in Sources */,
+				B283CBC51E956033008A3313 /* Errorable.swift in Sources */,
+				B27B53C81E945FC600B0E050 /* InboxWorker.swift in Sources */,
+				B27B53BC1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
+				B27B53B01E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
+				B27B53C41E945FC600B0E050 /* InboxRouter.swift in Sources */,
+				B27B53921E945F2100B0E050 /* DashboardInteractor.swift in Sources */,
+				B2FC67B41E9904C70003A35C /* Supplier.swift in Sources */,
+				B2FC678E1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */,
+				B299B79A1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */,
+				B27B53BE1E945FC600B0E050 /* InboxInteractor.swift in Sources */,
+				B2FC679A1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
+				B27B53511E944DC800B0E050 /* DateFormaters.swift in Sources */,
+				B2D3ABFB1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
+				B2D3AC011E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
+				B2FB68481E93F7F3009560BD /* GetConvertedInvoiceResponse.swift in Sources */,
+				B299B7A01E995EE3002BFA87 /* ManagedCrud.swift in Sources */,
+				B2FC677D1E984E390003A35C /* SignUpViewController.swift in Sources */,
+				B299B7971E9915B9002BFA87 /* Managed.swift in Sources */,
+				B2FC675E1E983C9E0003A35C /* SignInInteractor.swift in Sources */,
+				B27B53AE1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
+				B283CBC21E955E57008A3313 /* RebotValueWrapper.swift in Sources */,
+				B2FC67681E983C9E0003A35C /* SignInWorker.swift in Sources */,
+				B2FB683F1E93EA20009560BD /* ConvertedInvoiceResponse.swift in Sources */,
+				B283CBC01E955C7C008A3313 /* RebotColor.swift in Sources */,
+				B2FC67901E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
+				B22B11BB1E89D5C8009D3E76 /* FirstViewController.swift in Sources */,
+				B27B53981E945F2100B0E050 /* DashboardRouter.swift in Sources */,
+				B2FC678A1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */,
+				B2FC67661E983C9E0003A35C /* SignInViewController.swift in Sources */,
+				B2FC67BD1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
+				B2D3AC041E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
+				B27B53C61E945FC600B0E050 /* InboxViewController.swift in Sources */,
+				B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */,
+				B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */,
+				B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
+				B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */,
+				B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
+				B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
+				B2FC67AB1E98FED90003A35C /* Invoice.swift in Sources */,
+				B27B53B21E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
+				B2FB684C1E93FC1E009560BD /* FileUploadResponse.swift in Sources */,
+				B2FB68521E940478009560BD /* LineChartResponse.swift in Sources */,
+				B2FC67641E983C9E0003A35C /* SignInRouter.swift in Sources */,
+				B27B53601E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
+				B2FB68341E93D151009560BD /* Router.swift in Sources */,
+				B2FC678C1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
+				B2FC67511E983BAD0003A35C /* TextField+Rebotise.swift in Sources */,
+				B27B53571E94542900B0E050 /* API.swift in Sources */,
+				B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */,
+				B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */,
+				B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
+				B2FC67881E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
+				B27B53AA1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
+				B27B53C01E945FC600B0E050 /* InboxModels.swift in Sources */,
+				B27B53641E94587D00B0E050 /* PagerModels.swift in Sources */,
+				B27B53A81E945F9400B0E050 /* ExpensesInteractor.swift in Sources */,
+				B27B536C1E94587D00B0E050 /* PagerWorker.swift in Sources */,
+				B2FC67B71E9905870003A35C /* XeroCategory.swift in Sources */,
+				B2FC67921E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
+				B27B53961E945F2100B0E050 /* DashboardPresenter.swift in Sources */,
+				B2FC67751E984E390003A35C /* SignUpInteractor.swift in Sources */,
+				B2FB68461E93F675009560BD /* InvoiceStatusToShowResponse.swift in Sources */,
+				B2FC677B1E984E390003A35C /* SignUpRouter.swift in Sources */,
+				B2D3ABF91E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
+				B283CBCA1E959473008A3313 /* LineXAxeFormatter.swift in Sources */,
+				B2FB68541E9406D9009560BD /* SupplierResponse.swift in Sources */,
+				B2FC677F1E984E390003A35C /* SignUpWorker.swift in Sources */,
+				B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
+				B2FB68501E93FFB5009560BD /* QBExpenseCategoryResponse.swift in Sources */,
+				B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */,
+				B2FC67B11E9900F00003A35C /* Expense.swift in Sources */,
+				B27B53901E945F2100B0E050 /* DashboardConfigurator.swift in Sources */,
+				B2FC67601E983C9E0003A35C /* SignInModels.swift in Sources */,
+				B27B53681E94587D00B0E050 /* PagerRouter.swift in Sources */,
+				B27B53661E94587D00B0E050 /* PagerPresenter.swift in Sources */,
+				B27B53941E945F2100B0E050 /* DashboardModels.swift in Sources */,
+				B2FC675C1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
+				B299B7AA1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */,
+				B2FC67A51E98F7A90003A35C /* ReceiptBot.xcdatamodeld in Sources */,
+				B2FC67AE1E9900920003A35C /* Category.swift in Sources */,
+				B2FB684E1E93FF22009560BD /* XeroExpenseCategoryResponse.swift in Sources */,
+				B299B7BA1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
+				B299B7B11E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
+				B299B7941E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */,
+				B299B78F1E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
+				B2FB683D1E93D355009560BD /* JSONable.swift in Sources */,
+				B27B53621E94587D00B0E050 /* PagerInteractor.swift in Sources */,
+				B283CBD01E96CB7A008A3313 /* InboxCell.swift in Sources */,
+				B2FB68441E93F5A1009560BD /* ForgotPasswordResponse.swift in Sources */,
+				B27B539A1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
+				B2FC67A81E98FD060003A35C /* UserInfo.swift in Sources */,
+				B299B7AE1E9AAFF0002BFA87 /* AppSettings.swift in Sources */,
+				B299B7B51E9ACD98002BFA87 /* Spinnable.swift in Sources */,
+				B27B53C21E945FC600B0E050 /* InboxPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22B11C71E89D5C8009D3E76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B299B79E1E993BAE002BFA87 /* RebotDateConverterTest.swift in Sources */,
+				B2D3AC001E97D53C00293B8C /* InboxDataSource.swift in Sources */,
+				B283CBCC1E959928008A3313 /* RebotValueWrapper.swift in Sources */,
+				B2FC675D1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
+				B2FC67AC1E98FED90003A35C /* Invoice.swift in Sources */,
+				B27B53631E94587D00B0E050 /* PagerInteractor.swift in Sources */,
+				B27B53611E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
+				B27B539D1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
+				B2FC67BE1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
+				B27B53C31E945FC600B0E050 /* InboxPresenter.swift in Sources */,
+				B2FC67691E983C9E0003A35C /* SignInWorker.swift in Sources */,
+				B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
+				B2FC67911E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
+				B27B53C51E945FC600B0E050 /* InboxRouter.swift in Sources */,
+				B2D3AC0C1E97E7E300293B8C /* FileUploadResponse.swift in Sources */,
+				B2D3ABF81E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
+				B27B53A71E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
+				B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */,
+				B27B536B1E94587D00B0E050 /* PagerViewController.swift in Sources */,
+				B2FC675F1E983C9E0003A35C /* SignInInteractor.swift in Sources */,
+				B27B53AB1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
+				B27B53651E94587D00B0E050 /* PagerModels.swift in Sources */,
+				B299B79B1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */,
+				B2FC678F1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */,
+				B2FC67B21E9900F00003A35C /* Expense.swift in Sources */,
+				B2FC677A1E984E390003A35C /* SignUpPresenter.swift in Sources */,
+				B2FC677C1E984E390003A35C /* SignUpRouter.swift in Sources */,
+				B2D3AC0B1E97E7E300293B8C /* CategoryResponse.swift in Sources */,
+				B2FC67A11E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
+				B2FC67671E983C9E0003A35C /* SignInViewController.swift in Sources */,
+				B283CBCB1E9594A7008A3313 /* LineXAxeFormatter.swift in Sources */,
+				B283CBD71E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
+				B27B536D1E94587D00B0E050 /* PagerWorker.swift in Sources */,
+				B2FC67891E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
+				B299B7911E990FA7002BFA87 /* Router.swift in Sources */,
+				B27B53A91E945F9400B0E050 /* ExpensesInteractor.swift in Sources */,
+				B283CBC81E9564B0008A3313 /* NumberFormaters.swift in Sources */,
+				B2D3AC101E97E7E300293B8C /* SupplierResponse.swift in Sources */,
+				B2FC67801E984E390003A35C /* SignUpWorker.swift in Sources */,
+				B2FC67781E984E390003A35C /* SignUpModels.swift in Sources */,
+				B299B7B61E9ACD98002BFA87 /* Spinnable.swift in Sources */,
+				B2D3AC071E97E7E300293B8C /* ConvertedInvoiceResponse.swift in Sources */,
+				B299B7921E990FAA002BFA87 /* API.swift in Sources */,
+				B27B53691E94587D00B0E050 /* PagerRouter.swift in Sources */,
+				B27B53AD1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
+				B27B53B31E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
+				B27B53991E945F2100B0E050 /* DashboardRouter.swift in Sources */,
+				B27B53671E94587D00B0E050 /* PagerPresenter.swift in Sources */,
+				B2D3AC131E97EAA000293B8C /* RebotColor.swift in Sources */,
+				B27B53551E944E6600B0E050 /* DateFormaters.swift in Sources */,
+				B270DB501E940A61008B5D22 /* DateFormattersTest.swift in Sources */,
+				B27B53911E945F2100B0E050 /* DashboardConfigurator.swift in Sources */,
+				B2FC678B1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */,
+				B299B7B31E9AC0B9002BFA87 /* AppDelegate.swift in Sources */,
+				B2D3AC021E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
+				B299B7951E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */,
+				B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */,
+				B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
+				B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
+				B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
+				B2D3AC061E97E7E300293B8C /* SignUpResponse.swift in Sources */,
+				B2FC677E1E984E390003A35C /* SignUpViewController.swift in Sources */,
+				B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
+				B2D3AC081E97E7E300293B8C /* ForgotPasswordResponse.swift in Sources */,
+				B2FC67631E983C9E0003A35C /* SignInPresenter.swift in Sources */,
+				B2D3AC091E97E7E300293B8C /* InvoiceStatusToShowResponse.swift in Sources */,
+				B27B53C91E945FC600B0E050 /* InboxWorker.swift in Sources */,
+				B2D3AC0E1E97E7E300293B8C /* QBExpenseCategoryResponse.swift in Sources */,
+				B283CBCD1E959CD0008A3313 /* Errorable.swift in Sources */,
+				B27B53C11E945FC600B0E050 /* InboxModels.swift in Sources */,
+				B2FC67521E983BAD0003A35C /* TextField+Rebotise.swift in Sources */,
+				B2FC67951E984E560003A35C /* CompleteProfileWorker.swift in Sources */,
+				B2D3AC121E97E7FB00293B8C /* JSONObject+DateFormat.swift in Sources */,
+				B2FC67B51E9904C70003A35C /* Supplier.swift in Sources */,
+				B2FC67B81E9905870003A35C /* XeroCategory.swift in Sources */,
+				B27B53971E945F2100B0E050 /* DashboardPresenter.swift in Sources */,
+				B2FC67761E984E390003A35C /* SignUpInteractor.swift in Sources */,
+				B27B53BF1E945FC600B0E050 /* InboxInteractor.swift in Sources */,
+				B299B7A11E995EE3002BFA87 /* ManagedCrud.swift in Sources */,
+				B2D3AC0A1E97E7E300293B8C /* GetConvertedInvoiceResponse.swift in Sources */,
+				B2D3AC0D1E97E7E300293B8C /* XeroExpenseCategoryResponse.swift in Sources */,
+				B299B7AF1E9AAFF0002BFA87 /* AppSettings.swift in Sources */,
+				B2FC679E1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
+				B299B7981E9915B9002BFA87 /* Managed.swift in Sources */,
+				B27B53BD1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
+				B299B7AB1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */,
+				B299B7A81E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
+				B27B53931E945F2100B0E050 /* DashboardInteractor.swift in Sources */,
+				B2FC67741E984E390003A35C /* SignUpConfigurator.swift in Sources */,
+				B2D3AC0F1E97E7E300293B8C /* LineChartResponse.swift in Sources */,
+				B2FC67A61E98F7A90003A35C /* ReceiptBot.xcdatamodeld in Sources */,
+				B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */,
+				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
+				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
+				B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */,
+				B283CBD11E96CB7A008A3313 /* InboxCell.swift in Sources */,
+				B27B53C71E945FC600B0E050 /* InboxViewController.swift in Sources */,
+				B2D3ABFC1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
+				B27B53B11E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
+				B27B53AF1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
+				B2FC67AF1E9900920003A35C /* Category.swift in Sources */,
+				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
+				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
+				B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
+				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
+				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
+				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
+				B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B22B11CD1E89D5C8009D3E76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B22B11B41E89D5C7009D3E76 /* ReceiptBot */;
+			targetProxy = B22B11CC1E89D5C8009D3E76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B27B53701E945BF000B0E050 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B53711E945BF000B0E050 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B27B53721E945BF000B0E050 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B53731E945BF000B0E050 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B27B53781E945C0700B0E050 /* Dashboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B53791E945C0700B0E050 /* Base */,
+			);
+			name = Dashboard.storyboard;
+			sourceTree = "<group>";
+		};
+		B27B537C1E945C1600B0E050 /* Expenses.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B537D1E945C1600B0E050 /* Base */,
+			);
+			name = Expenses.storyboard;
+			sourceTree = "<group>";
+		};
+		B27B53801E945C2200B0E050 /* Inbox.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B53811E945C2200B0E050 /* Base */,
+			);
+			name = Inbox.storyboard;
+			sourceTree = "<group>";
+		};
+		B27B53841E945E3600B0E050 /* InvoicesAndReceipts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B27B53851E945E3600B0E050 /* Base */,
+			);
+			name = InvoicesAndReceipts.storyboard;
+			sourceTree = "<group>";
+		};
+		B2FC674B1E982FA50003A35C /* Auth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FC674C1E982FA50003A35C /* Base */,
+			);
+			name = Auth.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B22B11D21E89D5C8009D3E76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B22B11D31E89D5C8009D3E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B22B11D51E89D5C8009D3E76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0055D58A78E5AD565A02578F /* Pods-ReceiptBot.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				INFOPLIST_FILE = ReceiptBot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B22B11D61E89D5C8009D3E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				INFOPLIST_FILE = ReceiptBot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B22B11D81E89D5C8009D3E76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232B5C95BDEA8FE6ECD87D20 /* Pods-ReceiptBotTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReceiptBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReceiptBot.app/ReceiptBot";
+			};
+			name = Debug;
+		};
+		B22B11D91E89D5C8009D3E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CB11C467AE2FEA740D3E72 /* Pods-ReceiptBotTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReceiptBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReceiptBot.app/ReceiptBot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B22B11B01E89D5C7009D3E76 /* Build configuration list for PBXProject "ReceiptBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22B11D21E89D5C8009D3E76 /* Debug */,
+				B22B11D31E89D5C8009D3E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B22B11D41E89D5C8009D3E76 /* Build configuration list for PBXNativeTarget "ReceiptBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22B11D51E89D5C8009D3E76 /* Debug */,
+				B22B11D61E89D5C8009D3E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B22B11D71E89D5C8009D3E76 /* Build configuration list for PBXNativeTarget "ReceiptBotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22B11D81E89D5C8009D3E76 /* Debug */,
+				B22B11D91E89D5C8009D3E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2FC67A31E98F7A90003A35C /* ReceiptBot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2FC67A41E98F7A90003A35C /* ReceiptBot.xcdatamodel */,
+			);
+			currentVersion = B2FC67A41E98F7A90003A35C /* ReceiptBot.xcdatamodel */;
+			name = ReceiptBot.xcdatamodeld;
+			path = DataModel/ReceiptBot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B22B11AD1E89D5C7009D3E76 /* Project object */;
+}

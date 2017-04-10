@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tog-j6-bZ8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Idm-4M-cQD">
+            <objects>
+                <viewController id="Tog-j6-bZ8" customClass="DashboardViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oRs-df-9dt"/>
+                        <viewControllerLayoutGuide type="bottom" id="k8j-wD-GNb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FLG-8d-Kdg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naS-Hc-yRQ" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="35" width="345" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k8j-wD-GNb" firstAttribute="top" secondItem="naS-Hc-yRQ" secondAttribute="bottom" constant="15" id="J0D-1K-RYP"/>
+                            <constraint firstItem="naS-Hc-yRQ" firstAttribute="leading" secondItem="FLG-8d-Kdg" secondAttribute="leading" constant="15" id="nz2-sN-GEO"/>
+                            <constraint firstItem="naS-Hc-yRQ" firstAttribute="top" secondItem="oRs-df-9dt" secondAttribute="bottom" constant="15" id="sYA-yb-IJ0"/>
+                            <constraint firstAttribute="trailing" secondItem="naS-Hc-yRQ" secondAttribute="trailing" constant="15" id="x8q-sq-WN5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chart" destination="naS-Hc-yRQ" id="T8o-41-rqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QA-q5-ySq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="111"/>
+        </scene>
+    </scenes>
+</document>

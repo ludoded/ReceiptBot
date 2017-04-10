@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Expense" representedClassName="Expense" syncable="YES">
+        <attribute name="amount1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month6" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Invoice" representedClassName="Invoice" syncable="YES">
+        <attribute name="convertedInvoiceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grossAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="invoiceDueDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="invoiceNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="netAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalFilename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalInvoiceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supplierId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taxAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taxPercentage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="InvoiceStatus" representedClassName="InvoiceStatus" syncable="YES">
+        <attribute name="approved" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="exported" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pending" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="processing" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rejected" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="QboCategory" representedClassName="QboCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qboId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Supplier" representedClassName="Supplier" syncable="YES">
+        <attribute name="supplierName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vendorId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="accountingSoftware" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="accType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="businessSector" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orgId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="orgName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="XeroCategory" representedClassName="XeroCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xeroId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-36" positionY="153" width="128" height="60"/>
+        <element name="Expense" positionX="-9" positionY="135" width="128" height="225"/>
+        <element name="Invoice" positionX="-54" positionY="90" width="128" height="270"/>
+        <element name="InvoiceStatus" positionX="18" positionY="180" width="128" height="135"/>
+        <element name="QboCategory" positionX="36" positionY="189" width="128" height="75"/>
+        <element name="Supplier" positionX="-18" positionY="162" width="128" height="75"/>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="XeroCategory" positionX="0" positionY="171" width="128" height="75"/>
+    </elements>
+</model>
