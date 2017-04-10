@@ -16,7 +16,7 @@ protocol SignUpInteractorOutput {
 }
 
 class SignUpInteractor {
-    var output: SignUpInteractorOutput!
+    var output: (SignUpInteractorOutput & PasswordRecoveryInteractorOutput)!
     var worker: SignUpWorker!
     
     var email: String!
@@ -31,8 +31,21 @@ class SignUpInteractor {
         }
     }
     
+    func recoveryPassword(request: PasswordRecoveryModel.Request) {
+        let passwordWorker = PasswordRecoveryWorker(with: request.email)
+        passwordWorker.tryToRecovery { [weak self] (data) in
+            DispatchQueue.main.async { self?.passStatus(data: data) }
+        }
+    }
+    
+    /// MARK: passing data
     func pass(data: RebotValueWrapper<SignUpFirstResponse>) {
         let response = SignUp.Register.Response(data: data)
         output.presentRegister(response: response)
+    }
+    
+    func passStatus(data: RebotValueWrapper<StatusDetailResponse>) {
+        let response = PasswordRecoveryModel.Response(status: data)
+        output.presentRecoveredPassword(response: response)
     }
 }

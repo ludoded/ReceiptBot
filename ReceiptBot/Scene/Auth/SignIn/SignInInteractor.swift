@@ -16,7 +16,7 @@ protocol SignInInteractorOutput {
 }
 
 class SignInInteractor {
-    var output: SignInInteractorOutput!
+    var output: (SignInInteractorOutput & PasswordRecoveryInteractorOutput)!
     var worker: SignInWorker!
 
     // MARK: - Business logic
@@ -29,8 +29,21 @@ class SignInInteractor {
         }
     }
     
+    func recoveryPassword(request: PasswordRecoveryModel.Request) {
+        let passwordWorker = PasswordRecoveryWorker(with: request.email)
+        passwordWorker.tryToRecovery { [weak self] (data) in
+            DispatchQueue.main.async { self?.passStatus(data: data) }
+        }
+    }
+    
+    /// MARK: passing data
     func passAuthData(data: RebotValueWrapper<AuthResponse>) {
         let response = SignIn.Login.Response(data: data)
         output.presentLogin(response: response)
+    }
+    
+    func passStatus(data: RebotValueWrapper<StatusDetailResponse>) {
+        let response = PasswordRecoveryModel.Response(status: data)
+        output.presentRecoveredPassword(response: response)
     }
 }

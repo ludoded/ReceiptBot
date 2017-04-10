@@ -16,7 +16,7 @@ protocol SignInPresenterOutput: class, Errorable, Spinnable {
 }
 
 class SignInPresenter {
-    weak var output: SignInPresenterOutput!
+    weak var output: (SignInPresenterOutput & PasswordRecoveryPresenterOutput)!
 
     // MARK: - Presentation logic
 
@@ -26,6 +26,17 @@ class SignInPresenter {
         switch response.data {
         case .none(let message): output.show(type: .error(message: message))
         case .value: output.displayMain()
+        }
+    }
+    
+    func presentRecoveredPassword(response: PasswordRecoveryModel.Response) {
+        output.stopSpinning()
+        
+        switch response.status {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value(let status):
+            if status.status || status.isEmailVerified { output.show(type: .success(message: status.details)) }
+            else { output.show(type: .error(message: status.details)) }
         }
     }
 }

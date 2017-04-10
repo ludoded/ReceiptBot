@@ -13,16 +13,16 @@ import UIKit
 
 // MARK: - Connect View, Interactor, and Presenter
 
-extension SignUpViewController: SignUpPresenterOutput {
+extension SignUpViewController: SignUpPresenterOutput, PasswordRecoveryPresenterOutput {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.passDataToNextScene(segue: segue)
     }
 }
 
-extension SignUpInteractor: SignUpViewControllerOutput {
+extension SignUpInteractor: SignUpViewControllerOutput, PasswordRecoveryViewControllerOutput {
 }
 
-extension SignUpPresenter: SignUpInteractorOutput {
+extension SignUpPresenter: SignUpInteractorOutput, PasswordRecoveryInteractorOutput {
 }
 
 class SignUpConfigurator {

@@ -14,7 +14,7 @@
         <scene sceneID="P0i-sG-IK0">
             <objects>
                 <navigationController navigationBarHidden="YES" id="CLm-cb-t3N" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mgI-m9-dNd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgI-m9-dNd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -102,7 +102,7 @@
                                                                             <constraint firstAttribute="width" secondItem="pJp-tT-sCw" secondAttribute="height" multiplier="1:1" id="T0u-a7-5Bq"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rehan900" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-wn-DId" customClass="ErrorTextField" customModule="Material">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="irfan100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-wn-DId" customClass="ErrorTextField" customModule="Material">
                                                                         <rect key="frame" x="37" y="0.0" width="297" height="29"/>
                                                                         <color key="tintColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16329078801331853" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="textColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16542817008879024" alpha="1" colorSpace="calibratedRGB"/>

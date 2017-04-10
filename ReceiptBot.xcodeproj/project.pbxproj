@@ -131,6 +131,12 @@
 		B299B7B61E9ACD98002BFA87 /* Spinnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B41E9ACD98002BFA87 /* Spinnable.swift */; };
 		B299B7BA1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */; };
 		B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */; };
+		B2A054731E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */; };
+		B2A054741E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */; };
+		B2A054771E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */; };
+		B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */; };
+		B2A0547B1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */; };
+		B2A0547C1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -331,6 +337,9 @@
 		B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConfigurator.swift; path = Helper/Setting/AppConfigurator.swift; sourceTree = "<group>"; };
 		B299B7B41E9ACD98002BFA87 /* Spinnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinnable.swift; path = Helper/Sharable/Spinnable.swift; sourceTree = "<group>"; };
 		B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailPasswordWorker.swift; path = Scene/Sharable/Worker/EmailPasswordWorker.swift; sourceTree = "<group>"; };
+		B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryWorker.swift; path = Scene/Sharable/Worker/PasswordRecoveryWorker.swift; sourceTree = "<group>"; };
+		B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryModel.swift; path = Scene/Sharable/Models/PasswordRecoveryModel.swift; sourceTree = "<group>"; };
+		B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryOutputs.swift; path = Scene/Sharable/Output/PasswordRecoveryOutputs.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -672,6 +681,8 @@
 		B299B7B71E9AD9FC002BFA87 /* Sharable */ = {
 			isa = PBXGroup;
 			children = (
+				B2A054791E9BE42F00CF88D9 /* Output */,
+				B2A054751E9BE37800CF88D9 /* Models */,
 				B299B7B81E9ADA08002BFA87 /* Worker */,
 			);
 			name = Sharable;
@@ -681,8 +692,25 @@
 			isa = PBXGroup;
 			children = (
 				B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */,
+				B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */,
 			);
 			name = Worker;
+			sourceTree = "<group>";
+		};
+		B2A054751E9BE37800CF88D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2A054791E9BE42F00CF88D9 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */,
+			);
+			name = Output;
 			sourceTree = "<group>";
 		};
 		B2FB68311E93D122009560BD /* Networking */ = {
@@ -1095,12 +1123,14 @@
 				B2FC67661E983C9E0003A35C /* SignInViewController.swift in Sources */,
 				B2FC67BD1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
 				B2D3AC041E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
+				B2A0547B1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */,
 				B27B53C61E945FC600B0E050 /* InboxViewController.swift in Sources */,
 				B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */,
 				B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */,
 				B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
 				B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */,
 				B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
+				B2A054771E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
 				B2FC67AB1E98FED90003A35C /* Invoice.swift in Sources */,
 				B27B53B21E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
@@ -1112,6 +1142,7 @@
 				B2FC678C1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
 				B2FC67511E983BAD0003A35C /* TextField+Rebotise.swift in Sources */,
 				B27B53571E94542900B0E050 /* API.swift in Sources */,
+				B2A054731E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
 				B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */,
 				B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */,
 				B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
@@ -1171,6 +1202,7 @@
 				B2FC675D1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
 				B2FC67AC1E98FED90003A35C /* Invoice.swift in Sources */,
 				B27B53631E94587D00B0E050 /* PagerInteractor.swift in Sources */,
+				B2A0547C1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */,
 				B27B53611E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
 				B27B539D1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
 				B2FC67BE1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
@@ -1225,6 +1257,7 @@
 				B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
 				B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
 				B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
+				B2A054741E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
 				B2D3AC061E97E7E300293B8C /* SignUpResponse.swift in Sources */,
 				B2FC677E1E984E390003A35C /* SignUpViewController.swift in Sources */,
 				B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
@@ -1269,6 +1302,7 @@
 				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
 				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
 				B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
+				B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
 				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,

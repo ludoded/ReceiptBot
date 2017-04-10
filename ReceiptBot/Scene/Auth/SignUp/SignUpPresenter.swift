@@ -16,7 +16,7 @@ protocol SignUpPresenterOutput: class, Errorable, Spinnable {
 }
 
 class SignUpPresenter {
-    weak var output: SignUpPresenterOutput!
+    weak var output: (SignUpPresenterOutput & PasswordRecoveryPresenterOutput)!
 
     // MARK: - Presentation logic
     func presentRegister(response: SignUp.Register.Response) {
@@ -27,6 +27,17 @@ class SignUpPresenter {
         case .value(let data):
             let viewModel = SignUp.Register.ViewModel(email: data.email)
             output.displayRegister(viewModel: viewModel)
+        }
+    }
+    
+    func presentRecoveredPassword(response: PasswordRecoveryModel.Response) {
+        output.stopSpinning()
+        
+        switch response.status {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value(let status):
+            if status.status || status.isEmailVerified { output.show(type: .success(message: status.details)) }
+            else { output.show(type: .error(message: status.details)) }
         }
     }
 }

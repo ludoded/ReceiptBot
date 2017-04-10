@@ -20,7 +20,7 @@ protocol SignInViewControllerOutput {
 
 class SignInViewController: EmailPasswordViewController {
     fileprivate var spinner: MBProgressHUD?
-    var output: SignInViewControllerOutput!
+    var output: (SignInViewControllerOutput & PasswordRecoveryViewControllerOutput)!
     var router: SignInRouter!
     
     @IBAction func login(_ sender: Button) {
@@ -28,6 +28,7 @@ class SignInViewController: EmailPasswordViewController {
     }
     
     @IBAction func forgotPassword(_ sender: UIButton) {
+        recoverPassword()
     }
     
     @IBAction func openSignUp(_ sender: UIButton) {
@@ -47,6 +48,13 @@ class SignInViewController: EmailPasswordViewController {
         let request = SignIn.Login.Request(email: textFields?[0].text,
                                            password: textFields?[1].text)
         output.tryToLogin(request: request)
+        
+        startSpinning()
+    }
+    
+    func recoverPassword() {
+        let request = PasswordRecoveryModel.Request(email: textFields![0].text ?? "")
+        output.recoveryPassword(request: request)
         
         startSpinning()
     }

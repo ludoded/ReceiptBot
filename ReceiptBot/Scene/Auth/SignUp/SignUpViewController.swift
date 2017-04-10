@@ -17,7 +17,7 @@ protocol SignUpViewControllerOutput {
 }
 
 class SignUpViewController: EmailPasswordViewController {
-    var output: SignUpViewControllerOutput!
+    var output: (SignUpViewControllerOutput & PasswordRecoveryViewControllerOutput)!
     var router: SignUpRouter!
 
     @IBAction func register(_ sender: Button) {
@@ -25,6 +25,7 @@ class SignUpViewController: EmailPasswordViewController {
     }
     
     @IBAction func forgetPassword(_ sender: UIButton) {
+        recoverPassword()
     }
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -45,6 +46,13 @@ class SignUpViewController: EmailPasswordViewController {
         let request = SignUp.Register.Request(email: textFields[0].text,
                                               password: textFields[1].text)
         output.tryToSignUp(request: request)
+    }
+    
+    func recoverPassword() {
+        let request = PasswordRecoveryModel.Request(email: textFields![0].text ?? "")
+        output.recoveryPassword(request: request)
+        
+        startSpinning()
     }
 
     // MARK: - Display logic
