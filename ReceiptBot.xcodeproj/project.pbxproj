@@ -137,6 +137,10 @@
 		B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */; };
 		B2A0547B1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */; };
 		B2A0547C1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */; };
+		B2A0547E1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */; };
+		B2A0547F1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */; };
+		B2A054811E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */; };
+		B2A054821E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -340,6 +344,8 @@
 		B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryWorker.swift; path = Scene/Sharable/Worker/PasswordRecoveryWorker.swift; sourceTree = "<group>"; };
 		B2A054761E9BE3A300CF88D9 /* PasswordRecoveryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryModel.swift; path = Scene/Sharable/Models/PasswordRecoveryModel.swift; sourceTree = "<group>"; };
 		B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryOutputs.swift; path = Scene/Sharable/Output/PasswordRecoveryOutputs.swift; sourceTree = "<group>"; };
+		B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuthConfigurator.swift; path = Helper/Setting/GoogleAuthConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 				B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */,
 				B22B11C11E89D5C8009D3E76 /* Assets.xcassets */,
 				B22B11C61E89D5C8009D3E76 /* Info.plist */,
+				B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */,
 			);
 			path = ReceiptBot;
 			sourceTree = "<group>";
@@ -674,6 +681,7 @@
 			children = (
 				B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */,
 				B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */,
+				B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -917,7 +925,7 @@
 				TargetAttributes = {
 					B22B11B41E89D5C7009D3E76 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2JRU28287L;
+						DevelopmentTeam = QM96BQK26G;
 						ProvisioningStyle = Automatic;
 					};
 					B22B11CA1E89D5C8009D3E76 = {
@@ -956,6 +964,7 @@
 				B27B53761E945BF000B0E050 /* Main.storyboard in Resources */,
 				B27B53861E945E3600B0E050 /* InvoicesAndReceipts.storyboard in Resources */,
 				B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */,
+				B2A0547E1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */,
 				B27B53741E945BF000B0E050 /* LaunchScreen.storyboard in Resources */,
 				B27B537A1E945C0700B0E050 /* Dashboard.storyboard in Resources */,
 				B283CBD31E96CB97008A3313 /* InboxCell.xib in Resources */,
@@ -970,6 +979,7 @@
 				B27B53751E945BF000B0E050 /* LaunchScreen.storyboard in Resources */,
 				B27B537F1E945C1600B0E050 /* Expenses.storyboard in Resources */,
 				B27B537B1E945C0700B0E050 /* Dashboard.storyboard in Resources */,
+				B2A0547F1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */,
 				B27B53771E945BF000B0E050 /* Main.storyboard in Resources */,
 				B2FC674E1E9832170003A35C /* Assets.xcassets in Resources */,
 				B283CBD41E96CB97008A3313 /* InboxCell.xib in Resources */,
@@ -1143,6 +1153,7 @@
 				B2FC67511E983BAD0003A35C /* TextField+Rebotise.swift in Sources */,
 				B27B53571E94542900B0E050 /* API.swift in Sources */,
 				B2A054731E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
+				B2A054811E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */,
 				B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */,
 				B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */,
 				B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
@@ -1301,6 +1312,7 @@
 				B2FC67AF1E9900920003A35C /* Category.swift in Sources */,
 				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
 				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
+				B2A054821E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */,
 				B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
 				B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
@@ -1476,11 +1488,11 @@
 			baseConfigurationReference = 0055D58A78E5AD565A02578F /* Pods-ReceiptBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2JRU28287L;
+				DEVELOPMENT_TEAM = QM96BQK26G;
 				INFOPLIST_FILE = ReceiptBot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBot;
+				PRODUCT_BUNDLE_IDENTIFIER = ReceiptBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -1492,11 +1504,11 @@
 			baseConfigurationReference = 52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2JRU28287L;
+				DEVELOPMENT_TEAM = QM96BQK26G;
 				INFOPLIST_FILE = ReceiptBot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.ReceiptBot;
+				PRODUCT_BUNDLE_IDENTIFIER = ReceiptBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
