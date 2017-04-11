@@ -54,4 +54,8 @@ extension DatabaseManager {
         
         return result
     }
+    
+    func removeAll(obj: NSManagedObject) {
+        
+    }
 }

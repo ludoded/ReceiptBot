@@ -9,11 +9,18 @@
 //  clean architecture to your iOS and Mac projects, see http://clean-swift.com
 //
 
+import ActionSheetPicker_3_0
 import Material
 
 protocol CompleteProfileViewControllerOutput {
     var email: String! { get set }
-    func doSomething(request: CompleteProfile.Something.Request)
+    var countries: [String] { get }
+    var roles: [String] { get }
+    
+    var countryId: Int { get set }
+    var accountType: Int { get set }
+    
+    func completeRegistration(request: CompleteProfile.Registration.Request)
 }
 
 class CompleteProfileViewController: SignBaseViewController {
@@ -24,6 +31,7 @@ class CompleteProfileViewController: SignBaseViewController {
     @IBOutlet weak var accountType: UILabel!
     
     @IBAction func completeProfile(_ sender: Button) {
+        completeRegistration()
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -34,9 +42,11 @@ class CompleteProfileViewController: SignBaseViewController {
     }
     
     @IBAction func pickCountry(_ sender: UITapGestureRecognizer) {
+        displayCountryPicker()
     }
     
     @IBAction func pickAccountType(_ sender: UITapGestureRecognizer) {
+        displayRolePicker()
     }
     
     // MARK: - Object lifecycle
@@ -46,27 +56,45 @@ class CompleteProfileViewController: SignBaseViewController {
         CompleteProfileConfigurator.sharedInstance.configure(viewController: self)
     }
 
-    // MARK: - View lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        doSomethingOnLoad()
-    }
-
     // MARK: - Event handling
 
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
-        let request = CompleteProfile.Something.Request()
-        output.doSomething(request: request)
+    func completeRegistration() {
+        startSpinning()
+        
+        let request = CompleteProfile.Registration.Request(fullName: textFields[0].text ?? "",
+                                                           companyName: textFields[1].text ?? "")
+        output.completeRegistration(request: request)
     }
 
     // MARK: - Display logic
 
-    func displaySomething(viewModel: CompleteProfile.Something.ViewModel) {
-        // NOTE: Display the result from the Presenter
-
-        // nameTextField.text = viewModel.name
+    func displayHome() {
+        router.navigateToMain()
+    }
+    
+    func displayCountryPicker() {
+        let picker = ActionSheetStringPicker(title: "Pick the County",
+                                             rows: output.countries,
+                                             initialSelection: 0,
+                                             doneBlock: { [weak self] (_, index, value) in
+                                                self?.output.countryId = index
+                                                self?.country.text = (value as? String)
+                                            },
+                                             cancel: nil,
+                                             origin: self.view)
+        picker?.show()
+    }
+    
+    func displayRolePicker() {
+        let picker = ActionSheetStringPicker(title: "Pick Account Type",
+                                             rows: output.roles,
+                                             initialSelection: 0,
+                                             doneBlock: { [weak self] (_, index, value) in
+                                                self?.output.accountType = index
+                                                self?.accountType.text = (value as? String)
+                                            },
+                                             cancel: nil,
+                                             origin: self.view)
+        picker?.show()
     }
 }

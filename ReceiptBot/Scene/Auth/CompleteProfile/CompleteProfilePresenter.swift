@@ -11,23 +11,20 @@
 
 import UIKit
 
-protocol CompleteProfilePresenterInput {
-    func presentSomething(response: CompleteProfile.Something.Response)
+protocol CompleteProfilePresenterOutput: class, Errorable, Spinnable {
+    func displayHome()
 }
 
-protocol CompleteProfilePresenterOutput: class {
-    func displaySomething(viewModel: CompleteProfile.Something.ViewModel)
-}
-
-class CompleteProfilePresenter: CompleteProfilePresenterInput {
+class CompleteProfilePresenter {
     weak var output: CompleteProfilePresenterOutput!
 
     // MARK: - Presentation logic
-
-    func presentSomething(response: CompleteProfile.Something.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = CompleteProfile.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+    func presentAuthResponse(response: CompleteProfile.Registration.Response) {
+        output.stopSpinning()
+        
+        switch response.data {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value: output.displayHome()
+        }
     }
 }

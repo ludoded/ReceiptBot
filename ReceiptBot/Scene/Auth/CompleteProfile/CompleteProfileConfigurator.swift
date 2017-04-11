@@ -14,9 +14,6 @@ import UIKit
 // MARK: - Connect View, Interactor, and Presenter
 
 extension CompleteProfileViewController: CompleteProfilePresenterOutput {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        router.passDataToNextScene(segue: segue)
-    }
 }
 
 extension CompleteProfileInteractor: CompleteProfileViewControllerOutput {

@@ -12,9 +12,25 @@
 import UIKit
 
 class CompleteProfileWorker {
-    // MARK: - Business Logic
-  
-    func doSomeWork() {
-        // NOTE: Do the work
+    let params: CompleteProfile.Registration.Params
+    
+    /// TODO: replace all those params into struct
+    init(params: CompleteProfile.Registration.Params) {
+        self.params = params
+    }
+    
+    func completeRegistration(callback: @escaping (RebotValueWrapper<AuthResponse>) -> ()) {
+        AuthResponse.loadType(request: API.signUpSecond(params.params)) { (auth, message) in
+            guard message == nil else { callback(.none(message: message!)); return }
+            guard auth!.detail.isEmpty else { callback(.none(message: auth!.detail)); return }
+            
+            /// Save the response into database
+            let userInfo: UserInfo = DatabaseManager.shared.insert(response: auth!)
+            
+            /// Save the user info into singleton
+            AppSettings.shared.store(user: userInfo)
+            
+            callback(.value(auth!))
+        }
     }
 }

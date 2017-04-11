@@ -25,7 +25,7 @@ class SignUpRouter: SignUpRouterInput {
 
     // MARK: - Communication
     func passDataToNextScene(segue: UIStoryboardSegue) {
-        if segue.identifier == "ShowSomewhereScene" {
+        if segue.identifier == "ShowCompleteProfile" {
             passDataToProfileCompletionScene(segue: segue)
         }
     }

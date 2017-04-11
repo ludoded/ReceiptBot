@@ -14,7 +14,7 @@
         <scene sceneID="P0i-sG-IK0">
             <objects>
                 <navigationController navigationBarHidden="YES" id="CLm-cb-t3N" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgI-m9-dNd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mgI-m9-dNd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -509,7 +509,7 @@
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                                                 <color key="value" red="0.60392156860000001" green="0.80000000000000004" blue="0.16345293420000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email Address"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Full Name"/>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
                                                                                 <real key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
@@ -531,7 +531,7 @@
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                                                 <color key="value" red="0.60392156860000001" green="0.80000000000000004" blue="0.16345293420000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Organisation Name"/>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
                                                                                 <real key="value" value="0.0"/>
                                                                             </userDefinedRuntimeAttribute>
@@ -543,7 +543,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-VK-2B8">
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-VK-2B8">
                                                                         <rect key="frame" x="0.0" y="128" width="318" height="20.5"/>
                                                                         <gestureRecognizers/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -553,7 +553,7 @@
                                                                             <outletCollection property="gestureRecognizers" destination="SPI-Gs-XT8" appends="YES" id="9hN-eK-oMe"/>
                                                                         </connections>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Account Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-oI-xSS">
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Account Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-oI-xSS">
                                                                         <rect key="frame" x="0.0" y="183.5" width="318" height="20.5"/>
                                                                         <gestureRecognizers/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

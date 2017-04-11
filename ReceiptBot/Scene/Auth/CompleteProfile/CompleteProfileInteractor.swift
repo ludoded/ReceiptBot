@@ -11,31 +11,65 @@
 
 import UIKit
 
-protocol CompleteProfileInteractorInput {
-    func doSomething(request: CompleteProfile.Something.Request)
-}
-
 protocol CompleteProfileInteractorOutput {
-      func presentSomething(response: CompleteProfile.Something.Response)
+      func presentAuthResponse(response: CompleteProfile.Registration.Response)
 }
 
-class CompleteProfileInteractor: CompleteProfileInteractorInput {
+class CompleteProfileInteractor {
     var output: CompleteProfileInteractorOutput!
     var worker: CompleteProfileWorker!
     
     var email: String!
+    
+    /// Properties from pickers
+    var countryId = 0
+    var accountType = 0
+    
+    var countries: [String] {
+        return [
+            "Choose Country",
+            "United Kingdom"
+        ]
+    }
+    
+    var roles: [String] {
+        return [
+            "Choose Account Type",
+            "Accountant",
+            "BookKeeper",
+            "Enterpreneur",
+            "Finance Professional",
+            "Other",
+            "StartUp"
+        ]
+    }
 
     // MARK: - Business logic
-
-    func doSomething(request: CompleteProfile.Something.Request) {
-        // NOTE: Create some Worker to do the work
-
-        worker = CompleteProfileWorker()
-        worker.doSomeWork()
-
-        // NOTE: Pass the result to the Presenter
-
-        let response = CompleteProfile.Something.Response()
-        output.presentSomething(response: response)
+    func completeRegistration(request: CompleteProfile.Registration.Request) {
+        guard countryId != 0 else { pass(user: .none(message: "Pick the country!")); return }
+        guard accountType != 0 else { pass(user: .none(message: "Pick the account type!")); return }
+        guard !request.fullName.isEmpty  else { pass(user: .none(message: "Enter Full Name!")); return }
+        guard !request.companyName.isEmpty else { pass(user: .none(message: "Enter Organisation Name!")); return }
+        
+        let parameters = params(from: request)
+        worker = CompleteProfileWorker(params: parameters)
+        worker.completeRegistration { [weak self] (wrapper) in
+            DispatchQueue.main.async { self?.pass(user: wrapper) }
+        }
+    }
+    
+    func params(from request: CompleteProfile.Registration.Request) -> CompleteProfile.Registration.Params {
+        let parameters = CompleteProfile.Registration.Params(fullName: request.fullName,
+                                                             companyName: request.companyName,
+                                                             countryId: countryId,
+                                                             accType: accountType,
+                                                             email: email,
+                                                             userType: 1) /// Android sets userType to 1
+        return parameters
+    }
+    
+    func pass(user: RebotValueWrapper<AuthResponse>) {
+        let response = CompleteProfile.Registration.Response(data: user)
+        output.presentAuthResponse(response: response)
     }
 }

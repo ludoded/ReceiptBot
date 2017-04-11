@@ -32,16 +32,16 @@ class EmailPasswordViewController: SignBaseViewController {
         let everythingValid = Observable.combineLatest(emailValid, passwordValid) { $0 && $1 }
         
         emailValid
-            .bindTo(textFields![0].rx.isErrorRevealed)
+            .bind(to: textFields![0].rx.isErrorRevealed)
             .disposed(by: disposeBag)
         emailValid
-            .bindTo(recoveryButton.rx.isEnabled)
+            .bind(to: recoveryButton.rx.isEnabled)
             .disposed(by: disposeBag)
         passwordValid
-            .bindTo(textFields![1].rx.isErrorRevealed)
+            .bind(to: textFields![1].rx.isErrorRevealed)
             .disposed(by: disposeBag)
         everythingValid
-            .bindTo(loginButton.rx.isEnabled)
+            .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
 }
