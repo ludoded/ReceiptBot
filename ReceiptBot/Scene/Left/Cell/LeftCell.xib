@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftCell" rowHeight="56" id="FtO-yD-JrN" customClass="LeftCell" customModule="ReceiptBot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FtO-yD-JrN" id="zE7-dk-7st">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-IC-2eE">
+                        <rect key="frame" x="15" y="0.0" width="345" height="55.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W78-sG-RGq">
+                                <rect key="frame" x="0.0" y="0.5" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W78-sG-RGq" secondAttribute="height" multiplier="1:1" id="Kp9-fe-2Ga"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whE-P0-9Ei">
+                                <rect key="frame" x="70" y="19" width="275" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.81726611640000002" green="0.81726611640000002" blue="0.81726611640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.12549019610000001" green="0.21960784310000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Hga-IC-2eE" firstAttribute="leading" secondItem="zE7-dk-7st" secondAttribute="leading" constant="15" id="4nY-xa-pDA"/>
+                    <constraint firstAttribute="trailing" secondItem="Hga-IC-2eE" secondAttribute="trailing" constant="15" id="OYX-jX-AqO"/>
+                    <constraint firstAttribute="bottom" secondItem="Hga-IC-2eE" secondAttribute="bottom" id="eSu-y6-GiD"/>
+                    <constraint firstItem="Hga-IC-2eE" firstAttribute="top" secondItem="zE7-dk-7st" secondAttribute="top" id="fYg-YG-EcK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.12549019610000001" green="0.21960784310000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="logo" destination="W78-sG-RGq" id="3By-ME-aWr"/>
+                <outlet property="name" destination="whE-P0-9Ei" id="yXZ-rX-tyn"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="-6"/>
+        </tableViewCell>
+    </objects>
+</document>

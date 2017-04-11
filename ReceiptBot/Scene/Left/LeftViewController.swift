@@ -11,17 +11,18 @@
 
 import UIKit
 
-protocol LeftViewControllerInput {
-    func displaySomething(viewModel: Left.Something.ViewModel)
-}
-
 protocol LeftViewControllerOutput {
-    func doSomething(request: Left.Something.Request)
+    func fetchUser()
 }
 
-class LeftViewController: UIViewController, LeftViewControllerInput {
+class LeftViewController: UIViewController {
     var output: LeftViewControllerOutput!
     var router: LeftRouter!
+
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var entity: UILabel!
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Object lifecycle
 
@@ -34,23 +35,50 @@ class LeftViewController: UIViewController, LeftViewControllerInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomethingOnLoad()
+        
+        LeftConfigurator.sharedInstance.dataSourceConfigure(viewController: self)
+        setupTableView()
+        fetchUser()
     }
 
     // MARK: - Event handling
 
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
-        let request = Left.Something.Request()
-        output.doSomething(request: request)
+    func setupTableView() {
+        tableView.register(LeftCell.nib, forCellReuseIdentifier: LeftCell.cellId)
     }
-
+    
+    func fetchUser() {
+        output.fetchUser()
+    }
+    
     // MARK: - Display logic
 
-    func displaySomething(viewModel: Left.Something.ViewModel) {
-        // NOTE: Display the result from the Presenter
+    func displayUserInfo(viewModel: Left.User.ViewModel) {
+        name.text = viewModel.name
+        email.text = viewModel.email
+        entity.text = viewModel.entityName
+    }
+}
 
-        // nameTextField.text = viewModel.name
+extension LeftViewController: LeftDataSourceOutput {
+    func didSelect(type: LeftDataSourceType) {
+        switch type {
+        case .invoice: closeLeft()
+        case .logout: showLogoutAlert()
+        }
+    }
+    
+    func showLogoutAlert() {
+        let alert = UIAlertController(title: "Sign Out", message: "Are You Sure?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in self?.logout() }))
+        
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        DispatchQueue.main.async {
+            AppConfigurator.shared.show(for: .auth)
+        }
     }
 }

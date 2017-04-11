@@ -12,12 +12,15 @@
 import UIKit
 
 struct Left {
-    struct Something {
-        struct Request {
-        }
+    struct User {
         struct Response {
+            let userInfo: UserInfo
         }
+        
         struct ViewModel {
+            let name: String
+            let email: String
+            let entityName: String
         }
     }
 }

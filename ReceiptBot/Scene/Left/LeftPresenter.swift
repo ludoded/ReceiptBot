@@ -11,23 +11,20 @@
 
 import UIKit
 
-protocol LeftPresenterInput {
-    func presentSomething(response: Left.Something.Response)
-}
-
 protocol LeftPresenterOutput: class {
-    func displaySomething(viewModel: Left.Something.ViewModel)
+    func displayUserInfo(viewModel: Left.User.ViewModel)
 }
 
-class LeftPresenter: LeftPresenterInput {
+class LeftPresenter {
     weak var output: LeftPresenterOutput!
 
     // MARK: - Presentation logic
-
-    func presentSomething(response: Left.Something.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = Left.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+    func presentUserInfo(response: Left.User.Response) {
+        let user = response.userInfo
+        let viewModel = Left.User.ViewModel(name: user.fullName ?? "",
+                                            email: user.emailAddress ?? "",
+                                            entityName: user.orgName ?? "")
+        
+        output.displayUserInfo(viewModel: viewModel)
     }
 }

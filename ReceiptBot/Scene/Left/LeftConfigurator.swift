@@ -27,7 +27,8 @@ extension LeftPresenter: LeftInteractorOutput {
 
 class LeftConfigurator {
     // MARK: - Object lifecycle
-
+    let dataSource = LeftDataSource()
+    
     static let sharedInstance = LeftConfigurator()
 
     private init() {}
@@ -46,5 +47,11 @@ class LeftConfigurator {
 
         viewController.output = interactor
         viewController.router = router
+    }
+    
+    func dataSourceConfigure(viewController: LeftViewController) {
+        dataSource.output = viewController
+        viewController.tableView.dataSource = dataSource
+        viewController.tableView.delegate = dataSource
     }
 }

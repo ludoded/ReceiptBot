@@ -155,8 +155,18 @@
 		B2A054971E9D3BF300CF88D9 /* LeftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */; };
 		B2A054981E9D3BF300CF88D9 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */; };
 		B2A054991E9D3BF300CF88D9 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */; };
-		B2A0549A1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */; };
-		B2A0549B1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */; };
+		B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0549D1E9D83D800CF88D9 /* LeftDataSource.swift */; };
+		B2A0549F1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0549D1E9D83D800CF88D9 /* LeftDataSource.swift */; };
+		B2A054A21E9D84B000CF88D9 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A054A11E9D84B000CF88D9 /* LeftCell.xib */; };
+		B2A054A31E9D84B000CF88D9 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A054A11E9D84B000CF88D9 /* LeftCell.xib */; };
+		B2A054A51E9D85B000CF88D9 /* LeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054A41E9D85B000CF88D9 /* LeftCell.swift */; };
+		B2A054A61E9D85B000CF88D9 /* LeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054A41E9D85B000CF88D9 /* LeftCell.swift */; };
+		B2A054A81E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054A71E9D85FA00CF88D9 /* LeftDataSourceModel.swift */; };
+		B2A054A91E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054A71E9D85FA00CF88D9 /* LeftDataSourceModel.swift */; };
+		B2A054AB1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */; };
+		B2A054AC1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */; };
+		B2A054AE1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */; };
+		B2A054AF1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -369,7 +379,12 @@
 		B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftPresenter.swift; path = Scene/Left/LeftPresenter.swift; sourceTree = "<group>"; };
 		B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftRouter.swift; path = Scene/Left/LeftRouter.swift; sourceTree = "<group>"; };
 		B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = Scene/Left/LeftViewController.swift; sourceTree = "<group>"; };
-		B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftWorker.swift; path = Scene/Left/LeftWorker.swift; sourceTree = "<group>"; };
+		B2A0549D1E9D83D800CF88D9 /* LeftDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSource.swift; path = Scene/Left/DataSource/LeftDataSource.swift; sourceTree = "<group>"; };
+		B2A054A11E9D84B000CF88D9 /* LeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftCell.xib; path = Scene/Left/Cell/LeftCell.xib; sourceTree = "<group>"; };
+		B2A054A41E9D85B000CF88D9 /* LeftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftCell.swift; path = Scene/Left/Cell/LeftCell.swift; sourceTree = "<group>"; };
+		B2A054A71E9D85FA00CF88D9 /* LeftDataSourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceModel.swift; path = Scene/Left/DataSource/LeftDataSourceModel.swift; sourceTree = "<group>"; };
+		B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceInteractor.swift; path = Scene/Left/DataSource/LeftDataSourceInteractor.swift; sourceTree = "<group>"; };
+		B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceConfigurator.swift; path = Scene/Left/DataSource/LeftDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -750,15 +765,36 @@
 		B2A054861E9D3BD000CF88D9 /* Left */ = {
 			isa = PBXGroup;
 			children = (
+				B2A054A01E9D849700CF88D9 /* Cell */,
+				B2A0549C1E9D83B000CF88D9 /* DataSource */,
 				B2A054871E9D3BF300CF88D9 /* LeftConfigurator.swift */,
 				B2A054881E9D3BF300CF88D9 /* LeftInteractor.swift */,
 				B2A054891E9D3BF300CF88D9 /* LeftModels.swift */,
 				B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */,
 				B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */,
 				B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */,
-				B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */,
 			);
 			name = Left;
+			sourceTree = "<group>";
+		};
+		B2A0549C1E9D83B000CF88D9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0549D1E9D83D800CF88D9 /* LeftDataSource.swift */,
+				B2A054A71E9D85FA00CF88D9 /* LeftDataSourceModel.swift */,
+				B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */,
+				B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		B2A054A01E9D849700CF88D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2A054A11E9D84B000CF88D9 /* LeftCell.xib */,
+				B2A054A41E9D85B000CF88D9 /* LeftCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		B2FB68311E93D122009560BD /* Networking */ = {
@@ -1001,6 +1037,7 @@
 			files = (
 				B2FC674D1E982FA50003A35C /* Auth.storyboard in Resources */,
 				B27B537E1E945C1600B0E050 /* Expenses.storyboard in Resources */,
+				B2A054A21E9D84B000CF88D9 /* LeftCell.xib in Resources */,
 				B27B53761E945BF000B0E050 /* Main.storyboard in Resources */,
 				B27B53861E945E3600B0E050 /* InvoicesAndReceipts.storyboard in Resources */,
 				B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */,
@@ -1017,6 +1054,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27B53751E945BF000B0E050 /* LaunchScreen.storyboard in Resources */,
+				B2A054A31E9D84B000CF88D9 /* LeftCell.xib in Resources */,
 				B27B537F1E945C1600B0E050 /* Expenses.storyboard in Resources */,
 				B27B537B1E945C0700B0E050 /* Dashboard.storyboard in Resources */,
 				B2A0547F1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */,
@@ -1130,15 +1168,16 @@
 				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
 				B22B11BD1E89D5C8009D3E76 /* SecondViewController.swift in Sources */,
+				B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */,
 				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
+				B2A054AE1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */,
 				B27B539C1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
 				B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
 				B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
 				B2FB684A1E93FB16009560BD /* CategoryResponse.swift in Sources */,
 				B2A054901E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
-				B2A0549A1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */,
 				B2FC67941E984E560003A35C /* CompleteProfileWorker.swift in Sources */,
 				B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */,
 				B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */,
@@ -1147,6 +1186,7 @@
 				B283CBC51E956033008A3313 /* Errorable.swift in Sources */,
 				B27B53C81E945FC600B0E050 /* InboxWorker.swift in Sources */,
 				B27B53BC1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
+				B2A054A51E9D85B000CF88D9 /* LeftCell.swift in Sources */,
 				B27B53B01E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
 				B27B53C41E945FC600B0E050 /* InboxRouter.swift in Sources */,
 				B27B53921E945F2100B0E050 /* DashboardInteractor.swift in Sources */,
@@ -1192,6 +1232,7 @@
 				B2FB68521E940478009560BD /* LineChartResponse.swift in Sources */,
 				B2FC67641E983C9E0003A35C /* SignInRouter.swift in Sources */,
 				B27B53601E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
+				B2A054A81E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */,
 				B2FB68341E93D151009560BD /* Router.swift in Sources */,
 				B2FC678C1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
 				B2FC67511E983BAD0003A35C /* TextField+Rebotise.swift in Sources */,
@@ -1212,6 +1253,7 @@
 				B2FC67B71E9905870003A35C /* XeroCategory.swift in Sources */,
 				B2FC67921E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B27B53961E945F2100B0E050 /* DashboardPresenter.swift in Sources */,
+				B2A054AB1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */,
 				B2FC67751E984E390003A35C /* SignUpInteractor.swift in Sources */,
 				B2FB68461E93F675009560BD /* InvoiceStatusToShowResponse.swift in Sources */,
 				B2FC677B1E984E390003A35C /* SignUpRouter.swift in Sources */,
@@ -1270,8 +1312,10 @@
 				B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
 				B2FC67911E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
 				B27B53C51E945FC600B0E050 /* InboxRouter.swift in Sources */,
+				B2A054A91E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */,
 				B2A054971E9D3BF300CF88D9 /* LeftRouter.swift in Sources */,
 				B2D3AC0C1E97E7E300293B8C /* FileUploadResponse.swift in Sources */,
+				B2A054AF1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */,
 				B2D3ABF81E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
 				B27B53A71E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
 				B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */,
@@ -1315,6 +1359,7 @@
 				B299B7B31E9AC0B9002BFA87 /* AppDelegate.swift in Sources */,
 				B2D3AC021E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
 				B299B7951E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */,
+				B2A054A61E9D85B000CF88D9 /* LeftCell.swift in Sources */,
 				B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */,
 				B2A054991E9D3BF300CF88D9 /* LeftViewController.swift in Sources */,
 				B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
@@ -1343,7 +1388,6 @@
 				B2D3AC0A1E97E7E300293B8C /* GetConvertedInvoiceResponse.swift in Sources */,
 				B2D3AC0D1E97E7E300293B8C /* XeroExpenseCategoryResponse.swift in Sources */,
 				B299B7AF1E9AAFF0002BFA87 /* AppSettings.swift in Sources */,
-				B2A0549B1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */,
 				B2FC679E1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
 				B299B7981E9915B9002BFA87 /* Managed.swift in Sources */,
 				B27B53BD1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
@@ -1363,6 +1407,7 @@
 				B2D3ABFC1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
 				B27B53B11E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
 				B27B53AF1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
+				B2A054AC1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */,
 				B2FC67AF1E9900920003A35C /* Category.swift in Sources */,
 				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
 				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
@@ -1374,6 +1419,7 @@
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
 				B2A054951E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
 				B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */,
+				B2A0549F1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

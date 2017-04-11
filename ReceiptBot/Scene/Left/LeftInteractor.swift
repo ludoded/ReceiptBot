@@ -11,29 +11,17 @@
 
 import UIKit
 
-protocol LeftInteractorInput {
-    func doSomething(request: Left.Something.Request)
-}
-
 protocol LeftInteractorOutput {
-      func presentSomething(response: Left.Something.Response)
+      func presentUserInfo(response: Left.User.Response)
 }
 
-class LeftInteractor: LeftInteractorInput {
+class LeftInteractor {
     var output: LeftInteractorOutput!
-    var worker: LeftWorker!
 
     // MARK: - Business logic
-
-    func doSomething(request: Left.Something.Request) {
-        // NOTE: Create some Worker to do the work
-
-        worker = LeftWorker()
-        worker.doSomeWork()
-
-        // NOTE: Pass the result to the Presenter
-
-        let response = Left.Something.Response()
-        output.presentSomething(response: response)
+    func fetchUser() {
+        guard let userInfo = AppSettings.shared.user else { return }
+        let response = Left.User.Response(userInfo: userInfo)
+        output.presentUserInfo(response: response)
     }
 }
