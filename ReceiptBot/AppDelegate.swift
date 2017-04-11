@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        GoogleAuthConfigurator.shared.configureGoogleEnvironment()
         AppConfigurator.shared.show(for: .launch)
         setupDB()
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+            return GIDSignIn.sharedInstance().handle(url,
+                                                     sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                     annotation: [:])
     }
 }
 
