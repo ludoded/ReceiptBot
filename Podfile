@@ -5,6 +5,8 @@ def pods
     pod 'Alamofire'
     pod 'BRYXBanner'
     pod 'Charts'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
     pod 'Material'
     pod 'MBProgressHUD'
     pod 'RxCocoa'
