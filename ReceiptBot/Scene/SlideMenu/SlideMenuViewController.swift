@@ -10,12 +10,12 @@
 //
 
 import UIKit
+
 import SlideMenuControllerSwift
 
 class SlideMenuViewController: SlideMenuController {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         SlideMenuConfigurator.sharedInstance.configure(viewController: self)
     }
 }

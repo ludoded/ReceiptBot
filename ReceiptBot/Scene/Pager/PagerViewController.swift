@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import Material
 import XLPagerTabStrip
 
 protocol PagerViewControllerInput {
@@ -38,6 +39,9 @@ class PagerViewController: ButtonBarPagerTabStripViewController, PagerViewContro
         self.buttonBarView = self.barView
         
         super.viewDidLoad()
+        
+        let menu = UIBarButtonItem(image: Icon.cm.menu, style: .plain, target: self, action: #selector(toggleLeft))
+        navigationItem.leftBarButtonItem = menu
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

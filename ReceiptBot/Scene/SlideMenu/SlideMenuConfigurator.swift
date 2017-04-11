@@ -31,12 +31,12 @@ final class SlideMenuConfigurator {
         SlideMenuOptions.simultaneousGestureRecognizers = false
         SlideMenuOptions.hideStatusBar = false
         
-        if let main = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateInitialViewController() {
+        if let main = UIStoryboard(name: "InvoicesAndReceipts", bundle: Bundle.main).instantiateInitialViewController() {
             viewController.mainViewController = main
         }
         
-//        if let left = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LeftViewController") as? LeftMenuViewController {
-//            viewController.leftViewController = left
-//        }
+        if let left = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LeftViewController") as? LeftViewController {
+            viewController.leftViewController = left
+        }
     }
 }

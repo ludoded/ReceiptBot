@@ -11,7 +11,7 @@ import UIKit
 enum InitialSceneType: String {
     case launch = "LaunchScreen"
     case auth = "Auth"
-    case main = "InvoicesAndReceipts"
+    case main = "Main"
 }
 
 final class AppConfigurator {

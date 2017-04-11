@@ -143,6 +143,20 @@
 		B2A054821E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */; };
 		B2A054841E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */; };
 		B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */; };
+		B2A0548E1E9D3BF300CF88D9 /* LeftConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054871E9D3BF300CF88D9 /* LeftConfigurator.swift */; };
+		B2A0548F1E9D3BF300CF88D9 /* LeftConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054871E9D3BF300CF88D9 /* LeftConfigurator.swift */; };
+		B2A054901E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054881E9D3BF300CF88D9 /* LeftInteractor.swift */; };
+		B2A054911E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054881E9D3BF300CF88D9 /* LeftInteractor.swift */; };
+		B2A054921E9D3BF300CF88D9 /* LeftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054891E9D3BF300CF88D9 /* LeftModels.swift */; };
+		B2A054931E9D3BF300CF88D9 /* LeftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054891E9D3BF300CF88D9 /* LeftModels.swift */; };
+		B2A054941E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */; };
+		B2A054951E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */; };
+		B2A054961E9D3BF300CF88D9 /* LeftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */; };
+		B2A054971E9D3BF300CF88D9 /* LeftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */; };
+		B2A054981E9D3BF300CF88D9 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */; };
+		B2A054991E9D3BF300CF88D9 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */; };
+		B2A0549A1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */; };
+		B2A0549B1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -349,6 +363,13 @@
 		B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuthConfigurator.swift; path = Helper/Setting/GoogleAuthConfigurator.swift; sourceTree = "<group>"; };
 		B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalLoginWorker.swift; path = Scene/Sharable/Worker/ExternalLoginWorker.swift; sourceTree = "<group>"; };
+		B2A054871E9D3BF300CF88D9 /* LeftConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftConfigurator.swift; path = Scene/Left/LeftConfigurator.swift; sourceTree = "<group>"; };
+		B2A054881E9D3BF300CF88D9 /* LeftInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftInteractor.swift; path = Scene/Left/LeftInteractor.swift; sourceTree = "<group>"; };
+		B2A054891E9D3BF300CF88D9 /* LeftModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftModels.swift; path = Scene/Left/LeftModels.swift; sourceTree = "<group>"; };
+		B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftPresenter.swift; path = Scene/Left/LeftPresenter.swift; sourceTree = "<group>"; };
+		B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftRouter.swift; path = Scene/Left/LeftRouter.swift; sourceTree = "<group>"; };
+		B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = Scene/Left/LeftViewController.swift; sourceTree = "<group>"; };
+		B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftWorker.swift; path = Scene/Left/LeftWorker.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -487,6 +508,7 @@
 		B22B11DA1E89DE4C009D3E76 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B2A054861E9D3BD000CF88D9 /* Left */,
 				B2FC67531E983C740003A35C /* Auth */,
 				B27B53B41E945FB000B0E050 /* Inbox */,
 				B27B539E1E945F7C00B0E050 /* Expenses */,
@@ -723,6 +745,20 @@
 				B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */,
 			);
 			name = Output;
+			sourceTree = "<group>";
+		};
+		B2A054861E9D3BD000CF88D9 /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				B2A054871E9D3BF300CF88D9 /* LeftConfigurator.swift */,
+				B2A054881E9D3BF300CF88D9 /* LeftInteractor.swift */,
+				B2A054891E9D3BF300CF88D9 /* LeftModels.swift */,
+				B2A0548A1E9D3BF300CF88D9 /* LeftPresenter.swift */,
+				B2A0548B1E9D3BF300CF88D9 /* LeftRouter.swift */,
+				B2A0548C1E9D3BF300CF88D9 /* LeftViewController.swift */,
+				B2A0548D1E9D3BF300CF88D9 /* LeftWorker.swift */,
+			);
+			name = Left;
 			sourceTree = "<group>";
 		};
 		B2FB68311E93D122009560BD /* Networking */ = {
@@ -1100,7 +1136,9 @@
 				B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
 				B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
 				B2FB684A1E93FB16009560BD /* CategoryResponse.swift in Sources */,
+				B2A054901E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
+				B2A0549A1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */,
 				B2FC67941E984E560003A35C /* CompleteProfileWorker.swift in Sources */,
 				B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */,
 				B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */,
@@ -1139,9 +1177,11 @@
 				B2D3AC041E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B2A0547B1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */,
 				B27B53C61E945FC600B0E050 /* InboxViewController.swift in Sources */,
+				B2A0548E1E9D3BF300CF88D9 /* LeftConfigurator.swift in Sources */,
 				B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */,
 				B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */,
 				B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
+				B2A054961E9D3BF300CF88D9 /* LeftRouter.swift in Sources */,
 				B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */,
 				B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
 				B2A054771E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
@@ -1158,11 +1198,13 @@
 				B27B53571E94542900B0E050 /* API.swift in Sources */,
 				B2A054731E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
 				B2A054811E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */,
+				B2A054941E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
 				B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */,
 				B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */,
 				B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
 				B2FC67881E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
 				B27B53AA1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
+				B2A054921E9D3BF300CF88D9 /* LeftModels.swift in Sources */,
 				B27B53C01E945FC600B0E050 /* InboxModels.swift in Sources */,
 				B27B53641E94587D00B0E050 /* PagerModels.swift in Sources */,
 				B27B53A81E945F9400B0E050 /* ExpensesInteractor.swift in Sources */,
@@ -1179,6 +1221,7 @@
 				B2FC677F1E984E390003A35C /* SignUpWorker.swift in Sources */,
 				B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
 				B2FB68501E93FFB5009560BD /* QBExpenseCategoryResponse.swift in Sources */,
+				B2A054981E9D3BF300CF88D9 /* LeftViewController.swift in Sources */,
 				B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */,
 				B2FC67B11E9900F00003A35C /* Expense.swift in Sources */,
 				B27B53901E945F2100B0E050 /* DashboardConfigurator.swift in Sources */,
@@ -1227,6 +1270,7 @@
 				B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
 				B2FC67911E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
 				B27B53C51E945FC600B0E050 /* InboxRouter.swift in Sources */,
+				B2A054971E9D3BF300CF88D9 /* LeftRouter.swift in Sources */,
 				B2D3AC0C1E97E7E300293B8C /* FileUploadResponse.swift in Sources */,
 				B2D3ABF81E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
 				B27B53A71E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
@@ -1238,6 +1282,7 @@
 				B299B79B1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */,
 				B2FC678F1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */,
 				B2FC67B21E9900F00003A35C /* Expense.swift in Sources */,
+				B2A054931E9D3BF300CF88D9 /* LeftModels.swift in Sources */,
 				B2FC677A1E984E390003A35C /* SignUpPresenter.swift in Sources */,
 				B2FC677C1E984E390003A35C /* SignUpRouter.swift in Sources */,
 				B2D3AC0B1E97E7E300293B8C /* CategoryResponse.swift in Sources */,
@@ -1261,6 +1306,7 @@
 				B27B53B31E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
 				B27B53991E945F2100B0E050 /* DashboardRouter.swift in Sources */,
 				B27B53671E94587D00B0E050 /* PagerPresenter.swift in Sources */,
+				B2A0548F1E9D3BF300CF88D9 /* LeftConfigurator.swift in Sources */,
 				B2D3AC131E97EAA000293B8C /* RebotColor.swift in Sources */,
 				B27B53551E944E6600B0E050 /* DateFormaters.swift in Sources */,
 				B270DB501E940A61008B5D22 /* DateFormattersTest.swift in Sources */,
@@ -1270,6 +1316,7 @@
 				B2D3AC021E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
 				B299B7951E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */,
 				B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */,
+				B2A054991E9D3BF300CF88D9 /* LeftViewController.swift in Sources */,
 				B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
 				B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
 				B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
@@ -1296,6 +1343,7 @@
 				B2D3AC0A1E97E7E300293B8C /* GetConvertedInvoiceResponse.swift in Sources */,
 				B2D3AC0D1E97E7E300293B8C /* XeroExpenseCategoryResponse.swift in Sources */,
 				B299B7AF1E9AAFF0002BFA87 /* AppSettings.swift in Sources */,
+				B2A0549B1E9D3BF300CF88D9 /* LeftWorker.swift in Sources */,
 				B2FC679E1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
 				B299B7981E9915B9002BFA87 /* Managed.swift in Sources */,
 				B27B53BD1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
@@ -1308,6 +1356,7 @@
 				B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */,
 				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
+				B2A054911E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */,
 				B283CBD11E96CB7A008A3313 /* InboxCell.swift in Sources */,
 				B27B53C71E945FC600B0E050 /* InboxViewController.swift in Sources */,
@@ -1323,6 +1372,7 @@
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
 				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
+				B2A054951E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
 				B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */,
 				B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
 			);
