@@ -141,6 +141,8 @@
 		B2A0547F1E9C69AA00CF88D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */; };
 		B2A054811E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */; };
 		B2A054821E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */; };
+		B2A054841E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */; };
+		B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -346,6 +348,7 @@
 		B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordRecoveryOutputs.swift; path = Scene/Sharable/Output/PasswordRecoveryOutputs.swift; sourceTree = "<group>"; };
 		B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuthConfigurator.swift; path = Helper/Setting/GoogleAuthConfigurator.swift; sourceTree = "<group>"; };
+		B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalLoginWorker.swift; path = Scene/Sharable/Worker/ExternalLoginWorker.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -701,6 +704,7 @@
 			children = (
 				B299B7B91E9ADA25002BFA87 /* EmailPasswordWorker.swift */,
 				B2A054721E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift */,
+				B2A054831E9D21A600CF88D9 /* ExternalLoginWorker.swift */,
 			);
 			name = Worker;
 			sourceTree = "<group>";
@@ -1193,6 +1197,7 @@
 				B299B78F1E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
 				B2FB683D1E93D355009560BD /* JSONable.swift in Sources */,
 				B27B53621E94587D00B0E050 /* PagerInteractor.swift in Sources */,
+				B2A054841E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */,
 				B283CBD01E96CB7A008A3313 /* InboxCell.swift in Sources */,
 				B2FB68441E93F5A1009560BD /* ForgotPasswordResponse.swift in Sources */,
 				B27B539A1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
@@ -1318,6 +1323,7 @@
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
 				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
+				B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */,
 				B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

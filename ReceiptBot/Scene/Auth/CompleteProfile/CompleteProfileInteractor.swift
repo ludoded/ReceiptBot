@@ -11,6 +11,11 @@
 
 import UIKit
 
+enum CompleteProfileType: String {
+    case system
+    case external
+}
+
 protocol CompleteProfileInteractorOutput {
       func presentAuthResponse(response: CompleteProfile.Registration.Response)
 }
@@ -20,6 +25,10 @@ class CompleteProfileInteractor {
     var worker: CompleteProfileWorker!
     
     var email: String!
+    var type: CompleteProfileType = .system
+    
+    /// In case of external sign in
+    var externalInfo: SignIn.CompleteProfileInfo!
     
     /// Properties from pickers
     var countryId = 0
@@ -48,13 +57,23 @@ class CompleteProfileInteractor {
     func completeRegistration(request: CompleteProfile.Registration.Request) {
         guard countryId != 0 else { pass(user: .none(message: "Pick the country!")); return }
         guard accountType != 0 else { pass(user: .none(message: "Pick the account type!")); return }
-        guard !request.fullName.isEmpty  else { pass(user: .none(message: "Enter Full Name!")); return }
+        guard !request.fullName.isEmpty else { pass(user: .none(message: "Enter Full Name!")); return }
         guard !request.companyName.isEmpty else { pass(user: .none(message: "Enter Organisation Name!")); return }
         
         let parameters = params(from: request)
         worker = CompleteProfileWorker(params: parameters)
         worker.completeRegistration { [weak self] (wrapper) in
-            DispatchQueue.main.async { self?.pass(user: wrapper) }
+            DispatchQueue.main.async {
+                if self?.type == .system { self?.pass(user: wrapper) }
+                else { self?.tryExternalLogin() }
+            }
+        }
+    }
+    
+    func tryExternalLogin() {
+        let extWorker = ExternalLoginWorker(email: externalInfo.email)
+        extWorker.tryToLogin { [weak self] (resp) in
+            DispatchQueue.main.async { self?.pass(user: resp) }
         }
     }
     

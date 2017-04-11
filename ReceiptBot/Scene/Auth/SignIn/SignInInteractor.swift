@@ -12,12 +12,16 @@
 import UIKit
 
 protocol SignInInteractorOutput {
-      func presentLogin(response: SignIn.Login.Response)
+    func presentLogin(response: SignIn.Login.Response)
+    func presentCompleteProfile()
+    func presentRegister(response: SignIn.Google.Response)
 }
 
 class SignInInteractor {
     var output: (SignInInteractorOutput & PasswordRecoveryInteractorOutput)!
     var worker: SignInWorker!
+    
+    var completeProfileInfo: SignIn.CompleteProfileInfo!
 
     // MARK: - Business logic
     func tryToLogin(request: SignIn.Login.Request) {
@@ -36,6 +40,35 @@ class SignInInteractor {
         }
     }
     
+    func tryToSignUp(request: SignIn.Google.Request) {
+        let registerWorker = SignUpWorker(email: request.email, password: request.password)
+        registerWorker.tryToSignUp { [weak self] (resp) in
+            switch resp {
+            case .none: DispatchQueue.main.async { self?.passRegister(data: resp) }
+            case .value(let data):
+                if !data.isVerified || !data.userAlreadyCreated {
+                    DispatchQueue.main.async { self?.passCompleteProfile(email: request.email, name: request.name) }
+                }
+                else if !data.isVerified || data.userAlreadyCreated {
+                    DispatchQueue.main.async { self?.passRegister(data: .none(message: "User Already Registered, Please Verify your Email Address")) }
+                }
+                else if data.isVerified || data.userAlreadyCreated {
+                    self?.tryToExternalSignIn(request: request)
+                }
+                else {
+                    DispatchQueue.main.async { self?.passRegister(data: resp) }
+                }
+            }
+        }
+    }
+    
+    func tryToExternalSignIn(request: SignIn.Google.Request) {
+        let extWorker = ExternalLoginWorker(email: request.email)
+        extWorker.tryToLogin { [weak self] (resp) in
+            DispatchQueue.main.async { self?.passAuthData(data: resp) }
+        }
+    }
+    
     /// MARK: passing data
     func passAuthData(data: RebotValueWrapper<AuthResponse>) {
         let response = SignIn.Login.Response(data: data)
@@ -45,5 +78,15 @@ class SignInInteractor {
     func passStatus(data: RebotValueWrapper<StatusDetailResponse>) {
         let response = PasswordRecoveryModel.Response(status: data)
         output.presentRecoveredPassword(response: response)
+    }
+    
+    func passRegister(data: RebotValueWrapper<SignUpFirstResponse>) {
+        let response = SignIn.Google.Response(data: data)
+        output.presentRegister(response: response)
+    }
+    
+    func passCompleteProfile(email: String, name: String) {
+        completeProfileInfo = SignIn.CompleteProfileInfo(email: email, name: name)
+        output.presentCompleteProfile()
     }
 }

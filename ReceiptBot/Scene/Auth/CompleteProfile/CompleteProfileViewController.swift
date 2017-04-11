@@ -19,6 +19,9 @@ protocol CompleteProfileViewControllerOutput {
     
     var countryId: Int { get set }
     var accountType: Int { get set }
+    var type: CompleteProfileType { get set }
+    
+    var externalInfo: SignIn.CompleteProfileInfo! { get set }
     
     func completeRegistration(request: CompleteProfile.Registration.Request)
 }
@@ -54,6 +57,17 @@ class CompleteProfileViewController: SignBaseViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         CompleteProfileConfigurator.sharedInstance.configure(viewController: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        trySetupFullName()
+    }
+    
+    /// Setup full name in case it's external request
+    private func trySetupFullName() {
+        guard let name = output.externalInfo?.name else { return }
+        textFields?[0].text = name
     }
 
     // MARK: - Event handling

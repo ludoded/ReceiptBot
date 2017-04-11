@@ -9,19 +9,29 @@
 //  clean architecture to your iOS and Mac projects, see http://clean-swift.com
 //
 
+import GoogleSignIn
 import Material
 import MBProgressHUD
 import RxSwift
 import RxCocoa
 
 protocol SignInViewControllerOutput {
+    var completeProfileInfo: SignIn.CompleteProfileInfo! { get set }
+    
     func tryToLogin(request: SignIn.Login.Request)
+    func tryToSignUp(request: SignIn.Google.Request)
 }
 
 class SignInViewController: EmailPasswordViewController {
     fileprivate var spinner: MBProgressHUD?
     var output: (SignInViewControllerOutput & PasswordRecoveryViewControllerOutput)!
     var router: SignInRouter!
+    
+    deinit {
+        GoogleAuthConfigurator.shared.signedIn = nil
+    }
+    
+    @IBOutlet weak var signStack: UIStackView!
     
     @IBAction func login(_ sender: Button) {
         tryToLogin()
@@ -40,6 +50,11 @@ class SignInViewController: EmailPasswordViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         SignInConfigurator.sharedInstance.configure(viewController: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupGoogleButton()
     }
 
     // MARK: - Event handling
@@ -63,5 +78,32 @@ class SignInViewController: EmailPasswordViewController {
     
     func displayMain() {
         router.displayMain()
+    }
+    
+    func displayCompleteProfile() {
+        router.navigateToCompleteProfile()
+    }
+}
+
+extension SignInViewController: GIDSignInUIDelegate {
+    func setupGoogleButton() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        let googleButton = GIDSignInButton()
+        googleButton.style = .standard
+        signStack.addArrangedSubview(googleButton)
+        
+        /// Observe google sign in
+        GoogleAuthConfigurator.shared.signedIn = { [weak self] email, error in self?.googleSignIn(with: email, or: error) }
+    }
+    
+    func googleSignIn(with authInfo: GoogleAuthInfo?, or error: String?) {
+        /// Show error if one is occured
+        guard error == nil else { show(type: .error(message: error!)); return }
+        
+        startSpinning()
+        
+        let request = SignIn.Google.Request(email: authInfo!.email, name: authInfo!.name)
+        output.tryToSignUp(request: request)
     }
 }

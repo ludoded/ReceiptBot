@@ -13,6 +13,7 @@ import UIKit
 
 protocol SignInPresenterOutput: class, Errorable, Spinnable {
     func displayMain()
+    func displayCompleteProfile()
 }
 
 class SignInPresenter {
@@ -38,5 +39,20 @@ class SignInPresenter {
             if status.status || status.isEmailVerified { output.show(type: .success(message: status.details)) }
             else { output.show(type: .error(message: status.details)) }
         }
+    }
+    
+    func presentRegister(response: SignIn.Google.Response) {
+        output.stopSpinning()
+        
+        switch response.data {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value(let data):
+            guard data.message.isEmpty else { output.show(type: .error(message: data.message)); return }
+            output.displayMain()
+        }
+    }
+    
+    func presentCompleteProfile() {
+        output.displayCompleteProfile()
     }
 }

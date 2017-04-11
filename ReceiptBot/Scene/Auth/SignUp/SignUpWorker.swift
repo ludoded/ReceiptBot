@@ -15,9 +15,6 @@ class SignUpWorker: EmailPasswordWorker {
     func tryToSignUp(callback: @escaping (RebotValueWrapper<SignUpFirstResponse>) -> ()) {
         SignUpFirstResponse.loadType(request: API.signUpFirst(params)) { (resp, message) in
             guard message == nil else { callback(.none(message: message!)); return }
-            guard resp!.message.isEmpty else { callback(.none(message: resp!.message)); return }
-            guard !resp!.userAlreadyCreated else { callback(.none(message: "User Already Registered, Please Verify your Email Address")); return }
-            guard !resp!.isVerified else { callback(.none(message: "User Already Registered, Please Login From Your Email Address")); return }
             
             callback(.value(resp!))
         }

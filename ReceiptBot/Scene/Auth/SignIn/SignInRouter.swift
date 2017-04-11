@@ -13,6 +13,7 @@ import UIKit
 
 protocol SignInRouterInput {
     func navigateToSignUp()
+    func navigateToCompleteProfile()
     func displayMain()
 }
 
@@ -25,24 +26,25 @@ class SignInRouter: SignInRouterInput {
          viewController.performSegue(withIdentifier: "ShowSignUp", sender: nil)
     }
     
+    func navigateToCompleteProfile() {
+        viewController.performSegue(withIdentifier: "ShowProfileCompletion", sender: nil)
+    }
+    
     func displayMain() {
         AppConfigurator.shared.show(for: .main)
     }
-
     // MARK: - Communication
 
     func passDataToNextScene(segue: UIStoryboardSegue) {
-        // NOTE: Teach the router which scenes it can communicate with
-
-        if segue.identifier == "ShowSomewhereScene" {
-            passDataToSomewhereScene(segue: segue)
+        if segue.identifier == "ShowProfileCompletion" {
+            passDataToProfileCompletion(segue: segue)
         }
     }
-
-    func passDataToSomewhereScene(segue: UIStoryboardSegue) {
-        // NOTE: Teach the router how to pass data to the next scene
-
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereViewController.output.name = viewController.output.name
+    
+    func passDataToProfileCompletion(segue: UIStoryboardSegue) {
+        let completionProfile = segue.destination as! CompleteProfileViewController
+        completionProfile.output.externalInfo = viewController.output.completeProfileInfo
+        completionProfile.output.type = viewController.output.completeProfileInfo.type
+        completionProfile.output.email = viewController.output.completeProfileInfo.email
     }
 }

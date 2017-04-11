@@ -22,4 +22,23 @@ struct SignIn {
             let data: RebotValueWrapper<AuthResponse>
         }
     }
+    
+    struct Google {
+        struct Request {
+            let email: String
+            let password = ""
+            let name: String
+        }
+        
+        struct Response {
+            let data: RebotValueWrapper<SignUpFirstResponse>
+        }
+    }
+    
+    struct CompleteProfileInfo {
+        let email: String
+        let name: String
+        let password = ""
+        let type: CompleteProfileType = .external
+    }
 }

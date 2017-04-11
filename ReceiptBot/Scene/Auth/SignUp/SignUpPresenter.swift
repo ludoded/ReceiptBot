@@ -25,6 +25,10 @@ class SignUpPresenter {
         switch response.data {
         case .none(let message): output.show(type: .error(message: message))
         case .value(let data):
+            guard data.message.isEmpty else { output.show(type: .error(message: data.message)); return }
+            guard !data.userAlreadyCreated else { output.show(type: .error(message: "User Already Registered, Please Verify your Email Address")); return }
+            guard !data.isVerified else { output.show(type: .error(message: "User Already Registered, Please Login From Your Email Address")); return }
+            
             let viewModel = SignUp.Register.ViewModel(email: data.email)
             output.displayRegister(viewModel: viewModel)
         }

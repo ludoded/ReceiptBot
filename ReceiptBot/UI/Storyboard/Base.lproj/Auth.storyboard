@@ -58,7 +58,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2XD-7u-M2i">
-                                                        <rect key="frame" x="10" y="220" width="334" height="178"/>
+                                                        <rect key="frame" x="10" y="245" width="334" height="178"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="my0-y5-1mL">
                                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
@@ -153,7 +153,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-9U-39r">
-                                                        <rect key="frame" x="102" y="476" width="150" height="130"/>
+                                                        <rect key="frame" x="102" y="526" width="150" height="80"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-rl-aSt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
@@ -185,12 +185,6 @@
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuF-bJ-XnM">
-                                                                <rect key="frame" x="51.5" y="100" width="47" height="30"/>
-                                                                <state key="normal" title="google">
-                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -237,9 +231,11 @@
                         <outlet property="loginButton" destination="HDK-6G-H4d" id="AR3-Zw-lzi"/>
                         <outlet property="recoveryButton" destination="gjQ-rl-aSt" id="AKV-Mw-zJ7"/>
                         <outlet property="scrollView" destination="glA-IM-rgN" id="T8C-ff-Sir"/>
+                        <outlet property="signStack" destination="KVc-9U-39r" id="ZHw-pV-lfy"/>
                         <outletCollection property="textFields" destination="PC1-Dv-omn" id="f7u-am-NF9"/>
                         <outletCollection property="textFields" destination="0SI-wn-DId" id="JcN-Z5-Cme"/>
                         <segue destination="wMu-No-cPY" kind="show" identifier="ShowSignUp" id="hyZ-uD-cXd"/>
+                        <segue destination="MFv-8l-zUH" kind="show" identifier="ShowProfileCompletion" id="cNp-g3-uZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBm-Oc-1Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpc-mO-NpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="117"/>
+            <point key="canvasLocation" x="1337" y="-274"/>
         </scene>
         <!--Complete Profile View Controller-->
         <scene sceneID="S4M-IG-iCT">
@@ -657,7 +653,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2169" y="117"/>
+            <point key="canvasLocation" x="1337" y="517"/>
         </scene>
     </scenes>
     <resources>
@@ -665,4 +661,7 @@
         <image name="email" width="29" height="29"/>
         <image name="password" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cNp-g3-uZQ"/>
+    </inferredMetricsTieBreakers>
 </document>
