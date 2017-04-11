@@ -34,6 +34,11 @@ extension API {
         return Alamofire.request(SessionRouter.signIn(params))
     }
     
+    static func externalLogin(_ email: String) -> DataRequest {
+        SessionRouter.baseURLString = stageURL
+        return Alamofire.request(SessionRouter.external(email: email))
+    }
+    
     static func forgotPassword(_ email: String) -> DataRequest {
         SessionRouter.baseURLString = stageURL
         return Alamofire.request(SessionRouter.forgotPassword(email: email))

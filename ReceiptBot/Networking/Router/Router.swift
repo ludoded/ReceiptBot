@@ -19,13 +19,14 @@ enum SessionRouter: BaseRouter {
     case signUpFirst(Parameters)
     case signUpSecond(Parameters)
     case signIn(Parameters)
+    case external(email: String)
     case forgotPassword(email: String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
         case .signUpFirst, .signUpSecond, .signIn:
             return .post
-        case .forgotPassword:
+        case .forgotPassword, .external:
             return .get
         }
     }
@@ -38,6 +39,8 @@ enum SessionRouter: BaseRouter {
             return "/AccountService.svc/SignUpOrgInfo"
         case .signIn:
             return "/AccountService.svc/Login"
+        case .external(let email):
+            return "/AccountService.svc/ExternalLogin/\(email)"
         case .forgotPassword(let email):
             return "/AccountService.svc/ForgotPassword/\(email)"
         }
@@ -57,7 +60,7 @@ enum SessionRouter: BaseRouter {
             return try encoder.encode(urlRequest, with: params)
         case .signIn(let params):
             return try encoder.encode(urlRequest, with: params)
-        case .forgotPassword:
+        case .forgotPassword, .external:
             return try encoder.encode(urlRequest, with: nil)
         }
     }
