@@ -12,7 +12,7 @@
 import UIKit
 
 protocol PhotoVerifyViewControllerOutput {
-    func doSomething(request: PhotoVerify.Something.Request)
+    func tryToUpload(request: PhotoVerify.Upload.Request)
 }
 
 class PhotoVerifyViewController: UIViewController {
@@ -28,7 +28,7 @@ class PhotoVerifyViewController: UIViewController {
     }
     
     @IBAction func uploadPhoto(_ sender: UIButton) {
-        
+        tryToUpload()
     }
     
     // MARK: - Object lifecycle
@@ -47,9 +47,14 @@ class PhotoVerifyViewController: UIViewController {
     func setupOnLoad() {
         photo.image = takenPhoto
     }
+    
+    func tryToUpload() {
+        let request = PhotoVerify.Upload.Request(image: takenPhoto)
+        output.tryToUpload(request: request)
+    }
 
     // MARK: - Display logic
-    func displaySomething(viewModel: PhotoVerify.Something.ViewModel) {
-        
+    func displayInvoices() {
+        router.navigateToInvoice()
     }
 }

@@ -12,12 +12,19 @@
 import UIKit
 
 struct PhotoVerify {
-    struct Something {
+    struct Upload {
         struct Request {
+            let image: UIImage!
         }
+        
         struct Response {
+            let data: RebotValueWrapper<FileUploadResponse>
         }
-        struct ViewModel {
+        
+        struct Params {
+            let userInfo: UserInfo
+            let imgString: String
+            let invoiceInfo: Invoice
         }
     }
 }

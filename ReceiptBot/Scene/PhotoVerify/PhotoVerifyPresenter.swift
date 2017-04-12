@@ -11,23 +11,15 @@
 
 import UIKit
 
-protocol PhotoVerifyPresenterInput {
-    func presentSomething(response: PhotoVerify.Something.Response)
-}
-
 protocol PhotoVerifyPresenterOutput: class {
-    func displaySomething(viewModel: PhotoVerify.Something.ViewModel)
+    func displaySomething()
 }
 
-class PhotoVerifyPresenter: PhotoVerifyPresenterInput {
+class PhotoVerifyPresenter {
     weak var output: PhotoVerifyPresenterOutput!
 
     // MARK: - Presentation logic
-
-    func presentSomething(response: PhotoVerify.Something.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = PhotoVerify.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+    func presentSomething(response: PhotoVerify.Upload.Response) {
+        output.displaySomething()
     }
 }

@@ -12,9 +12,7 @@
 import UIKit
 
 class PhotoVerifyWorker {
-    // MARK: - Business Logic
-  
-    func doSomeWork() {
-        // NOTE: Do the work
+    func uploadFile() {
+        
     }
 }

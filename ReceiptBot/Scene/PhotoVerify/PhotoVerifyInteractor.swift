@@ -11,29 +11,16 @@
 
 import UIKit
 
-protocol PhotoVerifyInteractorInput {
-    func doSomething(request: PhotoVerify.Something.Request)
-}
-
 protocol PhotoVerifyInteractorOutput {
-      func presentSomething(response: PhotoVerify.Something.Response)
+      func presentSomething(response: PhotoVerify.Upload.Response)
 }
 
-class PhotoVerifyInteractor: PhotoVerifyInteractorInput {
+class PhotoVerifyInteractor {
     var output: PhotoVerifyInteractorOutput!
     var worker: PhotoVerifyWorker!
 
     // MARK: - Business logic
-
-    func doSomething(request: PhotoVerify.Something.Request) {
-        // NOTE: Create some Worker to do the work
-
-        worker = PhotoVerifyWorker()
-        worker.doSomeWork()
-
-        // NOTE: Pass the result to the Presenter
-
-        let response = PhotoVerify.Something.Response()
-        output.presentSomething(response: response)
+    func tryToUpload(request: PhotoVerify.Upload.Request) {
+        
     }
 }
