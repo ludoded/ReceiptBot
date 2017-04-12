@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		22E6281B40752B886870A5C1 /* Pods_ReceiptBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */; };
 		9603600FFF96F971F37EAE33 /* Pods_ReceiptBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */; };
+		B213E4051E9ED2A90085970D /* CameraConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */; };
+		B213E4061E9ED2A90085970D /* CameraConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */; };
+		B213E40D1E9ED2A90085970D /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4021E9ED2A90085970D /* CameraRouter.swift */; };
+		B213E40E1E9ED2A90085970D /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4021E9ED2A90085970D /* CameraRouter.swift */; };
+		B213E40F1E9ED2A90085970D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4031E9ED2A90085970D /* CameraViewController.swift */; };
+		B213E4101E9ED2A90085970D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4031E9ED2A90085970D /* CameraViewController.swift */; };
+		B213E41B1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4141E9EDAE40085970D /* PhotoVerifyConfigurator.swift */; };
+		B213E41C1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4141E9EDAE40085970D /* PhotoVerifyConfigurator.swift */; };
+		B213E41D1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4151E9EDAE40085970D /* PhotoVerifyInteractor.swift */; };
+		B213E41E1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4151E9EDAE40085970D /* PhotoVerifyInteractor.swift */; };
+		B213E41F1E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4161E9EDAE40085970D /* PhotoVerifyModels.swift */; };
+		B213E4201E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4161E9EDAE40085970D /* PhotoVerifyModels.swift */; };
+		B213E4211E9EDAE40085970D /* PhotoVerifyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4171E9EDAE40085970D /* PhotoVerifyPresenter.swift */; };
+		B213E4221E9EDAE40085970D /* PhotoVerifyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4171E9EDAE40085970D /* PhotoVerifyPresenter.swift */; };
+		B213E4231E9EDAE40085970D /* PhotoVerifyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4181E9EDAE40085970D /* PhotoVerifyRouter.swift */; };
+		B213E4241E9EDAE40085970D /* PhotoVerifyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4181E9EDAE40085970D /* PhotoVerifyRouter.swift */; };
+		B213E4251E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */; };
+		B213E4261E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */; };
+		B213E4271E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */; };
+		B213E4281E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */; };
 		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
 		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
@@ -295,6 +315,16 @@
 		52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot.release.xcconfig"; sourceTree = "<group>"; };
 		52CB11C467AE2FEA740D3E72 /* Pods-ReceiptBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests.release.xcconfig"; sourceTree = "<group>"; };
 		63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptBotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraConfigurator.swift; path = Scene/Camera/CameraConfigurator.swift; sourceTree = "<group>"; };
+		B213E4021E9ED2A90085970D /* CameraRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraRouter.swift; path = Scene/Camera/CameraRouter.swift; sourceTree = "<group>"; };
+		B213E4031E9ED2A90085970D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Scene/Camera/CameraViewController.swift; sourceTree = "<group>"; };
+		B213E4141E9EDAE40085970D /* PhotoVerifyConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyConfigurator.swift; path = Scene/PhotoVerify/PhotoVerifyConfigurator.swift; sourceTree = "<group>"; };
+		B213E4151E9EDAE40085970D /* PhotoVerifyInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyInteractor.swift; path = Scene/PhotoVerify/PhotoVerifyInteractor.swift; sourceTree = "<group>"; };
+		B213E4161E9EDAE40085970D /* PhotoVerifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyModels.swift; path = Scene/PhotoVerify/PhotoVerifyModels.swift; sourceTree = "<group>"; };
+		B213E4171E9EDAE40085970D /* PhotoVerifyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyPresenter.swift; path = Scene/PhotoVerify/PhotoVerifyPresenter.swift; sourceTree = "<group>"; };
+		B213E4181E9EDAE40085970D /* PhotoVerifyRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyRouter.swift; path = Scene/PhotoVerify/PhotoVerifyRouter.swift; sourceTree = "<group>"; };
+		B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyViewController.swift; path = Scene/PhotoVerify/PhotoVerifyViewController.swift; sourceTree = "<group>"; };
+		B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyWorker.swift; path = Scene/PhotoVerify/PhotoVerifyWorker.swift; sourceTree = "<group>"; };
 		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -467,6 +497,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B213E3FD1E9ED16A0085970D /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */,
+				B213E4021E9ED2A90085970D /* CameraRouter.swift */,
+				B213E4031E9ED2A90085970D /* CameraViewController.swift */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		B213E4131E9EDABE0085970D /* PhotoVerify */ = {
+			isa = PBXGroup;
+			children = (
+				B213E4141E9EDAE40085970D /* PhotoVerifyConfigurator.swift */,
+				B213E4151E9EDAE40085970D /* PhotoVerifyInteractor.swift */,
+				B213E4161E9EDAE40085970D /* PhotoVerifyModels.swift */,
+				B213E4171E9EDAE40085970D /* PhotoVerifyPresenter.swift */,
+				B213E4181E9EDAE40085970D /* PhotoVerifyRouter.swift */,
+				B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */,
+				B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */,
+			);
+			name = PhotoVerify;
+			sourceTree = "<group>";
+		};
 		B22B11AC1E89D5C7009D3E76 = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +571,8 @@
 		B22B11DA1E89DE4C009D3E76 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B213E4131E9EDABE0085970D /* PhotoVerify */,
+				B213E3FD1E9ED16A0085970D /* Camera */,
 				B2A054861E9D3BD000CF88D9 /* Left */,
 				B2FC67531E983C740003A35C /* Auth */,
 				B27B53B41E945FB000B0E050 /* Inbox */,
@@ -1161,6 +1217,7 @@
 			files = (
 				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
+				B213E41F1E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
 				B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */,
 				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
@@ -1175,11 +1232,13 @@
 				B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */,
 				B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */,
 				B2FC67BA1E9905EA0003A35C /* QboCategory.swift in Sources */,
+				B213E41D1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */,
 				B2FB68371E93D218009560BD /* SignUpResponse.swift in Sources */,
 				B283CBC51E956033008A3313 /* Errorable.swift in Sources */,
 				B27B53C81E945FC600B0E050 /* InboxWorker.swift in Sources */,
 				B27B53BC1E945FC600B0E050 /* InboxConfigurator.swift in Sources */,
 				B2A054A51E9D85B000CF88D9 /* LeftCell.swift in Sources */,
+				B213E4271E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */,
 				B27B53B01E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
 				B27B53C41E945FC600B0E050 /* InboxRouter.swift in Sources */,
 				B27B53921E945F2100B0E050 /* DashboardInteractor.swift in Sources */,
@@ -1197,6 +1256,7 @@
 				B299B7971E9915B9002BFA87 /* Managed.swift in Sources */,
 				B2FC675E1E983C9E0003A35C /* SignInInteractor.swift in Sources */,
 				B27B53AE1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
+				B213E4211E9EDAE40085970D /* PhotoVerifyPresenter.swift in Sources */,
 				B283CBC21E955E57008A3313 /* RebotValueWrapper.swift in Sources */,
 				B2FC67681E983C9E0003A35C /* SignInWorker.swift in Sources */,
 				B2FB683F1E93EA20009560BD /* ConvertedInvoiceResponse.swift in Sources */,
@@ -1208,12 +1268,15 @@
 				B2FC67BD1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
 				B2D3AC041E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B2A0547B1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */,
+				B213E41B1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */,
+				B213E4231E9EDAE40085970D /* PhotoVerifyRouter.swift in Sources */,
 				B27B53C61E945FC600B0E050 /* InboxViewController.swift in Sources */,
 				B2A0548E1E9D3BF300CF88D9 /* LeftConfigurator.swift in Sources */,
 				B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */,
 				B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */,
 				B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
 				B2A054961E9D3BF300CF88D9 /* LeftRouter.swift in Sources */,
+				B213E40D1E9ED2A90085970D /* CameraRouter.swift in Sources */,
 				B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */,
 				B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
 				B2A054771E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
@@ -1245,10 +1308,12 @@
 				B2FC67B71E9905870003A35C /* XeroCategory.swift in Sources */,
 				B2FC67921E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B27B53961E945F2100B0E050 /* DashboardPresenter.swift in Sources */,
+				B213E4251E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */,
 				B2A054AB1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */,
 				B2FC67751E984E390003A35C /* SignUpInteractor.swift in Sources */,
 				B2FB68461E93F675009560BD /* InvoiceStatusToShowResponse.swift in Sources */,
 				B2FC677B1E984E390003A35C /* SignUpRouter.swift in Sources */,
+				B213E40F1E9ED2A90085970D /* CameraViewController.swift in Sources */,
 				B2D3ABF91E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
 				B283CBCA1E959473008A3313 /* LineXAxeFormatter.swift in Sources */,
 				B2FB68541E9406D9009560BD /* SupplierResponse.swift in Sources */,
@@ -1262,6 +1327,7 @@
 				B2FC67601E983C9E0003A35C /* SignInModels.swift in Sources */,
 				B27B53681E94587D00B0E050 /* PagerRouter.swift in Sources */,
 				B27B53661E94587D00B0E050 /* PagerPresenter.swift in Sources */,
+				B213E4051E9ED2A90085970D /* CameraConfigurator.swift in Sources */,
 				B27B53941E945F2100B0E050 /* DashboardModels.swift in Sources */,
 				B2FC675C1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
 				B299B7AA1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */,
@@ -1294,6 +1360,7 @@
 				B283CBCC1E959928008A3313 /* RebotValueWrapper.swift in Sources */,
 				B2FC675D1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
 				B2FC67AC1E98FED90003A35C /* Invoice.swift in Sources */,
+				B213E4221E9EDAE40085970D /* PhotoVerifyPresenter.swift in Sources */,
 				B27B53631E94587D00B0E050 /* PagerInteractor.swift in Sources */,
 				B2A0547C1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift in Sources */,
 				B27B53611E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
@@ -1302,6 +1369,8 @@
 				B27B53C31E945FC600B0E050 /* InboxPresenter.swift in Sources */,
 				B2FC67691E983C9E0003A35C /* SignInWorker.swift in Sources */,
 				B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
+				B213E4241E9EDAE40085970D /* PhotoVerifyRouter.swift in Sources */,
+				B213E40E1E9ED2A90085970D /* CameraRouter.swift in Sources */,
 				B2FC67911E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
 				B27B53C51E945FC600B0E050 /* InboxRouter.swift in Sources */,
 				B2A054A91E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */,
@@ -1329,7 +1398,9 @@
 				B27B536D1E94587D00B0E050 /* PagerWorker.swift in Sources */,
 				B2FC67891E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
 				B299B7911E990FA7002BFA87 /* Router.swift in Sources */,
+				B213E4261E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */,
 				B27B53A91E945F9400B0E050 /* ExpensesInteractor.swift in Sources */,
+				B213E4281E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */,
 				B283CBC81E9564B0008A3313 /* NumberFormaters.swift in Sources */,
 				B2D3AC101E97E7E300293B8C /* SupplierResponse.swift in Sources */,
 				B2FC67801E984E390003A35C /* SignUpWorker.swift in Sources */,
@@ -1337,6 +1408,7 @@
 				B299B7B61E9ACD98002BFA87 /* Spinnable.swift in Sources */,
 				B2D3AC071E97E7E300293B8C /* ConvertedInvoiceResponse.swift in Sources */,
 				B299B7921E990FAA002BFA87 /* API.swift in Sources */,
+				B213E4201E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
 				B27B53691E94587D00B0E050 /* PagerRouter.swift in Sources */,
 				B27B53AD1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
 				B27B53B31E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
@@ -1355,6 +1427,7 @@
 				B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */,
 				B2A054991E9D3BF300CF88D9 /* LeftViewController.swift in Sources */,
 				B2FC678D1E984E560003A35C /* CompleteProfileModels.swift in Sources */,
+				B213E4061E9ED2A90085970D /* CameraConfigurator.swift in Sources */,
 				B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
 				B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
 				B2A054741E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
@@ -1393,6 +1466,7 @@
 				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
 				B2A054911E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
+				B213E41C1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */,
 				B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */,
 				B283CBD11E96CB7A008A3313 /* InboxCell.swift in Sources */,
 				B27B53C71E945FC600B0E050 /* InboxViewController.swift in Sources */,
@@ -1401,10 +1475,12 @@
 				B27B53AF1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
 				B2A054AC1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */,
 				B2FC67AF1E9900920003A35C /* Category.swift in Sources */,
+				B213E41E1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */,
 				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
 				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
 				B2A054821E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift in Sources */,
 				B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */,
+				B213E4101E9ED2A90085970D /* CameraViewController.swift in Sources */,
 				B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
 				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
