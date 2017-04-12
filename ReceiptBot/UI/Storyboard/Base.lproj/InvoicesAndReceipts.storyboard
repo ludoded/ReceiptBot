@@ -68,7 +68,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Invoices and Receipts" id="XmS-OM-HlY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lMM-gS-ga5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lMM-gS-ga5">
+                            <connections>
+                                <action selector="showCamera:" destination="Hag-2d-gxw" id="0AK-79-owk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barView" destination="UwX-ad-Gfd" id="TeM-Vh-vq8"/>

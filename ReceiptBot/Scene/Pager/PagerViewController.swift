@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import ALCameraViewController
 import Material
 import XLPagerTabStrip
 
@@ -28,6 +29,17 @@ class PagerViewController: ButtonBarPagerTabStripViewController, PagerViewContro
     
     @IBOutlet weak var barView: ButtonBarView!
     @IBOutlet weak var container: UIScrollView!
+    
+    @IBAction func showCamera(_ sender: UIBarButtonItem) {
+        let imagePickerViewController = CameraViewController(croppingEnabled: true) { [weak self] image, asset in
+            // Do something with your image here.
+            // If cropping is enabled this image will be the cropped version
+            
+            self?.dismiss(animated: true, completion: nil)
+        }
+        
+        navigationController?.present(imagePickerViewController, animated: true, completion: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -3,6 +3,7 @@ platform :ios, '9.0'
 def pods
     pod 'ActionSheetPicker-3.0'
     pod 'Alamofire'
+    pod 'ALCameraViewController'
     pod 'BRYXBanner'
     pod 'Charts'
     pod 'Firebase/Auth'

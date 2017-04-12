@@ -58,5 +58,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow take photo of receipt from gallery</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow take photo of receipt</string>
 </dict>
 </plist>

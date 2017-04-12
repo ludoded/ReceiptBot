@@ -10,8 +10,6 @@
 		22E6281B40752B886870A5C1 /* Pods_ReceiptBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */; };
 		9603600FFF96F971F37EAE33 /* Pods_ReceiptBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */; };
 		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
-		B22B11BB1E89D5C8009D3E76 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */; };
-		B22B11BD1E89D5C8009D3E76 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */; };
 		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
 		B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */; };
@@ -299,8 +297,6 @@
 		63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptBotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22B11C61E89D5C8009D3E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B22B11CB1E89D5C8009D3E76 /* ReceiptBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,8 +497,6 @@
 				B2FB68311E93D122009560BD /* Networking */,
 				B22B11DA1E89DE4C009D3E76 /* Scene */,
 				B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */,
-				B22B11BA1E89D5C8009D3E76 /* FirstViewController.swift */,
-				B22B11BC1E89D5C8009D3E76 /* SecondViewController.swift */,
 				B22B11C11E89D5C8009D3E76 /* Assets.xcassets */,
 				B22B11C61E89D5C8009D3E76 /* Info.plist */,
 				B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */,
@@ -1167,7 +1161,6 @@
 			files = (
 				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
-				B22B11BD1E89D5C8009D3E76 /* SecondViewController.swift in Sources */,
 				B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */,
 				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
@@ -1209,7 +1202,6 @@
 				B2FB683F1E93EA20009560BD /* ConvertedInvoiceResponse.swift in Sources */,
 				B283CBC01E955C7C008A3313 /* RebotColor.swift in Sources */,
 				B2FC67901E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
-				B22B11BB1E89D5C8009D3E76 /* FirstViewController.swift in Sources */,
 				B27B53981E945F2100B0E050 /* DashboardRouter.swift in Sources */,
 				B2FC678A1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */,
 				B2FC67661E983C9E0003A35C /* SignInViewController.swift in Sources */,
