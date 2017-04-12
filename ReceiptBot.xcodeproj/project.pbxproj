@@ -29,6 +29,8 @@
 		B213E4261E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */; };
 		B213E4271E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */; };
 		B213E4281E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */; };
+		B213E42A1E9EE9250085970D /* UIImage+base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4291E9EE9250085970D /* UIImage+base64.swift */; };
+		B213E42B1E9EE9250085970D /* UIImage+base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4291E9EE9250085970D /* UIImage+base64.swift */; };
 		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
 		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
@@ -325,6 +327,7 @@
 		B213E4181E9EDAE40085970D /* PhotoVerifyRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyRouter.swift; path = Scene/PhotoVerify/PhotoVerifyRouter.swift; sourceTree = "<group>"; };
 		B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyViewController.swift; path = Scene/PhotoVerify/PhotoVerifyViewController.swift; sourceTree = "<group>"; };
 		B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyWorker.swift; path = Scene/PhotoVerify/PhotoVerifyWorker.swift; sourceTree = "<group>"; };
+		B213E4291E9EE9250085970D /* UIImage+base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+base64.swift"; path = "Helper/Extension/UIImage+base64.swift"; sourceTree = "<group>"; };
 		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -622,6 +625,7 @@
 				B2FC679F1E9857530003A35C /* UIViewController+keyboard.swift */,
 				B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */,
 				B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */,
+				B213E4291E9EE9250085970D /* UIImage+base64.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1275,6 +1279,7 @@
 				B2FC67791E984E390003A35C /* SignUpPresenter.swift in Sources */,
 				B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */,
 				B299B7A71E9AAB02002BFA87 /* RebotValidator.swift in Sources */,
+				B213E42A1E9EE9250085970D /* UIImage+base64.swift in Sources */,
 				B2A054961E9D3BF300CF88D9 /* LeftRouter.swift in Sources */,
 				B213E40D1E9ED2A90085970D /* CameraRouter.swift in Sources */,
 				B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */,
@@ -1465,6 +1470,7 @@
 				B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */,
 				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
+				B213E42B1E9EE9250085970D /* UIImage+base64.swift in Sources */,
 				B2A054911E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B213E41C1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */,
 				B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */,
