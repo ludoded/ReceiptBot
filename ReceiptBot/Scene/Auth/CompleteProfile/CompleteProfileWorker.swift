@@ -28,7 +28,7 @@ class CompleteProfileWorker {
             let userInfo: UserInfo = DatabaseManager.shared.insert(response: auth!)
             
             /// Save the user info into singleton
-            AppSettings.shared.store(user: userInfo)
+            AppSettings.shared.store(user: auth!)
             
             callback(.value(auth!))
         }

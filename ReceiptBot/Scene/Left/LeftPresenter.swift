@@ -21,9 +21,9 @@ class LeftPresenter {
     // MARK: - Presentation logic
     func presentUserInfo(response: Left.User.Response) {
         let user = response.userInfo
-        let viewModel = Left.User.ViewModel(name: user.fullName ?? "",
-                                            email: user.emailAddress ?? "",
-                                            entityName: user.orgName ?? "")
+        let viewModel = Left.User.ViewModel(name: user.credentials.fullName,
+                                            email: user.userEmail,
+                                            entityName: user.organisationName)
         
         output.displayUserInfo(viewModel: viewModel)
     }

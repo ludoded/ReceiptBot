@@ -12,10 +12,12 @@ class EmailPasswordWorker {
     let email: String
     let password: String
     
-    var params: [String: String] {
+    var params: [String: Any] {
         return [
             "Email": email,
-            "Password": password
+            "Password": password,
+            "RememberMe": true,
+            "ShouldLockout": false
         ]
     }
     

@@ -15,15 +15,15 @@ class SignInWorker: EmailPasswordWorker {
     func tryToLogin(callback: @escaping (RebotValueWrapper<AuthResponse>) -> ()) {
         AuthResponse.loadType(request: API.signIn(params)) { (auth, message) in
             guard message == nil else { callback(.none(message: message!)); return }
-            guard let user = auth, user.detail.isEmpty else { callback(.none(message: auth!.detail)); return }
+            if !auth!.detail.contains("Success") { callback(.none(message: auth!.detail)); return }
             
             /// Save the response into database
-            let userInfo: UserInfo = DatabaseManager.shared.insert(response: user)
+//            let userInfo: UserInfo = DatabaseManager.shared.insert(response: user)
             
             /// Save the user info into singleton
-            AppSettings.shared.store(user: userInfo)
+            AppSettings.shared.store(user: auth!)
             
-            callback(.value(user))
+            callback(.value(auth!))
         }
     }
 }

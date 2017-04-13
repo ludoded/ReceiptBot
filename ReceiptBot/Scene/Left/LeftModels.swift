@@ -14,7 +14,7 @@ import UIKit
 struct Left {
     struct User {
         struct Response {
-            let userInfo: UserInfo
+            let userInfo: AuthResponse
         }
         
         struct ViewModel {

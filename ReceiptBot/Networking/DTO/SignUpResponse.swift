@@ -66,14 +66,15 @@ struct AuthResponse: JSONable {
     let status: Bool
     
     init(json: JSON) {
+        dump(json)
         self.accountPackageId = json["AccountPackageId"].stringValue
         self.applicationUserId = json["ApplicationUserid"].intValue
         self.emailAddress = json["EmailAddress"].stringValue
         self.entityId = json["EntityId"].intValue
         self.entityName = json["EntityName"].stringValue
         self.credentials = CredentialsResponse(json: json)
-        self.organisationId = json["OrganisationId"].intValue
-        self.organisationName = json["OrganisationName"].stringValue
+        self.organisationId = json["OrganizationId"].intValue
+        self.organisationName = json["OrganizationName"].stringValue
         self.userEmail = json["UserEmail"].stringValue
         self.detail = json["detail"].stringValue
         self.isEmailVerified = json["isEmailVerified"].boolValue

@@ -11,6 +11,20 @@
 
 import UIKit
 
+enum InboxFilterType {
+    case all, processing, processed, approved, rejected
+    
+    var description: String {
+        switch self {
+        case .all: return "All"
+        case .processing: return "Processing"
+        case .processed: return "Processed"
+        case .approved: return "Approved"
+        case .rejected: return "Rejected"
+        }
+    }
+}
+
 protocol InboxInteractorOutput {
 //      func presentSomething(response: Inbox.Something.Response)
 }

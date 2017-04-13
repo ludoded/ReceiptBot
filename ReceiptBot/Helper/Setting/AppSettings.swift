@@ -11,18 +11,18 @@ import Foundation
 final class AppSettings {
     static let shared = AppSettings()
     
-    var user: UserInfo!
+    var user: AuthResponse!
     
     private init() {}
     
-    func store(user: UserInfo) {
+    func store(user: AuthResponse) {
         self.user = user
     }
     
-    private func fetchUser() {
-        guard let users: [UserInfo] = DatabaseManager.shared.fetch(),
-            let user = users.first
-            else { return }
-        store(user: user)
-    }
+//    private func fetchUser() {
+//        guard let users: [UserInfo] = DatabaseManager.shared.fetch(),
+//            let user = users.first
+//            else { return }
+//        store(user: user)
+//    }
 }
