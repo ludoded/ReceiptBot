@@ -18,6 +18,7 @@ protocol InboxDataSourceOutput {
 protocol InboxDataSourceVCOutput {
     func startUpdatingTableView()
     func finishUpdatingTableView()
+    func didSelect(at row: Int)
 }
 
 class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -69,5 +70,10 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        vcOutput.didSelect(at: indexPath.row)
     }
 }

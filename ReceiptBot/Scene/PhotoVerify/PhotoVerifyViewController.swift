@@ -57,4 +57,8 @@ class PhotoVerifyViewController: UIViewController {
     func displayInvoices() {
         router.navigateToInvoice()
     }
+    
+    func displaySomething() {
+    
+    }
 }

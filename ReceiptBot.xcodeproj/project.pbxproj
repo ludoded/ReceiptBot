@@ -31,6 +31,20 @@
 		B213E4281E9EDAE40085970D /* PhotoVerifyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */; };
 		B213E42A1E9EE9250085970D /* UIImage+base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4291E9EE9250085970D /* UIImage+base64.swift */; };
 		B213E42B1E9EE9250085970D /* UIImage+base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4291E9EE9250085970D /* UIImage+base64.swift */; };
+		B213E4341EA01CF30085970D /* DetailInvoiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42D1EA01CF30085970D /* DetailInvoiceConfigurator.swift */; };
+		B213E4351EA01CF30085970D /* DetailInvoiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42D1EA01CF30085970D /* DetailInvoiceConfigurator.swift */; };
+		B213E4361EA01CF30085970D /* DetailInvoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42E1EA01CF30085970D /* DetailInvoiceInteractor.swift */; };
+		B213E4371EA01CF30085970D /* DetailInvoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42E1EA01CF30085970D /* DetailInvoiceInteractor.swift */; };
+		B213E4381EA01CF30085970D /* DetailInvoiceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42F1EA01CF30085970D /* DetailInvoiceModels.swift */; };
+		B213E4391EA01CF30085970D /* DetailInvoiceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E42F1EA01CF30085970D /* DetailInvoiceModels.swift */; };
+		B213E43A1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4301EA01CF30085970D /* DetailInvoicePresenter.swift */; };
+		B213E43B1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4301EA01CF30085970D /* DetailInvoicePresenter.swift */; };
+		B213E43C1EA01CF30085970D /* DetailInvoiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4311EA01CF30085970D /* DetailInvoiceRouter.swift */; };
+		B213E43D1EA01CF30085970D /* DetailInvoiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4311EA01CF30085970D /* DetailInvoiceRouter.swift */; };
+		B213E43E1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4321EA01CF30085970D /* DetailInvoiceViewController.swift */; };
+		B213E43F1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4321EA01CF30085970D /* DetailInvoiceViewController.swift */; };
+		B213E4401EA01CF30085970D /* DetailInvoiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */; };
+		B213E4411EA01CF30085970D /* DetailInvoiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */; };
 		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
 		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
@@ -328,6 +342,13 @@
 		B213E4191E9EDAE40085970D /* PhotoVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyViewController.swift; path = Scene/PhotoVerify/PhotoVerifyViewController.swift; sourceTree = "<group>"; };
 		B213E41A1E9EDAE40085970D /* PhotoVerifyWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoVerifyWorker.swift; path = Scene/PhotoVerify/PhotoVerifyWorker.swift; sourceTree = "<group>"; };
 		B213E4291E9EE9250085970D /* UIImage+base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+base64.swift"; path = "Helper/Extension/UIImage+base64.swift"; sourceTree = "<group>"; };
+		B213E42D1EA01CF30085970D /* DetailInvoiceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceConfigurator.swift; path = Scene/DetailInvoice/DetailInvoiceConfigurator.swift; sourceTree = "<group>"; };
+		B213E42E1EA01CF30085970D /* DetailInvoiceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceInteractor.swift; path = Scene/DetailInvoice/DetailInvoiceInteractor.swift; sourceTree = "<group>"; };
+		B213E42F1EA01CF30085970D /* DetailInvoiceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceModels.swift; path = Scene/DetailInvoice/DetailInvoiceModels.swift; sourceTree = "<group>"; };
+		B213E4301EA01CF30085970D /* DetailInvoicePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoicePresenter.swift; path = Scene/DetailInvoice/DetailInvoicePresenter.swift; sourceTree = "<group>"; };
+		B213E4311EA01CF30085970D /* DetailInvoiceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceRouter.swift; path = Scene/DetailInvoice/DetailInvoiceRouter.swift; sourceTree = "<group>"; };
+		B213E4321EA01CF30085970D /* DetailInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceViewController.swift; path = Scene/DetailInvoice/DetailInvoiceViewController.swift; sourceTree = "<group>"; };
+		B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceWorker.swift; path = Scene/DetailInvoice/DetailInvoiceWorker.swift; sourceTree = "<group>"; };
 		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -524,6 +545,20 @@
 			name = PhotoVerify;
 			sourceTree = "<group>";
 		};
+		B213E42C1EA01CC90085970D /* DetailInvoice */ = {
+			isa = PBXGroup;
+			children = (
+				B213E42D1EA01CF30085970D /* DetailInvoiceConfigurator.swift */,
+				B213E42E1EA01CF30085970D /* DetailInvoiceInteractor.swift */,
+				B213E42F1EA01CF30085970D /* DetailInvoiceModels.swift */,
+				B213E4301EA01CF30085970D /* DetailInvoicePresenter.swift */,
+				B213E4311EA01CF30085970D /* DetailInvoiceRouter.swift */,
+				B213E4321EA01CF30085970D /* DetailInvoiceViewController.swift */,
+				B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */,
+			);
+			name = DetailInvoice;
+			sourceTree = "<group>";
+		};
 		B22B11AC1E89D5C7009D3E76 = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +609,7 @@
 		B22B11DA1E89DE4C009D3E76 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B213E42C1EA01CC90085970D /* DetailInvoice */,
 				B213E4131E9EDABE0085970D /* PhotoVerify */,
 				B213E3FD1E9ED16A0085970D /* Camera */,
 				B2A054861E9D3BD000CF88D9 /* Left */,
@@ -1220,6 +1256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
+				B213E43A1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
 				B213E41F1E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
 				B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
@@ -1255,6 +1292,7 @@
 				B2D3ABFB1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
 				B2D3AC011E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
 				B2FB68481E93F7F3009560BD /* GetConvertedInvoiceResponse.swift in Sources */,
+				B213E43E1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */,
 				B299B7A01E995EE3002BFA87 /* ManagedCrud.swift in Sources */,
 				B2FC677D1E984E390003A35C /* SignUpViewController.swift in Sources */,
 				B299B7971E9915B9002BFA87 /* Managed.swift in Sources */,
@@ -1286,10 +1324,12 @@
 				B2FC67A01E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
 				B2A054771E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
+				B213E4361EA01CF30085970D /* DetailInvoiceInteractor.swift in Sources */,
 				B2FC67AB1E98FED90003A35C /* Invoice.swift in Sources */,
 				B27B53B21E945F9400B0E050 /* ExpensesWorker.swift in Sources */,
 				B2FB684C1E93FC1E009560BD /* FileUploadResponse.swift in Sources */,
 				B2FB68521E940478009560BD /* LineChartResponse.swift in Sources */,
+				B213E4341EA01CF30085970D /* DetailInvoiceConfigurator.swift in Sources */,
 				B2FC67641E983C9E0003A35C /* SignInRouter.swift in Sources */,
 				B27B53601E94587D00B0E050 /* PagerConfigurator.swift in Sources */,
 				B2A054A81E9D85FA00CF88D9 /* LeftDataSourceModel.swift in Sources */,
@@ -1302,6 +1342,7 @@
 				B2A054941E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
 				B283CBC71E9563BF008A3313 /* NumberFormaters.swift in Sources */,
 				B2FC67731E984E390003A35C /* SignUpConfigurator.swift in Sources */,
+				B213E4381EA01CF30085970D /* DetailInvoiceModels.swift in Sources */,
 				B283CBD61E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
 				B2FC67881E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
 				B27B53AA1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
@@ -1325,6 +1366,7 @@
 				B2FC677F1E984E390003A35C /* SignUpWorker.swift in Sources */,
 				B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
 				B2FB68501E93FFB5009560BD /* QBExpenseCategoryResponse.swift in Sources */,
+				B213E4401EA01CF30085970D /* DetailInvoiceWorker.swift in Sources */,
 				B2A054981E9D3BF300CF88D9 /* LeftViewController.swift in Sources */,
 				B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */,
 				B2FC67B11E9900F00003A35C /* Expense.swift in Sources */,
@@ -1333,6 +1375,7 @@
 				B27B53681E94587D00B0E050 /* PagerRouter.swift in Sources */,
 				B27B53661E94587D00B0E050 /* PagerPresenter.swift in Sources */,
 				B213E4051E9ED2A90085970D /* CameraConfigurator.swift in Sources */,
+				B213E43C1EA01CF30085970D /* DetailInvoiceRouter.swift in Sources */,
 				B27B53941E945F2100B0E050 /* DashboardModels.swift in Sources */,
 				B2FC675C1E983C9E0003A35C /* SignInConfigurator.swift in Sources */,
 				B299B7AA1E9AAE45002BFA87 /* EmailPasswordViewController.swift in Sources */,
@@ -1360,6 +1403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B213E43B1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */,
 				B299B79E1E993BAE002BFA87 /* RebotDateConverterTest.swift in Sources */,
 				B2D3AC001E97D53C00293B8C /* InboxDataSource.swift in Sources */,
 				B283CBCC1E959928008A3313 /* RebotValueWrapper.swift in Sources */,
@@ -1372,6 +1416,7 @@
 				B27B539D1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
 				B2FC67BE1E99068E0003A35C /* InvoiceStatus.swift in Sources */,
 				B27B53C31E945FC600B0E050 /* InboxPresenter.swift in Sources */,
+				B213E43D1EA01CF30085970D /* DetailInvoiceRouter.swift in Sources */,
 				B2FC67691E983C9E0003A35C /* SignInWorker.swift in Sources */,
 				B2D3ABFA1E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
 				B213E4241E9EDAE40085970D /* PhotoVerifyRouter.swift in Sources */,
@@ -1397,6 +1442,7 @@
 				B2FC677C1E984E390003A35C /* SignUpRouter.swift in Sources */,
 				B2D3AC0B1E97E7E300293B8C /* CategoryResponse.swift in Sources */,
 				B2FC67A11E9857530003A35C /* UIViewController+keyboard.swift in Sources */,
+				B213E4371EA01CF30085970D /* DetailInvoiceInteractor.swift in Sources */,
 				B2FC67671E983C9E0003A35C /* SignInViewController.swift in Sources */,
 				B283CBCB1E9594A7008A3313 /* LineXAxeFormatter.swift in Sources */,
 				B283CBD71E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
@@ -1411,6 +1457,7 @@
 				B2FC67801E984E390003A35C /* SignUpWorker.swift in Sources */,
 				B2FC67781E984E390003A35C /* SignUpModels.swift in Sources */,
 				B299B7B61E9ACD98002BFA87 /* Spinnable.swift in Sources */,
+				B213E43F1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */,
 				B2D3AC071E97E7E300293B8C /* ConvertedInvoiceResponse.swift in Sources */,
 				B299B7921E990FAA002BFA87 /* API.swift in Sources */,
 				B213E4201E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
@@ -1435,6 +1482,7 @@
 				B213E4061E9ED2A90085970D /* CameraConfigurator.swift in Sources */,
 				B299B7B21E9AC05C002BFA87 /* AppConfigurator.swift in Sources */,
 				B2FC679B1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
+				B213E4391EA01CF30085970D /* DetailInvoiceModels.swift in Sources */,
 				B2A054741E9BE26A00CF88D9 /* PasswordRecoveryWorker.swift in Sources */,
 				B2D3AC061E97E7E300293B8C /* SignUpResponse.swift in Sources */,
 				B2FC677E1E984E390003A35C /* SignUpViewController.swift in Sources */,
@@ -1475,6 +1523,7 @@
 				B213E41C1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */,
 				B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */,
 				B283CBD11E96CB7A008A3313 /* InboxCell.swift in Sources */,
+				B213E4411EA01CF30085970D /* DetailInvoiceWorker.swift in Sources */,
 				B27B53C71E945FC600B0E050 /* InboxViewController.swift in Sources */,
 				B2D3ABFC1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
 				B27B53B11E945F9400B0E050 /* ExpensesViewController.swift in Sources */,
@@ -1493,6 +1542,7 @@
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
 				B2A054951E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
 				B2A054851E9D21A600CF88D9 /* ExternalLoginWorker.swift in Sources */,
+				B213E4351EA01CF30085970D /* DetailInvoiceConfigurator.swift in Sources */,
 				B2A0549F1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B27B539B1E945F2100B0E050 /* DashboardViewController.swift in Sources */,
 			);

@@ -72,6 +72,10 @@ extension InboxViewController: InboxDataSourceVCOutput {
     func startUpdatingTableView() {
         
     }
+    
+    func didSelect(at row: Int) {
+        router.navigateToDetails()
+    }
 }
 
 extension InboxViewController: IndicatorInfoProvider {
