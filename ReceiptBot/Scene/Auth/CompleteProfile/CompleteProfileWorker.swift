@@ -20,7 +20,7 @@ class CompleteProfileWorker {
     }
     
     func completeRegistration(callback: @escaping (RebotValueWrapper<AuthResponse>) -> ()) {
-        AuthResponse.loadType(request: API.signUpSecond(params.params)) { (auth, message) in
+        AuthResponse.loadType(request: API.signUpSecond(params.params)) { [weak self] (auth, message) in
             guard message == nil else { callback(.none(message: message!)); return }
             guard auth!.detail.isEmpty else { callback(.none(message: auth!.detail)); return }
             
@@ -29,6 +29,8 @@ class CompleteProfileWorker {
             
             /// Save the user info into singleton
             AppSettings.shared.store(user: auth!)
+            
+            AppSettings.shared.updateCredentials(email: self?.params.params["Email"] as! String, password: self?.params.params["Password"] as! String)
             
             callback(.value(auth!))
         }

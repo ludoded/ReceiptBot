@@ -32,6 +32,10 @@ final class GoogleAuthConfigurator: NSObject {
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
     }
+    
+    func logout() {
+        GIDSignIn.sharedInstance().signOut()
+    }
 }
 
 extension GoogleAuthConfigurator: GIDSignInDelegate {
@@ -43,6 +47,7 @@ extension GoogleAuthConfigurator: GIDSignInDelegate {
             else { signedIn?(nil, "Can't access the email"); return }
         
         let userInfo = GoogleAuthInfo(email: email, name: name)
+        
         signedIn?(userInfo, nil)
     }
     

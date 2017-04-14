@@ -77,6 +77,7 @@ extension LeftViewController: LeftDataSourceOutput {
     }
     
     func logout() {
+        AppSettings.shared.logout()
         DispatchQueue.main.async {
             AppConfigurator.shared.show(for: .auth)
         }

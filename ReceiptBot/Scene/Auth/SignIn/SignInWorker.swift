@@ -13,7 +13,7 @@ import UIKit
 
 class SignInWorker: EmailPasswordWorker {
     func tryToLogin(callback: @escaping (RebotValueWrapper<AuthResponse>) -> ()) {
-        AuthResponse.loadType(request: API.signIn(params)) { (auth, message) in
+        AuthResponse.loadType(request: API.signIn(params)) { [weak self] (auth, message) in
             guard message == nil else { callback(.none(message: message!)); return }
             if !auth!.detail.contains("Success") { callback(.none(message: auth!.detail)); return }
             
@@ -22,6 +22,8 @@ class SignInWorker: EmailPasswordWorker {
             
             /// Save the user info into singleton
             AppSettings.shared.store(user: auth!)
+            
+            AppSettings.shared.updateCredentials(email: self?.params["Email"] as! String, password: self?.params["Password"] as! String)
             
             callback(.value(auth!))
         }

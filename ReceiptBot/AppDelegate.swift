@@ -33,7 +33,7 @@ extension AppDelegate {
     func setupDB() {
         DatabaseManager.shared.createPersistentStore { (error) in
             assert(error == nil, "Couldn't create database's persistent store: \(String(describing: error))")
-            DispatchQueue.main.async { AppConfigurator.shared.show(for: .auth) }
+            DispatchQueue.main.async { AppConfigurator.shared.showInitial() }
         }
     }
 }
