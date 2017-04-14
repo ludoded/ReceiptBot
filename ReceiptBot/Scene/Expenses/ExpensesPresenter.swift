@@ -12,16 +12,16 @@
 import UIKit
 import Charts
 
-protocol ExpensesPresenterOutput: class, Errorable {
+protocol ExpensesPresenterOutput: class, Errorable, Spinnable {
     func updateChart(viewModel: Expenses.Line.ViewModel)
 }
 
 class ExpensesPresenter {
     weak var output: ExpensesPresenterOutput!
 
-    // MARK: - Presentation logic
-    
     func presentLineChart(response: Expenses.Line.Response) {
+        output.stopSpinning()
+        
         let dataSetWrapped = response.dataSet
         switch dataSetWrapped {
         case .value(let dataSet):

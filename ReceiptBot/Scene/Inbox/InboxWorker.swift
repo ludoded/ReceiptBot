@@ -12,9 +12,5 @@
 import UIKit
 
 class InboxWorker {
-    // MARK: - Business Logic
-  
-    func doSomeWork() {
-        // NOTE: Do the work
-    }
+
 }

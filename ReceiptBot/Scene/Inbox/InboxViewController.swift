@@ -13,10 +13,11 @@ import UIKit
 import XLPagerTabStrip
 
 protocol InboxViewControllerOutput {
+    var selectedInvoice: SyncConvertedInvoiceResponse! { get set }
 //    func fetchInbox(request: Inbox.DataSource.Request)
 }
 
-class InboxViewController: UIViewController {
+class InboxViewController: UIViewController, Spinnable {
     private var dataSource: InboxDataSource!
     
     var output: InboxViewControllerOutput!
@@ -66,14 +67,16 @@ class InboxViewController: UIViewController {
 
 extension InboxViewController: InboxDataSourceVCOutput {
     func finishUpdatingTableView() {
+        stopSpinning()
         tableView.reloadData()
     }
     
     func startUpdatingTableView() {
-        
+        startSpinning()
     }
     
-    func didSelect(at row: Int) {
+    func didSelect(the invoice: SyncConvertedInvoiceResponse) {
+        output.selectedInvoice = invoice
         router.navigateToDetails()
     }
 }

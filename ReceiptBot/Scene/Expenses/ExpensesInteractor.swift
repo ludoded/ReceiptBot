@@ -22,7 +22,8 @@ class ExpensesInteractor {
 
     // MARK: - Business logic
     func fetchLineData() {
-        worker = ExpensesWorker()
+        let entityId = AppSettings.shared.user.entityId
+        worker = ExpensesWorker(entityId: entityId)
         worker.fetchLineData { [weak self] (set) in
             self?.pass(dataSet: set)
         }

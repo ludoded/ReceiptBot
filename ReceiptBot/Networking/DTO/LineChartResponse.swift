@@ -26,12 +26,12 @@ struct LineChartResponse: JSONable {
     let month4: Int
     let month5: Int
     let month6: Int
-    let month1Name: String
-    let month2Name: String
-    let month3Name: String
-    let month4Name: String
-    let month5Name: String
-    let month6Name: String
+    let month1Name: Date?
+    let month2Name: Date?
+    let month3Name: Date?
+    let month4Name: Date?
+    let month5Name: Date?
+    let month6Name: Date?
     let supplierName: String
     let totalGrossAmount: Int
     
@@ -51,12 +51,12 @@ struct LineChartResponse: JSONable {
         self.month4 = json["Month4"].intValue
         self.month5 = json["Month5"].intValue
         self.month6 = json["Month6"].intValue
-        self.month1Name = json["Month1Name"].stringValue
-        self.month2Name = json["Month2Name"].stringValue
-        self.month3Name = json["Month3Name"].stringValue
-        self.month4Name = json["Month4Name"].stringValue
-        self.month5Name = json["Month5Name"].stringValue
-        self.month6Name = json["Month6Name"].stringValue
+        self.month1Name = DateFormatters.mdyFormatter.date(from: json["Month1Name"].stringValue)
+        self.month2Name = DateFormatters.mdyFormatter.date(from: json["Month2Name"].stringValue)
+        self.month3Name = DateFormatters.mdyFormatter.date(from: json["Month3Name"].stringValue)
+        self.month4Name = DateFormatters.mdyFormatter.date(from: json["Month4Name"].stringValue)
+        self.month5Name = DateFormatters.mdyFormatter.date(from: json["Month5Name"].stringValue)
+        self.month6Name = DateFormatters.mdyFormatter.date(from: json["Month6Name"].stringValue)
         self.supplierName = json["SupplierName"].stringValue
         self.totalGrossAmount = json["totalGrossAmount"].intValue
     }

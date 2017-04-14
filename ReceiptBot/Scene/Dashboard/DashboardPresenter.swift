@@ -12,7 +12,7 @@
 import UIKit
 import Charts
 
-protocol DashboardPresenterOutput: class, Errorable {
+protocol DashboardPresenterOutput: class, Errorable, Spinnable {
     func updateChart(viewModel: Dashboard.PieChart.ViewModel)
 }
 
@@ -20,6 +20,8 @@ class DashboardPresenter {
     weak var output: DashboardPresenterOutput!
 
     func presentPieData(response: Dashboard.PieChart.Response) {
+        output.stopSpinning()
+        
         let dataSetWrapped = response.dataSet
         switch dataSetWrapped {
         case .value(let dataSet):

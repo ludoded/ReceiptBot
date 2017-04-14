@@ -23,7 +23,8 @@ class DashboardInteractor {
     // MARK: - Business logic
     
     func fetchPieChart() {
-        worker = DashboardWorker()
+        let entityId = AppSettings.shared.user.entityId
+        worker = DashboardWorker(entityId: entityId)
         worker.fetchPieData { [weak self] dataSet in
             DispatchQueue.main.async { self?.sendPieData(request: dataSet) }
         }

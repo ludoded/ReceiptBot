@@ -29,15 +29,15 @@ class InboxDataSourcePresenter {
         }
     }
     
-    func pass(theInvoices invoices: [TempInboxInvoiceWorker]) {
+    func pass(theInvoices invoices: [SyncConvertedInvoiceResponse]) {
         var cellModels: [InboxDataSourceModel.Cell.ViewModel] = []
         
         for invoice in invoices {
-            let paidOn = DateFormatters.mdytaFormatter.string(from: invoice.paidOn)
-            let cellModel = InboxDataSourceModel.Cell.ViewModel(name: invoice.name,
+            let paidOn = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
+            let cellModel = InboxDataSourceModel.Cell.ViewModel(name: invoice.supplierName,
                                                                 paidOn: paidOn,
-                                                                status: invoice.status,
-                                                                currency: invoice.currency)
+                                                                status: invoice.type,
+                                                                currency: invoice.taxAmount)
             cellModels.append(cellModel)
         }
         

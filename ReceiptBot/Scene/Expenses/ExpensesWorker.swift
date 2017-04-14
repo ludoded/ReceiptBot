@@ -13,34 +13,39 @@ import UIKit
 import Charts
 
 class ExpensesWorker {
-    // MARK: - Business Logic
+    let entityId: Int
+    
+    init(entityId: Int) {
+        self.entityId = entityId
+    }
   
-    func fetchLineData(callback: (RebotValueWrapper<LineChartDataSet>) -> ()) {
-        /// TODO: fetch real data later
-        let now = Date().timeIntervalSince1970
-        let month = 60 * 60 * 24 * 31
-        
-        let values = [
-            ChartDataEntry(x: now - Double((month * 6)), y: 0.0),
-            ChartDataEntry(x: now - Double((month * 5)), y: 100_000_000.0),
-            ChartDataEntry(x: now - Double((month * 4)), y: 400_000_000.0),
-            ChartDataEntry(x: now - Double((month * 3)), y: 200_000_000.0),
-            ChartDataEntry(x: now - Double((month * 2)), y: 1_000_000_000.0),
-            ChartDataEntry(x: now - Double(month), y: 145_223_223.0)
-        ]
-        
-        let dataSet = LineChartDataSet(values: values, label: nil)
-        dataSet.colors = [.green]
-        dataSet.drawValuesEnabled = true
-        dataSet.drawCirclesEnabled = true
-        dataSet.circleColors = [.blue]
-        dataSet.drawCircleHoleEnabled = true
-        dataSet.circleHoleColor = .white
-        dataSet.lineWidth = 3.0
-        dataSet.fillAlpha = 0.5
-        dataSet.fill = Fill(color: .green)
-        dataSet.drawFilledEnabled = true
-        
-        callback(.value(dataSet))
+    func fetchLineData(callback: @escaping (RebotValueWrapper<LineChartDataSet>) -> ()) {
+        LineChartResponse.loadType(request: API.lineChart(with: entityId)) { (lineResp, message) in
+            guard message == nil else { callback(.none(message: message!)); return }
+            guard let line = lineResp else { callback(.none(message: "Can't parse Line Data!")); return }
+            
+            var values: [ChartDataEntry] = []
+            
+            if line.grossAmountMonth6 > 0 { values.append(ChartDataEntry(x: line.month6Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth6))) }
+            if line.grossAmountMonth5 > 0 { values.append(ChartDataEntry(x: line.month5Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth5))) }
+            if line.grossAmountMonth4 > 0 { values.append(ChartDataEntry(x: line.month4Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth4))) }
+            if line.grossAmountMonth3 > 0 { values.append(ChartDataEntry(x: line.month3Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth3))) }
+            if line.grossAmountMonth2 > 0 { values.append(ChartDataEntry(x: line.month2Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth2))) }
+            if line.grossAmountMonth1 > 0 { values.append(ChartDataEntry(x: line.month1Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth1))) }
+            
+            let dataSet = LineChartDataSet(values: values, label: nil)
+            dataSet.colors = [.green]
+            dataSet.drawValuesEnabled = true
+            dataSet.drawCirclesEnabled = true
+            dataSet.circleColors = [.blue]
+            dataSet.drawCircleHoleEnabled = true
+            dataSet.circleHoleColor = .white
+            dataSet.lineWidth = 3.0
+            dataSet.fillAlpha = 0.5
+            dataSet.fill = Fill(color: .green)
+            dataSet.drawFilledEnabled = true
+            
+            callback(.value(dataSet))
+        }
     }
 }

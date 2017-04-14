@@ -41,6 +41,7 @@ class DashboardViewController: UIViewController {
     // MARK: - Event handling
 
     func fetchData() {
+        startSpinning()
         output.fetchPieChart()
     }
 

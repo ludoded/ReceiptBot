@@ -11,23 +11,42 @@
 
 import UIKit
 
-protocol DetailInvoicePresenterInput {
-    func presentSomething(response: DetailInvoice.Something.Response)
+protocol DetailInvoicePresenterOutput: class, Errorable, Spinnable {
+    func displayInitial(viewModel: DetailInvoice.Setup.ViewModel)
 }
 
-protocol DetailInvoicePresenterOutput: class {
-    func displaySomething(viewModel: DetailInvoice.Something.ViewModel)
-}
-
-class DetailInvoicePresenter: DetailInvoicePresenterInput {
+class DetailInvoicePresenter {
     weak var output: DetailInvoicePresenterOutput!
 
     // MARK: - Presentation logic
-
-    func presentSomething(response: DetailInvoice.Something.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = DetailInvoice.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+    func presentInitialSetup(response: DetailInvoice.Setup.Response) {
+        switch response.invoice {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value(let invoice): passInitialSetup(from: invoice)
+        }
+    }
+    
+    func passInitialSetup(from invoice: SyncConvertedInvoiceResponse) {
+        guard var imageURL = URL(string: API.documentsURL) else { output.show(type: .error(message: "Can't load the image")); return }
+        imageURL.appendPathComponent(invoice.filePath)
+        imageURL.appendPathComponent(invoice.fileName)
+        let imageRequest = URLRequest(url: imageURL)
+        
+        let invoiceDate = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
+        let dueDate = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
+        
+        let viewModel = DetailInvoice.Setup.ViewModel(imageRequest: imageRequest,
+                                                      supplierName: invoice.supplierName,
+                                                      invoiceDate: invoiceDate,
+                                                      invoiceNumber: invoice.invoiceNumber,
+                                                      paymentMethod: invoice.paymentMethod,
+                                                      category: invoice.categoryId,
+                                                      taxRate: invoice.taxPercentage,
+                                                      taxAmount: invoice.taxAmount,
+                                                      grossAmount: invoice.grossAmount,
+                                                      netAmount: invoice.netAmount,
+                                                      dueDate: dueDate)
+        
+        output.displayInitial(viewModel: viewModel)
     }
 }

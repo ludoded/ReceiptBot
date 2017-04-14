@@ -8,39 +8,41 @@
 
 import Alamofire
 
-private let stageURL = "http://51.140.104.181:82"
 
 private var router: Router.Type {
-    Router.baseURLString = stageURL
+    Router.baseURLString = API.stageURL
     return Router.self
 }
 
-struct API {}
+struct API {
+    static let stageURL = "http://51.140.104.181:82"
+    static let documentsURL = "http://51.140.104.181"
+}
 
 /// MARK: Sessions
 extension API {
     static func signUpFirst(_ params: Parameters) -> DataRequest {
-        SessionRouter.baseURLString = stageURL
+        SessionRouter.baseURLString = API.stageURL
         return Alamofire.request(SessionRouter.signUpFirst(params))
     }
     
     static func signUpSecond(_ params: Parameters) -> DataRequest {
-        SessionRouter.baseURLString = stageURL
+        SessionRouter.baseURLString = API.stageURL
         return Alamofire.request(SessionRouter.signUpSecond(params))
     }
     
     static func signIn(_ params: Parameters) -> DataRequest {
-        SessionRouter.baseURLString = stageURL
+        SessionRouter.baseURLString = API.stageURL
         return Alamofire.request(SessionRouter.signIn(params))
     }
     
     static func externalLogin(_ email: String) -> DataRequest {
-        SessionRouter.baseURLString = stageURL
+        SessionRouter.baseURLString = API.stageURL
         return Alamofire.request(SessionRouter.external(email: email))
     }
     
     static func forgotPassword(_ email: String) -> DataRequest {
-        SessionRouter.baseURLString = stageURL
+        SessionRouter.baseURLString = API.stageURL
         return Alamofire.request(SessionRouter.forgotPassword(email: email))
     }
 }

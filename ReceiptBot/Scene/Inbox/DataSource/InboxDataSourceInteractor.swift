@@ -18,17 +18,32 @@ protocol InboxDataSourceInteractorOutput {
 class InboxDataSourceInteractor {
     var output: InboxDataSourceInteractorOutput!
     var worker: InboxDataSourceWorker!
+    
+    var invoices: [SyncConvertedInvoiceResponse]!
 
     // MARK: - Business logic
     func fetchInvoices() {
-        worker = InboxDataSourceWorker()
+        let entityId = AppSettings.shared.user.entityId
+        worker = InboxDataSourceWorker(entityId: 2) // TODO: replace 2 with entityId
         worker.fetchInvoices { [weak self] (wrappedArray) in
             self?.pass(data: wrappedArray)
         }
     }
     
-    func pass(data: RebotValueWrapper<[TempInboxInvoiceWorker]>) {
+    func pass(data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>) {
+        storeInvoices(for: data)
+        
         let response = InboxDataSourceModel.Invoices.Response(data: data)
         output.presentInvoices(response: response)
+    }
+    
+    /// Save invoices in interactor for later usage
+    ///
+    /// - Parameter data: Wrapper of Sync Converted Invoice Response
+    func storeInvoices(for data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>) {
+        switch data {
+        case .value(let invoices): self.invoices = invoices
+        default: break
+        }
     }
 }

@@ -22,4 +22,11 @@ struct DateFormatters {
         
         return formatter
     }
+    
+    static var mdyFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        
+        return formatter
+    }
 }

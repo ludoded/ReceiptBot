@@ -23,7 +23,7 @@ struct InboxDataSourceModel {
     
     struct Invoices {
         struct Response {
-            let data: RebotValueWrapper<[TempInboxInvoiceWorker]>
+            let data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>
         }
         
         struct ViewModel {

@@ -10,47 +10,58 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 import Material
 
 protocol DetailInvoiceViewControllerOutput {
-    func save(request: DetailInvoice.Something.Request)
+    var originalInvoice: SyncConvertedInvoiceResponse? { get set }
+    
+    func initialSetup()
+    func save(request: DetailInvoice.Save.Request)
 }
 
 class DetailInvoiceViewController: UITableViewController {
     var output: DetailInvoiceViewControllerOutput!
     var router: DetailInvoiceRouter!
     
-    @IBOutlet weak var invoicePhoto: UIImageView!
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet var textFields: [TextField]!
     
     // MARK: - Object lifecycle
-
     override func awakeFromNib() {
         super.awakeFromNib()
         DetailInvoiceConfigurator.sharedInstance.configure(viewController: self)
     }
 
     // MARK: - View lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomethingOnLoad()
+        initialSetup()
+        
     }
 
     // MARK: - Event handling
-
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
-        let request = DetailInvoice.Something.Request()
-        output.save(request: request)
+    func initialSetup() {
+        output.initialSetup()
+    }
+    
+    func save() {
+//        let request = DetailInvoice.Save.Request()
+//        output.save(request: request)
     }
 
     // MARK: - Display logic
-
-    func displaySomething(viewModel: DetailInvoice.Something.ViewModel) {
-        // NOTE: Display the result from the Presenter
-
-        // nameTextField.text = viewModel.name
+    func displayInitial(viewModel: DetailInvoice.Setup.ViewModel) {
+        webView.loadRequest(viewModel.imageRequest)
+        textFields?[0].text = viewModel.supplierName
+        textFields?[1].text = viewModel.invoiceDate
+        textFields?[2].text = viewModel.invoiceNumber
+        textFields?[3].text = viewModel.paymentMethod
+        textFields?[4].text = viewModel.category
+        textFields?[5].text = viewModel.taxRate
+        textFields?[6].text = viewModel.taxAmount
+        textFields?[7].text = viewModel.grossAmount
+        textFields?[8].text = viewModel.netAmount
+        textFields?[9].text = viewModel.dueDate
     }
 }

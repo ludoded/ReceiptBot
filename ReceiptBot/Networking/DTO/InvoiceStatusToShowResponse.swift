@@ -17,6 +17,10 @@ struct InvoiceStatusToShowResponse: JSONable {
     let processingTotal: Int
     let rejectedTotal: Int
     
+    var total: Double {
+        return Double(approvedTotal + exportedTotal + pendingTotal + processingTotal + rejectedTotal)
+    }
+    
     init(json: JSON) {
         self.approvedTotal = json["ApprovedTotal"].intValue
         self.exportedTotal = json["ExportedTotal"].intValue

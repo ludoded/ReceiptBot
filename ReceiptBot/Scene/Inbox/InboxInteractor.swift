@@ -32,6 +32,7 @@ protocol InboxInteractorOutput {
 class InboxInteractor {
     var output: InboxInteractorOutput!
     var worker: InboxWorker!
+    
+    var selectedInvoice: SyncConvertedInvoiceResponse!
 
-    // MARK: - Business logic
 }

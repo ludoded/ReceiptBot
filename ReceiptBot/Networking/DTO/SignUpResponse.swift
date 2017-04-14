@@ -66,7 +66,6 @@ struct AuthResponse: JSONable {
     let status: Bool
     
     init(json: JSON) {
-        dump(json)
         self.accountPackageId = json["AccountPackageId"].stringValue
         self.applicationUserId = json["ApplicationUserid"].intValue
         self.emailAddress = json["EmailAddress"].stringValue

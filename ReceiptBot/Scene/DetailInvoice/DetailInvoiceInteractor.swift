@@ -11,32 +11,23 @@
 
 import UIKit
 
-protocol DetailInvoiceInteractorInput {
-    func doSomething(request: DetailInvoice.Something.Request)
-}
-
 protocol DetailInvoiceInteractorOutput {
-      func presentSomething(response: DetailInvoice.Something.Response)
+    func presentInitialSetup(response: DetailInvoice.Setup.Response)
 }
 
-class DetailInvoiceInteractor: DetailInvoiceInteractorInput {
+class DetailInvoiceInteractor {
     var output: DetailInvoiceInteractorOutput!
     var worker: DetailInvoiceWorker!
+    
+    var originalInvoice: SyncConvertedInvoiceResponse?
 
     // MARK: - Business logic
-    func save(request: DetailInvoice.Something.Request) {
-        
+    func initialSetup() {
+        let response = DetailInvoice.Setup.Response(with: originalInvoice)
+        output.presentInitialSetup(response: response)
     }
     
-    func doSomething(request: DetailInvoice.Something.Request) {
-        // NOTE: Create some Worker to do the work
-
-        worker = DetailInvoiceWorker()
-        worker.doSomeWork()
-
-        // NOTE: Pass the result to the Presenter
-
-        let response = DetailInvoice.Something.Response()
-        output.presentSomething(response: response)
+    func save(request: DetailInvoice.Save.Request) {
+        
     }
 }

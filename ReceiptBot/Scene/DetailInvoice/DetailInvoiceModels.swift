@@ -12,12 +12,38 @@
 import UIKit
 
 struct DetailInvoice {
-    struct Something {
-        struct Request {
-        }
+    struct Setup {
         struct Response {
+            let invoice: RebotValueWrapper<SyncConvertedInvoiceResponse>
+            
+            init (with invoice: SyncConvertedInvoiceResponse?) {
+                if let unwrappedInvoice = invoice { self.invoice = .value(unwrappedInvoice) }
+                else { self.invoice = .none(message: "No original invoice") }
+            }
         }
+        
         struct ViewModel {
+            let imageRequest: URLRequest
+            let supplierName: String
+            let invoiceDate: String
+            let invoiceNumber: String
+            let paymentMethod: String
+            let category: String
+            let taxRate: String
+            let taxAmount: String
+            let grossAmount: String
+            let netAmount: String
+            let dueDate: String
+        }
+    }
+    
+    struct Save {
+        struct Request {
+            
+        }
+        
+        struct Response {
+            
         }
     }
 }

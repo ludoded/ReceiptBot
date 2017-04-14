@@ -35,13 +35,13 @@ class ExpensesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ExpensesConfigurator.sharedInstance.setup(theChart: chart)
-        doSomethingOnLoad()
+        fetchLineData()
     }
 
     // MARK: - Event handling
 
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
+    func fetchLineData() {
+        startSpinning()
         output.fetchLineData()
     }
 

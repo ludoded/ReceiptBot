@@ -11,24 +11,19 @@
 
 import UIKit
 
-struct TempInboxInvoiceWorker {
-    let name: String
-    let paidOn: Date
-    let status: String
-    let currency: String
-}
-
 class InboxDataSourceWorker {
-    // MARK: - Business Logic
-    /// TODO: Replace later to RebotValueWrapper<SyncConvertedInvoiceResponse>
-    func fetchInvoices(callback: (RebotValueWrapper<[TempInboxInvoiceWorker]>) -> ()) {
-        let values = [
-            TempInboxInvoiceWorker(name: "One", paidOn: Date(), status: "Extracted", currency: "$1.0"),
-            TempInboxInvoiceWorker(name: "Two", paidOn: Date(), status: "Pending", currency: "$1.0"),
-            TempInboxInvoiceWorker(name: "Very long name, because we want to test if the cell would be able to show such long name. We know it's barely possible but just in case", paidOn: Date(), status: "Ok", currency: "$1.0"),
-            TempInboxInvoiceWorker(name: "Four", paidOn: Date(), status: "Ok", currency: "$10.0")
-        ]
-        
-        callback(.value(values))
+    let entityId: Int
+    
+    init(entityId: Int) {
+        self.entityId = entityId
+    }
+    
+    func fetchInvoices(callback: @escaping (RebotValueWrapper<[SyncConvertedInvoiceResponse]>) -> ()) {
+        SyncConvertedInvoiceResponse.load(request: API.syncData(with: entityId)) { (invoicesResp, message) in
+            guard message == nil else { callback(.none(message: message!)); return }
+            guard let invoices = invoicesResp else { callback(.none(message: "Can't parse Sync Invoices Data!")); return }
+            
+            callback(.value(invoices))
+        }
     }
 }

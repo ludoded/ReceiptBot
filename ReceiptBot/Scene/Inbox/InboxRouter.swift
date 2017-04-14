@@ -33,7 +33,7 @@ class InboxRouter: InboxRouterInput {
     }
 
     func passDataToDetailInvoiceScene(segue: UIStoryboardSegue) {
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereViewController.output.name = viewController.output.name
+        let details = segue.destination as! DetailInvoiceViewController
+        details.output.originalInvoice = viewController.output.selectedInvoice
     }
 }

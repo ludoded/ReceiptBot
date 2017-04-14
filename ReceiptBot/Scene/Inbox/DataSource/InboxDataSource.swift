@@ -12,13 +12,15 @@
 import UIKit
 
 protocol InboxDataSourceOutput {
+    var invoices: [SyncConvertedInvoiceResponse]! { get set }
+    
     func fetchInvoices()
 }
 
 protocol InboxDataSourceVCOutput {
     func startUpdatingTableView()
     func finishUpdatingTableView()
-    func didSelect(at row: Int)
+    func didSelect(the invoice: SyncConvertedInvoiceResponse)
 }
 
 class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -31,11 +33,16 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         super.init()
         InboxDataSourceConfigurator.sharedInstance.configure(dataSource: self)
         fetchInvoices()
+        
+        model = InboxDataSourceModel.Invoices.ViewModel(cells: [])
     }
 
     // MARK: - Event handling
 
     func fetchInvoices() {
+        /// Notify that fetch request started
+        vcOutput?.startUpdatingTableView()
+        
         /// Fetch Invoices from internet
         output.fetchInvoices()
     }
@@ -72,8 +79,14 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         return UITableViewAutomaticDimension
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        vcOutput.didSelect(at: indexPath.row)
+        
+        let invoice = output.invoices[indexPath.row]
+        vcOutput.didSelect(the: invoice)
     }
 }

@@ -92,45 +92,50 @@
                         <sections>
                             <tableViewSection id="zeH-Pi-ghn">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="n8J-zQ-MzT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="207" id="n8J-zQ-MzT">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n8J-zQ-MzT" id="BWJ-D6-JVp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aqA-MJ-2Fe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="206.5"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
+                                                <webView userInteractionEnabled="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4M-fR-dqu">
+                                                    <rect key="frame" x="114.5" y="0.0" width="146" height="206.5"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="x4M-fR-dqu" secondAttribute="height" multiplier="1:1.414" id="HoA-Ry-xe0"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="WQ1-0l-wPA" id="SAu-ab-U1t"/>
+                                                    </connections>
+                                                </webView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="aqA-MJ-2Fe" secondAttribute="trailing" id="3Ls-Pm-dbp"/>
-                                                <constraint firstAttribute="bottom" secondItem="aqA-MJ-2Fe" secondAttribute="bottom" id="G7B-dL-VnC"/>
-                                                <constraint firstItem="aqA-MJ-2Fe" firstAttribute="top" secondItem="BWJ-D6-JVp" secondAttribute="top" id="j8y-3m-9Rv"/>
-                                                <constraint firstItem="aqA-MJ-2Fe" firstAttribute="leading" secondItem="BWJ-D6-JVp" secondAttribute="leading" id="yRo-q2-JdY"/>
+                                                <constraint firstAttribute="bottom" secondItem="x4M-fR-dqu" secondAttribute="bottom" id="Fde-Ks-Lmu"/>
+                                                <constraint firstItem="x4M-fR-dqu" firstAttribute="top" secondItem="BWJ-D6-JVp" secondAttribute="top" id="UEE-2L-Y4w"/>
+                                                <constraint firstItem="x4M-fR-dqu" firstAttribute="centerX" secondItem="BWJ-D6-JVp" secondAttribute="centerX" id="aZe-Xv-kpo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="d1u-rb-FjM">
-                                        <rect key="frame" x="0.0" y="207" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="d1u-rb-FjM">
+                                        <rect key="frame" x="0.0" y="207" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1u-rb-FjM" id="b4W-T0-6Rq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-qe-YMk">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Xdu-bM-4dp">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Xdu-bM-4dp" secondAttribute="height" multiplier="1:1" id="ENr-uk-5pM"/>
                                                                 <constraint firstAttribute="height" constant="40" id="MFE-I9-p5z"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOk-Br-9f3" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOk-Br-9f3" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -149,25 +154,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="zfa-b9-qvh">
-                                        <rect key="frame" x="0.0" y="267" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="zfa-b9-qvh">
+                                        <rect key="frame" x="0.0" y="277" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfa-b9-qvh" id="03T-Sw-D7o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-ss-kbn">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date" translatesAutoresizingMaskIntoConstraints="NO" id="APA-bU-VDQ">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="APA-bU-VDQ" secondAttribute="height" multiplier="1:1" id="Glm-nd-rRU"/>
                                                                 <constraint firstAttribute="height" constant="40" id="N6C-1j-MbH"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-bS-NLn" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-bS-NLn" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -186,25 +191,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="FAo-4t-0Le">
-                                        <rect key="frame" x="0.0" y="327" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="FAo-4t-0Le">
+                                        <rect key="frame" x="0.0" y="347" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAo-4t-0Le" id="Wqo-4k-Cis">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iYU-hU-jC3">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invnum" translatesAutoresizingMaskIntoConstraints="NO" id="1hi-mx-BeM">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="1hi-mx-BeM" secondAttribute="height" multiplier="1:1" id="fbm-gV-AhM"/>
                                                                 <constraint firstAttribute="height" constant="40" id="wbo-Hh-qkV"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-Kh-Idd" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-Kh-Idd" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -223,25 +228,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="VGr-mw-rUu">
-                                        <rect key="frame" x="0.0" y="387" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="VGr-mw-rUu">
+                                        <rect key="frame" x="0.0" y="417" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VGr-mw-rUu" id="C1S-jc-ihc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-hF-UtE">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency" translatesAutoresizingMaskIntoConstraints="NO" id="09O-eQ-6OM">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="09O-eQ-6OM" secondAttribute="height" multiplier="1:1" id="hA7-mr-rQl"/>
                                                                 <constraint firstAttribute="height" constant="40" id="w7K-R0-EpX"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tg3-P5-jFa" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tg3-P5-jFa" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -260,25 +265,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="f62-6j-JgB">
-                                        <rect key="frame" x="0.0" y="447" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="f62-6j-JgB">
+                                        <rect key="frame" x="0.0" y="487" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f62-6j-JgB" id="guO-a9-YhA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5C8-j7-H5h">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invnum" translatesAutoresizingMaskIntoConstraints="NO" id="XoL-3a-ywQ">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Nz5-Yj-45Z"/>
                                                                 <constraint firstAttribute="width" secondItem="XoL-3a-ywQ" secondAttribute="height" multiplier="1:1" id="dQs-8D-ycC"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-d9-JFr" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-d9-JFr" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -297,25 +302,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ErW-ec-f2M">
-                                        <rect key="frame" x="0.0" y="507" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="ErW-ec-f2M">
+                                        <rect key="frame" x="0.0" y="557" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ErW-ec-f2M" id="Tez-mK-e91">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-pe-UDd">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-mE-Z5E">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="eXz-mE-Z5E" secondAttribute="height" multiplier="1:1" id="TQl-X3-Xvv"/>
                                                                 <constraint firstAttribute="height" constant="40" id="jK4-9n-otY"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abG-bT-axF" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abG-bT-axF" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -334,25 +339,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="5Oe-oo-RmW">
-                                        <rect key="frame" x="0.0" y="567" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="5Oe-oo-RmW">
+                                        <rect key="frame" x="0.0" y="627" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Oe-oo-RmW" id="Kzj-y2-4UP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-qU-Umt">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taxamount" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-oa-6bI">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Tyt-yq-ZHw"/>
                                                                 <constraint firstAttribute="width" secondItem="Es1-oa-6bI" secondAttribute="height" multiplier="1:1" id="W0O-Hw-4fN"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6mr-HN-jbC" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6mr-HN-jbC" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -371,25 +376,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="H3X-SX-su5">
-                                        <rect key="frame" x="0.0" y="627" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="H3X-SX-su5">
+                                        <rect key="frame" x="0.0" y="697" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3X-SX-su5" id="9qL-hb-us4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yg9-tS-tI1">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grossamount" translatesAutoresizingMaskIntoConstraints="NO" id="66d-al-aYK">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="66d-al-aYK" secondAttribute="height" multiplier="1:1" id="BYw-GN-NO3"/>
                                                                 <constraint firstAttribute="height" constant="40" id="S14-5W-0pr"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-3R-r76" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-3R-r76" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -408,25 +413,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Bgo-YW-8QN">
-                                        <rect key="frame" x="0.0" y="687" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="Bgo-YW-8QN">
+                                        <rect key="frame" x="0.0" y="767" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bgo-YW-8QN" id="hWh-ZP-hVb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Msa-Lj-Din">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netamount" translatesAutoresizingMaskIntoConstraints="NO" id="wfS-hN-kZ4">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="wfS-hN-kZ4" secondAttribute="height" multiplier="1:1" id="RKi-Bq-9jy"/>
                                                                 <constraint firstAttribute="height" constant="40" id="f5B-jw-xJF"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxd-BT-c7o" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxd-BT-c7o" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -445,25 +450,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="2q1-V0-MyZ">
-                                        <rect key="frame" x="0.0" y="747" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="2q1-V0-MyZ">
+                                        <rect key="frame" x="0.0" y="837" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2q1-V0-MyZ" id="qVo-rF-RlI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gSj-aj-moE">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="69.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date" translatesAutoresizingMaskIntoConstraints="NO" id="Qd0-rr-ZfH">
-                                                            <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="15" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="GQd-Gs-58M"/>
                                                                 <constraint firstAttribute="width" secondItem="Qd0-rr-ZfH" secondAttribute="height" multiplier="1:1" id="KM7-aN-jdD"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-o3-sVw" customClass="TextField" customModule="ReceiptBot" customModuleProvider="target">
-                                                            <rect key="frame" x="48" y="20" width="311" height="20"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-o3-sVw" customClass="TextField" customModule="Material">
+                                                            <rect key="frame" x="48" y="25" width="311" height="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -491,7 +496,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="invoicePhoto" destination="aqA-MJ-2Fe" id="ZEa-Ab-CJb"/>
+                        <outlet property="webView" destination="x4M-fR-dqu" id="g6e-N1-IYu"/>
                         <outletCollection property="textFields" destination="jOk-Br-9f3" collectionClass="NSMutableArray" id="QOf-jq-V8h"/>
                         <outletCollection property="textFields" destination="lC4-bS-NLn" collectionClass="NSMutableArray" id="vEG-Ms-NQN"/>
                         <outletCollection property="textFields" destination="ZJH-Kh-Idd" collectionClass="NSMutableArray" id="22I-ui-j0h"/>
