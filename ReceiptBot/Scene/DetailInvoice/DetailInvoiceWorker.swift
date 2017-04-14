@@ -28,5 +28,20 @@ class DetailInvoiceSaveWorker {
 }
 
 class DetailInvoiceRejectWorker {
+    let request: DetailInvoice.Reject.Params
     
+    init(request: DetailInvoice.Reject.Params) {
+        self.request = request
+    }
+    
+    func reject(callback: @escaping (RebotValueWrapper<SyncConvertedInvoiceResponse>) -> ()) {
+        SyncConvertedInvoiceResponse.loadType(request: API.reject(with: request.entityId,
+                                                                  and: request.invoiceId,
+                                                                  originalInvoiceId: request.originalInvoiceId,
+                                                                  reason: request.comment)) { (resp, message) in
+                                                                    guard message == nil else { callback(.none(message: message!)); return }
+                                                                    
+                                                                    callback(.value(resp!))
+        }
+    }
 }

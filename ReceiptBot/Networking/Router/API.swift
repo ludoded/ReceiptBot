@@ -88,4 +88,8 @@ extension API {
     static func suppliers(with softwareId: String, and entityId: Int) -> DataRequest {
         return Alamofire.request(router.suppliers(softwareId: softwareId, entityId: entityId))
     }
+    
+    static func reject(with entityId: Int, and convertedInvoiceId: String, originalInvoiceId: String, reason: String) -> DataRequest {
+        return Alamofire.request(router.reject(entityId: entityId, convertedInvoiceId: convertedInvoiceId, originalInvoicId: originalInvoiceId, reason: reason))
+    }
 }

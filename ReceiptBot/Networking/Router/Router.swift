@@ -80,6 +80,7 @@ enum Router: BaseRouter {
     case qbCategories
     case updateConvertedInvoice(params: Parameters)
     case suppliers(softwareId: String, entityId: Int)
+    case reject(entityId: Int, convertedInvoiceId: String, originalInvoicId: String, reason: String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
@@ -94,7 +95,8 @@ enum Router: BaseRouter {
             return .get
             
         case .fileUpload,
-             .updateConvertedInvoice:
+             .updateConvertedInvoice,
+             .reject:
             return .post
         }
     }
@@ -121,6 +123,8 @@ enum Router: BaseRouter {
             return "/DataCorrectionService.svc/UpdateConvertedInvoiceMobile"
         case .suppliers(let softwareId, let entityId):
             return "/DataCorrectionService.svc/GetSuppliers/\(softwareId)/\(entityId)"
+        case .reject(let entityId, let convertedInvoiceId, let originalInvoicId, let reason):
+            return "/DataCorrectionService.svc/AddInvoiceCommentMobile/\(entityId)/\(convertedInvoiceId)/\(originalInvoicId)/\(reason)"
         }
     }
     
@@ -128,10 +132,6 @@ enum Router: BaseRouter {
         let url = Foundation.URL(string: Router.baseURLString!)!
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        
-        if let token = Router.OAuthToken {
-            urlRequest.setValue(token, forHTTPHeaderField: "X-Auth-Token")
-        }
         
         let urlEncoder = URLEncoding.default
         let jsonEncoder = JSONEncoding.default
@@ -144,7 +144,8 @@ enum Router: BaseRouter {
              .allExpense,
              .xeroCategories,
              .qbCategories,
-             .suppliers:
+             .suppliers,
+             .reject:
             return try urlEncoder.encode(urlRequest, with: nil)
             
         case .fileUpload(let params),

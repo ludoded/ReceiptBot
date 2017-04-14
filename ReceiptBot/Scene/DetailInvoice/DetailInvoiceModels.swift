@@ -38,11 +38,19 @@ struct DetailInvoice {
     }
     
     struct Reject {
-        struct Request {
+        struct Params {
             let comment: String
             let entityId: Int
             let invoiceId: String
             let originalInvoiceId: String
+        }
+        
+        struct Request {
+            let comment: String
+        }
+        
+        struct Response {
+            let data: RebotValueWrapper<SyncConvertedInvoiceResponse>
         }
     }
     

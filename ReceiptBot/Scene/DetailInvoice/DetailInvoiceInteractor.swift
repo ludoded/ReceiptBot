@@ -14,6 +14,7 @@ import UIKit
 protocol DetailInvoiceInteractorOutput {
     func presentInitialSetup(response: DetailInvoice.Setup.Response)
     func presentSave(response: DetailInvoice.Save.Response)
+    func presentReject(response: DetailInvoice.Reject.Response)
 }
 
 class DetailInvoiceInteractor {
@@ -51,16 +52,29 @@ class DetailInvoiceInteractor {
         
         let worker = DetailInvoiceSaveWorker(params: param.params)
         worker.save { [weak self] (inv) in
-            DispatchQueue.main.async { self?.pass(data: inv) }
+            DispatchQueue.main.async { self?.passSave(data: inv) }
         }
     }
     
-    func reject() {
-        
+    func reject(request: DetailInvoice.Reject.Request) {
+        let entityId = AppSettings.shared.user.entityId
+        let params = DetailInvoice.Reject.Params(comment: request.comment,
+                                                 entityId: entityId,
+                                                 invoiceId: originalInvoice?.convertedInvoiceId ?? "",
+                                                 originalInvoiceId: originalInvoice?.originalInvoiceId ?? "")
+        let worker = DetailInvoiceRejectWorker(request: params)
+        worker.reject { [weak self] (data) in
+            DispatchQueue.main.async { self?.passReject(data: data) }
+        }
     }
     
-    func pass(data: RebotValueWrapper<SyncConvertedInvoiceResponse>) {
+    func passSave(data: RebotValueWrapper<SyncConvertedInvoiceResponse>) {
         let response = DetailInvoice.Save.Response(data: data)
         output.presentSave(response: response)
+    }
+    
+    func passReject(data: RebotValueWrapper<SyncConvertedInvoiceResponse>) {
+        let response = DetailInvoice.Reject.Response(data: data)
+        output.presentReject(response: response)
     }
 }

@@ -35,6 +35,6 @@ extension Errorable where Self: UIViewController {
         }
         
         let banner = Banner(title: title, subtitle: subtitle, backgroundColor: color)
-        banner.show(self.view, duration: 2.0)
+        banner.show(duration: 2.0)
     }
 }

@@ -18,7 +18,7 @@ protocol DetailInvoiceViewControllerOutput {
     
     func initialSetup()
     func save(request: DetailInvoice.Save.Request)
-    func reject()
+    func reject(request: DetailInvoice.Reject.Request)
 }
 
 class DetailInvoiceViewController: UITableViewController {
@@ -44,6 +44,17 @@ class DetailInvoiceViewController: UITableViewController {
     }
     
     @IBAction func reject(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Reject", message: "Please enter the comment on reason you reject.", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Reason"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Reject", style: .default, handler: { [weak self] (_) in
+            guard let text =  alert.textFields?[0].text else { return }
+            DispatchQueue.main.async { self?.reject(with: text) }
+        }))
+        
+        navigationController?.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {
@@ -124,8 +135,11 @@ class DetailInvoiceViewController: UITableViewController {
         output.save(request: request)
     }
     
-    func reject() {
+    func reject(with comment: String) {
         startSpinning()
+        
+        let request = DetailInvoice.Reject.Request(comment: comment)
+        output.reject(request: request)
     }
 
     // MARK: - Display logic
