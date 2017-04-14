@@ -23,8 +23,8 @@ class InboxDataSourceInteractor {
 
     // MARK: - Business logic
     func fetchInvoices() {
-        _ = AppSettings.shared.user.entityId
-        worker = InboxDataSourceWorker(entityId: 2) // TODO: replace 2 with entityId
+        let entityId = AppSettings.shared.user.entityId
+        worker = InboxDataSourceWorker(entityId: entityId)
         worker.fetchInvoices { [weak self] (wrappedArray) in
             self?.pass(data: wrappedArray)
         }
