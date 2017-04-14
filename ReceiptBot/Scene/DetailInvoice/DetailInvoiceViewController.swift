@@ -24,6 +24,13 @@ class DetailInvoiceViewController: UITableViewController {
     var output: DetailInvoiceViewControllerOutput!
     var router: DetailInvoiceRouter!
     
+    /// Pickers
+    var invoiceDatePicker: UIDatePicker!
+    var dueDatePicker: UIDatePicker!
+    var paymentPicker: UIPickerView!
+    var categoryPicker: UIPickerView!
+    var taxPicker: UIPickerView!
+    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet var textFields: [TextField]!
     
@@ -37,9 +44,35 @@ class DetailInvoiceViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
-        
+        setupPickers()
     }
-
+    
+    /// MARK: - Setup handling
+    func setupPickers() {
+        invoiceDatePicker = UIDatePicker()
+        invoiceDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
+        textFields?[1].inputView = invoiceDatePicker
+        
+        dueDatePicker = UIDatePicker()
+        dueDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
+        textFields?[9].inputView = dueDatePicker
+        
+        paymentPicker = UIPickerView()
+        paymentPicker.dataSource = self
+        paymentPicker.delegate = self
+        textFields?[3].inputView = paymentPicker
+        
+        categoryPicker = UIPickerView()
+        categoryPicker.dataSource = self
+        categoryPicker.delegate = self
+        textFields?[4].inputView = categoryPicker
+        
+        taxPicker = UIPickerView()
+        taxPicker.dataSource = self
+        taxPicker.delegate = self
+        textFields?[5].inputView = taxPicker
+    }
+    
     // MARK: - Event handling
     func initialSetup() {
         output.initialSetup()
@@ -63,5 +96,103 @@ class DetailInvoiceViewController: UITableViewController {
         textFields?[7].text = viewModel.grossAmount
         textFields?[8].text = viewModel.netAmount
         textFields?[9].text = viewModel.dueDate
+    }
+}
+
+/// MARK: UITableViewDelegate
+extension DetailInvoiceViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        guard row > 0 else { return }
+        let textFieldIndex = row.advanced(by: -1) /// Because first row is the image. It can be moved into another section to simplify this logic
+        
+        activateTextField(at: textFieldIndex)
+    }
+}
+
+extension DetailInvoiceViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let index = textFields.index(of: textField as! TextField) else { return true }
+        if case 6...8 = index {
+            var set = CharacterSet.decimalDigits
+            set.insert(charactersIn: ".")
+            
+            let trimmed = string.trimmingCharacters(in: set)
+            return trimmed.isEmpty
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let index = textFields.index(of: textField as! TextField) else { return false }
+        let total = textFields.count
+        
+        /// Index of next textfield which should become first responder
+        let nextIndex = index.advanced(by: 1)
+        if nextIndex >= total { return textField.resignFirstResponder() }
+        
+        return activateTextField(at: nextIndex)
+    }
+    
+    @discardableResult
+    fileprivate func activateTextField(at index: Int) -> Bool {
+        deactivateAllTextFields()
+        
+        let textField = textFields[index]
+        textField.isUserInteractionEnabled = true
+        return textField.becomeFirstResponder()
+    }
+    
+    /// Set isUserInteractionEnabled to false for all textFields, so they won't be able to clicked directly
+    private func deactivateAllTextFields() {
+        textFields.forEach { $0.isUserInteractionEnabled = false }
+    }
+}
+
+/// MARK: Picker view delegates 
+extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case paymentPicker: return DetailInvoicePickerValues.Payment.values.count
+        case categoryPicker: return DetailInvoicePickerValues.Category.values.count
+        case taxPicker: return DetailInvoicePickerValues.Tax.values.count
+        default: return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView {
+        case paymentPicker: return DetailInvoicePickerValues.Payment.values[row]
+        case categoryPicker: return DetailInvoicePickerValues.Category.values[row]
+        case taxPicker: return DetailInvoicePickerValues.Tax.values[row]
+        default: return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case paymentPicker:
+            let title = DetailInvoicePickerValues.Payment.values[row]
+            textFields?[3].text = title
+        case categoryPicker:
+            let title = DetailInvoicePickerValues.Category.values[row]
+            textFields?[4].text = title
+        case taxPicker:
+            let title = DetailInvoicePickerValues.Tax.values[row]
+            textFields?[5].text = title
+        default: break
+        }
+    }
+    
+    func datePickerValueChanged(picker: UIDatePicker) {
+        switch picker {
+        case invoiceDatePicker: textFields?[0].text = DateFormatters.mdytaFormatter.string(from: picker.date)
+        case dueDatePicker: textFields?[9].text = DateFormatters.mdytaFormatter.string(from: picker.date)
+        default: break
+        }
     }
 }
