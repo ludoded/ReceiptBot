@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="311" y="-195"/>
         </scene>
-        <!--Detail Invoice View Controller-->
+        <!--Details-->
         <scene sceneID="qZm-7B-vzL">
             <objects>
                 <tableViewController id="WQ1-0l-wPA" customClass="DetailInvoiceViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
@@ -525,6 +526,26 @@
                             <outlet property="delegate" destination="WQ1-0l-wPA" id="2zL-ZE-Yha"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Details" id="q2Y-o2-RKN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ia4-w0-Z1C">
+                            <connections>
+                                <action selector="cancel:" destination="WQ1-0l-wPA" id="Puw-hj-Y5T"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="tLE-u7-X1s">
+                                <connections>
+                                    <action selector="save:" destination="WQ1-0l-wPA" id="ltZ-KE-y1x"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="hPr-Zz-kub">
+                                <connections>
+                                    <action selector="reject:" destination="WQ1-0l-wPA" id="qLG-IF-Dol"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="webView" destination="x4M-fR-dqu" id="g6e-N1-IYu"/>
                         <outletCollection property="textFields" destination="jOk-Br-9f3" collectionClass="NSMutableArray" id="QOf-jq-V8h"/>

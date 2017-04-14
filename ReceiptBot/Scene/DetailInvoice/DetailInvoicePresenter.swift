@@ -49,4 +49,13 @@ class DetailInvoicePresenter {
         
         output.displayInitial(viewModel: viewModel)
     }
+    
+    func presentSave(response: DetailInvoice.Save.Response) {
+        output.stopSpinning()
+        
+        switch response.data {
+        case .none(let message): output.show(type: .error(message: message))
+        case .value: output.show(type: .success(message: "Saved"))
+        }
+    }
 }

@@ -11,10 +11,22 @@
 
 import UIKit
 
-class DetailInvoiceWorker {
-    // MARK: - Business Logic
-  
-    func doSomeWork() {
-        // NOTE: Do the work
+class DetailInvoiceSaveWorker {
+    let params: [String: Any]
+    
+    init(params: [String: Any]) {
+        self.params = params
     }
+    
+    func save(callback: @escaping (RebotValueWrapper<SyncConvertedInvoiceResponse>) -> ()) {
+        SyncConvertedInvoiceResponse.loadType(request: API.updateConvertedInvoice(with: params)) { (resp, message) in
+            guard message == nil else { callback(.none(message: message!)); return }
+            
+            callback(.value(resp!))
+        }
+    }
+}
+
+class DetailInvoiceRejectWorker {
+    
 }

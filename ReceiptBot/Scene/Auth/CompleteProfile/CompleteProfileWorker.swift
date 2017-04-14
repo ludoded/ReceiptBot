@@ -25,7 +25,7 @@ class CompleteProfileWorker {
             guard auth!.detail.isEmpty else { callback(.none(message: auth!.detail)); return }
             
             /// Save the response into database
-            let userInfo: UserInfo = DatabaseManager.shared.insert(response: auth!)
+            let _: UserInfo = DatabaseManager.shared.insert(response: auth!)
             
             /// Save the user info into singleton
             AppSettings.shared.store(user: auth!)

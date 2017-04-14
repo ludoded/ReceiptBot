@@ -37,13 +37,73 @@ struct DetailInvoice {
         }
     }
     
+    struct Reject {
+        struct Request {
+            let comment: String
+            let entityId: Int
+            let invoiceId: String
+            let originalInvoiceId: String
+        }
+    }
+    
     struct Save {
         struct Request {
-            
+            let supplierName: String?
+            let invoiceDate: String?
+            let invoiceNumber: String?
+            let paymentMethod: String?
+            let category: String?
+            let taxRate: String?
+            let taxAmount: String?
+            let netAmount: String?
+            let grossAmount: String?
+            let dueDate: String?
         }
         
         struct Response {
+            let data: RebotValueWrapper<SyncConvertedInvoiceResponse>
+        }
+        
+        struct Params {
+            let currencyId: String = "1" /// TODO: i don't know what to do with this
+            let status: String
+            let convertedInvoiceId: String
+            let dueDate: String
+            let entityId: String
+            let fileName: String
+            let grossNumber: String
+            let invoiceNumber: String
+            let invoicedateMobile: String
+            let netAmount: String
+            let originalInvoiceId: String
+            let originalFileName: String
+            let supplierName: String
+            let taxAmount: String
+            let taxPercentage: String
+            let paymentMethod: String
+            let categoryId: String
             
+            var params: [String : Any] {
+                return [
+                    "ConvertedInvoiceId": convertedInvoiceId,
+                    "Type": status,
+                    "CurrencyId": currencyId,
+                    "DueDate": dueDate,
+                    "EntityId": entityId,
+                    "File_Name": fileName,
+                    "Gross_Amount": grossNumber,
+                    "InvoiceNumber": invoiceNumber,
+                    "InvoicedateMobile": invoicedateMobile,
+                    "NetAmount": netAmount,
+                    "OrgInvoiceId": originalInvoiceId,
+                    "OriginalFileName": originalFileName,
+                    "SupplierName": supplierName,
+                    "TaxAmount": taxAmount,
+                    "TaxPercentage": taxPercentage,
+                    "PaymentMethod": paymentMethod,
+                    "CategoryId": categoryId
+                ]
+            }
         }
     }
 }

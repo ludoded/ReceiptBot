@@ -18,6 +18,7 @@ protocol DetailInvoiceViewControllerOutput {
     
     func initialSetup()
     func save(request: DetailInvoice.Save.Request)
+    func reject()
 }
 
 class DetailInvoiceViewController: UITableViewController {
@@ -30,9 +31,24 @@ class DetailInvoiceViewController: UITableViewController {
     var paymentPicker: UIPickerView!
     var categoryPicker: UIPickerView!
     var taxPicker: UIPickerView!
+    var toolbar: UIToolbar!
     
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet var textFields: [TextField]!
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Are you sure?", message: "All your changes would be lost.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in self?.navigationController?.popViewController(animated: true) }))
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func reject(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        save()
+    }
     
     // MARK: - Object lifecycle
     override func awakeFromNib() {
@@ -49,28 +65,42 @@ class DetailInvoiceViewController: UITableViewController {
     
     /// MARK: - Setup handling
     func setupPickers() {
+        toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = false
+        toolbar.isUserInteractionEnabled = true
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done(toolbar:)))
+        toolbar.items = [done]
+        
         invoiceDatePicker = UIDatePicker()
         invoiceDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
+        textFields?[1].inputAccessoryView = toolbar
         textFields?[1].inputView = invoiceDatePicker
         
         dueDatePicker = UIDatePicker()
         dueDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
+        textFields?[9].inputAccessoryView = toolbar
         textFields?[9].inputView = dueDatePicker
         
         paymentPicker = UIPickerView()
         paymentPicker.dataSource = self
         paymentPicker.delegate = self
+        textFields?[3].inputAccessoryView = toolbar
         textFields?[3].inputView = paymentPicker
         
         categoryPicker = UIPickerView()
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
+        textFields?[4].inputAccessoryView = toolbar
         textFields?[4].inputView = categoryPicker
         
         taxPicker = UIPickerView()
         taxPicker.dataSource = self
         taxPicker.delegate = self
+        textFields?[5].inputAccessoryView = toolbar
         textFields?[5].inputView = taxPicker
+        
+        toolbar.sizeToFit()
     }
     
     // MARK: - Event handling
@@ -79,8 +109,23 @@ class DetailInvoiceViewController: UITableViewController {
     }
     
     func save() {
-//        let request = DetailInvoice.Save.Request()
-//        output.save(request: request)
+        startSpinning()
+        
+        let request = DetailInvoice.Save.Request(supplierName: textFields?[0].text,
+                                                 invoiceDate: textFields?[1].text,
+                                                 invoiceNumber: textFields?[2].text,
+                                                 paymentMethod: textFields?[3].text,
+                                                 category: textFields?[4].text,
+                                                 taxRate: textFields?[5].text,
+                                                 taxAmount: textFields?[6].text,
+                                                 netAmount: textFields?[7].text,
+                                                 grossAmount: textFields?[8].text,
+                                                 dueDate: textFields?[9].text)
+        output.save(request: request)
+    }
+    
+    func reject() {
+        startSpinning()
     }
 
     // MARK: - Display logic
@@ -194,5 +239,9 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
         case dueDatePicker: textFields?[9].text = DateFormatters.mdytaFormatter.string(from: picker.date)
         default: break
         }
+    }
+    
+    func done(toolbar: UIToolbar) {
+        view.endEditing(true)
     }
 }
