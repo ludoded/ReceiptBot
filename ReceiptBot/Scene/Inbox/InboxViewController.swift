@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 import XLPagerTabStrip
 
 protocol InboxViewControllerOutput {
@@ -29,6 +30,17 @@ class InboxViewController: UIViewController, Spinnable {
     // MARK: - IBActions
     
     @IBAction func pickFilter(_ sender: UIButton) {
+        let picker = ActionSheetStringPicker(title: "Pick the filter",
+                                             rows: InboxFilterType.allValues,
+                                             initialSelection: 0,
+                                             doneBlock: { [weak self] (_, _, value) in
+                                                let title = value as! String
+                                                DispatchQueue.main.async { self?.filter(with: title) }
+                                            },
+                                             cancel: nil,
+                                             origin: self.view)
+        
+        picker?.show()
     }
     
     // MARK: - Object lifecycle
@@ -54,6 +66,11 @@ class InboxViewController: UIViewController, Spinnable {
         dataSource.vcOutput = self
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
+    }
+    
+    func filter(with query: String) {
+        filter.setTitle(query, for: .normal)
+        dataSource.filterModel(with: query)
     }
 
     // MARK: - Display logic

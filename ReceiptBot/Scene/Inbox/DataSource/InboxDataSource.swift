@@ -13,8 +13,10 @@ import UIKit
 
 protocol InboxDataSourceOutput {
     var invoices: [SyncConvertedInvoiceResponse]! { get set }
+    var filteredInvoices: [SyncConvertedInvoiceResponse]! { get set }
     
     func fetchInvoices()
+    func filter(with query: String)
 }
 
 protocol InboxDataSourceVCOutput {
@@ -45,6 +47,10 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         /// Fetch Invoices from internet
         output.fetchInvoices()
+    }
+    
+    func filterModel(with query: String) {
+        output.filter(with: query)
     }
 
     // MARK: - Display logic
@@ -86,7 +92,7 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let invoice = output.invoices[indexPath.row]
+        let invoice = output.filteredInvoices[indexPath.row]
         vcOutput.didSelect(the: invoice)
     }
 }

@@ -29,6 +29,10 @@ class InboxDataSourcePresenter {
         }
     }
     
+    func presentFilteredInvoices(response: InboxDataSourceModel.Filtered.Response) {
+        pass(theInvoices: response.invoices)
+    }
+    
     func pass(theInvoices invoices: [SyncConvertedInvoiceResponse]) {
         var cellModels: [InboxDataSourceModel.Cell.ViewModel] = []
         

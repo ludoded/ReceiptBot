@@ -12,7 +12,8 @@
 import UIKit
 
 protocol InboxDataSourceInteractorOutput {
-      func presentInvoices(response: InboxDataSourceModel.Invoices.Response)
+    func presentInvoices(response: InboxDataSourceModel.Invoices.Response)
+    func presentFilteredInvoices(response: InboxDataSourceModel.Filtered.Response)
 }
 
 class InboxDataSourceInteractor {
@@ -20,6 +21,7 @@ class InboxDataSourceInteractor {
     var worker: InboxDataSourceWorker!
     
     var invoices: [SyncConvertedInvoiceResponse]!
+    var filteredInvoices: [SyncConvertedInvoiceResponse]!
 
     // MARK: - Business logic
     func fetchInvoices() {
@@ -30,6 +32,16 @@ class InboxDataSourceInteractor {
         }
     }
     
+    func filter(with query: String) {
+        if query.lowercased() == "all" {
+            passFiltered(invoices: invoices)
+        }
+        else {
+            filteredInvoices = invoices.filter({ $0.type.lowercased() == query.lowercased() })
+            passFiltered(invoices: filteredInvoices)
+        }
+    }
+    
     func pass(data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>) {
         storeInvoices(for: data)
         
@@ -37,12 +49,19 @@ class InboxDataSourceInteractor {
         output.presentInvoices(response: response)
     }
     
+    func passFiltered(invoices: [SyncConvertedInvoiceResponse]) {
+        let response = InboxDataSourceModel.Filtered.Response(invoices: invoices)
+        output.presentFilteredInvoices(response: response)
+    }
+    
     /// Save invoices in interactor for later usage
     ///
     /// - Parameter data: Wrapper of Sync Converted Invoice Response
     func storeInvoices(for data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>) {
         switch data {
-        case .value(let invoices): self.invoices = invoices
+        case .value(let invoices):
+            self.invoices = invoices
+            self.filteredInvoices = invoices
         default: break
         }
     }

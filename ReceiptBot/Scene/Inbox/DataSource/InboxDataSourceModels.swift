@@ -39,4 +39,10 @@ struct InboxDataSourceModel {
             }
         }
     }
+    
+    struct Filtered {
+        struct Response {
+            let invoices: [SyncConvertedInvoiceResponse]
+        }
+    }
 }

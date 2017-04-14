@@ -23,6 +23,8 @@ enum InboxFilterType {
         case .rejected: return "Rejected"
         }
     }
+    
+    static var allValues: [String] = [InboxFilterType.all, InboxFilterType.processing, InboxFilterType.processed, InboxFilterType.approved, InboxFilterType.rejected].map{ $0.description }
 }
 
 protocol InboxInteractorOutput {
