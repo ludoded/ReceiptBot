@@ -15,7 +15,7 @@
         <scene sceneID="P0i-sG-IK0">
             <objects>
                 <navigationController navigationBarHidden="YES" id="CLm-cb-t3N" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mgI-m9-dNd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgI-m9-dNd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -86,7 +86,6 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
                                                                                 <real key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Invalid email"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                 </subviews>
@@ -123,7 +122,6 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
                                                                                 <real key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Password should be at least 6 symbols."/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                 </subviews>
