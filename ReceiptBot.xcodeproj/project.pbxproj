@@ -205,6 +205,10 @@
 		B2A054AF1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */; };
 		B2B909301EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */; };
 		B2B909311EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */; };
+		B2B909331EA8183D00F78B0E /* PieChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B909321EA8183D00F78B0E /* PieChartFormatter.swift */; };
+		B2B909341EA8183D00F78B0E /* PieChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B909321EA8183D00F78B0E /* PieChartFormatter.swift */; };
+		B2B909371EA81FC300F78B0E /* RebotAttributedTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B909361EA81FC300F78B0E /* RebotAttributedTextBuilder.swift */; };
+		B2B909381EA81FC300F78B0E /* RebotAttributedTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B909361EA81FC300F78B0E /* RebotAttributedTextBuilder.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -441,6 +445,8 @@
 		B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceInteractor.swift; path = Scene/Left/DataSource/LeftDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceConfigurator.swift; path = Scene/Left/DataSource/LeftDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefreshControlOutput.swift; path = Scene/Sharable/Output/RefreshControlOutput.swift; sourceTree = "<group>"; };
+		B2B909321EA8183D00F78B0E /* PieChartFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieChartFormatter.swift; path = Helper/Formatter/PieChartFormatter.swift; sourceTree = "<group>"; };
+		B2B909361EA81FC300F78B0E /* RebotAttributedTextBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebotAttributedTextBuilder.swift; path = Helper/Utils/RebotAttributedTextBuilder.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -760,6 +766,7 @@
 				B283CBC11E955E57008A3313 /* RebotValueWrapper.swift */,
 				B299B7991E993ACE002BFA87 /* RebotDateConverter.swift */,
 				B299B7A61E9AAB02002BFA87 /* RebotValidator.swift */,
+				B2B909361EA81FC300F78B0E /* RebotAttributedTextBuilder.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -958,6 +965,7 @@
 				B27B53501E944DC800B0E050 /* DateFormaters.swift */,
 				B283CBC61E9563BF008A3313 /* NumberFormaters.swift */,
 				B283CBC91E959473008A3313 /* LineXAxeFormatter.swift */,
+				B2B909321EA8183D00F78B0E /* PieChartFormatter.swift */,
 			);
 			name = Formatter;
 			sourceTree = "<group>";
@@ -1299,6 +1307,7 @@
 				B2FC679A1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
 				B27B53511E944DC800B0E050 /* DateFormaters.swift in Sources */,
 				B2D3ABFB1E97D53C00293B8C /* InboxDataSourcePresenter.swift in Sources */,
+				B2B909371EA81FC300F78B0E /* RebotAttributedTextBuilder.swift in Sources */,
 				B2D3AC011E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
 				B2FB68481E93F7F3009560BD /* GetConvertedInvoiceResponse.swift in Sources */,
 				B213E43E1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */,
@@ -1381,6 +1390,7 @@
 				B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */,
 				B2FC67B11E9900F00003A35C /* Expense.swift in Sources */,
 				B27B53901E945F2100B0E050 /* DashboardConfigurator.swift in Sources */,
+				B2B909331EA8183D00F78B0E /* PieChartFormatter.swift in Sources */,
 				B2FC67601E983C9E0003A35C /* SignInModels.swift in Sources */,
 				B27B53681E94587D00B0E050 /* PagerRouter.swift in Sources */,
 				B27B53661E94587D00B0E050 /* PagerPresenter.swift in Sources */,
@@ -1457,6 +1467,7 @@
 				B283CBCB1E9594A7008A3313 /* LineXAxeFormatter.swift in Sources */,
 				B283CBD71E96D03F008A3313 /* UITableViewCell+RegisterHelper.swift in Sources */,
 				B27B536D1E94587D00B0E050 /* PagerWorker.swift in Sources */,
+				B2B909341EA8183D00F78B0E /* PieChartFormatter.swift in Sources */,
 				B2FC67891E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
 				B299B7911E990FA7002BFA87 /* Router.swift in Sources */,
 				B213E4261E9EDAE40085970D /* PhotoVerifyViewController.swift in Sources */,
@@ -1530,6 +1541,7 @@
 				B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */,
 				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
+				B2B909381EA81FC300F78B0E /* RebotAttributedTextBuilder.swift in Sources */,
 				B213E42B1E9EE9250085970D /* UIImage+base64.swift in Sources */,
 				B2A054911E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B213E41C1E9EDAE40085970D /* PhotoVerifyConfigurator.swift in Sources */,

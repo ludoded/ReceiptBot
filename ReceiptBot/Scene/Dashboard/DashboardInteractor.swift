@@ -17,6 +17,7 @@ protocol DashboardInteractorOutput {
 }
 
 class DashboardInteractor {
+    var pieData: PieChartDataSet!
     var output: DashboardInteractorOutput!
     var worker: DashboardWorker!
 
@@ -31,6 +32,13 @@ class DashboardInteractor {
     }
     
     private func sendPieData(request dataSet: RebotValueWrapper<PieChartDataSet>) {
+        /// Store dataset if it exists
+        switch dataSet {
+        case .value(let set): pieData = set
+        default: break
+        }
+        
+        /// Pass data to presenter
         let response = Dashboard.PieChart.Response(dataSet: dataSet)
         output.presentPieData(response: response)
     }

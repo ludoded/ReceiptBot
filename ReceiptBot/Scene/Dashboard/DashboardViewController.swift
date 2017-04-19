@@ -14,6 +14,8 @@ import Charts
 import XLPagerTabStrip
 
 protocol DashboardViewControllerOutput {
+    var pieData: PieChartDataSet! { get }
+    
     func fetchPieChart()
 }
 
@@ -27,17 +29,17 @@ class DashboardViewController: UIViewController, RefreshControlOutput {
     @IBOutlet weak var chart: PieChartView!
     
     // MARK: - Object lifecycle
-
     override func awakeFromNib() {
         super.awakeFromNib()
         DashboardConfigurator.sharedInstance.configure(viewController: self)
     }
 
     // MARK: - View lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         DashboardConfigurator.sharedInstance.setup(theChart: chart)
+        chart.delegate = self
+        
         fetchData()
         setupRefresh(sel: #selector(reload))
     }
@@ -47,23 +49,45 @@ class DashboardViewController: UIViewController, RefreshControlOutput {
     }
 
     // MARK: - Event handling
-
     func fetchData() {
         startSpinning()
         output.fetchPieChart()
     }
 
     // MARK: - Display logic
-
     func updateChart(viewModel: Dashboard.PieChart.ViewModel) {
         chart.data = viewModel.data
         chart.highlightValues(nil)
         chart.animate(xAxisDuration: 1.0)
+        setupUnselectedCenter()
+    }
+    
+    func setupUnselectedCenter() {
+        let pieEntry = output.pieData.values[0] as! PieChartDataEntry
+        setupCenterText(entry: pieEntry)
+    }
+    
+    func setupCenterText(entry: PieChartDataEntry, color: UIColor = RebotColor.Pie.pieColors[0]) {
+        let value = Int(round(entry.y * 100))
+        chart.centerAttributedText = RebotAttributedTextBuilder.buildPie(for: value,
+                                                                         and: entry.label ?? "",
+                                                                         with: color)
     }
 }
 
 extension DashboardViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Dashboard")
+    }
+}
+
+extension DashboardViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        let pieEntry = entry as! PieChartDataEntry
+        setupCenterText(entry: pieEntry, color: RebotColor.Pie.pieColors[Int(highlight.x)])
+    }
+    
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        setupUnselectedCenter()
     }
 }
