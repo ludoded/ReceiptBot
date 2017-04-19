@@ -60,7 +60,7 @@ class DashboardConfigurator {
         
         chart?.drawHoleEnabled = true
         chart?.rotationAngle = 0.0
-        chart?.rotationEnabled = true
+        chart?.rotationEnabled = false
         chart?.highlightPerTapEnabled = true
         
         let legend = chart?.legend

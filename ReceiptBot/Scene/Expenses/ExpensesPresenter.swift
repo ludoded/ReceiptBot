@@ -12,7 +12,7 @@
 import UIKit
 import Charts
 
-protocol ExpensesPresenterOutput: class, Errorable, Spinnable {
+protocol ExpensesPresenterOutput: class, Errorable, Spinnable, RefreshControlOutput {
     func updateChart(viewModel: Expenses.Line.ViewModel)
 }
 
@@ -21,6 +21,7 @@ class ExpensesPresenter {
 
     func presentLineChart(response: Expenses.Line.Response) {
         output.stopSpinning()
+        output.refresh.endRefreshing()
         
         let dataSetWrapped = response.dataSet
         switch dataSetWrapped {

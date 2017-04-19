@@ -20,26 +20,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKj-pD-q2Z" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="15" y="35" width="345" height="617"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXP-QT-Mzi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKj-pD-q2Z" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="15" y="25" width="345" height="617"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WKj-pD-q2Z" secondAttribute="bottom" constant="25" id="YBH-ZW-LsS"/>
+                                    <constraint firstItem="WKj-pD-q2Z" firstAttribute="centerX" secondItem="FXP-QT-Mzi" secondAttribute="centerX" id="YP2-f0-gpg"/>
+                                    <constraint firstItem="WKj-pD-q2Z" firstAttribute="top" secondItem="FXP-QT-Mzi" secondAttribute="top" constant="25" id="Yd2-2Z-hhh"/>
+                                    <constraint firstAttribute="trailing" secondItem="WKj-pD-q2Z" secondAttribute="trailing" constant="15" id="ljY-Hv-gye"/>
+                                    <constraint firstItem="WKj-pD-q2Z" firstAttribute="centerY" secondItem="FXP-QT-Mzi" secondAttribute="centerY" id="nzc-Ff-KPO"/>
+                                    <constraint firstItem="WKj-pD-q2Z" firstAttribute="leading" secondItem="FXP-QT-Mzi" secondAttribute="leading" constant="15" id="tNg-nq-abx"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uOR-I0-ufH" firstAttribute="top" secondItem="WKj-pD-q2Z" secondAttribute="bottom" constant="15" id="32z-7d-2W1"/>
-                            <constraint firstItem="WKj-pD-q2Z" firstAttribute="leading" secondItem="pzd-kv-mjf" secondAttribute="leading" constant="15" id="5xX-tQ-Pvh"/>
-                            <constraint firstItem="WKj-pD-q2Z" firstAttribute="top" secondItem="LyL-dG-ULR" secondAttribute="bottom" constant="15" id="idU-hF-yTs"/>
-                            <constraint firstAttribute="trailing" secondItem="WKj-pD-q2Z" secondAttribute="trailing" constant="15" id="vMv-Nz-KhZ"/>
+                            <constraint firstItem="FXP-QT-Mzi" firstAttribute="leading" secondItem="pzd-kv-mjf" secondAttribute="leading" id="3EU-RU-1Ez"/>
+                            <constraint firstItem="uOR-I0-ufH" firstAttribute="top" secondItem="FXP-QT-Mzi" secondAttribute="bottom" id="NH8-x6-iee"/>
+                            <constraint firstAttribute="trailing" secondItem="FXP-QT-Mzi" secondAttribute="trailing" id="gXc-p7-JwP"/>
+                            <constraint firstItem="FXP-QT-Mzi" firstAttribute="top" secondItem="pzd-kv-mjf" secondAttribute="top" id="yui-5K-Liy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chart" destination="WKj-pD-q2Z" id="bYU-xp-Bzi"/>
+                        <outlet property="scrollView" destination="FXP-QT-Mzi" id="QtI-6J-Rxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ae-aL-16O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="154"/>
+            <point key="canvasLocation" x="376.80000000000001" y="152.47376311844079"/>
         </scene>
     </scenes>
 </document>

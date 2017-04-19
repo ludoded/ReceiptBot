@@ -20,26 +20,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naS-Hc-yRQ" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="15" y="35" width="345" height="617"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewA-9i-Cjy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naS-Hc-yRQ" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="15" y="25" width="345" height="617"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="naS-Hc-yRQ" firstAttribute="leading" secondItem="ewA-9i-Cjy" secondAttribute="leading" constant="15" id="67b-55-rIm"/>
+                                    <constraint firstAttribute="trailing" secondItem="naS-Hc-yRQ" secondAttribute="trailing" constant="15" id="Jda-hk-4Tu"/>
+                                    <constraint firstItem="naS-Hc-yRQ" firstAttribute="centerY" secondItem="ewA-9i-Cjy" secondAttribute="centerY" id="Rb4-Ga-z7S"/>
+                                    <constraint firstItem="naS-Hc-yRQ" firstAttribute="top" secondItem="ewA-9i-Cjy" secondAttribute="top" constant="25" id="Ugc-9s-3Vv"/>
+                                    <constraint firstAttribute="bottom" secondItem="naS-Hc-yRQ" secondAttribute="bottom" constant="25" id="VRq-o1-9Re"/>
+                                    <constraint firstItem="naS-Hc-yRQ" firstAttribute="centerX" secondItem="ewA-9i-Cjy" secondAttribute="centerX" id="dG9-3F-Af5"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k8j-wD-GNb" firstAttribute="top" secondItem="naS-Hc-yRQ" secondAttribute="bottom" constant="15" id="J0D-1K-RYP"/>
-                            <constraint firstItem="naS-Hc-yRQ" firstAttribute="leading" secondItem="FLG-8d-Kdg" secondAttribute="leading" constant="15" id="nz2-sN-GEO"/>
-                            <constraint firstItem="naS-Hc-yRQ" firstAttribute="top" secondItem="oRs-df-9dt" secondAttribute="bottom" constant="15" id="sYA-yb-IJ0"/>
-                            <constraint firstAttribute="trailing" secondItem="naS-Hc-yRQ" secondAttribute="trailing" constant="15" id="x8q-sq-WN5"/>
+                            <constraint firstItem="k8j-wD-GNb" firstAttribute="top" secondItem="ewA-9i-Cjy" secondAttribute="bottom" id="2vq-HE-4Bw"/>
+                            <constraint firstAttribute="trailing" secondItem="ewA-9i-Cjy" secondAttribute="trailing" id="Bzm-gO-KGa"/>
+                            <constraint firstItem="ewA-9i-Cjy" firstAttribute="leading" secondItem="FLG-8d-Kdg" secondAttribute="leading" id="HGA-ZT-8Zx"/>
+                            <constraint firstItem="ewA-9i-Cjy" firstAttribute="top" secondItem="FLG-8d-Kdg" secondAttribute="top" id="WGE-vI-Caw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chart" destination="naS-Hc-yRQ" id="T8o-41-rqx"/>
+                        <outlet property="scrollView" destination="ewA-9i-Cjy" id="Mkd-Cv-GZt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QA-q5-ySq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="111"/>
+            <point key="canvasLocation" x="93.599999999999994" y="110.19490254872565"/>
         </scene>
     </scenes>
 </document>

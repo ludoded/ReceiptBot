@@ -15,11 +15,11 @@ import XLPagerTabStrip
 
 protocol InboxViewControllerOutput {
     var selectedInvoice: SyncConvertedInvoiceResponse! { get set }
-//    func fetchInbox(request: Inbox.DataSource.Request)
 }
 
 class InboxViewController: UIViewController, Spinnable {
-    private var dataSource: InboxDataSource!
+    fileprivate var dataSource: InboxDataSource!
+    fileprivate var refresh: UIRefreshControl!
     
     var output: InboxViewControllerOutput!
     var router: InboxRouter!
@@ -66,25 +66,32 @@ class InboxViewController: UIViewController, Spinnable {
         dataSource.vcOutput = self
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
+        
+        refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(reload), for: .valueChanged)
+        tableView.addSubview(refresh)
+    }
+    
+    func reload() {
+        resetFilter()
+        dataSource.fetchInvoices()
+    }
+    
+    func resetFilter() {
+        filter.setTitle(InboxFilterType.all.description, for: .normal)
     }
     
     func filter(with query: String) {
         filter.setTitle(query, for: .normal)
         dataSource.filterModel(with: query)
     }
-
-    // MARK: - Display logic
-
-    func displaySomething(viewModel: Inbox) {
-        // NOTE: Display the result from the Presenter
-
-        // nameTextField.text = viewModel.name
-    }
 }
 
 extension InboxViewController: InboxDataSourceVCOutput {
     func finishUpdatingTableView() {
         stopSpinning()
+        refresh.endRefreshing()
+        
         tableView.reloadData()
     }
     

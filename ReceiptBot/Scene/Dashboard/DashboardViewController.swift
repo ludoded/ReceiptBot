@@ -17,10 +17,13 @@ protocol DashboardViewControllerOutput {
     func fetchPieChart()
 }
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, RefreshControlOutput {
+    var refresh: UIRefreshControl!
+    
     var output: DashboardViewControllerOutput!
     var router: DashboardRouter!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var chart: PieChartView!
     
     // MARK: - Object lifecycle
@@ -35,6 +38,11 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DashboardConfigurator.sharedInstance.setup(theChart: chart)
+        fetchData()
+        setupRefresh(sel: #selector(reload))
+    }
+    
+    func reload() {
         fetchData()
     }
 

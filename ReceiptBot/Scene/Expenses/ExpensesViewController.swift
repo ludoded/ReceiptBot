@@ -18,10 +18,12 @@ protocol ExpensesViewControllerOutput {
 }
 
 class ExpensesViewController: UIViewController {
+    var refresh: UIRefreshControl!
     var output: ExpensesViewControllerOutput!
     var router: ExpensesRouter!
     
     @IBOutlet weak var chart: LineChartView!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     // MARK: - Object lifecycle
 
@@ -35,6 +37,11 @@ class ExpensesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ExpensesConfigurator.sharedInstance.setup(theChart: chart)
+        fetchLineData()
+        setupRefresh(sel: #selector(reload))
+    }
+    
+    func reload() {
         fetchLineData()
     }
 

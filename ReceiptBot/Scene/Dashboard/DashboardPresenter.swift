@@ -12,7 +12,7 @@
 import UIKit
 import Charts
 
-protocol DashboardPresenterOutput: class, Errorable, Spinnable {
+protocol DashboardPresenterOutput: class, Errorable, Spinnable, RefreshControlOutput {
     func updateChart(viewModel: Dashboard.PieChart.ViewModel)
 }
 
@@ -21,6 +21,7 @@ class DashboardPresenter {
 
     func presentPieData(response: Dashboard.PieChart.Response) {
         output.stopSpinning()
+        output.refresh.endRefreshing()
         
         let dataSetWrapped = response.dataSet
         switch dataSetWrapped {

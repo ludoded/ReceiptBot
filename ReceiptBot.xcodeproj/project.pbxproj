@@ -203,6 +203,8 @@
 		B2A054AC1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */; };
 		B2A054AE1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */; };
 		B2A054AF1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */; };
+		B2B909301EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */; };
+		B2B909311EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */; };
 		B2D3ABF51E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */; };
 		B2D3ABF71E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */; };
@@ -438,6 +440,7 @@
 		B2A054A71E9D85FA00CF88D9 /* LeftDataSourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceModel.swift; path = Scene/Left/DataSource/LeftDataSourceModel.swift; sourceTree = "<group>"; };
 		B2A054AA1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceInteractor.swift; path = Scene/Left/DataSource/LeftDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2A054AD1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftDataSourceConfigurator.swift; path = Scene/Left/DataSource/LeftDataSourceConfigurator.swift; sourceTree = "<group>"; };
+		B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefreshControlOutput.swift; path = Scene/Sharable/Output/RefreshControlOutput.swift; sourceTree = "<group>"; };
 		B2D3ABEE1E97D53C00293B8C /* InboxDataSourceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceConfigurator.swift; path = Scene/Inbox/DataSource/InboxDataSourceConfigurator.swift; sourceTree = "<group>"; };
 		B2D3ABEF1E97D53C00293B8C /* InboxDataSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceInteractor.swift; path = Scene/Inbox/DataSource/InboxDataSourceInteractor.swift; sourceTree = "<group>"; };
 		B2D3ABF01E97D53C00293B8C /* InboxDataSourceModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceModels.swift; path = Scene/Inbox/DataSource/InboxDataSourceModels.swift; sourceTree = "<group>"; };
@@ -852,6 +855,7 @@
 			isa = PBXGroup;
 			children = (
 				B2A0547A1E9BE44F00CF88D9 /* PasswordRecoveryOutputs.swift */,
+				B2B9092F1EA80C6400F78B0E /* RefreshControlOutput.swift */,
 			);
 			name = Output;
 			sourceTree = "<group>";
@@ -1270,6 +1274,7 @@
 				B27B539C1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
 				B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
 				B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
+				B2B909301EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */,
 				B2FB684A1E93FB16009560BD /* CategoryResponse.swift in Sources */,
 				B2A054901E9D3BF300CF88D9 /* LeftInteractor.swift in Sources */,
 				B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
@@ -1494,6 +1499,7 @@
 				B2D3ABF61E97D53C00293B8C /* InboxDataSourceConfigurator.swift in Sources */,
 				B2D3AC081E97E7E300293B8C /* ForgotPasswordResponse.swift in Sources */,
 				B2FC67631E983C9E0003A35C /* SignInPresenter.swift in Sources */,
+				B2B909311EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */,
 				B2D3AC091E97E7E300293B8C /* InvoiceStatusToShowResponse.swift in Sources */,
 				B27B53C91E945FC600B0E050 /* InboxWorker.swift in Sources */,
 				B2D3AC0E1E97E7E300293B8C /* QBExpenseCategoryResponse.swift in Sources */,
