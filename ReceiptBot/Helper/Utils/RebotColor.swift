@@ -11,13 +11,18 @@ import UIColor_Hex_Swift
 
 struct RebotColor {
     struct Pie {
-        static let pending = UIColor("#006C7E")
-        static let processed = UIColor("#0086AB")
-        static let exported = UIColor("#75DDE6")
-        static let rejected = UIColor("#7CB7C7")
-        static let process = UIColor("#5196A3")
+        static let pending = UIColor("#70DEE4")
+        static let processed = UIColor("#7AB8C4")
+        static let exported = UIColor("#006E7B")
+        static let rejected = UIColor("#0088A6")
+        static let process = UIColor("#4F96A1")
         
         static let pieColors = [pending, processed, exported, rejected, process]
+    }
+    
+    struct Line {
+        static let line = UIColor("#33691E")
+        static let fill = UIColor("#9BCA3B")
     }
     
     struct VCColor {
