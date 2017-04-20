@@ -28,11 +28,10 @@ class CompleteProfileWorker {
             let _: UserInfo = DatabaseManager.shared.insert(response: auth!)
             
             /// Save the user info into singleton
-            AppSettings.shared.store(user: auth!)
-            
-            AppSettings.shared.updateCredentials(email: self?.params.params["Email"] as! String, password: self?.params.params["Password"] as! String)
-            
-            callback(.value(auth!))
+            AppSettings.shared.store(user: auth!) { [weak self] in
+                AppSettings.shared.updateCredentials(email: self?.params.params["Email"] as! String, password: self?.params.params["Password"] as! String)
+                callback(.value(auth!))
+            }
         }
     }
 }

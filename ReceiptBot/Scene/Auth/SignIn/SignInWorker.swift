@@ -21,11 +21,10 @@ class SignInWorker: EmailPasswordWorker {
 //            let userInfo: UserInfo = DatabaseManager.shared.insert(response: user)
             
             /// Save the user info into singleton
-            AppSettings.shared.store(user: auth!)
-            
-            AppSettings.shared.updateCredentials(email: self?.params["Email"] as! String, password: self?.params["Password"] as! String)
-            
-            callback(.value(auth!))
+            AppSettings.shared.store(user: auth!) { [weak self] in
+                AppSettings.shared.updateCredentials(email: self?.params["Email"] as! String, password: self?.params["Password"] as! String)
+                callback(.value(auth!))
+            }
         }
     }
 }

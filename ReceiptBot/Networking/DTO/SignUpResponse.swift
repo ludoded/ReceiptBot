@@ -53,6 +53,7 @@ struct SignUpFirstResponse: JSONable {
 /// Response when logging in or second stage for signing up
 struct AuthResponse: JSONable {
     let accountPackageId: String
+    let accountPackageIdMobile: String
     let applicationUserId: Int
     let emailAddress: String
     let entityId: Int
@@ -67,6 +68,7 @@ struct AuthResponse: JSONable {
     
     init(json: JSON) {
         self.accountPackageId = json["AccountPackageId"].stringValue
+        self.accountPackageIdMobile = json["AccountPackageIdMobile"].string ?? "3" /// NOTE: Nabeel told that 3 is default
         self.applicationUserId = json["ApplicationUserid"].intValue
         self.emailAddress = json["EmailAddress"].stringValue
         self.entityId = json["EntityId"].intValue

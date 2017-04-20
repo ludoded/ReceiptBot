@@ -320,6 +320,8 @@
 		B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67B91E9905EA0003A35C /* QboCategory.swift */; };
 		B2FC67BD1E99068E0003A35C /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */; };
 		B2FC67BE1E99068E0003A35C /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */; };
+		B2FCC5941EA8F947004FBD5B /* AppConfigChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCC5931EA8F947004FBD5B /* AppConfigChunk.swift */; };
+		B2FCC5951EA8F947004FBD5B /* AppConfigChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCC5931EA8F947004FBD5B /* AppConfigChunk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -502,6 +504,7 @@
 		B2FC67B61E9905870003A35C /* XeroCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XeroCategory.swift; path = DataModel/XeroCategory.swift; sourceTree = "<group>"; };
 		B2FC67B91E9905EA0003A35C /* QboCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QboCategory.swift; path = DataModel/QboCategory.swift; sourceTree = "<group>"; };
 		B2FC67BC1E99068E0003A35C /* InvoiceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvoiceStatus.swift; path = DataModel/InvoiceStatus.swift; sourceTree = "<group>"; };
+		B2FCC5931EA8F947004FBD5B /* AppConfigChunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConfigChunk.swift; path = Helper/Setting/AppConfigChunk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,6 +827,7 @@
 			isa = PBXGroup;
 			children = (
 				B299B7AD1E9AAFF0002BFA87 /* AppSettings.swift */,
+				B2FCC5931EA8F947004FBD5B /* AppConfigChunk.swift */,
 				B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */,
 				B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */,
 			);
@@ -1378,6 +1382,7 @@
 				B2FC67751E984E390003A35C /* SignUpInteractor.swift in Sources */,
 				B2FB68461E93F675009560BD /* InvoiceStatusToShowResponse.swift in Sources */,
 				B2FC677B1E984E390003A35C /* SignUpRouter.swift in Sources */,
+				B2FCC5941EA8F947004FBD5B /* AppConfigChunk.swift in Sources */,
 				B213E40F1E9ED2A90085970D /* CameraViewController.swift in Sources */,
 				B2D3ABF91E97D53C00293B8C /* InboxDataSourceModels.swift in Sources */,
 				B283CBCA1E959473008A3313 /* LineXAxeFormatter.swift in Sources */,
@@ -1539,6 +1544,7 @@
 				B2D3AC0F1E97E7E300293B8C /* LineChartResponse.swift in Sources */,
 				B2FC67A61E98F7A90003A35C /* ReceiptBot.xcdatamodeld in Sources */,
 				B2FC67A91E98FD060003A35C /* UserInfo.swift in Sources */,
+				B2FCC5951EA8F947004FBD5B /* AppConfigChunk.swift in Sources */,
 				B2FC67931E984E560003A35C /* CompleteProfileViewController.swift in Sources */,
 				B2FC67651E983C9E0003A35C /* SignInRouter.swift in Sources */,
 				B2B909381EA81FC300F78B0E /* RebotAttributedTextBuilder.swift in Sources */,

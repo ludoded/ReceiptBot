@@ -14,10 +14,16 @@ final class AppSettings {
     var user: AuthResponse!
     let ud = UserDefaults.standard
     
+    var config: AppConfigChunk!
+    
     private init() {}
     
-    func store(user: AuthResponse) {
+    func store(user: AuthResponse, callback: @escaping () -> ()) {
         self.user = user
+        
+        config = AppConfigChunk.shared
+        /// Fetching categories and suppliers
+        config.loadConfigs(callback: callback)
     }
     
     /// MARK: Credentials handling
@@ -37,12 +43,6 @@ final class AppSettings {
     func logout() {
         ud.set(nil, forKey: "email")
         ud.set(nil, forKey: "password")
+        config.reset()
     }
-    
-//    private func fetchUser() {
-//        guard let users: [UserInfo] = DatabaseManager.shared.fetch(),
-//            let user = users.first
-//            else { return }
-//        store(user: user)
-//    }
 }
