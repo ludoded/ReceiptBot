@@ -64,6 +64,7 @@ class CameraViewController: UIViewController, Errorable {
     // MARK: - Event handling
     func cameraSetup() {
         cameraView.setupCameraView()
+        cameraView.cameraViewType = .normal
         cameraView.isBorderDetectionEnabled = true
     }
 
