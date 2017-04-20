@@ -37,11 +37,12 @@ class InboxDataSourcePresenter {
         var cellModels: [InboxDataSourceModel.Cell.ViewModel] = []
         
         for invoice in invoices {
-            let paidOn = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
+            let paidOn = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
+            let currency = "£" + invoice.grossAmount
             let cellModel = InboxDataSourceModel.Cell.ViewModel(name: invoice.supplierName,
                                                                 paidOn: paidOn,
                                                                 status: invoice.type,
-                                                                currency: invoice.taxAmount)
+                                                                currency: currency)
             cellModels.append(cellModel)
         }
         

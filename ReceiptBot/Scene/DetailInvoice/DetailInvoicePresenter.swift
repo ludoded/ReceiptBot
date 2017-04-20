@@ -34,13 +34,14 @@ class DetailInvoicePresenter {
         
         let invoiceDate = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
         let dueDate = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
+        let categoryName = AppSettings.shared.config.categoryName(for: invoice.categoryId)
         
         let viewModel = DetailInvoice.Setup.ViewModel(imageRequest: imageRequest,
                                                       supplierName: invoice.supplierName,
                                                       invoiceDate: invoiceDate,
                                                       invoiceNumber: invoice.invoiceNumber,
                                                       paymentMethod: invoice.paymentMethod,
-                                                      category: invoice.categoryId,
+                                                      category: categoryName,
                                                       taxRate: invoice.taxPercentage,
                                                       taxAmount: invoice.taxAmount,
                                                       grossAmount: invoice.grossAmount,

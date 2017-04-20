@@ -21,8 +21,8 @@ final class AppSettings {
     func store(user: AuthResponse, callback: @escaping () -> ()) {
         self.user = user
         
-        config = AppConfigChunk.shared
         /// Fetching categories and suppliers
+        config = AppConfigChunk.shared
         config.loadConfigs(callback: callback)
     }
     

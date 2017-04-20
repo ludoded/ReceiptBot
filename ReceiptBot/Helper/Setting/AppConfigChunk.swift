@@ -45,6 +45,17 @@ final class AppConfigChunk {
         suppliers = nil
     }
     
+    func categoryName(for id: String) -> String {
+        guard let name = categories.filter({ String($0.masterId) == id }).first?.category else { return "" }
+        return name
+    }
+    
+    func supplierId(by name: String) -> Int {
+        guard let id = suppliers.filter({ $0.companyName == name }).first?.vendorId else { return 0 }
+        return id
+    }
+    
+    /// MARK: Private methods
     private func validateFetchingState(callback: @escaping () -> ()) {
         if categoryState == .loaded && supplierState == .loaded { callback(); return }
     }
