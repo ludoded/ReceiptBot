@@ -50,6 +50,11 @@ final class AppConfigChunk {
         return name
     }
     
+    func categoryId(by name: String) -> String {
+        guard let id = categories.filter({ $0.category == name }).first?.masterId else { return "" }
+        return String(id)
+    }
+    
     func supplierId(by name: String) -> Int {
         guard let id = suppliers.filter({ $0.companyName == name }).first?.vendorId else { return 0 }
         return id

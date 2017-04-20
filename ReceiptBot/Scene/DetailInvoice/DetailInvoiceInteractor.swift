@@ -30,8 +30,9 @@ class DetailInvoiceInteractor {
     
     func save(request: DetailInvoice.Save.Request) {
         let category = request.category ?? ""
-        let categoryIndex = DetailInvoicePickerValues.Category.values.index(of: category) ?? 0
-        let categoryId = String(categoryIndex)
+        let categoryId = AppSettings.shared.config.categoryId(by: category)
+        let supplierName = AppSettings.shared.config.supplierId(by: request.supplierName ?? "")
+        let paymentId = DetailInvoicePickerValues.Payment.values.index(where: { $0 == (request.paymentMethod ?? "") }) ?? 0
         
         let param = DetailInvoice.Save.Params(status: "Approved",
                                               convertedInvoiceId: originalInvoice?.convertedInvoiceId ?? "1",
@@ -44,10 +45,10 @@ class DetailInvoiceInteractor {
                                               netAmount: request.netAmount ?? "",
                                               originalInvoiceId: originalInvoice?.originalInvoiceId ?? "",
                                               originalFileName: originalInvoice?.originalFileName ?? "",
-                                              supplierName: request.supplierName ?? "",
+                                              supplierName: String(supplierName),
                                               taxAmount: request.taxAmount ?? "",
-                                              taxPercentage: originalInvoice?.taxPercentage ?? "",
-                                              paymentMethod: request.paymentMethod ?? "",
+                                              taxPercentage: originalInvoice?.taxPercentage ?? "0",
+                                              paymentMethod: String(paymentId),
                                               categoryId: categoryId)
         
         let worker = DetailInvoiceSaveWorker(params: param.params)
