@@ -11,6 +11,7 @@
 
 import UIKit
 import ActionSheetPicker_3_0
+import Kingfisher
 import Material
 
 protocol DetailInvoiceViewControllerOutput {
@@ -34,6 +35,7 @@ class DetailInvoiceViewController: UITableViewController {
     var toolbar: UIToolbar!
     
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var textFields: [TextField]!
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -144,7 +146,18 @@ class DetailInvoiceViewController: UITableViewController {
 
     // MARK: - Display logic
     func displayInitial(viewModel: DetailInvoice.Setup.ViewModel) {
-        webView.loadRequest(viewModel.imageRequest)
+        /// Loading image
+        var isWebView = false
+        switch viewModel.type {
+        case .pdf(let req):
+            webView.loadRequest(req)
+            isWebView = true
+        case .image(let res): imageView.kf.setImage(with: res)
+        }
+        
+        webView.isHidden = !isWebView
+        imageView.isHidden = isWebView
+        
         textFields?[0].text = viewModel.supplierName
         textFields?[1].text = viewModel.invoiceDate
         textFields?[2].text = viewModel.invoiceNumber

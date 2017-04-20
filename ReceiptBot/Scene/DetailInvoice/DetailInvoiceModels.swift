@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 struct DetailInvoice {
     struct Setup {
@@ -22,8 +23,13 @@ struct DetailInvoice {
             }
         }
         
+        enum InvoiceType {
+            case pdf(URLRequest)
+            case image(ImageResource)
+        }
+        
         struct ViewModel {
-            let imageRequest: URLRequest
+            let type: InvoiceType
             let supplierName: String
             let invoiceDate: String
             let invoiceNumber: String

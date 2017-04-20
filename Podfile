@@ -8,6 +8,7 @@ def pods
     pod 'Charts'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+    pod 'Kingfisher'
     pod 'Material'
     pod 'MBProgressHUD'
     pod 'RxCocoa'

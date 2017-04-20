@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol DetailInvoicePresenterOutput: class, Errorable, Spinnable {
     func displayInitial(viewModel: DetailInvoice.Setup.ViewModel)
@@ -27,16 +28,24 @@ class DetailInvoicePresenter {
     }
     
     func passInitialSetup(from invoice: SyncConvertedInvoiceResponse) {
-        guard var imageURL = URL(string: API.documentsURL) else { output.show(type: .error(message: "Can't load the image")); return }
-        imageURL.appendPathComponent(invoice.filePath)
-        imageURL.appendPathComponent(invoice.fileName)
-        let imageRequest = URLRequest(url: imageURL)
-        
         let invoiceDate = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
         let dueDate = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
         let categoryName = AppSettings.shared.config.categoryName(for: invoice.categoryId)
         
-        let viewModel = DetailInvoice.Setup.ViewModel(imageRequest: imageRequest,
+        guard var imageURL = URL(string: API.documentsURL) else { output.show(type: .error(message: "Can't load the image")); return }
+        imageURL.appendPathComponent(invoice.filePath)
+        imageURL.appendPathComponent(invoice.fileName)
+        
+        let type: DetailInvoice.Setup.InvoiceType
+        /// If pdf
+        if invoice.fileName.lowercased().contains(".pdf") {
+            type = .pdf(URLRequest(url: imageURL))
+        }
+        else { /// If image: png, jpeg, jpg etc
+            type = .image(ImageResource(downloadURL: imageURL))
+        }
+        
+        let viewModel = DetailInvoice.Setup.ViewModel(type: type,
                                                       supplierName: invoice.supplierName,
                                                       invoiceDate: invoiceDate,
                                                       invoiceNumber: invoice.invoiceNumber,
