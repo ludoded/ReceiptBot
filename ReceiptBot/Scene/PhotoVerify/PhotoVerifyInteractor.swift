@@ -12,7 +12,7 @@
 import UIKit
 
 protocol PhotoVerifyInteractorOutput {
-      func presentSomething(response: PhotoVerify.Upload.Response)
+      func presentFile(response: PhotoVerify.Upload.Response)
 }
 
 class PhotoVerifyInteractor {
@@ -21,6 +21,32 @@ class PhotoVerifyInteractor {
 
     // MARK: - Business logic
     func tryToUpload(request: PhotoVerify.Upload.Request) {
+        let interval = Int(Date().timeIntervalSince1970)
+        let saveName = "\(interval).png"
+        let user = AppSettings.shared.user
+        let data = UIImagePNGRepresentation(request.image)?.base64EncodedString()
         
+        let params = PhotoVerify.Upload.Params(fileNameToSave: saveName,
+                                               fileNameOriginal: saveName,
+                                               serverLocation: "D:/",
+                                               organisationName: user?.organisationName ?? "",
+                                               companyName: user?.organisationName ?? "",
+                                               companyId: String(user?.organisationId ?? 0),
+                                               userId: "",
+                                               fileExtension: ".png",
+                                               folderType: "0",
+                                               mobileData: data ?? "",
+                                               originalInvoiceId: "",
+                                               originalInvoiceStatus: "",
+                                               filePath: " ")
+        worker = PhotoVerifyWorker(params: params)
+        worker.uploadFile { [weak self] (resp) in
+            self?.passToPresenter(data: resp)
+        }
+    }
+    
+    func passToPresenter(data: RebotValueWrapper<FileUploadResponse>) {
+        let response = PhotoVerify.Upload.Response(data: data)
+        output.presentFile(response: response)
     }
 }

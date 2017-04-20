@@ -57,6 +57,7 @@ class CameraViewController: UIViewController, Errorable {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
         cameraView.stop()
     }
 

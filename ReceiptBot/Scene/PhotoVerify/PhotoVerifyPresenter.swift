@@ -11,15 +11,22 @@
 
 import UIKit
 
-protocol PhotoVerifyPresenterOutput: class {
-    func displaySomething()
+protocol PhotoVerifyPresenterOutput: class, Errorable, Spinnable {
+    func displayFile()
 }
 
 class PhotoVerifyPresenter {
     weak var output: PhotoVerifyPresenterOutput!
 
     // MARK: - Presentation logic
-    func presentSomething(response: PhotoVerify.Upload.Response) {
-        output.displaySomething()
+    func presentFile(response: PhotoVerify.Upload.Response) {
+        DispatchQueue.main.async { [weak self] in
+            self?.output.stopSpinning()
+            
+            switch response.data {
+            case .none(let message): self?.output.show(type: .error(message: message))
+            case .value: self?.output.displayFile()
+            }
+        }
     }
 }

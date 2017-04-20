@@ -12,7 +12,17 @@
 import UIKit
 
 class PhotoVerifyWorker {
-    func uploadFile() {
-        
+    let params: PhotoVerify.Upload.Params
+    
+    init(params: PhotoVerify.Upload.Params) {
+        self.params = params
+    }
+    
+    func uploadFile(callback: @escaping (RebotValueWrapper<FileUploadResponse>) -> ()) {
+        FileUploadResponse.loadType(request: API.fileUpload(with: params.params)) { (resp, message) in
+            guard message == nil else { callback(.none(message: message!)); return }
+            
+            callback(.value(resp!))
+        }
     }
 }

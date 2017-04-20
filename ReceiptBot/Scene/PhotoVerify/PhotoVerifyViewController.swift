@@ -45,12 +45,12 @@ class PhotoVerifyViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.isHidden = false
     }
     
     // MARK: - Event handling
@@ -59,6 +59,7 @@ class PhotoVerifyViewController: UIViewController {
     }
     
     func tryToUpload() {
+        startSpinning(with: "Uploading")
         let request = PhotoVerify.Upload.Request(image: takenPhoto)
         output.tryToUpload(request: request)
     }
@@ -68,7 +69,7 @@ class PhotoVerifyViewController: UIViewController {
         router.navigateToInvoice()
     }
     
-    func displaySomething() {
-    
+    func displayFile() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

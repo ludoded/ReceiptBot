@@ -17,14 +17,42 @@ struct PhotoVerify {
             let image: UIImage!
         }
         
-        struct Response {
-            let data: RebotValueWrapper<FileUploadResponse>
+        struct Params {
+            let fileNameToSave: String
+            let fileNameOriginal: String
+            let serverLocation: String
+            let organisationName: String
+            let companyName: String
+            let companyId: String
+            let userId: String
+            let fileExtension: String
+            let folderType: String
+            let mobileData: String
+            let originalInvoiceId: String
+            let originalInvoiceStatus: String
+            let filePath: String
+            
+            var params: [String : Any] {
+                return [
+                    "fileNameToSave" : fileNameToSave,
+                    "fileNameOrignal" : fileNameOriginal,
+                    "serverLocation" : serverLocation,
+                    "OrganizationName" : organisationName,
+                    "CompanyName" : companyName,
+                    "CompanyId" : companyId,
+                    "Userid" : userId,
+                    "fileExtension" : fileExtension,
+                    "FolderType" : folderType,
+                    "MobileData" : mobileData,
+                    "OriginalInvoiceId" : originalInvoiceId,
+                    "OriginalInvoicestatus" : originalInvoiceStatus,
+                    "FilePath" : filePath
+                ]
+            }
         }
         
-        struct Params {
-            let userInfo: UserInfo
-            let imgString: String
-            let invoiceInfo: Invoice
+        struct Response {
+            let data: RebotValueWrapper<FileUploadResponse>
         }
     }
 }
