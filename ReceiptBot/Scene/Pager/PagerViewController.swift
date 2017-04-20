@@ -13,16 +13,12 @@ import UIKit
 import Material
 import XLPagerTabStrip
 
-protocol PagerViewControllerInput {
-    func displaySomething(viewModel: Pager.Something.ViewModel)
-}
-
 protocol PagerViewControllerOutput {
+    var takenPhoto: UIImage! { get set }
     var viewControllers: [UIViewController] { get }
-    func doSomething(request: Pager.Something.Request)
 }
 
-class PagerViewController: ButtonBarPagerTabStripViewController, PagerViewControllerInput {
+class PagerViewController: ButtonBarPagerTabStripViewController {
     var output: PagerViewControllerOutput!
     var router: PagerRouter!
     
@@ -30,7 +26,12 @@ class PagerViewController: ButtonBarPagerTabStripViewController, PagerViewContro
     @IBOutlet weak var container: UIScrollView!
     
     @IBAction func showCamera(_ sender: UIBarButtonItem) {
-        router.navigateToCamera()
+        let alert = UIAlertController(title: "Receipt process", message: "Pick the source", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [weak self] _ in self?.router.navigateToCamera() }))
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [weak self] _ in self?.showPicker() }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        navigationController?.present(alert, animated: true, completion: nil)
     }
     
     override func awakeFromNib() {
@@ -57,18 +58,22 @@ class PagerViewController: ButtonBarPagerTabStripViewController, PagerViewContro
         return output.viewControllers
     }
     
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
-        let request = Pager.Something.Request()
-        output.doSomething(request: request)
+    func showPicker() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        
+        navigationController?.present(picker, animated: true, completion: nil)
     }
+}
 
-    // MARK: - Display logic
-
-    func displaySomething(viewModel: Pager.Something.ViewModel) {
-        // NOTE: Display the result from the Presenter
-
-        // nameTextField.text = viewModel.name
+extension PagerViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        output.takenPhoto = image
+        
+        router.navigateToVerify()
     }
 }

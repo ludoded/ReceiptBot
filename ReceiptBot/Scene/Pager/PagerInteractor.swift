@@ -12,10 +12,11 @@
 import UIKit
 
 protocol PagerInteractorOutput {
-    func presentSomething(response: Pager.Something.Response)
+    
 }
 
 class PagerInteractor {
+    var takenPhoto: UIImage!
     var output: PagerInteractorOutput!
     var worker = PagerWorker()
     
@@ -30,12 +31,5 @@ class PagerInteractor {
             expenses,
             inbox
         ]
-    }
-
-    // MARK: - Business logic
-
-    func doSomething(request: Pager.Something.Request) {
-        let response = Pager.Something.Response()
-        output.presentSomething(response: response)
     }
 }

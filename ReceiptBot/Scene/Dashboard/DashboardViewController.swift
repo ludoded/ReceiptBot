@@ -63,7 +63,8 @@ class DashboardViewController: UIViewController, RefreshControlOutput {
     }
     
     func setupUnselectedCenter() {
-        let pieEntry = output.pieData.values[0] as! PieChartDataEntry
+        guard output.pieData.values.count > 0,
+            let pieEntry = output.pieData.values[0] as? PieChartDataEntry else { return }
         setupCenterText(entry: pieEntry)
     }
     

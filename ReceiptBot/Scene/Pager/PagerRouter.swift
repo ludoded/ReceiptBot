@@ -19,12 +19,23 @@ class PagerRouter: PagerRouterInput {
     weak var viewController: PagerViewController!
 
     // MARK: - Navigation
-
+    func passDataToNextScene(segue: UIStoryboardSegue) {
+        if segue.identifier == "ShowVerifyFromPager" {
+            passDataToCameraVerifyScene(segue: segue)
+        }
+    }
+    
     func navigateToCamera() {
-         viewController.performSegue(withIdentifier: "ShowCameraView", sender: nil)
+        viewController.performSegue(withIdentifier: "ShowCameraView", sender: nil)
+    }
+    
+    func navigateToVerify() {
+        viewController.performSegue(withIdentifier: "ShowVerifyFromPager", sender: nil)
     }
 
     // MARK: - Communication
-    func passDataToNextScene(segue: UIStoryboardSegue) {
+    func passDataToCameraVerifyScene(segue: UIStoryboardSegue) {
+        let photoVerifyViewController = segue.destination as! PhotoVerifyViewController
+        photoVerifyViewController.takenPhoto = viewController.output.takenPhoto
     }
 }

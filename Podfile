@@ -15,6 +15,7 @@ def pods
     pod 'RxSwift'
     pod 'SlideMenuControllerSwift'
     pod 'SwiftyJSON'
+    pod 'TOCropViewController'
     pod 'UIColor_Hex_Swift'
     pod 'XLPagerTabStrip'
 end

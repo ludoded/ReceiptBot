@@ -11,23 +11,11 @@
 
 import UIKit
 
-protocol PagerPresenterInput {
-    func presentSomething(response: Pager.Something.Response)
-}
-
 protocol PagerPresenterOutput: class {
-    func displaySomething(viewModel: Pager.Something.ViewModel)
+    
 }
 
-class PagerPresenter: PagerPresenterInput {
+class PagerPresenter {
     weak var output: PagerPresenterOutput!
 
-    // MARK: - Presentation logic
-
-    func presentSomething(response: Pager.Something.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = Pager.Something.ViewModel()
-        output.displaySomething(viewModel: viewModel)
-    }
 }

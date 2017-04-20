@@ -56,6 +56,7 @@ PODS:
   - RxSwift (3.4.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
+  - TOCropViewController (2.0.12)
   - UIColor_Hex_Swift (3.0.2)
   - XLPagerTabStrip (7.0.0)
 
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - RxSwift
   - SlideMenuControllerSwift
   - SwiftyJSON
+  - TOCropViewController
   - UIColor_Hex_Swift
   - XLPagerTabStrip
 
@@ -99,9 +101,10 @@ SPEC CHECKSUMS:
   RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TOCropViewController: e6e31b38d785a901e5651a1e7fff71bcda6c5214
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: e0fa0ef71661f5ec195ecd07029581d58dcf961f
+PODFILE CHECKSUM: 835f23260ecdaa13f69bc819a9e928b238870751
 
 COCOAPODS: 1.2.1
