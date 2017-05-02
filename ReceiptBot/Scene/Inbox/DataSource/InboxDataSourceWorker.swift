@@ -19,11 +19,16 @@ class InboxDataSourceWorker {
     }
     
     func fetchInvoices(callback: @escaping (RebotValueWrapper<[SyncConvertedInvoiceResponse]>) -> ()) {
-        SyncConvertedInvoiceResponse.load(request: API.syncData(with: entityId)) { (invoicesResp, message) in
+        SyncConvertedInvoiceResponse.load(request: API.syncData(with: entityId)) { [unowned self] (invoicesResp, message) in
             guard message == nil else { callback(.none(message: message!)); return }
             guard let invoices = invoicesResp else { callback(.none(message: "Can't parse Sync Invoices Data!")); return }
             
-            callback(.value(invoices))
+            let filteredInvoices = self.removeExported(from: invoices)
+            callback(.value(filteredInvoices))
         }
+    }
+    
+    private func removeExported(from invoices: [SyncConvertedInvoiceResponse]) -> [SyncConvertedInvoiceResponse] {
+        return invoices.filter({ !$0.type.contains("Exported") })
     }
 }
