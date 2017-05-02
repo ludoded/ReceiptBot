@@ -28,27 +28,27 @@ class DashboardWorker {
             var colors: [UIColor] = []
             
             if pie.pendingTotal > 0 {
-                values.append(PieChartDataEntry(value: Double(pie.pendingTotal), label: "pending"))
+                values.append(PieChartDataEntry(value: Double(pie.pendingTotal), label: "Processing"))
                 colors.append(RebotColor.Pie.pending)
             }
             
             if pie.processingTotal > 0 {
-                values.append(PieChartDataEntry(value: Double(pie.processingTotal), label: "processed"))
+                values.append(PieChartDataEntry(value: Double(pie.processingTotal), label: "Processed"))
                 colors.append(RebotColor.Pie.processed)
             }
             
             if pie.exportedTotal > 0 {
-                values.append(PieChartDataEntry(value: Double(pie.exportedTotal), label: "exported"))
+                values.append(PieChartDataEntry(value: Double(pie.exportedTotal), label: "Exported"))
                 colors.append(RebotColor.Pie.exported)
             }
             
             if pie.rejectedTotal > 0 {
-                values.append(PieChartDataEntry(value: Double(pie.rejectedTotal), label: "reject"))
+                values.append(PieChartDataEntry(value: Double(pie.rejectedTotal), label: "Rejected"))
                 colors.append(RebotColor.Pie.rejected)
             }
             
             if pie.approvedTotal > 0 {
-                values.append(PieChartDataEntry(value: Double(pie.approvedTotal), label: "process"))
+                values.append(PieChartDataEntry(value: Double(pie.approvedTotal), label: "Approved"))
                 colors.append(RebotColor.Pie.process)
             }
             
