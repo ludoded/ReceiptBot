@@ -18,10 +18,14 @@ final class AppConfigChunk {
     
     var categories: [CategoryResponse]!
     var suppliers: [SupplierResponse]!
+    var payments: [PaymentMethodResponse]!
+    var taxes: [TaxPercentageResponse]!
     
     /// Private vars
     fileprivate var categoryState: AppConfigFetchingState!
     fileprivate var supplierState: AppConfigFetchingState!
+    fileprivate var paymentState: AppConfigFetchingState!
+    fileprivate var taxState: AppConfigFetchingState!
     
     static let shared = AppConfigChunk()
     
@@ -35,14 +39,20 @@ final class AppConfigChunk {
     func loadConfigs(callback: @escaping () -> ()) {
         categoryState = .loading
         supplierState = .loading
+        paymentState = .loading
+        taxState = .loading
         
         fetchCategories { [weak self] in self?.validateFetchingState(callback: callback) }
         fetchSuppliers { [weak self] in self?.validateFetchingState(callback: callback) }
+        fetchPaymentMethod { [weak self] in self?.validateFetchingState(callback: callback) }
+        fetchTaxes { [weak self] in self?.validateFetchingState(callback: callback) }
     }
     
     func reset() {
         categories = nil
         suppliers = nil
+        payments = nil
+        taxes = nil
     }
     
     func categoryName(for id: String) -> String {
@@ -62,7 +72,11 @@ final class AppConfigChunk {
     
     /// MARK: Private methods
     private func validateFetchingState(callback: @escaping () -> ()) {
-        if categoryState == .loaded && supplierState == .loaded { callback(); return }
+        if categoryState == .loaded &&
+            supplierState == .loaded &&
+            paymentState == .loaded &&
+            taxState == .loaded
+        { callback(); return }
     }
     
     private func fetchCategories(callback: @escaping () -> ()) {
@@ -89,6 +103,34 @@ final class AppConfigChunk {
             }
             
             self?.suppliers = suppliers
+            callback()
+        }
+    }
+    
+    private func fetchPaymentMethod(callback: @escaping () -> ()) {
+        PaymentMethodResponse.load(request: API.paymentMethod(with: self.entityId)) { [weak self] (methods, message) in
+            self?.paymentState = .loaded
+            guard message == nil else {
+                self?.payments = []
+                callback()
+                return
+            }
+            
+            self?.payments = methods
+            callback()
+        }
+    }
+    
+    private func fetchTaxes(callback: @escaping () -> ()) {
+        TaxPercentageResponse.load(request: API.taxPercentage(with: self.accountId, and: self.entityId)) { [weak self] (taxes, message) in
+            self?.taxState = .loaded
+            guard message == nil else {
+                self?.taxes = []
+                callback()
+                return
+            }
+            
+            self?.taxes = taxes
             callback()
         }
     }
