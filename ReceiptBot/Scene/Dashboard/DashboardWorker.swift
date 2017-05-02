@@ -24,15 +24,33 @@ class DashboardWorker {
             guard message == nil else { callback(.none(message: message!)); return }
             guard let pie = pieResp else { callback(.none(message: "Can't parse Pie Data!")); return }
             
-            let total: Double = pie.total
-            
             var values: [PieChartDataEntry] = []
+            var colors: [UIColor] = []
             
-            if pie.pendingTotal > 0 { values.append(PieChartDataEntry(value: Double(pie.pendingTotal) / total, label: "pending")) }
-            if pie.processingTotal > 0 { values.append(PieChartDataEntry(value: Double(pie.processingTotal) / total, label: "processed")) }
-            if pie.exportedTotal > 0 { values.append(PieChartDataEntry(value: Double(pie.exportedTotal) / total, label: "exported")) }
-            if pie.rejectedTotal > 0 { values.append(PieChartDataEntry(value: Double(pie.rejectedTotal) / total, label: "reject")) }
-            if pie.approvedTotal > 0 { values.append(PieChartDataEntry(value: Double(pie.approvedTotal) / total, label: "process")) }
+            if pie.pendingTotal > 0 {
+                values.append(PieChartDataEntry(value: Double(pie.pendingTotal), label: "pending"))
+                colors.append(RebotColor.Pie.pending)
+            }
+            
+            if pie.processingTotal > 0 {
+                values.append(PieChartDataEntry(value: Double(pie.processingTotal), label: "processed"))
+                colors.append(RebotColor.Pie.processed)
+            }
+            
+            if pie.exportedTotal > 0 {
+                values.append(PieChartDataEntry(value: Double(pie.exportedTotal), label: "exported"))
+                colors.append(RebotColor.Pie.exported)
+            }
+            
+            if pie.rejectedTotal > 0 {
+                values.append(PieChartDataEntry(value: Double(pie.rejectedTotal), label: "reject"))
+                colors.append(RebotColor.Pie.rejected)
+            }
+            
+            if pie.approvedTotal > 0 {
+                values.append(PieChartDataEntry(value: Double(pie.approvedTotal), label: "process"))
+                colors.append(RebotColor.Pie.process)
+            }
             
     
             let dataSet = PieChartDataSet(values: values, label: nil)
@@ -40,7 +58,7 @@ class DashboardWorker {
             dataSet.sliceSpace = 0.0
             dataSet.iconsOffset = CGPoint(x: 0, y: 40)
             
-            dataSet.colors = RebotColor.Pie.pieColors
+            dataSet.colors = colors
             
             callback(.value(dataSet))
         }

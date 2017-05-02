@@ -34,9 +34,8 @@ class DashboardPresenter {
     
     private func pass(pie dataSet: PieChartDataSet) {
         let data = PieChartData(dataSet: dataSet)
-        let total = dataSet.values.reduce(0, { $0.0 + $0.1.y })
         
-        data.setValueFormatter(PieChartFormatter(total: total))
+        data.setValueFormatter(PieChartFormatter())
         data.setValueTextColor(.black)
         
         let viewModel = Dashboard.PieChart.ViewModel(data: data)

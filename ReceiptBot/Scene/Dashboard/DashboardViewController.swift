@@ -69,7 +69,7 @@ class DashboardViewController: UIViewController, RefreshControlOutput {
     }
     
     func setupCenterText(entry: PieChartDataEntry, color: UIColor = RebotColor.Pie.pieColors[0]) {
-        let value = Int(round(entry.y * 100))
+        let value = Int(entry.y)
         chart.centerAttributedText = RebotAttributedTextBuilder.buildPie(for: value,
                                                                          and: entry.label ?? "",
                                                                          with: color)

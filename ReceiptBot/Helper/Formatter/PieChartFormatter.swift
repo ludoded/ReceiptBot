@@ -10,14 +10,7 @@ import Foundation
 import Charts
 
 class PieChartFormatter: NSObject, IValueFormatter {
-    let total: Double
-    
-    init(total: Double) {
-        self.total = total
-        super.init()
-    }
-    
     func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler: ViewPortHandler?) -> String {
-        return String(format: "%.0f", value * total)
+        return String(format: "%.0f", entry.y)
     }
 }
