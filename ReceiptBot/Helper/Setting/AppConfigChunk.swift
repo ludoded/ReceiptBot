@@ -55,19 +55,61 @@ final class AppConfigChunk {
         taxes = nil
     }
     
-    func categoryName(for id: String) -> String {
-        guard let name = categories.filter({ String($0.masterId) == id }).first?.category else { return "" }
-        return name
-    }
-    
+    /// Matching logic
     func categoryId(by name: String) -> String {
         guard let id = categories.filter({ $0.category == name }).first?.masterId else { return "" }
         return String(id)
     }
     
+    func categoryName(for id: String) -> String {
+        guard let name = categories.filter({ String($0.masterId) == id }).first?.category else { return "" }
+        return name
+    }
+    
+    func categoryNames() -> [String] {
+        return categories.map({ $0.category })
+    }
+    
     func supplierId(by name: String) -> Int {
         guard let id = suppliers.filter({ $0.companyName == name }).first?.vendorId else { return 0 }
         return id
+    }
+    
+    func supplierName(for id: Int) -> String {
+        guard let name = suppliers.filter({ $0.vendorId == id }).first?.companyName else { return "" }
+        return name
+    }
+    
+    func supplierNames() -> [String] {
+        return suppliers.map({ $0.companyName })
+    }
+    
+    func taxId(by name: String) -> Int {
+        guard let id = taxes.filter({ $0.name == name }).first?.taxId else { return 0 }
+        return id
+    }
+    
+    func taxName(for id: Int) -> String {
+        guard let name = taxes.filter({ $0.taxId == id }).first?.name else { return "" }
+        return name
+    }
+    
+    func taxNames() -> [String] {
+        return taxes.map({ $0.name })
+    }
+    
+    func paymentId(by name: String) -> Int {
+        guard let id = payments.filter({ $0.name == name }).first?.methodId else { return 0 }
+        return id
+    }
+    
+    func paymentName(for id: Int) -> String {
+        guard let name = payments.filter({ $0.methodId == id }).first?.name else { return "" }
+        return name
+    }
+    
+    func paymentNames() -> [String] {
+        return payments.map({ $0.name })
     }
     
     /// MARK: Private methods
