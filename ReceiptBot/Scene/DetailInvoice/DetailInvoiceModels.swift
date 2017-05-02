@@ -93,7 +93,7 @@ struct DetailInvoice {
             let originalFileName: String
             let supplierName: String
             let taxAmount: String
-            let taxPercentage: String
+            let taxPercentage: Int
             let paymentMethod: String
             let categoryId: String
             

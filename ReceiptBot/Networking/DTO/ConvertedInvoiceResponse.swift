@@ -24,11 +24,12 @@ struct SyncConvertedInvoiceResponse: JSONable {
     let netAmount: String
     let originalInvoiceId: String
     let originalFileName: String
+    let paymentMethodId: Int
     let paymentMethod: String
-    let supplierId: String
+    let supplierId: Int
     let supplierName: String
     let taxAmount: String
-    let taxPercentage: String
+    let taxPercentage: Int
     let type: String
     
     init(json: JSON) {
@@ -45,11 +46,12 @@ struct SyncConvertedInvoiceResponse: JSONable {
         self.netAmount = json["NetAmount"].stringValue
         self.originalInvoiceId = json["OriginalInvoiceId"].stringValue
         self.originalFileName = json["OriginalFileName"].stringValue
+        self.paymentMethodId = json["PaymentMethodId"].intValue
         self.paymentMethod = json["PaymentMethod"].stringValue
-        self.supplierId = json["SupplierId"].stringValue
+        self.supplierId = json["SupplierId"].intValue
         self.supplierName = json["SupplierName"].stringValue
         self.taxAmount = json["TaxAmount"].stringValue
-        self.taxPercentage = json["TaxPercentage"].stringValue
+        self.taxPercentage = json["TaxPercentage"].intValue
         self.type = json["Type"].stringValue
     }
 }

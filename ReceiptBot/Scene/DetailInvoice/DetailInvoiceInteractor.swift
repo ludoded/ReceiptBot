@@ -47,7 +47,7 @@ class DetailInvoiceInteractor {
                                               originalFileName: originalInvoice?.originalFileName ?? "",
                                               supplierName: String(supplierName),
                                               taxAmount: request.taxAmount ?? "",
-                                              taxPercentage: originalInvoice?.taxPercentage ?? "0",
+                                              taxPercentage: originalInvoice?.taxPercentage ?? 0,
                                               paymentMethod: String(paymentId),
                                               categoryId: categoryId)
         

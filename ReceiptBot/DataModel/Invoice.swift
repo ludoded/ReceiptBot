@@ -29,10 +29,10 @@ final class Invoice: NSManagedObject {
     static func insert(into context: NSManagedObjectContext, response: SyncConvertedInvoiceResponse) -> Invoice {
         let invoice: Invoice = context.insertObject()
         invoice.status = "Processing"
-        invoice.supplierId = response.supplierId
+        invoice.supplierId = String(response.supplierId)
         invoice.invoiceDate = response.invoiceDateMobile
         invoice.invoiceNumber = response.invoiceNumber
-        invoice.taxPercentage = response.taxPercentage
+        invoice.taxPercentage = String(response.taxPercentage)
         invoice.taxAmount = response.taxAmount
         invoice.grossAmount = response.grossAmount
         invoice.netAmount = response.netAmount

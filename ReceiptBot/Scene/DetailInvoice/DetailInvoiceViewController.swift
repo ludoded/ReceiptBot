@@ -229,18 +229,18 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
-        case paymentPicker: return DetailInvoicePickerValues.Payment.values.count
-        case categoryPicker: return DetailInvoicePickerValues.Category.values.count
-        case taxPicker: return DetailInvoicePickerValues.Tax.values.count
+        case paymentPicker: return AppSettings.shared.config.paymentNames().count
+        case categoryPicker: return AppSettings.shared.config.categoryNames().count
+        case taxPicker: return AppSettings.shared.config.taxNames().count
         default: return 0
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
-        case paymentPicker: return DetailInvoicePickerValues.Payment.values[row]
-        case categoryPicker: return DetailInvoicePickerValues.Category.values[row]
-        case taxPicker: return DetailInvoicePickerValues.Tax.values[row]
+        case paymentPicker: return AppSettings.shared.config.paymentNames()[row]
+        case categoryPicker: return AppSettings.shared.config.categoryNames()[row]
+        case taxPicker: return AppSettings.shared.config.taxNames()[row]
         default: return ""
         }
     }
@@ -248,13 +248,13 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case paymentPicker:
-            let title = DetailInvoicePickerValues.Payment.values[row]
+            let title = AppSettings.shared.config.paymentNames()[row]
             textFields?[3].text = title
         case categoryPicker:
-            let title = DetailInvoicePickerValues.Category.values[row]
+            let title = AppSettings.shared.config.categoryNames()[row]
             textFields?[4].text = title
         case taxPicker:
-            let title = DetailInvoicePickerValues.Tax.values[row]
+            let title = AppSettings.shared.config.taxNames()[row]
             textFields?[5].text = title
         default: break
         }
