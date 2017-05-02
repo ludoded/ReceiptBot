@@ -39,9 +39,10 @@ class InboxDataSourcePresenter {
         for invoice in invoices {
             let paidOn = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
             let currency = "£" + invoice.grossAmount
+            let type = RebotInvoiceStatusMapper.toFrontEnd(from: invoice.type)
             let cellModel = InboxDataSourceModel.Cell.ViewModel(name: invoice.supplierName,
                                                                 paidOn: paidOn,
-                                                                status: invoice.type,
+                                                                status: type,
                                                                 currency: currency)
             cellModels.append(cellModel)
         }
