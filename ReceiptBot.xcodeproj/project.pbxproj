@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		22E6281B40752B886870A5C1 /* Pods_ReceiptBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0F57FE11E21313544441D8 /* Pods_ReceiptBot.framework */; };
 		9603600FFF96F971F37EAE33 /* Pods_ReceiptBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */; };
+		B20565D61EB8AD9900AB1F96 /* TaxPercentageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20565D51EB8AD9900AB1F96 /* TaxPercentageResponse.swift */; };
+		B20565D71EB8AD9900AB1F96 /* TaxPercentageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20565D51EB8AD9900AB1F96 /* TaxPercentageResponse.swift */; };
+		B20565D91EB8ADFC00AB1F96 /* PaymentMethodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20565D81EB8ADFC00AB1F96 /* PaymentMethodResponse.swift */; };
+		B20565DA1EB8ADFC00AB1F96 /* PaymentMethodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20565D81EB8ADFC00AB1F96 /* PaymentMethodResponse.swift */; };
 		B213E4051E9ED2A90085970D /* CameraConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */; };
 		B213E4061E9ED2A90085970D /* CameraConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */; };
 		B213E40D1E9ED2A90085970D /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4021E9ED2A90085970D /* CameraRouter.swift */; };
@@ -341,6 +345,8 @@
 		52430BEDD600864F953CC115 /* Pods-ReceiptBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBot/Pods-ReceiptBot.release.xcconfig"; sourceTree = "<group>"; };
 		52CB11C467AE2FEA740D3E72 /* Pods-ReceiptBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptBotTests/Pods-ReceiptBotTests.release.xcconfig"; sourceTree = "<group>"; };
 		63C7F67A3436F67C850CE122 /* Pods_ReceiptBotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptBotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20565D51EB8AD9900AB1F96 /* TaxPercentageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaxPercentageResponse.swift; path = Networking/DTO/TaxPercentageResponse.swift; sourceTree = "<group>"; };
+		B20565D81EB8ADFC00AB1F96 /* PaymentMethodResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentMethodResponse.swift; path = Networking/DTO/PaymentMethodResponse.swift; sourceTree = "<group>"; };
 		B213E3FE1E9ED2A90085970D /* CameraConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraConfigurator.swift; path = Scene/Camera/CameraConfigurator.swift; sourceTree = "<group>"; };
 		B213E4021E9ED2A90085970D /* CameraRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraRouter.swift; path = Scene/Camera/CameraRouter.swift; sourceTree = "<group>"; };
 		B213E4031E9ED2A90085970D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Scene/Camera/CameraViewController.swift; sourceTree = "<group>"; };
@@ -938,6 +944,8 @@
 				B2FB684F1E93FFB5009560BD /* QBExpenseCategoryResponse.swift */,
 				B2FB68511E940478009560BD /* LineChartResponse.swift */,
 				B2FB68531E9406D9009560BD /* SupplierResponse.swift */,
+				B20565D51EB8AD9900AB1F96 /* TaxPercentageResponse.swift */,
+				B20565D81EB8ADFC00AB1F96 /* PaymentMethodResponse.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -1307,6 +1315,7 @@
 				B2FC67B41E9904C70003A35C /* Supplier.swift in Sources */,
 				B2FC678E1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */,
 				B299B79A1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */,
+				B20565D61EB8AD9900AB1F96 /* TaxPercentageResponse.swift in Sources */,
 				B27B53BE1E945FC600B0E050 /* InboxInteractor.swift in Sources */,
 				B2FC679A1E9850CC0003A35C /* SignBaseViewController.swift in Sources */,
 				B27B53511E944DC800B0E050 /* DateFormaters.swift in Sources */,
@@ -1370,6 +1379,7 @@
 				B2FC67881E984E560003A35C /* CompleteProfileConfigurator.swift in Sources */,
 				B27B53AA1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
 				B2A054921E9D3BF300CF88D9 /* LeftModels.swift in Sources */,
+				B20565D91EB8ADFC00AB1F96 /* PaymentMethodResponse.swift in Sources */,
 				B27B53C01E945FC600B0E050 /* InboxModels.swift in Sources */,
 				B27B53641E94587D00B0E050 /* PagerModels.swift in Sources */,
 				B27B53A81E945F9400B0E050 /* ExpensesInteractor.swift in Sources */,
@@ -1460,6 +1470,7 @@
 				B27B53AB1E945F9400B0E050 /* ExpensesModels.swift in Sources */,
 				B27B53651E94587D00B0E050 /* PagerModels.swift in Sources */,
 				B299B79B1E993ACE002BFA87 /* RebotDateConverter.swift in Sources */,
+				B20565D71EB8AD9900AB1F96 /* TaxPercentageResponse.swift in Sources */,
 				B2FC678F1E984E560003A35C /* CompleteProfilePresenter.swift in Sources */,
 				B2FC67B21E9900F00003A35C /* Expense.swift in Sources */,
 				B2A054931E9D3BF300CF88D9 /* LeftModels.swift in Sources */,
@@ -1486,6 +1497,7 @@
 				B213E43F1EA01CF30085970D /* DetailInvoiceViewController.swift in Sources */,
 				B2D3AC071E97E7E300293B8C /* ConvertedInvoiceResponse.swift in Sources */,
 				B299B7921E990FAA002BFA87 /* API.swift in Sources */,
+				B20565DA1EB8ADFC00AB1F96 /* PaymentMethodResponse.swift in Sources */,
 				B213E4201E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
 				B27B53691E94587D00B0E050 /* PagerRouter.swift in Sources */,
 				B27B53AD1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
