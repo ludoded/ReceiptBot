@@ -74,7 +74,9 @@ enum Router: BaseRouter {
     case pieChart(entityId: Int)
     case lineChart(entityId: Int)
     case convertedInvoice(originalInvoiceId: Int)
+    case paymentMethod(entityId: Int)
     case allExpense(softwareId: String, entityId: Int)
+    case taxPercentage(softwareId: String, entityId: Int)
     case fileUpload(params: Parameters)
     case xeroCategories
     case qbCategories
@@ -88,7 +90,9 @@ enum Router: BaseRouter {
              .pieChart,
              .lineChart,
              .convertedInvoice,
+             .paymentMethod,
              .allExpense,
+             .taxPercentage,
              .xeroCategories,
              .qbCategories,
              .suppliers:
@@ -111,8 +115,12 @@ enum Router: BaseRouter {
             return "/CommonService.svc/linechart/\(entityId)"
         case .convertedInvoice(let originalInvoiceId):
             return "/DataCorrectionService.svc/GetConvertedInvoicesMobile/\(originalInvoiceId)"
+        case .paymentMethod(let entityId):
+            return "/CommonService.svc/GetPaymentsModesMobile/\(entityId)"
         case .allExpense(let softwareId, let entityId):
             return "/CommonService.svc/GetCategories/\(softwareId)/\(entityId)"
+        case .taxPercentage(let softwareId, let entityId):
+            return "/CommonService.svc/GetTaxPercentageMobile/\(softwareId)/\(entityId)"
         case .fileUpload:
             return "/FileService.svc/FileUploadMobile"
         case .xeroCategories:
@@ -141,7 +149,9 @@ enum Router: BaseRouter {
              .pieChart,
              .lineChart,
              .convertedInvoice,
+             .paymentMethod,
              .allExpense,
+             .taxPercentage,
              .xeroCategories,
              .qbCategories,
              .suppliers,
