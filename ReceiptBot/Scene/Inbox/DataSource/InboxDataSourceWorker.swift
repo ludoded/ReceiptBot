@@ -29,6 +29,6 @@ class InboxDataSourceWorker {
     }
     
     private func removeExported(from invoices: [SyncConvertedInvoiceResponse]) -> [SyncConvertedInvoiceResponse] {
-        return invoices.filter({ !$0.type.contains("Exported") })
+        return invoices.filter({ !($0.type.contains("Exported") || $0.type.contains("Split") || $0.type.contains("Modified")) })
     }
 }
