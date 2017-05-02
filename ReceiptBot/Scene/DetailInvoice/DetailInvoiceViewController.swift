@@ -72,8 +72,8 @@ class DetailInvoiceViewController: UITableViewController {
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetup()
         setupPickers()
+        initialSetup()
     }
     
     /// MARK: - Setup handling
@@ -157,6 +157,7 @@ class DetailInvoiceViewController: UITableViewController {
         
         webView.isHidden = !isWebView
         imageView.isHidden = isWebView
+        dueDatePicker.minimumDate = viewModel.dueDateMin
         
         textFields?[0].text = viewModel.supplierName
         textFields?[1].text = viewModel.invoiceDate

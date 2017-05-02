@@ -40,6 +40,7 @@ struct DetailInvoice {
             let grossAmount: String
             let netAmount: String
             let dueDate: String
+            let dueDateMin: Date /// set min date for dueDate picker
         }
     }
     

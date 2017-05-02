@@ -58,7 +58,8 @@ class DetailInvoicePresenter {
                                                       taxAmount: invoice.taxAmount,
                                                       grossAmount: invoice.grossAmount,
                                                       netAmount: invoice.netAmount,
-                                                      dueDate: dueDate)
+                                                      dueDate: dueDate,
+                                                      dueDateMin: invoice.invoiceDateMobile ?? Date())
         
         output.displayInitial(viewModel: viewModel)
     }
