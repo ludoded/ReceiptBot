@@ -37,7 +37,7 @@ class InboxDataSourceInteractor {
             passFiltered(invoices: invoices)
         }
         else {
-            filteredInvoices = invoices.filter({ $0.type.lowercased() == query.lowercased() })
+            filteredInvoices = invoices.filter({ RebotInvoiceStatusMapper.toFrontEnd(from: $0.type).lowercased() == query.lowercased() })
             passFiltered(invoices: filteredInvoices)
         }
     }
