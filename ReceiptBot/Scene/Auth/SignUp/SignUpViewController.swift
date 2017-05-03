@@ -13,6 +13,7 @@ import Material
 
 protocol SignUpViewControllerOutput {
     var email: String! { get set }
+    var password: String! { get set }
     func tryToSignUp(request: SignUp.Register.Request)
 }
 
@@ -42,6 +43,8 @@ class SignUpViewController: EmailPasswordViewController {
     // MARK: - Event handling
 
     func tryToSignUp() {
+        output.password = textFields?[1].text ?? ""
+        
         startSpinning()
         let request = SignUp.Register.Request(email: textFields[0].text,
                                               password: textFields[1].text)

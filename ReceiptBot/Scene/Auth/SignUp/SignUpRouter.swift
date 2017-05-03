@@ -33,5 +33,6 @@ class SignUpRouter: SignUpRouterInput {
     func passDataToProfileCompletionScene(segue: UIStoryboardSegue) {
         let profileViewController = segue.destination as! CompleteProfileViewController
         profileViewController.output.email = viewController.output.email
+        profileViewController.output.password = viewController.output.password
     }
 }

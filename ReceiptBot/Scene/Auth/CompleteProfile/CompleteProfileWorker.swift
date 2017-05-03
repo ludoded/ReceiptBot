@@ -29,7 +29,7 @@ class CompleteProfileWorker {
             
             /// Save the user info into singleton
             AppSettings.shared.store(user: auth!) { [weak self] in
-                AppSettings.shared.updateCredentials(email: self?.params.params["Email"] as! String, password: self?.params.params["Password"] as! String)
+                AppSettings.shared.updateCredentials(email: self?.params.params["Email"] as! String, password: self?.params.password ?? "")
                 callback(.value(auth!))
             }
         }

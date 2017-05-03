@@ -20,6 +20,7 @@ class SignUpInteractor {
     var worker: SignUpWorker!
     
     var email: String!
+    var password: String!
 
     // MARK: - Business logic
     func tryToSignUp(request: SignUp.Register.Request) {

@@ -25,6 +25,7 @@ class CompleteProfileInteractor {
     var worker: CompleteProfileWorker!
     
     var email: String!
+    var password: String!
     var type: CompleteProfileType = .system
     
     /// In case of external sign in
@@ -83,6 +84,7 @@ class CompleteProfileInteractor {
                                                              countryId: countryId,
                                                              accType: accountType,
                                                              email: email,
+                                                             password: password,
                                                              userType: 1) /// Android sets userType to 1
         return parameters
     }

@@ -28,6 +28,7 @@ struct CompleteProfile {
             let countryId: Int
             let accType: Int
             let email: String
+            let password: String
             let userType: Int
             
             var params: [String : Any] {
@@ -36,7 +37,7 @@ struct CompleteProfile {
                     "Username" : email,
                     "FirstName" : firstLastName().first,
                     "LastName" : firstLastName().last,
-                    "OrganisationName" : companyName,
+                    "OrganizationName" : companyName,
                     "CountryId" : countryId,
                     "AccountId" : accType,
                     "UserType" : userType

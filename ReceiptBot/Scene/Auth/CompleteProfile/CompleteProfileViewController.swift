@@ -14,6 +14,7 @@ import Material
 
 protocol CompleteProfileViewControllerOutput {
     var email: String! { get set }
+    var password: String! { get set }
     var countries: [String] { get }
     var roles: [String] { get }
     
