@@ -125,6 +125,8 @@ class DetailInvoiceViewController: UITableViewController {
     }
     
     func save() {
+        guard validateInputs() else { return }
+        
         startSpinning()
         
         let request = DetailInvoice.Save.Request(supplierName: textFields?[0].text,
@@ -141,10 +143,26 @@ class DetailInvoiceViewController: UITableViewController {
     }
     
     func reject(with comment: String) {
+        guard validateInputs() else { return }
+        
         startSpinning()
         
         let request = DetailInvoice.Reject.Request(comment: comment)
         output.reject(request: request)
+    }
+    
+    func validateInputs() -> Bool {
+        if (textFields?[0].text ?? "").isEmpty { show(type: .error(message: "Please provide supplier name")); return false }
+        if (textFields?[1].text ?? "").isEmpty { show(type: .error(message: "Please provide invoice date")); return false }
+        if (textFields?[2].text ?? "").isEmpty { show(type: .error(message: "Please provide invoice number")); return false }
+        if (textFields?[3].text ?? "").isEmpty { show(type: .error(message: "Please provide payment method")); return false }
+        if (textFields?[4].text ?? "").isEmpty { show(type: .error(message: "Please provide category")); return false }
+        if (textFields?[5].text ?? "").isEmpty { show(type: .error(message: "Please provide tax percentage")); return false }
+        if (textFields?[6].text ?? "").isEmpty { show(type: .error(message: "Please provide tax amount")); return false }
+        if (textFields?[7].text ?? "").isEmpty { show(type: .error(message: "Please provide net amount")); return false }
+        if (textFields?[8].text ?? "").isEmpty { show(type: .error(message: "Please provide gross amount")); return false }
+        if (textFields?[9].text ?? "").isEmpty { show(type: .error(message: "Please provide invoice due date")); return false }
+        return true
     }
 
     // MARK: - Display logic
