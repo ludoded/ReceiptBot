@@ -538,12 +538,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Details" id="q2Y-o2-RKN">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="tLE-u7-X1s">
+                            <barButtonItem image="check" id="tLE-u7-X1s">
                                 <connections>
                                     <action selector="save:" destination="WQ1-0l-wPA" id="ltZ-KE-y1x"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="hPr-Zz-kub">
+                            <barButtonItem image="cross" id="hPr-Zz-kub">
                                 <connections>
                                     <action selector="reject:" destination="WQ1-0l-wPA" id="qLG-IF-Dol"/>
                                 </connections>
@@ -572,6 +572,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check" width="38" height="28"/>
+        <image name="cross" width="28" height="28"/>
         <image name="currency" width="29" height="29"/>
         <image name="date" width="29" height="29"/>
         <image name="grossamount" width="29" height="29"/>
