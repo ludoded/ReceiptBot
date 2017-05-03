@@ -29,10 +29,12 @@ class DetailInvoiceInteractor {
     }
     
     func save(request: DetailInvoice.Save.Request) {
+        guard canPerformAction(for: originalInvoice?.type ?? "") else { self.passSave(data: .none(message: "Can't Update the Invoice because of Status")); return }
+        
         let category = request.category ?? ""
         let categoryId = AppSettings.shared.config.categoryId(by: category)
         let supplierName = AppSettings.shared.config.supplierId(by: request.supplierName ?? "")
-        let paymentId = AppSettings.shared.config.paymentId(by: request.paymentMethod ?? "")///  DetailInvoicePickerValues.Payment.values.index(where: { $0 == (request.paymentMethod ?? "") }) ?? 0
+        let paymentId = AppSettings.shared.config.paymentId(by: request.paymentMethod ?? "")
         let taxId = AppSettings.shared.config.taxId(by: request.taxRate ?? "")
         
         let param = DetailInvoice.Save.Params(status: "Approved",
@@ -59,6 +61,8 @@ class DetailInvoiceInteractor {
     }
     
     func reject(request: DetailInvoice.Reject.Request) {
+        guard canPerformAction(for: originalInvoice?.type ?? "") else { self.passReject(data: .none(message: "Can't Reject the Invoice because of Status")); return }
+        
         let entityId = AppSettings.shared.user.entityId
         let params = DetailInvoice.Reject.Params(comment: request.comment,
                                                  entityId: entityId,
@@ -78,5 +82,10 @@ class DetailInvoiceInteractor {
     func passReject(data: RebotValueWrapper<SyncConvertedInvoiceResponse>) {
         let response = DetailInvoice.Reject.Response(data: data)
         output.presentReject(response: response)
+    }
+    
+    fileprivate func canPerformAction(for type: String) -> Bool {
+        let frontEndType = RebotInvoiceStatusMapper.toFrontEnd(from: type)
+        return frontEndType == "Approved" || frontEndType == "Processed"
     }
 }
