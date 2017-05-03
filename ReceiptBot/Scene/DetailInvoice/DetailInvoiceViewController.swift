@@ -32,6 +32,7 @@ class DetailInvoiceViewController: UITableViewController {
     /// Pickers
     var invoiceDatePicker: UIDatePicker!
     var dueDatePicker: UIDatePicker!
+    var supplierPicker: UIPickerView!
     var paymentPicker: UIPickerView!
     var categoryPicker: UIPickerView!
     var taxPicker: UIPickerView!
@@ -90,6 +91,12 @@ class DetailInvoiceViewController: UITableViewController {
         dueDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
         textFields?[9].inputAccessoryView = toolbar
         textFields?[9].inputView = dueDatePicker
+        
+        supplierPicker = UIPickerView()
+        supplierPicker.dataSource = self
+        supplierPicker.delegate = self
+        textFields?[0].inputAccessoryView = toolbar
+        textFields?[0].inputView = supplierPicker
         
         paymentPicker = UIPickerView()
         paymentPicker.dataSource = self
@@ -178,10 +185,10 @@ class DetailInvoiceViewController: UITableViewController {
 /// MARK: UITableViewDelegate
 extension DetailInvoiceViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard canSelect else { return }
-        
         let row = indexPath.row
-        guard row > 0 else { return }
+        
+        guard canSelect, row > 0, row != 9 else { return }
+        
         let textFieldIndex = row.advanced(by: -1) /// Because first row is the image. It can be moved into another section to simplify this logic
         
         activateTextField(at: textFieldIndex)
@@ -206,10 +213,27 @@ extension DetailInvoiceViewController: UITextFieldDelegate {
         let total = textFields.count
         
         /// Index of next textfield which should become first responder
-        let nextIndex = index.advanced(by: 1)
+        var nextIndex = index.advanced(by: 1)
+        if nextIndex == 8 { nextIndex = 9 } /// Gross amount should be overstepped
         if nextIndex >= total { return textField.resignFirstResponder() }
         
         return activateTextField(at: nextIndex)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let index = textFields.index(of: textField as! TextField), case 6...7 = index else { return }
+        NotificationCenter.default.addObserver(self, selector: #selector(recalculateGross), name: NSNotification.Name.UITextFieldTextDidChange, object: textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let index = textFields.index(of: textField as! TextField), case 6...7 = index else { return }
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidChange, object: textField)
+    }
+    
+    @objc fileprivate func recalculateGross() {
+        let tax = Double(textFields?[6].text ?? "0") ?? 0
+        let net = Double(textFields?[7].text ?? "0") ?? 0
+        self.textFields?[8].text = String(tax + net)
     }
     
     @discardableResult
@@ -235,6 +259,7 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
+        case supplierPicker: return AppSettings.shared.config.supplierNames().count
         case paymentPicker: return AppSettings.shared.config.paymentNames().count
         case categoryPicker: return AppSettings.shared.config.categoryNames().count
         case taxPicker: return AppSettings.shared.config.taxNames().count
@@ -244,6 +269,7 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
+        case supplierPicker: return AppSettings.shared.config.supplierNames()[row]
         case paymentPicker: return AppSettings.shared.config.paymentNames()[row]
         case categoryPicker: return AppSettings.shared.config.categoryNames()[row]
         case taxPicker: return AppSettings.shared.config.taxNames()[row]
@@ -253,6 +279,9 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
+        case supplierPicker:
+            let title = AppSettings.shared.config.supplierNames()[row]
+            textFields?[0].text = title
         case paymentPicker:
             let title = AppSettings.shared.config.paymentNames()[row]
             textFields?[3].text = title
