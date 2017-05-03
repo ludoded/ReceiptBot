@@ -18,4 +18,13 @@ struct NumberFormaters {
         
         return formatter
     }
+    
+    static var grossFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.allowsFloats = true
+        formatter.maximumFractionDigits = 2
+        
+        return formatter
+    }
 }

@@ -42,7 +42,9 @@ class InboxDataSourcePresenter {
                 paidOn = DateFormatters.mdySpaceFormatter.string(from: dueDate)
             }
             
-            let currency = "£" + invoice.grossAmount
+            let grossNumber = NSNumber(value: Double(invoice.grossAmount) ?? 0.0)
+            let currency = "£" + (NumberFormaters.grossFormatter.string(from: grossNumber) ?? "")
+            
             let type = RebotInvoiceStatusMapper.toFrontEnd(from: invoice.type)
             
             let cellModel = InboxDataSourceModel.Cell.ViewModel(name: invoice.supplierName,
