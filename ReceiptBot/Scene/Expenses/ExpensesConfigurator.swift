@@ -53,8 +53,9 @@ class ExpensesConfigurator {
         chart.dragEnabled = true
         chart.setScaleEnabled(true)
         chart.pinchZoomEnabled = false
-        chart.drawGridBackgroundEnabled = false
+        chart.drawGridBackgroundEnabled = true
         chart.highlightPerDragEnabled = true
+        
         
         chart.backgroundColor = .white /// TODO: change to proper background color
         
@@ -78,8 +79,8 @@ class ExpensesConfigurator {
         axe.labelPosition = .outsideChart
         axe.labelFont = UIFont.systemFont(ofSize: 4.0)
         axe.labelTextColor = .black
-        axe.drawAxisLineEnabled = false
-        axe.drawGridLinesEnabled = false
+        axe.drawAxisLineEnabled = true
+        axe.drawGridLinesEnabled = true
         axe.centerAxisLabelsEnabled = false
         axe.granularity = 100_000_000
         axe.axisMinimum = 0        

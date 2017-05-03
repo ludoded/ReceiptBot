@@ -26,24 +26,22 @@ class ExpensesWorker {
             
             var values: [ChartDataEntry] = []
             
-            if line.grossAmountMonth6 > 0 { values.append(ChartDataEntry(x: line.month6Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth6))) }
-            if line.grossAmountMonth5 > 0 { values.append(ChartDataEntry(x: line.month5Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth5))) }
-            if line.grossAmountMonth4 > 0 { values.append(ChartDataEntry(x: line.month4Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth4))) }
-            if line.grossAmountMonth3 > 0 { values.append(ChartDataEntry(x: line.month3Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth3))) }
-            if line.grossAmountMonth2 > 0 { values.append(ChartDataEntry(x: line.month2Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth2))) }
-            if line.grossAmountMonth1 > 0 { values.append(ChartDataEntry(x: line.month1Name?.timeIntervalSince1970 ?? 0, y: Double(line.grossAmountMonth1))) }
+            for month in line.months {
+                values.append(ChartDataEntry(x: month.monthYear?.timeIntervalSince1970 ?? 0, y: Double(month.totalAmount)))
+            }
             
             let dataSet = LineChartDataSet(values: values, label: nil)
-            dataSet.colors = [.green]
+            dataSet.colors = [RebotColor.Line.line]
             dataSet.drawValuesEnabled = true
             dataSet.drawCirclesEnabled = true
-            dataSet.circleColors = [.blue]
+            dataSet.circleColors = [RebotColor.Line.point]
             dataSet.drawCircleHoleEnabled = true
             dataSet.circleHoleColor = .white
             dataSet.lineWidth = 3.0
             dataSet.fillAlpha = 0.5
-            dataSet.fill = Fill(color: .green)
+            dataSet.fill = Fill(color: RebotColor.Line.fill)
             dataSet.drawFilledEnabled = true
+            dataSet.mode = .cubicBezier
             
             callback(.value(dataSet))
         }

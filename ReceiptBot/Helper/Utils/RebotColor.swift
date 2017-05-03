@@ -23,6 +23,7 @@ struct RebotColor {
     struct Line {
         static let line = UIColor("#33691E")
         static let fill = UIColor("#9BCA3B")
+        static let point = UIColor("#70DEE4")
     }
     
     struct VCColor {
