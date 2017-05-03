@@ -26,6 +26,9 @@ class DetailInvoiceViewController: UITableViewController {
     var output: DetailInvoiceViewControllerOutput!
     var router: DetailInvoiceRouter!
     
+    /// Validation
+    fileprivate var canSelect: Bool = true
+    
     /// Pickers
     var invoiceDatePicker: UIDatePicker!
     var dueDatePicker: UIDatePicker!
@@ -162,6 +165,9 @@ class DetailInvoiceViewController: UITableViewController {
         textFields?[7].text = viewModel.grossAmount
         textFields?[8].text = viewModel.netAmount
         textFields?[9].text = viewModel.dueDate
+        
+        canSelect = viewModel.validation.isEditable
+        if let error = viewModel.validation.error { show(type: .error(message: error)) }
     }
     
     func goBack() {
@@ -172,6 +178,8 @@ class DetailInvoiceViewController: UITableViewController {
 /// MARK: UITableViewDelegate
 extension DetailInvoiceViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard canSelect else { return }
+        
         let row = indexPath.row
         guard row > 0 else { return }
         let textFieldIndex = row.advanced(by: -1) /// Because first row is the image. It can be moved into another section to simplify this logic

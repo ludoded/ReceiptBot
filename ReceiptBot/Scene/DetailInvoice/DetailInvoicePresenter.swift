@@ -49,6 +49,14 @@ class DetailInvoicePresenter {
             type = .image(ImageResource(downloadURL: imageURL))
         }
         
+        /// If editable
+        let invType = RebotInvoiceStatusMapper.toFrontEnd(from: invoice.type).lowercased()
+        let validation: DetailInvoice.Setup.Validation
+        
+        if invType == "processing" { validation = DetailInvoice.Setup.Validation(isEditable: false, error: nil) }
+        else if invType == "rejected" { validation = DetailInvoice.Setup.Validation(isEditable: false, error: "This document is rejected due to: \"\(invoice.invoiceComment)\"") }
+        else { validation = DetailInvoice.Setup.Validation(isEditable: true, error: nil) }
+        
         let viewModel = DetailInvoice.Setup.ViewModel(type: type,
                                                       supplierName: supplierName,
                                                       invoiceDate: invoiceDate,
@@ -60,7 +68,8 @@ class DetailInvoicePresenter {
                                                       grossAmount: invoice.grossAmount,
                                                       netAmount: invoice.netAmount,
                                                       dueDate: dueDate,
-                                                      dueDateMin: invoice.invoiceDateMobile ?? Date())
+                                                      dueDateMin: invoice.invoiceDateMobile ?? Date(),
+                                                      validation: validation)
         
         output.displayInitial(viewModel: viewModel)
     }

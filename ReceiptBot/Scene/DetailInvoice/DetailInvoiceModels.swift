@@ -41,6 +41,12 @@ struct DetailInvoice {
             let netAmount: String
             let dueDate: String
             let dueDateMin: Date /// set min date for dueDate picker
+            let validation: Validation
+        }
+        
+        struct Validation {
+            let isEditable: Bool
+            let error: String?
         }
     }
     

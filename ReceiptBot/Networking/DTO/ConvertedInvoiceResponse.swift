@@ -21,6 +21,7 @@ struct SyncConvertedInvoiceResponse: JSONable {
     let grossAmount: String
     let invoiceNumber: String
     let invoiceDateMobile: Date?
+    let invoiceComment: String
     let netAmount: String
     let originalInvoiceId: String
     let originalFileName: String
@@ -42,6 +43,7 @@ struct SyncConvertedInvoiceResponse: JSONable {
         self.fileName = json["File_Name"].stringValue
         self.invoiceNumber = json["InvoiceNumber"].stringValue
         self.invoiceDateMobile = json["InvoicedateMobile"].mdytaDate
+        self.invoiceComment = json["InvoiceComment"].stringValue
         self.netAmount = json["NetAmount"].stringValue
         self.originalInvoiceId = json["OrgInvoiceId"].stringValue
         self.originalFileName = json["OriginalFileName"].stringValue
