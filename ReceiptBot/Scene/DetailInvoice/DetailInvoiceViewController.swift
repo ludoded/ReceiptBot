@@ -38,13 +38,6 @@ class DetailInvoiceViewController: UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var textFields: [TextField]!
     
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Are you sure?", message: "All your changes would be lost.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in self?.navigationController?.popViewController(animated: true) }))
-        navigationController?.present(alert, animated: true, completion: nil)
-    }
-    
     @IBAction func reject(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Reject", message: "Please enter the comment on reason you reject.", preferredStyle: .alert)
         alert.addTextField { (textField) in
