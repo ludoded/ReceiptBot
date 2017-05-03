@@ -14,6 +14,7 @@ import Kingfisher
 
 protocol DetailInvoicePresenterOutput: class, Errorable, Spinnable {
     func displayInitial(viewModel: DetailInvoice.Setup.ViewModel)
+    func goBack()
 }
 
 class DetailInvoicePresenter {
@@ -69,7 +70,7 @@ class DetailInvoicePresenter {
         
         switch response.data {
         case .none(let message): output.show(type: .error(message: message))
-        case .value: output.show(type: .success(message: "Saved"))
+        case .value: output.goBack()
         }
     }
     
@@ -78,7 +79,7 @@ class DetailInvoicePresenter {
         
         switch response.data {
         case .none(let message): output.show(type: .error(message: message))
-        case .value: output.show(type: .success(message: "Rejected"))
+        case .value: output.goBack()
         }
     }
 }

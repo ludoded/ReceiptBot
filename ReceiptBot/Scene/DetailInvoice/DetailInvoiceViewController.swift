@@ -163,6 +163,10 @@ class DetailInvoiceViewController: UITableViewController {
         textFields?[8].text = viewModel.netAmount
         textFields?[9].text = viewModel.dueDate
     }
+    
+    func goBack() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 /// MARK: UITableViewDelegate

@@ -56,6 +56,11 @@ class InboxViewController: UIViewController, Spinnable {
         super.viewDidLoad()
         setupTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reload()
+    }
 
     // MARK: - Event handling
     

@@ -34,7 +34,6 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     override init() {
         super.init()
         InboxDataSourceConfigurator.sharedInstance.configure(dataSource: self)
-        fetchInvoices()
         
         model = InboxDataSourceModel.Invoices.ViewModel(cells: [])
     }
