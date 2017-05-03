@@ -32,10 +32,11 @@ class DetailInvoiceInteractor {
         let category = request.category ?? ""
         let categoryId = AppSettings.shared.config.categoryId(by: category)
         let supplierName = AppSettings.shared.config.supplierId(by: request.supplierName ?? "")
-        let paymentId = DetailInvoicePickerValues.Payment.values.index(where: { $0 == (request.paymentMethod ?? "") }) ?? 0
+        let paymentId = AppSettings.shared.config.paymentId(by: request.paymentMethod ?? "")///  DetailInvoicePickerValues.Payment.values.index(where: { $0 == (request.paymentMethod ?? "") }) ?? 0
+        let taxId = AppSettings.shared.config.taxId(by: request.taxRate ?? "")
         
         let param = DetailInvoice.Save.Params(status: "Approved",
-                                              convertedInvoiceId: originalInvoice?.convertedInvoiceId ?? "1",
+                                              convertedInvoiceId: originalInvoice?.convertedInvoiceId ?? "0",
                                               dueDate: request.dueDate ?? "",
                                               entityId: originalInvoice?.entityId ?? "",
                                               fileName: originalInvoice?.fileName ?? "",
@@ -47,7 +48,7 @@ class DetailInvoiceInteractor {
                                               originalFileName: originalInvoice?.originalFileName ?? "",
                                               supplierName: String(supplierName),
                                               taxAmount: request.taxAmount ?? "",
-                                              taxPercentage: originalInvoice?.taxPercentage ?? 0,
+                                              taxPercentage: String(taxId),
                                               paymentMethod: String(paymentId),
                                               categoryId: categoryId)
         

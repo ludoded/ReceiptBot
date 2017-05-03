@@ -112,7 +112,7 @@ enum Router: BaseRouter {
         case .pieChart(let entityId):
             return "/CommonService.svc/InvoiceStatusToShow/\(entityId)"
         case .lineChart(let entityId):
-            return "/CommonService.svc/linechart/\(entityId)"
+            return "/CommonService.svc/linechartMobile/\(entityId)/6"
         case .convertedInvoice(let originalInvoiceId):
             return "/DataCorrectionService.svc/GetConvertedInvoicesMobile/\(originalInvoiceId)"
         case .paymentMethod(let entityId):

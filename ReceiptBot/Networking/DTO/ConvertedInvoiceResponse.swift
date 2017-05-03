@@ -44,7 +44,7 @@ struct SyncConvertedInvoiceResponse: JSONable {
         self.invoiceNumber = json["InvoiceNumber"].stringValue
         self.invoiceDateMobile = json["InvoicedateMobile"].mdytaDate
         self.netAmount = json["NetAmount"].stringValue
-        self.originalInvoiceId = json["OriginalInvoiceId"].stringValue
+        self.originalInvoiceId = json["OrgInvoiceId"].stringValue
         self.originalFileName = json["OriginalFileName"].stringValue
         self.paymentMethodId = json["PaymentMethodId"].intValue
         self.paymentMethod = json["PaymentMethod"].stringValue
