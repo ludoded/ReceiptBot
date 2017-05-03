@@ -40,7 +40,6 @@ struct SyncConvertedInvoiceResponse: JSONable {
         self.entityId = json["EntityId"].stringValue
         self.filePath = json["FilePath"].stringValue
         self.fileName = json["File_Name"].stringValue
-        self.grossAmount = json["Gross_Amount"].stringValue
         self.invoiceNumber = json["InvoiceNumber"].stringValue
         self.invoiceDateMobile = json["InvoicedateMobile"].mdytaDate
         self.netAmount = json["NetAmount"].stringValue
@@ -49,9 +48,15 @@ struct SyncConvertedInvoiceResponse: JSONable {
         self.paymentMethodId = json["PaymentMethodId"].intValue
         self.paymentMethod = json["PaymentMethod"].stringValue
         self.supplierId = json["SupplierId"].intValue
-        self.supplierName = json["SupplierName"].stringValue
         self.taxAmount = json["TaxAmount"].stringValue
         self.taxPercentage = json["TaxPercentage"].intValue
         self.type = json["Type"].stringValue
+        
+        /// Additional validation
+        let gross = json["Gross_Amount"].stringValue
+        self.grossAmount = gross.isEmpty ? "0.00" : gross
+        
+        let supplier = json["SupplierName"].stringValue
+        self.supplierName = supplier.isEmpty ? "Supplier Name" : supplier
     }
 }
