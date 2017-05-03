@@ -50,6 +50,15 @@ struct DetailInvoice {
             let entityId: Int
             let invoiceId: String
             let originalInvoiceId: String
+            
+            var toParams: [String : Any] {
+                return  [
+                    "EntityId": entityId,
+                    "ConvertedInvoiceId": invoiceId,
+                    "Org_Invoice_Id": originalInvoiceId,
+                    "InvComment": comment
+                ]
+            }
         }
         
         struct Request {

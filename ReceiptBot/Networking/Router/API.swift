@@ -97,7 +97,7 @@ extension API {
         return Alamofire.request(router.paymentMethod(entityId: entityId))
     }
     
-    static func reject(with entityId: Int, and convertedInvoiceId: String, originalInvoiceId: String, reason: String) -> DataRequest {
-        return Alamofire.request(router.reject(entityId: entityId, convertedInvoiceId: convertedInvoiceId, originalInvoicId: originalInvoiceId, reason: reason))
+    static func reject(with params: Parameters) -> DataRequest {
+        return Alamofire.request(router.reject(params: params))
     }
 }

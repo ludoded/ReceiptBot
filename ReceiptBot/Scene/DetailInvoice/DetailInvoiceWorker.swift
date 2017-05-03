@@ -35,10 +35,7 @@ class DetailInvoiceRejectWorker {
     }
     
     func reject(callback: @escaping (RebotValueWrapper<SyncConvertedInvoiceResponse>) -> ()) {
-        SyncConvertedInvoiceResponse.loadType(request: API.reject(with: request.entityId,
-                                                                  and: request.invoiceId,
-                                                                  originalInvoiceId: request.originalInvoiceId,
-                                                                  reason: request.comment)) { (resp, message) in
+        SyncConvertedInvoiceResponse.loadType(request: API.reject(with: self.request.toParams)) { (resp, message) in
                                                                     guard message == nil else { callback(.none(message: message!)); return }
                                                                     
                                                                     callback(.value(resp!))

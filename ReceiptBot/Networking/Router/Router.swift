@@ -82,7 +82,7 @@ enum Router: BaseRouter {
     case qbCategories
     case updateConvertedInvoice(params: Parameters)
     case suppliers(softwareId: String, entityId: Int)
-    case reject(entityId: Int, convertedInvoiceId: String, originalInvoicId: String, reason: String)
+    case reject(params: Parameters)
     
     var method: Alamofire.HTTPMethod {
         switch self {
@@ -131,8 +131,8 @@ enum Router: BaseRouter {
             return "/DataCorrectionService.svc/UpdateConvertedInvoiceMobile"
         case .suppliers(let softwareId, let entityId):
             return "/DataCorrectionService.svc/GetSuppliers/\(softwareId)/\(entityId)"
-        case .reject(let entityId, let convertedInvoiceId, let originalInvoicId, let reason):
-            return "/DataCorrectionService.svc/AddInvoiceCommentMobile/\(entityId)/\(convertedInvoiceId)/\(originalInvoicId)/\(reason)"
+        case .reject:
+            return "/DataCorrectionService.svc/AddInvoiceCommentMobile"
         }
     }
     
@@ -154,12 +154,12 @@ enum Router: BaseRouter {
              .taxPercentage,
              .xeroCategories,
              .qbCategories,
-             .suppliers,
-             .reject:
+             .suppliers:
             return try urlEncoder.encode(urlRequest, with: nil)
             
         case .fileUpload(let params),
-             .updateConvertedInvoice(let params):
+             .updateConvertedInvoice(let params),
+             .reject(let params):
             return try jsonEncoder.encode(urlRequest, with: params)
         }
     }
