@@ -11,7 +11,7 @@ import Foundation
 struct DateFormatters {
     static var mdytaFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd yyyy"
+        formatter.dateFormat = "MMM dd yyyy HH:mma"
         
         return formatter
     }
@@ -19,6 +19,13 @@ struct DateFormatters {
     static var mFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM"
+        
+        return formatter
+    }
+    
+    static var mdySpaceFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd yyyy"
         
         return formatter
     }

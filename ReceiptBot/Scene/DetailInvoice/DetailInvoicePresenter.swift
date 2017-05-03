@@ -29,8 +29,8 @@ class DetailInvoicePresenter {
     }
     
     func passInitialSetup(from invoice: SyncConvertedInvoiceResponse) {
-        let invoiceDate = DateFormatters.mdytaFormatter.string(from: invoice.invoiceDateMobile ?? Date())
-        let dueDate = DateFormatters.mdytaFormatter.string(from: invoice.dueDate ?? Date())
+        let invoiceDate = DateFormatters.mdySpaceFormatter.string(from: invoice.invoiceDateMobile ?? Date())
+        let dueDate = DateFormatters.mdySpaceFormatter.string(from: invoice.dueDate ?? Date())
         let supplierName = AppSettings.shared.config.supplierName(for: invoice.supplierId)
         let categoryName = AppSettings.shared.config.categoryName(for: invoice.categoryId)
         let paymentMethod = AppSettings.shared.config.paymentName(for: invoice.paymentMethodId)

@@ -83,11 +83,13 @@ class DetailInvoiceViewController: UITableViewController {
         toolbar.items = [done]
         
         invoiceDatePicker = UIDatePicker()
+        invoiceDatePicker.datePickerMode = .date
         invoiceDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
         textFields?[1].inputAccessoryView = toolbar
         textFields?[1].inputView = invoiceDatePicker
         
         dueDatePicker = UIDatePicker()
+        dueDatePicker.datePickerMode = .date
         dueDatePicker.addTarget(self, action: #selector(datePickerValueChanged(picker:)), for: .valueChanged)
         textFields?[9].inputAccessoryView = toolbar
         textFields?[9].inputView = dueDatePicker
@@ -315,8 +317,8 @@ extension DetailInvoiceViewController: UIPickerViewDataSource, UIPickerViewDeleg
     
     func datePickerValueChanged(picker: UIDatePicker) {
         switch picker {
-        case invoiceDatePicker: textFields?[0].text = DateFormatters.mdytaFormatter.string(from: picker.date)
-        case dueDatePicker: textFields?[9].text = DateFormatters.mdytaFormatter.string(from: picker.date)
+        case invoiceDatePicker: textFields?[1].text = DateFormatters.mdySpaceFormatter.string(from: picker.date)
+        case dueDatePicker: textFields?[9].text = DateFormatters.mdySpaceFormatter.string(from: picker.date)
         default: break
         }
     }
