@@ -64,6 +64,7 @@ struct AuthResponse: JSONable {
     let userEmail: String
     let detail: String
     let isEmailVerified: Bool
+    let vatRegister: Bool
     let status: Bool
     
     init(json: JSON) {
@@ -79,6 +80,7 @@ struct AuthResponse: JSONable {
         self.userEmail = json["UserEmail"].stringValue
         self.detail = json["detail"].stringValue
         self.isEmailVerified = json["isEmailVerified"].boolValue
+        self.vatRegister = json["VATRegister"].boolValue
         self.status = json["status"].boolValue
     }
 }

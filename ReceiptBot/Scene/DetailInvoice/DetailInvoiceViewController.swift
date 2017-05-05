@@ -29,6 +29,10 @@ class DetailInvoiceViewController: UITableViewController {
     /// Validation
     fileprivate var canSelect: Bool = true
     
+    fileprivate lazy var vatRegister: Bool = {
+        return AppSettings.shared.user.vatRegister
+    }()
+    
     /// Pickers
     var invoiceDatePicker: UIDatePicker!
     var dueDatePicker: UIDatePicker!
@@ -215,6 +219,9 @@ extension DetailInvoiceViewController {
         
         guard canSelect, row > 0, row != 9 else { return }
         
+        /// If VATRegister is false, lock tax amount and tax percentage
+        if !vatRegister, row == 6 || row == 7 { return }
+        
         let textFieldIndex = row.advanced(by: -1) /// Because first row is the image. It can be moved into another section to simplify this logic
         
         activateTextField(at: textFieldIndex)
@@ -241,6 +248,7 @@ extension DetailInvoiceViewController: UITextFieldDelegate {
         /// Index of next textfield which should become first responder
         var nextIndex = index.advanced(by: 1)
         if nextIndex == 8 { nextIndex = 9 } /// Gross amount should be overstepped
+        if !vatRegister && (nextIndex == 5 || nextIndex == 6) { nextIndex = 7 } /// If VATRegister is false, tax amount and tax percentage should be overstepped
         if nextIndex >= total { return textField.resignFirstResponder() }
         
         return activateTextField(at: nextIndex)
