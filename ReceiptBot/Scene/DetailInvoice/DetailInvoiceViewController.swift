@@ -38,6 +38,9 @@ class DetailInvoiceViewController: UITableViewController {
     var taxPicker: UIPickerView!
     var toolbar: UIToolbar!
     
+    @IBOutlet weak var approve: UIBarButtonItem!
+    @IBOutlet weak var reject: UIBarButtonItem!
+    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var textFields: [TextField]!
@@ -194,6 +197,9 @@ class DetailInvoiceViewController: UITableViewController {
         textFields?[9].text = viewModel.dueDate
         
         canSelect = viewModel.validation.isEditable
+        approve.isEnabled = canSelect
+        reject.isEnabled = canSelect
+        
         if let error = viewModel.validation.error { show(type: .error(message: error)) }
     }
     

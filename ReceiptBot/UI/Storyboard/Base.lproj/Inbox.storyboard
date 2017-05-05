@@ -552,7 +552,9 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="approve" destination="tLE-u7-X1s" id="GCI-Ko-Zwk"/>
                         <outlet property="imageView" destination="kmI-Qc-xua" id="mCX-ct-oEQ"/>
+                        <outlet property="reject" destination="hPr-Zz-kub" id="VbL-l5-n9d"/>
                         <outlet property="webView" destination="x4M-fR-dqu" id="g6e-N1-IYu"/>
                         <outletCollection property="textFields" destination="jOk-Br-9f3" collectionClass="NSMutableArray" id="QOf-jq-V8h"/>
                         <outletCollection property="textFields" destination="lC4-bS-NLn" collectionClass="NSMutableArray" id="vEG-Ms-NQN"/>
@@ -572,8 +574,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="check" width="38" height="28"/>
-        <image name="cross" width="28" height="28"/>
+        <image name="check" width="34" height="25"/>
+        <image name="cross" width="25" height="25"/>
         <image name="currency" width="29" height="29"/>
         <image name="date" width="29" height="29"/>
         <image name="grossamount" width="29" height="29"/>
