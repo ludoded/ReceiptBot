@@ -19,4 +19,14 @@ struct RebotValidator {
     static func validate(password: String) -> Bool {
         return password.characters.count >= 6
     }
+    
+    static func emailError(text: String) -> Bool {
+        guard !text.isEmpty else { return true }
+        return validate(email: text)
+    }
+    
+    static func passwordError(text: String) -> Bool {
+        guard !text.isEmpty else { return true }
+        return validate(password: text)
+    }
 }

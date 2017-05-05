@@ -29,15 +29,23 @@ class EmailPasswordViewController: SignBaseViewController {
         let passwordValid = textFields![1].rx.text.orEmpty
             .map{ RebotValidator.validate(password: $0) }
             .shareReplay(1)
+        
+        let emailError = textFields![0].rx.text.orEmpty
+            .map{ RebotValidator.emailError(text: $0) }
+            .shareReplay(1)
+        let passwordError = textFields![1].rx.text.orEmpty
+            .map{ RebotValidator.passwordError(text: $0) }
+            .shareReplay(1)
+        
         let everythingValid = Observable.combineLatest(emailValid, passwordValid) { $0 && $1 }
         
-        emailValid
+        emailError
             .bind(to: textFields![0].rx.isErrorRevealed)
             .disposed(by: disposeBag)
         emailValid
             .bind(to: recoveryButton.rx.isEnabled)
             .disposed(by: disposeBag)
-        passwordValid
+        passwordError
             .bind(to: textFields![1].rx.isErrorRevealed)
             .disposed(by: disposeBag)
         everythingValid
