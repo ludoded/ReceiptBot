@@ -152,6 +152,7 @@ class DetailInvoiceViewController: UITableViewController {
     }
     
     func reject(with comment: String) {
+        guard !comment.isEmpty else { show(type: .error(message: "Please provide a comment on reason you reject")); return }
         guard validateInputs() else { return }
         
         startSpinning()
