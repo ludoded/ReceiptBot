@@ -46,13 +46,13 @@ class SignInInteractor {
             switch resp {
             case .none: DispatchQueue.main.async { self?.passRegister(data: resp) }
             case .value(let data):
-                if !data.isVerified || !data.userAlreadyCreated {
+                if !data.isVerified && !data.userAlreadyCreated || !data.isOrgExist {
                     DispatchQueue.main.async { self?.passCompleteProfile(email: request.email, name: request.name) }
                 }
-                else if !data.isVerified || data.userAlreadyCreated {
+                else if !data.isVerified && data.userAlreadyCreated {
                     DispatchQueue.main.async { self?.passRegister(data: .none(message: "User Already Registered, Please Verify your Email Address")) }
                 }
-                else if data.isVerified || data.userAlreadyCreated {
+                else if data.isVerified && data.userAlreadyCreated {
                     self?.tryToExternalSignIn(request: request)
                 }
                 else {

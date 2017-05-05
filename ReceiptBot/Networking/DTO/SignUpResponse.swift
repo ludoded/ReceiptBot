@@ -38,6 +38,7 @@ struct SignUpFirstResponse: JSONable {
     let isVerified: Bool
     let message: String
     let userAlreadyCreated: Bool
+    let isOrgExist: Bool
     
     init(json: JSON) {
         self.id = json["Id"].stringValue
@@ -47,6 +48,7 @@ struct SignUpFirstResponse: JSONable {
         self.isVerified = json["IsVerified"].boolValue
         self.message = json["message"].stringValue
         self.userAlreadyCreated = json["userAllradyCreated"].boolValue
+        self.isOrgExist = json["isOrgExist"].boolValue
     }
 }
 
