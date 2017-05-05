@@ -19,6 +19,13 @@ struct NumberFormaters {
         return formatter
     }
     
+    static var lineFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        return formatter
+    }
+    
     static var grossFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal

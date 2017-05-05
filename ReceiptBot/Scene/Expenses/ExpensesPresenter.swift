@@ -35,7 +35,7 @@ class ExpensesPresenter {
     private func pass(line dataSet: LineChartDataSet) {
         let data = LineChartData(dataSet: dataSet)
         
-        data.setValueFormatter(DefaultValueFormatter(formatter: NumberFormaters.pieFormatter))
+        data.setValueFormatter(DefaultValueFormatter(formatter: NumberFormaters.lineFormatter))
         data.setValueTextColor(.black)
         
         let viewModel = Expenses.Line.ViewModel(data: data)

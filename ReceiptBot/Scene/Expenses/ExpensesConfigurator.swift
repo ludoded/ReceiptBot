@@ -83,6 +83,6 @@ class ExpensesConfigurator {
         axe.drawGridLinesEnabled = true
         axe.centerAxisLabelsEnabled = false
         axe.granularity = 100_000_000
-        axe.axisMinimum = 0        
+        axe.axisMinimum = 0
     }
 }
