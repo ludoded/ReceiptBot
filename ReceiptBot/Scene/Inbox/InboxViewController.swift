@@ -20,6 +20,7 @@ protocol InboxViewControllerOutput {
 class InboxViewController: UIViewController, Spinnable {
     fileprivate var dataSource: InboxDataSource!
     fileprivate var refresh: UIRefreshControl!
+    fileprivate var currentFilter = InboxFilterType.all.description
     
     var output: InboxViewControllerOutput!
     var router: InboxRouter!
@@ -35,6 +36,7 @@ class InboxViewController: UIViewController, Spinnable {
                                              initialSelection: 0,
                                              doneBlock: { [weak self] (_, _, value) in
                                                 let title = value as! String
+                                                self?.currentFilter = title
                                                 DispatchQueue.main.async { self?.filter(with: title) }
                                             },
                                              cancel: nil,
@@ -78,12 +80,7 @@ class InboxViewController: UIViewController, Spinnable {
     }
     
     func reload() {
-        resetFilter()
-        dataSource.fetchInvoices()
-    }
-    
-    func resetFilter() {
-        filter.setTitle(InboxFilterType.all.description, for: .normal)
+        dataSource.fetchInvoices(with: currentFilter)
     }
     
     func filter(with query: String) {

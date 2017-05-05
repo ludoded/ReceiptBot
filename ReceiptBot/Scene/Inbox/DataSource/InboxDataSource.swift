@@ -15,7 +15,7 @@ protocol InboxDataSourceOutput {
     var invoices: [SyncConvertedInvoiceResponse]! { get set }
     var filteredInvoices: [SyncConvertedInvoiceResponse]! { get set }
     
-    func fetchInvoices()
+    func fetchInvoices(with query: String)
     func filter(with query: String)
 }
 
@@ -40,12 +40,12 @@ class InboxDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Event handling
 
-    func fetchInvoices() {
+    func fetchInvoices(with query: String) {
         /// Notify that fetch request started
         vcOutput?.startUpdatingTableView()
         
         /// Fetch Invoices from internet
-        output.fetchInvoices()
+        output.fetchInvoices(with: query)
     }
     
     func filterModel(with query: String) {

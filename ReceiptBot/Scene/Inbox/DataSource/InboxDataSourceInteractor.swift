@@ -24,11 +24,12 @@ class InboxDataSourceInteractor {
     var filteredInvoices: [SyncConvertedInvoiceResponse]!
 
     // MARK: - Business logic
-    func fetchInvoices() {
+    func fetchInvoices(with query: String) {
         let entityId = AppSettings.shared.user.entityId
         worker = InboxDataSourceWorker(entityId: entityId)
         worker.fetchInvoices { [weak self] (wrappedArray) in
-            self?.pass(data: wrappedArray)
+            self?.storeInvoices(for: wrappedArray)
+            self?.filter(with: query)
         }
     }
     
@@ -43,8 +44,6 @@ class InboxDataSourceInteractor {
     }
     
     func pass(data: RebotValueWrapper<[SyncConvertedInvoiceResponse]>) {
-        storeInvoices(for: data)
-        
         let response = InboxDataSourceModel.Invoices.Response(data: data)
         output.presentInvoices(response: response)
     }
