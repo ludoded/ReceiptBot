@@ -29,6 +29,14 @@ class InboxDataSourceWorker {
     }
     
     private func removeExported(from invoices: [SyncConvertedInvoiceResponse]) -> [SyncConvertedInvoiceResponse] {
-        return invoices.filter({ !($0.type.contains("Exported") || $0.type.contains("Split") || $0.type.contains("Modified")) })
+        let filteredInvoices = invoices.filter({ !($0.type.contains("Exported") || $0.type.contains("Split") || $0.type.contains("Modified")) })
+        
+        /// Remove duplicates
+        var exportedInvoices: [SyncConvertedInvoiceResponse] = []
+        for invoice in filteredInvoices where exportedInvoices.index(where: { $0.originalInvoiceId == invoice.originalInvoiceId }) == nil {
+            exportedInvoices.append(invoice)
+        }
+        
+        return exportedInvoices
     }
 }
