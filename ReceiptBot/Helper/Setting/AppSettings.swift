@@ -23,6 +23,7 @@ final class AppSettings {
         
         /// Fetching categories and suppliers
         config = AppConfigChunk.shared
+        config.initSetup()
         config.loadConfigs(callback: callback)
     }
     

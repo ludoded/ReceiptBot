@@ -53,7 +53,7 @@ class CompleteProfileInteractor {
             "StartUp"
         ]
     }
-
+    
     // MARK: - Business logic
     func completeRegistration(request: CompleteProfile.Registration.Request) {
         guard countryId != 0 else { pass(user: .none(message: "Pick the country!")); return }

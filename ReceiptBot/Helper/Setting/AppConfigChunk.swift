@@ -13,8 +13,8 @@ enum AppConfigFetchingState {
 }
 
 final class AppConfigChunk {
-    let accountId: String
-    let entityId: Int
+    var accountId: String!
+    var entityId: Int!
     
     var categories: [CategoryResponse]!
     var suppliers: [SupplierResponse]!
@@ -29,7 +29,9 @@ final class AppConfigChunk {
     
     static let shared = AppConfigChunk()
     
-    private init() {
+    private init() {}
+    
+    func initSetup() {
         let user = AppSettings.shared.user
         
         self.accountId = user?.accountPackageIdMobile ?? "3"
