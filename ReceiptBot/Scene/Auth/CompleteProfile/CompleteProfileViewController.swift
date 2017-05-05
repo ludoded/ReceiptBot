@@ -88,7 +88,7 @@ class CompleteProfileViewController: SignBaseViewController {
     }
     
     func displayCountryPicker() {
-        let picker = ActionSheetStringPicker(title: "Pick the County",
+        let picker = ActionSheetStringPicker(title: "Pick the Country",
                                              rows: output.countries,
                                              initialSelection: 0,
                                              doneBlock: { [weak self] (_, index, value) in
