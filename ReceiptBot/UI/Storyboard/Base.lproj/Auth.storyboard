@@ -481,19 +481,19 @@
                                                 <rect key="frame" x="10" y="20" width="354" height="606"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BW0-Tw-faT">
-                                                        <rect key="frame" x="18" y="0.0" width="318" height="395"/>
+                                                        <rect key="frame" x="47" y="0.0" width="260.5" height="395"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE/EDIT PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-S3-7kH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="318" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create/Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-S3-7kH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="260.5" height="36"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-f8-h8O">
-                                                                <rect key="frame" x="0.0" y="66" width="318" height="329"/>
+                                                                <rect key="frame" x="0.0" y="66" width="260.5" height="329"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Uj-Z2-RbL" customClass="ErrorTextField" customModule="Material">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="260.5" height="29"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="29" id="YQm-EG-CQh"/>
                                                                         </constraints>
@@ -514,7 +514,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abg-MW-BbU" customClass="ErrorTextField" customModule="Material">
-                                                                        <rect key="frame" x="0.0" y="74" width="318" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="74" width="260.5" height="29"/>
                                                                         <color key="tintColor" red="0.60392156860000001" green="0.80000000000000004" blue="0.16329078799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="29" id="Efo-4S-jiJ"/>
@@ -539,7 +539,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-VK-2B8">
-                                                                        <rect key="frame" x="0.0" y="148" width="318" height="20.5"/>
+                                                                        <rect key="frame" x="0.0" y="148" width="260.5" height="20.5"/>
                                                                         <gestureRecognizers/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -549,7 +549,7 @@
                                                                         </connections>
                                                                     </label>
                                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Account Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-oI-xSS">
-                                                                        <rect key="frame" x="0.0" y="213.5" width="318" height="20.5"/>
+                                                                        <rect key="frame" x="0.0" y="213.5" width="260.5" height="20.5"/>
                                                                         <gestureRecognizers/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -559,7 +559,7 @@
                                                                         </connections>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43h-PY-flM" customClass="Button" customModule="Material">
-                                                                        <rect key="frame" x="0.0" y="279" width="318" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="279" width="260.5" height="50"/>
                                                                         <color key="backgroundColor" red="0.60392156860000001" green="0.80000000000000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="nUl-hj-rrr"/>
