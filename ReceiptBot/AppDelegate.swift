@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                      sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                      annotation: [:])
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        GIDSignIn.sharedInstance().signOut()
+    }
 }
 
 /// MARK: Database

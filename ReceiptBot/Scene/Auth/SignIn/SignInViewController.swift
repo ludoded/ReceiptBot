@@ -98,6 +98,9 @@ extension SignInViewController: GIDSignInUIDelegate {
     }
     
     func googleSignIn(with authInfo: GoogleAuthInfo?, or error: String?) {
+        /// Sign out, because we don't need the system being signed in, we don't use the privilege of it
+        GoogleAuthConfigurator.shared.logout()
+        
         /// Show error if one is occured
         guard error == nil else { show(type: .error(message: error!)); return }
         
