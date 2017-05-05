@@ -84,7 +84,7 @@ class CompleteProfileInteractor {
                                                              countryId: countryId,
                                                              accType: accountType,
                                                              email: email,
-                                                             password: password,
+                                                             password: password ?? "",
                                                              userType: 1) /// Android sets userType to 1
         return parameters
     }
