@@ -24,7 +24,8 @@ class PhotoVerifyInteractor {
         let interval = Int(Date().timeIntervalSince1970)
         let saveName = "\(interval).png"
         let user = AppSettings.shared.user
-        let data = UIImagePNGRepresentation(request.image)?.base64EncodedString()
+        let scaledImage = request.image.rebotSize()
+        let data = UIImagePNGRepresentation(scaledImage ?? UIImage())?.base64EncodedString()
         
         let params = PhotoVerify.Upload.Params(fileNameToSave: saveName,
                                                fileNameOriginal: saveName,

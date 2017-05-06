@@ -243,6 +243,8 @@
 		B2D3AC111E97E7F600293B8C /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683C1E93D355009560BD /* JSONable.swift */; };
 		B2D3AC121E97E7FB00293B8C /* JSONObject+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */; };
 		B2D3AC131E97EAA000293B8C /* RebotColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CBBF1E955C7C008A3313 /* RebotColor.swift */; };
+		B2DFA80A1EBDDB9300158D3C /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFA8091EBDDB9300158D3C /* UIImage+Scaling.swift */; };
+		B2DFA80B1EBDDB9300158D3C /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFA8091EBDDB9300158D3C /* UIImage+Scaling.swift */; };
 		B2FB68341E93D151009560BD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68331E93D151009560BD /* Router.swift */; };
 		B2FB68371E93D218009560BD /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68361E93D218009560BD /* SignUpResponse.swift */; };
 		B2FB683D1E93D355009560BD /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB683C1E93D355009560BD /* JSONable.swift */; };
@@ -465,6 +467,7 @@
 		B2D3ABF31E97D53C00293B8C /* InboxDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSource.swift; path = Scene/Inbox/DataSource/InboxDataSource.swift; sourceTree = "<group>"; };
 		B2D3ABF41E97D53C00293B8C /* InboxDataSourceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxDataSourceWorker.swift; path = Scene/Inbox/DataSource/InboxDataSourceWorker.swift; sourceTree = "<group>"; };
 		B2D3AC031E97E6A400293B8C /* DataRequest+ParseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+ParseResponse.swift"; path = "Helper/Extension/DataRequest+ParseResponse.swift"; sourceTree = "<group>"; };
+		B2DFA8091EBDDB9300158D3C /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Scaling.swift"; path = "Helper/Extension/UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		B2FB68331E93D151009560BD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
 		B2FB68361E93D218009560BD /* SignUpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpResponse.swift; path = Networking/DTO/SignUpResponse.swift; sourceTree = "<group>"; };
 		B2FB683C1E93D355009560BD /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONable.swift; path = Helper/Networking/JSONable.swift; sourceTree = "<group>"; };
@@ -687,6 +690,7 @@
 				B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */,
 				B299B7A31E9A6E35002BFA87 /* Reactive+ErrorTextField.swift */,
 				B213E4291E9EE9250085970D /* UIImage+base64.swift */,
+				B2DFA8091EBDDB9300158D3C /* UIImage+Scaling.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1338,6 +1342,7 @@
 				B2FC67681E983C9E0003A35C /* SignInWorker.swift in Sources */,
 				B2FB683F1E93EA20009560BD /* ConvertedInvoiceResponse.swift in Sources */,
 				B283CBC01E955C7C008A3313 /* RebotColor.swift in Sources */,
+				B2DFA80A1EBDDB9300158D3C /* UIImage+Scaling.swift in Sources */,
 				B2FC67901E984E560003A35C /* CompleteProfileRouter.swift in Sources */,
 				B27B53981E945F2100B0E050 /* DashboardRouter.swift in Sources */,
 				B2FC678A1E984E560003A35C /* CompleteProfileInteractor.swift in Sources */,
@@ -1518,6 +1523,7 @@
 				B299B7B31E9AC0B9002BFA87 /* AppDelegate.swift in Sources */,
 				B2D3AC021E97D53C00293B8C /* InboxDataSourceWorker.swift in Sources */,
 				B299B7951E9911BF002BFA87 /* NSManagedObject+crud.swift in Sources */,
+				B2DFA80B1EBDDB9300158D3C /* UIImage+Scaling.swift in Sources */,
 				B2A054A61E9D85B000CF88D9 /* LeftCell.swift in Sources */,
 				B2FC67611E983C9E0003A35C /* SignInModels.swift in Sources */,
 				B20565DD1EB8D67800AB1F96 /* RebotInvoiceStatusMapper.swift in Sources */,
