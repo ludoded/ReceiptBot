@@ -38,8 +38,8 @@ class InboxDataSourcePresenter {
         
         for invoice in invoices {
             var paidOn: String = ""
-            if let dueDate = invoice.dueDate {
-                paidOn = DateFormatters.mdySpaceFormatter.string(from: dueDate)
+            if let invoiceDate = invoice.invoiceDateMobile {
+                paidOn = DateFormatters.mdySpaceFormatter.string(from: invoiceDate)
             }
             
             let grossNumber = NSNumber(value: Double(invoice.grossAmount) ?? 0.0)
