@@ -197,8 +197,8 @@ class DetailInvoiceViewController: UITableViewController {
         textFields?[4].text = viewModel.category
         textFields?[5].text = viewModel.taxRate
         textFields?[6].text = viewModel.taxAmount
-        textFields?[7].text = viewModel.grossAmount
-        textFields?[8].text = viewModel.netAmount
+        textFields?[7].text = viewModel.netAmount
+        textFields?[8].text = viewModel.grossAmount
         textFields?[9].text = viewModel.dueDate
         
         canSelect = viewModel.validation.isEditable
