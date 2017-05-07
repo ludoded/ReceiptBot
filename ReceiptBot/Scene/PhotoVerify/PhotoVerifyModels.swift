@@ -23,7 +23,7 @@ struct PhotoVerify {
             let serverLocation: String
             let organisationName: String
             let companyName: String
-            let companyId: String
+            let companyId: Int
             let userId: String
             let fileExtension: String
             let folderType: String

@@ -31,15 +31,15 @@ class PhotoVerifyInteractor {
                                                fileNameOriginal: saveName,
                                                serverLocation: "D:/",
                                                organisationName: user?.organisationName ?? "",
-                                               companyName: user?.organisationName ?? "",
-                                               companyId: String(user?.organisationId ?? 0),
+                                               companyName: user?.entityName ?? "",
+                                               companyId: user?.entityId ?? 0,
                                                userId: "",
                                                fileExtension: ".png",
                                                folderType: "0",
                                                mobileData: data ?? "",
                                                originalInvoiceId: "",
                                                originalInvoiceStatus: "",
-                                               filePath: " ")
+                                               filePath: "")
         worker = PhotoVerifyWorker(params: params)
         worker.uploadFile { [weak self] (resp) in
             self?.passToPresenter(data: resp)
