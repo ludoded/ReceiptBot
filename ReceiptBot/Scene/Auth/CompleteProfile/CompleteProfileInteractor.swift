@@ -46,11 +46,12 @@ class CompleteProfileInteractor {
         return [
             "Choose Account Type",
             "Accountant",
+            "Portfolio FD",
             "Bookkeeper",
-            "Enterpreneur",
+            "Entrepreneur/Start up",
             "Finance Professional",
             "Other",
-            "StartUp"
+            "Small/Medium Business"
         ]
     }
     
