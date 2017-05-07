@@ -70,7 +70,7 @@
                                                                             <constraint firstAttribute="width" secondItem="dql-Aj-hme" secondAttribute="height" multiplier="1:1" id="PRC-BA-yhI"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nabeel@rebot.io" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-Dv-omn" customClass="ErrorTextField" customModule="Material">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-Dv-omn" customClass="ErrorTextField" customModule="Material">
                                                                         <rect key="frame" x="37" y="0.0" width="297" height="29"/>
                                                                         <color key="textColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16542817008879024" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,7 +102,7 @@
                                                                             <constraint firstAttribute="width" secondItem="pJp-tT-sCw" secondAttribute="height" multiplier="1:1" id="T0u-a7-5Bq"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nabeel@rebot.io" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-wn-DId" customClass="ErrorTextField" customModule="Material">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-wn-DId" customClass="ErrorTextField" customModule="Material">
                                                                         <rect key="frame" x="37" y="0.0" width="297" height="29"/>
                                                                         <color key="tintColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16329078801331853" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="textColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16542817008879024" alpha="1" colorSpace="calibratedRGB"/>
