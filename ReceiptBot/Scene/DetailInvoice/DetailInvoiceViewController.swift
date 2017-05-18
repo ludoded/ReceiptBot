@@ -20,6 +20,7 @@ protocol DetailInvoiceViewControllerOutput {
     func initialSetup()
     func save(request: DetailInvoice.Save.Request)
     func reject(request: DetailInvoice.Reject.Request)
+    func validate(invoiceDateString: String, dueDateString: String) -> Bool
 }
 
 class DetailInvoiceViewController: UITableViewController {
@@ -172,6 +173,11 @@ class DetailInvoiceViewController: UITableViewController {
         if (textFields?[7].text ?? "").isEmpty { show(type: .error(message: "Please provide net amount")); return false }
         if (textFields?[8].text ?? "").isEmpty { show(type: .error(message: "Please provide gross amount")); return false }
         if (textFields?[9].text ?? "").isEmpty { show(type: .error(message: "Please provide invoice due date")); return false }
+        
+        if !output.validate(invoiceDateString: textFields?[1].text ?? "", dueDateString: textFields?[9].text ?? "") {
+            show(type: .error(message: "Invoice Date can't be later than Due Date")); return false
+        }
+        
         return true
     }
 

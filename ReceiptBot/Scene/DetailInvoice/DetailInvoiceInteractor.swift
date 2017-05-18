@@ -74,6 +74,13 @@ class DetailInvoiceInteractor {
         }
     }
     
+    func validate(invoiceDateString: String, dueDateString: String) -> Bool {
+        guard let invoiceDate = DateFormatters.mdySpaceFormatter.date(from: invoiceDateString),
+            let dueDate = DateFormatters.mdySpaceFormatter.date(from: dueDateString)
+            else { return false }
+        return invoiceDate.compare(dueDate) != .orderedDescending
+    }
+    
     func passSave(data: RebotValueWrapper<SyncConvertedInvoiceResponse>) {
         let response = DetailInvoice.Save.Response(data: data)
         output.presentSave(response: response)

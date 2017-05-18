@@ -42,7 +42,6 @@ final class AppConfigurator {
             externalSign = ExternalLoginWorker(email: credentials.email)
             externalSign.tryToLogin{ [weak self] (resp) in self?.loginCompleted(with: resp) }
         }
-        
     }
     
     func loginCompleted(with resp: RebotValueWrapper<AuthResponse>) {
