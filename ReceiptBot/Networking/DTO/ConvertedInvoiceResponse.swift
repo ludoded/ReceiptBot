@@ -33,6 +33,19 @@ struct SyncConvertedInvoiceResponse: JSONable {
     let taxPercentage: Int
     let type: String
     
+    /// Helpers
+    var isPdf: Bool {
+        return fileName.lowercased().contains(".pdf")
+    }
+    
+    var fullMediaUrl: URL? {
+        guard var url = URL(string: API.documentsURL) else { return nil }
+        url.appendPathComponent(filePath)
+        url.appendPathComponent(fileName)
+        
+        return url
+    }
+    
     init(json: JSON) {
         self.categoryId = json["CategoryId"].stringValue
         self.convertedInvoiceId = json["ConvertedInvoiceId"].stringValue

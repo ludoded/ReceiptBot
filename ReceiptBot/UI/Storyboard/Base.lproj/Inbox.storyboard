@@ -566,11 +566,95 @@
                         <outletCollection property="textFields" destination="Cdo-3R-r76" collectionClass="NSMutableArray" id="uLZ-cA-1SX"/>
                         <outletCollection property="textFields" destination="Xxd-BT-c7o" collectionClass="NSMutableArray" id="OHO-KR-qiy"/>
                         <outletCollection property="textFields" destination="Xtd-o3-sVw" collectionClass="NSMutableArray" id="bNx-4B-O02"/>
+                        <segue destination="oLP-wH-dYC" kind="show" identifier="showZoomScrollView" id="GEh-op-uyr"/>
+                        <segue destination="EWY-PX-NxT" kind="show" identifier="showZoomWebView" id="tqe-53-8Ef"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ham-04-jjn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1198" y="-196"/>
+        </scene>
+        <!--Zoom Web View Controller-->
+        <scene sceneID="Vrh-gH-mYh">
+            <objects>
+                <viewController id="EWY-PX-NxT" customClass="ZoomWebViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IKU-kO-VoS"/>
+                        <viewControllerLayoutGuide type="bottom" id="c1J-Fq-sZf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h1N-hK-udq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-Dd-7Az">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ki6-Dd-7Az" firstAttribute="top" secondItem="IKU-kO-VoS" secondAttribute="bottom" id="dBX-hT-r1l"/>
+                            <constraint firstAttribute="trailing" secondItem="ki6-Dd-7Az" secondAttribute="trailing" id="kNa-IG-AZK"/>
+                            <constraint firstItem="ki6-Dd-7Az" firstAttribute="leading" secondItem="h1N-hK-udq" secondAttribute="leading" id="syB-Hg-KpM"/>
+                            <constraint firstItem="c1J-Fq-sZf" firstAttribute="top" secondItem="ki6-Dd-7Az" secondAttribute="bottom" id="xh1-6Q-hdL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ki6-Dd-7Az" id="QAy-ux-6oX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8r4-ua-KmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="-541"/>
+        </scene>
+        <!--Zoom Scroll View Controller-->
+        <scene sceneID="69t-u9-MnM">
+            <objects>
+                <viewController id="oLP-wH-dYC" customClass="ZoomScrollViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UkR-Hy-fyT"/>
+                        <viewControllerLayoutGuide type="bottom" id="sJy-bf-Q9z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Abe-5u-Ziz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="yFs-QN-cWv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qbk-dU-FJD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qbk-dU-FJD" secondAttribute="trailing" id="8GX-7l-eQh"/>
+                                    <constraint firstItem="Qbk-dU-FJD" firstAttribute="top" secondItem="yFs-QN-cWv" secondAttribute="top" id="Hag-A7-5QY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qbk-dU-FJD" secondAttribute="bottom" id="LLq-WC-PgZ"/>
+                                    <constraint firstItem="Qbk-dU-FJD" firstAttribute="leading" secondItem="yFs-QN-cWv" secondAttribute="leading" id="yig-aZ-bLa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="oLP-wH-dYC" id="Bqh-n5-KvT"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yFs-QN-cWv" firstAttribute="leading" secondItem="Abe-5u-Ziz" secondAttribute="leading" id="25a-Jy-gg7"/>
+                            <constraint firstItem="sJy-bf-Q9z" firstAttribute="top" secondItem="yFs-QN-cWv" secondAttribute="bottom" id="6eW-mC-IL0"/>
+                            <constraint firstItem="yFs-QN-cWv" firstAttribute="top" secondItem="UkR-Hy-fyT" secondAttribute="bottom" id="eT3-9w-k9d"/>
+                            <constraint firstItem="Qbk-dU-FJD" firstAttribute="width" secondItem="Abe-5u-Ziz" secondAttribute="width" id="gve-IY-JPx"/>
+                            <constraint firstAttribute="trailing" secondItem="yFs-QN-cWv" secondAttribute="trailing" id="hZl-Qy-X8o"/>
+                            <constraint firstItem="Qbk-dU-FJD" firstAttribute="height" secondItem="Abe-5u-Ziz" secondAttribute="height" id="w6O-yd-Shl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Qbk-dU-FJD" id="69Z-J7-CXF"/>
+                        <outlet property="scrollView" destination="yFs-QN-cWv" id="Cb9-VQ-Bfv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilx-In-BQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="169"/>
         </scene>
     </scenes>
     <resources>

@@ -36,13 +36,11 @@ class DetailInvoicePresenter {
         let paymentMethod = AppSettings.shared.config.paymentName(for: invoice.paymentMethodId)
         let taxPercentage = AppSettings.shared.config.taxName(for: invoice.taxPercentage)
         
-        guard var imageURL = URL(string: API.documentsURL) else { output.show(type: .error(message: "Can't load the image")); return }
-        imageURL.appendPathComponent(invoice.filePath)
-        imageURL.appendPathComponent(invoice.fileName)
+        guard let imageURL = invoice.fullMediaUrl else { output.show(type: .error(message: "Can't load the image")); return }
         
         let type: DetailInvoice.Setup.InvoiceType
         /// If pdf
-        if invoice.fileName.lowercased().contains(".pdf") {
+        if invoice.isPdf {
             type = .pdf(URLRequest(url: imageURL))
         }
         else { /// If image: png, jpeg, jpg etc

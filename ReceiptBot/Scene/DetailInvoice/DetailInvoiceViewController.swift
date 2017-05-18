@@ -214,6 +214,15 @@ class DetailInvoiceViewController: UITableViewController {
         if let error = viewModel.validation.error { show(type: .error(message: error)) }
     }
     
+    func displayZoom() {
+        if output.originalInvoice?.isPdf ?? true {
+            router.navigateToZoomWeb()
+        }
+        else {
+            router.navigateToZoomImage()
+        }
+    }
+    
     func goBack() {
         navigationController?.popViewController(animated: true)
     }
@@ -224,7 +233,9 @@ extension DetailInvoiceViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         
-        guard canSelect, row > 0, row != 9 else { return }
+        if row == 0 { displayZoom(); return }
+        
+        guard canSelect, row != 9 else { return }
         
         /// If VATRegister is false, lock tax amount and tax percentage
         if !vatRegister, row == 6 || row == 7 { return }

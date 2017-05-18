@@ -58,6 +58,10 @@
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
 		B22B11E31E89DE86009D3E76 /* SlideMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */; };
 		B22B11E81E89DE86009D3E76 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */; };
+		B268D22E1ECE0E8F00B25176 /* ZoomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D22D1ECE0E8F00B25176 /* ZoomWebViewController.swift */; };
+		B268D2301ECE0F4200B25176 /* ZoomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D22F1ECE0F4200B25176 /* ZoomScrollViewController.swift */; };
+		B268D2311ECE135000B25176 /* ZoomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D22D1ECE0E8F00B25176 /* ZoomWebViewController.swift */; };
+		B268D2321ECE135300B25176 /* ZoomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D22F1ECE0F4200B25176 /* ZoomScrollViewController.swift */; };
 		B270DB501E940A61008B5D22 /* DateFormattersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B270DB4F1E940A61008B5D22 /* DateFormattersTest.swift */; };
 		B27B53511E944DC800B0E050 /* DateFormaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53501E944DC800B0E050 /* DateFormaters.swift */; };
 		B27B53541E944DEA00B0E050 /* JSONObject+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */; };
@@ -380,6 +384,8 @@
 		B22B11D11E89D5C8009D3E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B22B11DC1E89DE86009D3E76 /* SlideMenuConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuConfigurator.swift; path = Scene/SlideMenu/SlideMenuConfigurator.swift; sourceTree = "<group>"; };
 		B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuViewController.swift; path = Scene/SlideMenu/SlideMenuViewController.swift; sourceTree = "<group>"; };
+		B268D22D1ECE0E8F00B25176 /* ZoomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZoomWebViewController.swift; path = Scene/DetailInvoice/Zoom/ZoomWebViewController.swift; sourceTree = "<group>"; };
+		B268D22F1ECE0F4200B25176 /* ZoomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZoomScrollViewController.swift; path = Scene/DetailInvoice/Zoom/ZoomScrollViewController.swift; sourceTree = "<group>"; };
 		B270DB4F1E940A61008B5D22 /* DateFormattersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormattersTest.swift; path = Helper/Formatters/DateFormattersTest.swift; sourceTree = "<group>"; };
 		B27B53501E944DC800B0E050 /* DateFormaters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormaters.swift; path = Helper/Formatter/DateFormaters.swift; sourceTree = "<group>"; };
 		B27B53531E944DEA00B0E050 /* JSONObject+DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONObject+DateFormat.swift"; path = "Helper/Extension/JSONObject+DateFormat.swift"; sourceTree = "<group>"; };
@@ -575,6 +581,7 @@
 		B213E42C1EA01CC90085970D /* DetailInvoice */ = {
 			isa = PBXGroup;
 			children = (
+				B268D22C1ECE0E5A00B25176 /* Zoom */,
 				B213E42D1EA01CF30085970D /* DetailInvoiceConfigurator.swift */,
 				B213E42E1EA01CF30085970D /* DetailInvoiceInteractor.swift */,
 				B213E42F1EA01CF30085970D /* DetailInvoiceModels.swift */,
@@ -659,6 +666,15 @@
 				B22B11E11E89DE86009D3E76 /* SlideMenuViewController.swift */,
 			);
 			name = SlideMenu;
+			sourceTree = "<group>";
+		};
+		B268D22C1ECE0E5A00B25176 /* Zoom */ = {
+			isa = PBXGroup;
+			children = (
+				B268D22D1ECE0E8F00B25176 /* ZoomWebViewController.swift */,
+				B268D22F1ECE0F4200B25176 /* ZoomScrollViewController.swift */,
+			);
+			name = Zoom;
 			sourceTree = "<group>";
 		};
 		B270DB4A1E9409DB008B5D22 /* Helper */ = {
@@ -1295,6 +1311,7 @@
 				B213E43A1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,
 				B213E41F1E9EDAE40085970D /* PhotoVerifyModels.swift in Sources */,
+				B268D2301ECE0F4200B25176 /* ZoomScrollViewController.swift in Sources */,
 				B2A0549E1E9D83D800CF88D9 /* LeftDataSource.swift in Sources */,
 				B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */,
 				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
@@ -1308,6 +1325,7 @@
 				B299B7A41E9A6E35002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
 				B2FC67941E984E560003A35C /* CompleteProfileWorker.swift in Sources */,
 				B27B536A1E94587D00B0E050 /* PagerViewController.swift in Sources */,
+				B268D22E1ECE0E8F00B25176 /* ZoomWebViewController.swift in Sources */,
 				B2FC67621E983C9E0003A35C /* SignInPresenter.swift in Sources */,
 				B2FC67BA1E9905EA0003A35C /* QboCategory.swift in Sources */,
 				B213E41D1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */,
@@ -1584,6 +1602,7 @@
 				B27B53AF1E945F9400B0E050 /* ExpensesRouter.swift in Sources */,
 				B2A054AC1E9D86C600CF88D9 /* LeftDataSourceInteractor.swift in Sources */,
 				B2FC67AF1E9900920003A35C /* Category.swift in Sources */,
+				B268D2321ECE135300B25176 /* ZoomScrollViewController.swift in Sources */,
 				B213E41E1E9EDAE40085970D /* PhotoVerifyInteractor.swift in Sources */,
 				B299B7BB1E9ADA25002BFA87 /* EmailPasswordWorker.swift in Sources */,
 				B27B53951E945F2100B0E050 /* DashboardModels.swift in Sources */,
@@ -1592,6 +1611,7 @@
 				B213E4101E9ED2A90085970D /* CameraViewController.swift in Sources */,
 				B2A054781E9BE3A300CF88D9 /* PasswordRecoveryModel.swift in Sources */,
 				B2FC67BB1E9905EA0003A35C /* QboCategory.swift in Sources */,
+				B268D2311ECE135000B25176 /* ZoomWebViewController.swift in Sources */,
 				B2D3AC051E97E6A400293B8C /* DataRequest+ParseResponse.swift in Sources */,
 				B299B7A51E9A6E3E002BFA87 /* Reactive+ErrorTextField.swift in Sources */,
 				B2A054951E9D3BF300CF88D9 /* LeftPresenter.swift in Sources */,
