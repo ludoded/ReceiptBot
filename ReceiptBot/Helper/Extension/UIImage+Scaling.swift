@@ -10,9 +10,9 @@ import UIKit
 
 extension UIImage {
     func rebotSize() -> UIImage? {
-        var makeScale: CGFloat = 1.0
+        var makeScale: CGFloat = 0.3
         if size.width > UIScreen.main.bounds.width {
-            makeScale = UIScreen.main.bounds.width / size.width
+            makeScale = (UIScreen.main.bounds.width / size.width) * 3.0
         }
         
         
