@@ -19,7 +19,8 @@ final class AppConfigurator {
         return (UIApplication.shared.delegate as? AppDelegate)?.window
     }
     
-    fileprivate var worker: SignInWorker!
+    fileprivate var usualSign: SignInWorker!
+    fileprivate var externalSign: ExternalLoginWorker!
     
     static let shared = AppConfigurator()
     private init() {}
@@ -31,14 +32,24 @@ final class AppConfigurator {
     
     func showInitial() {
         guard let credentials = AppSettings.shared.credentials() else { show(for: .auth); return }
+        let type = AppSettings.shared.autoLoginType()
         
-        worker = SignInWorker(email: credentials.email, password: credentials.password)
-        worker.tryToLogin { [weak self] (resp) in
-            DispatchQueue.main.async {
-                switch resp {
-                case .none: self?.show(for: .auth)
-                case .value: self?.show(for: .main)
-                }
+        switch type {
+        case .usual:
+            usualSign = SignInWorker(email: credentials.email, password: credentials.password)
+            usualSign.tryToLogin { [weak self] (resp) in self?.loginCompleted(with: resp) }
+        case .external:
+            externalSign = ExternalLoginWorker(email: credentials.email)
+            externalSign.tryToLogin{ [weak self] (resp) in self?.loginCompleted(with: resp) }
+        }
+        
+    }
+    
+    func loginCompleted(with resp: RebotValueWrapper<AuthResponse>) {
+        DispatchQueue.main.async { [weak self] in
+            switch resp {
+            case .none: self?.show(for: .auth)
+            case .value: self?.show(for: .main)
             }
         }
     }

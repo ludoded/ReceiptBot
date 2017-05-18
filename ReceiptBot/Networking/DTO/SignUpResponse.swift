@@ -45,7 +45,7 @@ struct SignUpFirstResponse: JSONable {
         self.identityUserId = json["IdentityUserId"].stringValue
         self.email = json["Email"].stringValue
         self.credentials = CredentialsResponse(json: json)
-        self.isVerified = json["IsVerified"].boolValue
+        self.isVerified = json["isVerified"].boolValue
         self.message = json["message"].stringValue
         self.userAlreadyCreated = json["userAllradyCreated"].boolValue
         self.isOrgExist = json["isOrgExist"].boolValue
@@ -71,7 +71,7 @@ struct AuthResponse: JSONable {
     
     init(json: JSON) {
         self.accountPackageId = json["AccountPackageId"].stringValue
-        self.accountPackageIdMobile = json["AccountPackageIdMobile"].string ?? "3" /// NOTE: Nabeel told that 3 is default
+        self.accountPackageIdMobile = String(json["AccountPackageIdMobile"].int ?? 3) /// NOTE: Nabeel told that 3 is default
         self.applicationUserId = json["ApplicationUserid"].intValue
         self.emailAddress = json["EmailAddress"].stringValue
         self.entityId = json["EntityId"].intValue
@@ -82,7 +82,7 @@ struct AuthResponse: JSONable {
         self.userEmail = json["UserEmail"].stringValue
         self.detail = json["detail"].stringValue
         self.isEmailVerified = json["isEmailVerified"].boolValue
-        self.vatRegister = json["VATRegister"].boolValue
+        self.vatRegister = json["VATRegister"].bool ?? true
         self.status = json["status"].boolValue
     }
 }

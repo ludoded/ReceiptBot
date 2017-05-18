@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum AutoLoginType: String {
+    case usual
+    case external
+}
+
 final class AppSettings {
     static let shared = AppSettings()
     
@@ -28,9 +33,10 @@ final class AppSettings {
     }
     
     /// MARK: Credentials handling
-    func updateCredentials(email: String, password: String) {
+    func updateCredentials(email: String, password: String, type: AutoLoginType) {
         ud.set(email, forKey: "email")
         ud.set(password, forKey: "password")
+        ud.set(type.rawValue, forKey: "loginType")
     }
     
     func credentials() -> (email: String, password: String)? {
@@ -39,6 +45,11 @@ final class AppSettings {
             else { return nil }
         
         return (email, password)
+    }
+    
+    func autoLoginType() -> AutoLoginType {
+        guard let rawType = ud.string(forKey: "loginType"), let type = AutoLoginType(rawValue: rawType) else { return .usual }
+        return type
     }
     
     func logout() {

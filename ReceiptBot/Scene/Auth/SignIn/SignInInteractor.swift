@@ -20,6 +20,7 @@ protocol SignInInteractorOutput {
 class SignInInteractor {
     var output: (SignInInteractorOutput & PasswordRecoveryInteractorOutput)!
     var worker: SignInWorker!
+    var extWorker: ExternalLoginWorker!
     
     var completeProfileInfo: SignIn.CompleteProfileInfo!
 
@@ -63,7 +64,7 @@ class SignInInteractor {
     }
     
     func tryToExternalSignIn(request: SignIn.Google.Request) {
-        let extWorker = ExternalLoginWorker(email: request.email)
+        extWorker = ExternalLoginWorker(email: request.email)
         extWorker.tryToLogin { [weak self] (resp) in
             DispatchQueue.main.async { self?.passAuthData(data: resp) }
         }

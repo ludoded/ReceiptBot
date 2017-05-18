@@ -22,7 +22,7 @@ class SignInWorker: EmailPasswordWorker {
             
             /// Save the user info into singleton
             AppSettings.shared.store(user: auth!) { [weak self] in
-                AppSettings.shared.updateCredentials(email: self?.params["Email"] as! String, password: self?.params["Password"] as! String)
+                AppSettings.shared.updateCredentials(email: self?.params["Email"] as! String, password: self?.params["Password"] as! String, type: .usual)
                 callback(.value(auth!))
             }
         }

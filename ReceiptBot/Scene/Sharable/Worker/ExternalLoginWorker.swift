@@ -19,7 +19,11 @@ final class ExternalLoginWorker {
         AuthResponse.loadType(request: API.externalLogin(email)) { (resp, message) in
             guard message == nil else { callback(.none(message: message!)); return }
             
-            callback(.value(resp!))
+            /// Save the user info into singleton
+            AppSettings.shared.store(user: resp!) { [weak self] in
+                AppSettings.shared.updateCredentials(email: self?.email ?? "", password: "", type: .external)
+                callback(.value(resp!))
+            }
         }
     }
 }
