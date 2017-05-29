@@ -20,12 +20,12 @@ struct LineChartResponse: JSONable {
 
 struct LineChartMonthResponse: JSONable {
     let totalAmount: Int
-    let monthYear: Date?
+    let monthYear: String
     let count: Int
     
     init(json: JSON) {
         self.totalAmount = json["MonthTotalAmount"].intValue
-        self.monthYear = DateFormatters.myFormatter.date(from: json["MonthYear"].stringValue)
+        self.monthYear = json["MonthYear"].stringValue.components(separatedBy: "/").first ?? "1"
         self.count = json["Mounthcount"].intValue
     }
 }

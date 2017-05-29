@@ -63,12 +63,11 @@ class ExpensesConfigurator {
         
         let xAxis = chart.xAxis
         xAxis.labelPosition = .bottom
-        /// TODO: setup font
         xAxis.labelTextColor = .black
         xAxis.drawAxisLineEnabled = false
         xAxis.drawGridLinesEnabled = false
         xAxis.centerAxisLabelsEnabled = false
-        xAxis.granularity = 60 * 60 * 24 * 31 /// Month
+        xAxis.granularity = 1 /// Month
         xAxis.valueFormatter = LineXAxeFormatter()
         
         setup(sideAxe: chart.leftAxis)

@@ -26,8 +26,12 @@ class ExpensesWorker {
             
             var values: [ChartDataEntry] = []
             
+            let lastMonth: Double = Double(line.months.last?.monthYear ?? "0") ?? 0
+            
             for month in line.months {
-                values.append(ChartDataEntry(x: month.monthYear?.timeIntervalSince1970 ?? 0, y: Double(month.totalAmount)))
+                var monthVal = Double(month.monthYear) ?? 0
+                monthVal = monthVal > lastMonth ? monthVal - 12 : monthVal
+                values.append(ChartDataEntry(x: monthVal, y: Double(month.totalAmount)))
             }
             
             let dataSet = LineChartDataSet(values: values, label: nil)

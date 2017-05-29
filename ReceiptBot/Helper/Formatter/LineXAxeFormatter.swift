@@ -11,7 +11,7 @@ import Charts
 
 class LineXAxeFormatter: NSObject, IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let date = Date(timeIntervalSince1970: value)
-        return DateFormatters.mFormatter.string(from: date)
+        let valInt = Int(value)
+        return RebotDateConverter.convertToMonth(from: valInt)
     }
 }
