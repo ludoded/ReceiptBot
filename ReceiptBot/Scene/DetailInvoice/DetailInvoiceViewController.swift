@@ -250,12 +250,25 @@ extension DetailInvoiceViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let index = textFields.index(of: textField as! TextField) else { return true }
         if case 6...8 = index {
+            /// Check if there are more than one dot
+            guard (textField.text ?? "").appending(string).components(separatedBy: ".").count <= 2 else { return false }
+            
             var set = CharacterSet.decimalDigits
             set.insert(charactersIn: ".")
             
             let trimmed = string.trimmingCharacters(in: set)
-            return trimmed.isEmpty
+            
+            let comps = (textField.text ?? "").components(separatedBy: ".")
+            let afterDot = comps.count > 1 ? comps[1] : ""
+            let startIndex = comps.count > 1 ? comps[0].characters.count.advanced(by: 2) : 0
+            
+            guard trimmed.isEmpty else { return false }
+            
+            if range.location >= startIndex {
+                return afterDot.characters.count < 2 || string.isEmpty
+            }
         }
+        
         return true
     }
     
