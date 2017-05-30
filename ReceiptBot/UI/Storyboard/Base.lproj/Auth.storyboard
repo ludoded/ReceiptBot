@@ -74,7 +74,7 @@
                                                                         <rect key="frame" x="37" y="0.0" width="297" height="29"/>
                                                                         <color key="textColor" red="0.60392156862745094" green="0.80000000000000004" blue="0.16542817008879024" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                                                 <color key="value" red="0.60392156862745094" green="0.80000000000000004" blue="0.16345293423973364" alpha="1" colorSpace="calibratedRGB"/>
