@@ -155,6 +155,7 @@
 		B28E9C131EDD95FD0019F571 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9C0E1EDD95FD0019F571 /* SettingsModels.swift */; };
 		B28E9C141EDD95FD0019F571 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9C0F1EDD95FD0019F571 /* SettingsPresenter.swift */; };
 		B28E9C151EDD95FD0019F571 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9C101EDD95FD0019F571 /* SettingsViewController.swift */; };
+		B28E9C171EDDC31F0019F571 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9C161EDDC31F0019F571 /* SettingsManager.swift */; };
 		B299B78F1E9909B9002BFA87 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */; };
 		B299B7901E9909B9002BFA87 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */; };
 		B299B7911E990FA7002BFA87 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB68331E93D151009560BD /* Router.swift */; };
@@ -444,6 +445,7 @@
 		B28E9C0E1EDD95FD0019F571 /* SettingsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsModels.swift; path = Scene/Settings/SettingsModels.swift; sourceTree = "<group>"; };
 		B28E9C0F1EDD95FD0019F571 /* SettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPresenter.swift; path = Scene/Settings/SettingsPresenter.swift; sourceTree = "<group>"; };
 		B28E9C101EDD95FD0019F571 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Scene/Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		B28E9C161EDDC31F0019F571 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = Helper/Setting/SettingsManager.swift; sourceTree = "<group>"; };
 		B299B78E1E9909B9002BFA87 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Database/DatabaseManager.swift; sourceTree = "<group>"; };
 		B299B7931E9911BF002BFA87 /* NSManagedObject+crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSManagedObject+crud.swift"; path = "Helper/Extension/NSManagedObject+crud.swift"; sourceTree = "<group>"; };
 		B299B7961E9915B9002BFA87 /* Managed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Managed.swift; path = Helper/Sharable/Managed.swift; sourceTree = "<group>"; };
@@ -886,6 +888,7 @@
 				B2FCC5931EA8F947004FBD5B /* AppConfigChunk.swift */,
 				B299B7B01E9AC05C002BFA87 /* AppConfigurator.swift */,
 				B2A054801E9D0B6F00CF88D9 /* GoogleAuthConfigurator.swift */,
+				B28E9C161EDDC31F0019F571 /* SettingsManager.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1334,6 +1337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28E9C171EDDC31F0019F571 /* SettingsManager.swift in Sources */,
 				B2D3ABFF1E97D53C00293B8C /* InboxDataSource.swift in Sources */,
 				B213E43A1EA01CF30085970D /* DetailInvoicePresenter.swift in Sources */,
 				B2FC67771E984E390003A35C /* SignUpModels.swift in Sources */,

@@ -65,7 +65,7 @@ class CameraViewController: UIViewController, Errorable {
     func cameraSetup() {
         cameraView.setupCameraView()
         cameraView.cameraViewType = .normal
-        cameraView.isBorderDetectionEnabled = UserDefaults.standard.bool(forKey: "SettingsCropEnabled")
+        cameraView.isBorderDetectionEnabled = SettingsManager.shared.crop()
     }
 
     // MARK: - Display logic

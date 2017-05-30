@@ -22,17 +22,17 @@ protocol SettingsInteractorOutput {
 
 class SettingsInteractor: SettingsInteractorInput {
     var output: SettingsInteractorOutput!
-    let ud = UserDefaults.standard
+    let manager = SettingsManager.shared
 
     // MARK: - Business logic
 
     func loadInitialSettings() {
-        let crop = ud.bool(forKey: "SettingsCropEnabled")
+        let crop = manager.crop()
         let response = Settings.Camera.Response(crop: crop)
         output.presentInitialSettings(response: response)
     }
     
     func saveEnableCrop(with state: Bool) {
-        ud.set(state, forKey: "SettingsCropEnabled")
+        manager.saveCrop(state: state)
     }
 }
