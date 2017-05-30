@@ -18,6 +18,9 @@ protocol LeftViewControllerOutput {
 class LeftViewController: UIViewController {
     var output: LeftViewControllerOutput!
     var router: LeftRouter!
+    
+    var invoices: UINavigationController!
+    var settings: UINavigationController!
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -37,12 +40,18 @@ class LeftViewController: UIViewController {
         super.viewDidLoad()
         
         LeftConfigurator.sharedInstance.dataSourceConfigure(viewController: self)
+        setupControllers()
         setupTableView()
         fetchUser()
     }
 
     // MARK: - Event handling
 
+    func setupControllers() {
+        self.invoices = UIStoryboard(name: "InvoicesAndReceipts", bundle: Bundle.main).instantiateInitialViewController() as! UINavigationController
+        self.settings = UIStoryboard(name: "Settings", bundle: Bundle.main).instantiateInitialViewController() as! UINavigationController
+    }
+    
     func setupTableView() {
         tableView.register(LeftCell.nib, forCellReuseIdentifier: LeftCell.cellId)
     }
@@ -63,7 +72,8 @@ class LeftViewController: UIViewController {
 extension LeftViewController: LeftDataSourceOutput {
     func didSelect(type: LeftDataSourceType) {
         switch type {
-        case .invoice: closeLeft()
+        case .invoice: slideMenuController()?.changeMainViewController(invoices, close: true)
+        case .settings: slideMenuController()?.changeMainViewController(settings, close: true)
         case .logout: showLogoutAlert()
         }
     }

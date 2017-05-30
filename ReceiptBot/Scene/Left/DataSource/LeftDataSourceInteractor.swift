@@ -12,6 +12,7 @@ final class LeftDataSourceInteractor: LeftDataSourceInteractorOutput {
     var viewModels: [LeftDataSourceModel.ViewModel] {
         return [
             LeftDataSourceModel.ViewModel(imageName: "folder", name: "Invoices and Receipts"),
+            LeftDataSourceModel.ViewModel(imageName: "gear", name: "Settings"),
             LeftDataSourceModel.ViewModel(imageName: "signout", name: "Signout")
         ]
     }

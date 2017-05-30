@@ -10,11 +10,13 @@ import UIKit
 
 enum LeftDataSourceType {
     case invoice
+    case settings
     case logout
     
     static func type(from indexPath: IndexPath) -> LeftDataSourceType {
         switch indexPath.row {
         case 0: return .invoice
+        case 1: return .settings
         default: return .logout
         }
     }

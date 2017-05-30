@@ -90,7 +90,7 @@
         <scene sceneID="SDY-U5-W7L">
             <objects>
                 <navigationController id="I31-hN-abp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="pIK-bD-jgS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="pIK-bD-jgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,8 +277,8 @@
     <resources>
         <image name="XButtonWhite" width="24" height="24"/>
         <image name="capture_button" width="66" height="66"/>
-        <image name="checkincircle" width="29" height="29"/>
-        <image name="crossincircle" width="29" height="29"/>
+        <image name="checkincircle" width="75" height="75"/>
+        <image name="crossincircle" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sJe-Id-Z1M"/>
