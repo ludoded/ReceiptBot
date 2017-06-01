@@ -30,6 +30,8 @@ class PagerViewController: ButtonBarPagerTabStripViewController {
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [weak self] _ in self?.router.navigateToCamera() }))
         alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [weak self] _ in self?.showPicker() }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.popoverPresentationController?.barButtonItem = sender
+        alert.popoverPresentationController?.permittedArrowDirections = .any
         
         navigationController?.present(alert, animated: true, completion: nil)
     }
