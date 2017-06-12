@@ -53,6 +53,9 @@
 		B213E4411EA01CF30085970D /* DetailInvoiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */; };
 		B213E4431EA1148B0085970D /* DetailInvoicePickerValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4421EA1148B0085970D /* DetailInvoicePickerValues.swift */; };
 		B213E4441EA1148B0085970D /* DetailInvoicePickerValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B213E4421EA1148B0085970D /* DetailInvoicePickerValues.swift */; };
+		B221233B1EEED7F600D2891D /* SettingsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224A5B61EEEAE4100A025F6 /* SettingsURL.swift */; };
+		B224A5B51EEEACE700A025F6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B224A5B41EEEACE700A025F6 /* Settings.bundle */; };
+		B224A5B71EEEAE4100A025F6 /* SettingsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224A5B61EEEAE4100A025F6 /* SettingsURL.swift */; };
 		B22B11B91E89D5C8009D3E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */; };
 		B22B11C21E89D5C8009D3E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B11C11E89D5C8009D3E76 /* Assets.xcassets */; };
 		B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B11CF1E89D5C8009D3E76 /* ReceiptBotTests.swift */; };
@@ -382,6 +385,8 @@
 		B213E4321EA01CF30085970D /* DetailInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceViewController.swift; path = Scene/DetailInvoice/DetailInvoiceViewController.swift; sourceTree = "<group>"; };
 		B213E4331EA01CF30085970D /* DetailInvoiceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoiceWorker.swift; path = Scene/DetailInvoice/DetailInvoiceWorker.swift; sourceTree = "<group>"; };
 		B213E4421EA1148B0085970D /* DetailInvoicePickerValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailInvoicePickerValues.swift; path = Scene/DetailInvoice/DetailInvoicePickerValues.swift; sourceTree = "<group>"; };
+		B224A5B41EEEACE700A025F6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		B224A5B61EEEAE4100A025F6 /* SettingsURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsURL.swift; path = Networking/Router/SettingsURL.swift; sourceTree = "<group>"; };
 		B22B11B51E89D5C8009D3E76 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22B11B81E89D5C8009D3E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22B11C11E89D5C8009D3E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -641,6 +646,7 @@
 				B22B11C11E89D5C8009D3E76 /* Assets.xcassets */,
 				B22B11C61E89D5C8009D3E76 /* Info.plist */,
 				B2A0547D1E9C69AA00CF88D9 /* GoogleService-Info.plist */,
+				B224A5B41EEEACE700A025F6 /* Settings.bundle */,
 			);
 			path = ReceiptBot;
 			sourceTree = "<group>";
@@ -979,6 +985,7 @@
 			children = (
 				B2FB68331E93D151009560BD /* Router.swift */,
 				B27B53561E94542900B0E050 /* API.swift */,
+				B224A5B61EEEAE4100A025F6 /* SettingsURL.swift */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -1208,6 +1215,7 @@
 			files = (
 				B2FC674D1E982FA50003A35C /* Auth.storyboard in Resources */,
 				B27B537E1E945C1600B0E050 /* Expenses.storyboard in Resources */,
+				B224A5B51EEEACE700A025F6 /* Settings.bundle in Resources */,
 				B2A054A21E9D84B000CF88D9 /* LeftCell.xib in Resources */,
 				B28E9BFC1EDD90650019F571 /* Settings.storyboard in Resources */,
 				B27B53761E945BF000B0E050 /* Main.storyboard in Resources */,
@@ -1348,6 +1356,7 @@
 				B27B53AC1E945F9400B0E050 /* ExpensesPresenter.swift in Sources */,
 				B2A054AE1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */,
 				B27B539C1E945F2100B0E050 /* DashboardWorker.swift in Sources */,
+				B224A5B71EEEAE4100A025F6 /* SettingsURL.swift in Sources */,
 				B27B53A61E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
 				B2FC679D1E98571C0003A35C /* UIScrollView+keyboard.swift in Sources */,
 				B2B909301EA80C6400F78B0E /* RefreshControlOutput.swift in Sources */,
@@ -1528,6 +1537,7 @@
 				B2A054AF1E9D88FB00CF88D9 /* LeftDataSourceConfigurator.swift in Sources */,
 				B2D3ABF81E97D53C00293B8C /* InboxDataSourceInteractor.swift in Sources */,
 				B27B53A71E945F9400B0E050 /* ExpensesConfigurator.swift in Sources */,
+				B221233B1EEED7F600D2891D /* SettingsURL.swift in Sources */,
 				B22B11D01E89D5C8009D3E76 /* ReceiptBotTests.swift in Sources */,
 				B27B536B1E94587D00B0E050 /* PagerViewController.swift in Sources */,
 				B2FC675F1E983C9E0003A35C /* SignInInteractor.swift in Sources */,

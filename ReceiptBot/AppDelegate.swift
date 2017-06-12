@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GoogleAuthConfigurator.shared.configureGoogleEnvironment()
+        SettingsURL.registerDefaults()
         AppConfigurator.shared.show(for: .launch)
         setupDB()
         return true

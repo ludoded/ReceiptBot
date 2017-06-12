@@ -15,8 +15,13 @@ private var router: Router.Type {
 }
 
 struct API {
-    static let stageURL = "http://51.140.27.53:82" //"http://51.140.104.181:82"
-    static let documentsURL = "https://app.receipt-bot.com/" //"http://test.receipt-bot.com"
+    static var stageURL: String {
+        return SettingsURL.baseURL()
+    }
+    
+    static var documentsURL: String {
+        return SettingsURL.docsURL()
+    }
 }
 
 /// MARK: Sessions
